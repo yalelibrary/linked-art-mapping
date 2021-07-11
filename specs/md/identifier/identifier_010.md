@@ -4,17 +4,20 @@ The Library of Congress Control Number is a serially based identifier assigned t
 
 Usage: ~4 million values.
 
+|Tag|Tag Label|First Indicator|Second Indicator|Subfield|Subfield Label|Repeatable|
+|---|---------|---------------|----------------|--------|--------------|----------|
+|010|LCCN|Undefined|Undefined|a|LCCN|F|
+
 ```
 
 ---
 examples:
-  # Voyager record IDs for testing
+  # Voyager BIB IDs for testing
   - [4, 3802861, 15589896]
 input:
   - 010$a
 trim:
-  - whitespace
-  
+  - whitespace  
                     
 ```
 
@@ -22,6 +25,8 @@ trim:
 
 2.  Output JSON with values for LCCN.
 
+
+BIB ID: 4
 
 ```
 

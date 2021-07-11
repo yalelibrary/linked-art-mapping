@@ -49,6 +49,10 @@ Variable values are supplied for:
     
 ```
 
+-   **[001 \(BIB ID\)](../identifier/identifier_001.md)**  
+The Voyager BIB ID is a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.
 -   **[010 \(LCCN\)](../identifier/identifier_010.md)**  
 The Library of Congress Control Number is a serially based identifier assigned to resources that also appear in the catalog of the Library of Congress.
+-   **[020 \(ISBN\)](../identifier/identifier_020.md)**  
+The International Standard Book Number \(ISBN\) is a publisher-assigned commercial book identifier that is intended to be unique. May appear in 10- or 13-digit formats.
 
