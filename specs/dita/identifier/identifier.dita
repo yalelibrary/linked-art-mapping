@@ -78,6 +78,16 @@
                                     <xref format="html" href="http://vocab.getty.edu/aat/300404621" scope="external"/>
                                 </entry>
                             </row>
+                            <row>
+                                <entry>079</entry>
+                                <entry>Local System Control Number (OCLC Number)</entry>
+                                <entry>T</entry>
+                                <entry>T</entry>
+                                <entry>Owner-Assigned Number</entry>
+                                <entry>
+                                    <xref format="html" href="http://vocab.getty.edu/aat/300404621" scope="external"/>
+                                </entry>
+                            </row>
                         </tbody>
                     </tgroup>
                 </table>

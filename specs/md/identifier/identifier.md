@@ -10,6 +10,7 @@
 |022|ISSN \(International Standard Serial Number\)|T|T|ISSN Identifier|[http://vocab.getty.edu/aat/300417430](http://vocab.getty.edu/aat/300417430)|
 |028|Publisher or Distributor Number|T|T|Publisher/Distributor Number|TBD|
 |035|System Control Number \(OCLC Number\)|T|T|Owner-Assigned Number|[http://vocab.getty.edu/aat/300404621](http://vocab.getty.edu/aat/300404621)|
+|079|Local System Control Number \(OCLC Number\)|T|T|Owner-Assigned Number|[http://vocab.getty.edu/aat/300404621](http://vocab.getty.edu/aat/300404621)|
 
 ## JSON Structure
 
@@ -55,4 +56,12 @@ The Voyager BIB ID is a serially based identifier assigned to MARC 21 Bibliograp
 The Library of Congress Control Number is a serially based identifier assigned to resources that also appear in the catalog of the Library of Congress.
 -   **[020 \(ISBN\)](../identifier/identifier_020.md)**  
 The International Standard Book Number \(ISBN\) is a publisher-assigned commercial book identifier that is intended to be unique. May appear in 10- or 13-digit formats.
+-   **[022 \(ISSN\)](../identifier/identifier_022.md)**  
+The International Standard Serial Number is a unique identification number assigned to a continuing resource.
+-   **[028 \(Publisher or Distributor Number\)](../identifier/identifier_028.md)**  
+Formatted number used for sound recordings, printed music, other music-related materials, and video recordings.
+-   **[035 \(System Control Number: OCLC\)](../identifier/identifier_035.md)**  
+Control number of a system other than the one whose control number is contained in field 001 \(Control Number\), field 010 \(Library of Congress Control Number\) or field 016 \(National Bibliographic Agency Control Number\).
+-   **[079 \(Local System Control Number: OCLC\)](../identifier/identifier_079.md)**  
+Control number of a system other than the one whose control number is contained in field 001 \(Control Number\), field 010 \(Library of Congress Control Number\) or field 016 \(National Bibliographic Agency Control Number\).
 
