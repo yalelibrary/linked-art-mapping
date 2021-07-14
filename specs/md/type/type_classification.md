@@ -8,9 +8,9 @@ For top-level resources, variable values are supplied for:
 -   `root -> _label`
 -   `root -> identified_by -> content`
 
-```
+Top-level Type \(Concept\) entity for classification number:
 
-# Top-level Type (Concept) entity for classification number
+```
 
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -36,9 +36,9 @@ For embedded references, variable values are supplied for:
 -   `root -> classified_as -> id` **\[must match the `id` of the top-level resource\]**.
 -   `root -> classified_as -> _label` **\[must match the `_label` of the top-level resource\]**.
 
-```
+Embedded Type \(Concept\) entity for classification number:
 
-# Embedded Type (Concept) entity for classification number
+```
 
 "classified_as": [
   {

@@ -20,9 +20,9 @@ For embedded references, variable values are supplied for:
 -   `root -> about -> type` **\[must match the `type` of the top-level resource\]**.
 -   `root -> about -> _label` **\[must match the `_label` of the top-level resource\]**.
 
-```
+Top-level Type \(Concept\) entity for subject heading:
 
-# Top-level Type (Concept) entity for subject heading
+```
 
 {
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -65,14 +65,13 @@ For embedded references, variable values are supplied for:
       }
     ]
   }
-}
-                
+}               
                 
 ```
 
-```
+Embedded Type \(Concept\) entity for subject heading:
 
-#Embedded Type (Concept) entity for subject heading
+```
 
 "about": [
   {
@@ -85,8 +84,7 @@ For embedded references, variable values are supplied for:
     "type": "Type",
     "_label": "Death--Religious aspects--Christianity--History--2nd century"
   }
-]
-                
+]               
                 
 ```
 
