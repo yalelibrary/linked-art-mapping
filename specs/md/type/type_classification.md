@@ -62,5 +62,8 @@ Embedded Type \(Concept\) entity for classification number:
       
 ```
 
+-   **[Call Numbers \(050 and 090\)](../type/type_call_numbers.md)**  
+Classification or call numbers
+
 **Parent topic:**[Type Entity \(Concept\)](../type/type.md)
 
