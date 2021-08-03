@@ -1,4 +1,4 @@
-# LUX Entities
+# MARC-to-Linked Art Entity Mapping
 
 -   [Identifier Entity](identifier/identifier.md)
     -   [001 \(BIB ID\)](identifier/identifier_001.md)
@@ -12,5 +12,6 @@
     -   [Classification Numbers](type/type_classification.md)
         -   [Call Numbers \(050 and 090\)](type/type_call_numbers.md)
             -   [050 \(Library of Congress Call Number\)](type/type_050.md)
+            -   [090 \(Locally Assigned LC-Type Call Number\)](type/type_090.md)
     -   [Subject Headings](type/type_subject.md)
 

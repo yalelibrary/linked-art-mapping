@@ -1,0 +1,15 @@
+<task id="task_050" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:generalTask.xsd">
+  <title>Call Numbers (050 and 090)</title>
+  <shortdesc>Classification or call numbers</shortdesc>
+  <taskbody>
+    <context>      
+      <data name="usage" value="16680852"/>
+      <p>Usage: ~16.7 million values</p>    
+    </context>
+    <steps>
+      <step>
+        <cmd>Dedupe processed <codeph>050$a</codeph> and <codeph>090$a</codeph> values.</cmd>        
+      </step>      
+    </steps>    
+  </taskbody>
+</task>
