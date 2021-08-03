@@ -7,7 +7,7 @@ Usage: ~5.1 million values
 |Tag|Tag Label|First Indicator|Second Indicator|Subfield|Subfield Label|Repeatable|
 |---|---------|---------------|----------------|--------|--------------|----------|
 |090|Locally Assigned LC-Type Call Number|undefined|undefined|a|Classification number|T|
-|090|Library of Congress Call Number|\#-1|0-4|b|Local Cutter number|F|
+|090|Library of Congress Call Number|undefined|undefined|b|Local Cutter number|F|
 
 ```
 
@@ -37,7 +37,7 @@ strip:
 
 3.  Dedupe processed `090$a` values.
 
-4.  
+
 BIB ID: 907498
 
 Top-level Type \(Concept\) entity:

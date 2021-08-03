@@ -31,8 +31,8 @@
             <row>
               <entry>090</entry>
               <entry>Library of Congress Call Number</entry>
-              <entry>#-1</entry>
-              <entry>0-4</entry>
+              <entry>undefined</entry>
+              <entry>undefined</entry>
               <entry>b</entry>
               <entry>Local Cutter number</entry>
               <entry>F</entry>
@@ -73,11 +73,6 @@ strip:
       </step>
       <step>
         <cmd>Dedupe processed <codeph>090$a</codeph> values.</cmd>
-      </step>
-
-
-      <step>
-        <cmd/>
       </step>
     </steps>
     <result> BIB ID: <keyword>907498</keyword>

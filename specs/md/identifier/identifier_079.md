@@ -6,7 +6,7 @@ Usage: ~8 million values.
 
 |Tag|Tag Label|First Indicator|Second Indicator|Subfield|Subfield Label|Repeatable|
 |---|---------|---------------|----------------|--------|--------------|----------|
-|079|Local System Control Number: OCLC|Undefined|Undefined|a|Local system control number|F|
+|079|Local System Control Number: OCLC|undefined|undefined|a|Local system control number|F|
 
 ```
 

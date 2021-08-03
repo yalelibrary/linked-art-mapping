@@ -6,8 +6,8 @@ Usage: ~29 million values.
 
 |Tag|Tag Label|First Indicator|Second Indicator|Subfield|Subfield Label|Repeatable|
 |---|---------|---------------|----------------|--------|--------------|----------|
-|035|System Control Number: OCLC|Undefined|Undefined|a|System control number|F|
-|035|System Control Number: OCLC|Undefined|Undefined|z|Canceled/invalid control number|T|
+|035|System Control Number: OCLC|undefined|undefined|a|System control number|F|
+|035|System Control Number: OCLC|undefined|undefined|z|Canceled/invalid control number|T|
 
 ```
 

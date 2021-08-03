@@ -6,9 +6,9 @@ Usage: ~280,000 values.
 
 |Tag|Tag Label|First Indicator|Second Indicator|Subfield|Subfield Label|Repeatable|
 |---|---------|---------------|----------------|--------|--------------|----------|
-|022|ISSN|\#\|0\|1|Undefined|a|ISSN|F|
-|022|ISSN|\#\|0\|1|Undefined|y|Incorrect ISSN|T|
-|022|ISSN|\#\|0\|1|Undefined|z|Canceled ISSN|T|
+|022|ISSN|\#-1|undefined|a|ISSN|F|
+|022|ISSN|\#-1|undefined|y|Incorrect ISSN|T|
+|022|ISSN|\#-1|undefined|z|Canceled ISSN|T|
 
 ```
 

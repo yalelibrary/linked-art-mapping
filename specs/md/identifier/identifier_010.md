@@ -6,7 +6,7 @@ Usage: ~4 million values.
 
 |Tag|Tag Label|First Indicator|Second Indicator|Subfield|Subfield Label|Repeatable|
 |---|---------|---------------|----------------|--------|--------------|----------|
-|010|LCCN|Undefined|Undefined|a|LCCN|F|
+|010|LCCN|undefined|undefined|a|LCCN|F|
 
 ```
 

@@ -23,8 +23,8 @@
             <row>
               <entry>035</entry>
               <entry>System Control Number: OCLC</entry>
-              <entry>Undefined</entry>
-              <entry>Undefined</entry>
+              <entry>undefined</entry>
+              <entry>undefined</entry>
               <entry>a</entry>
               <entry>System control number</entry>
               <entry>F</entry>
@@ -32,8 +32,8 @@
             <row>
               <entry>035</entry>
               <entry>System Control Number: OCLC</entry>
-              <entry>Undefined</entry>
-              <entry>Undefined</entry>
+              <entry>undefined</entry>
+              <entry>undefined</entry>
               <entry>z</entry>
               <entry>Canceled/invalid control number</entry>
               <entry>T</entry>

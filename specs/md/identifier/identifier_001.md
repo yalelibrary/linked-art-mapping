@@ -6,7 +6,7 @@ Usage: ~11.7 million values.
 
 |Tag|Tag Label|First Indicator|Second Indicator|Subfield|Subfield Label|Repeatable|
 |---|---------|---------------|----------------|--------|--------------|----------|
-|001|Control Number \(Voyager BIB ID\)|NA|NA|NA|Control Number|F|
+|001|Control Number \(Voyager BIB ID\)|NA|NA|NA|NA|F|
 
 ```
 

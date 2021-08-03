@@ -6,9 +6,9 @@ Usage: ~9 million values.
 
 |Tag|Tag Label|First Indicator|Second Indicator|Subfield|Subfield Label|Repeatable|
 |---|---------|---------------|----------------|--------|--------------|----------|
-|020|ISBN|Undefined|Undefined|a|ISBN|F|
-|020|ISBN|Undefined|Undefined|q|Qualifying information|T|
-|020|ISBN|Undefined|Undefined|z|Canceled/invalid ISBN|T|
+|020|ISBN|undefined|undefined|a|ISBN|F|
+|020|ISBN|undefined|undefined|q|Qualifying information|T|
+|020|ISBN|undefined|undefined|z|Canceled/invalid ISBN|T|
 
 ```
 

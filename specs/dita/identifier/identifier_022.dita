@@ -23,8 +23,8 @@
             <row>
               <entry>022</entry>
               <entry>ISSN</entry>
-              <entry>#|0|1</entry>
-              <entry>Undefined</entry>
+              <entry>#-1</entry>
+              <entry>undefined</entry>
               <entry>a</entry>
               <entry>ISSN</entry>
               <entry>F</entry>
@@ -32,8 +32,8 @@
             <row>
               <entry>022</entry>
               <entry>ISSN</entry>
-              <entry>#|0|1</entry>
-              <entry>Undefined</entry>
+              <entry>#-1</entry>
+              <entry>undefined</entry>
               <entry>y</entry>
               <entry>Incorrect ISSN</entry>
               <entry>T</entry>
@@ -41,8 +41,8 @@
             <row>
               <entry>022</entry>
               <entry>ISSN</entry>
-              <entry>#|0|1</entry>
-              <entry>Undefined</entry>
+              <entry>#-1</entry>
+              <entry>undefined</entry>
               <entry>z</entry>
               <entry>Canceled ISSN</entry>
               <entry>T</entry>

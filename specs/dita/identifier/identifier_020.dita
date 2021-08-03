@@ -23,8 +23,8 @@
             <row>
               <entry>020</entry>
               <entry>ISBN</entry>
-              <entry>Undefined</entry>
-              <entry>Undefined</entry>
+              <entry>undefined</entry>
+              <entry>undefined</entry>
               <entry>a</entry>
               <entry>ISBN</entry>
               <entry>F</entry>
@@ -32,8 +32,8 @@
             <row>
               <entry>020</entry>
               <entry>ISBN</entry>
-              <entry>Undefined</entry>
-              <entry>Undefined</entry>
+              <entry>undefined</entry>
+              <entry>undefined</entry>
               <entry>q</entry>
               <entry>Qualifying information</entry>
               <entry>T</entry>
@@ -41,8 +41,8 @@
             <row>
               <entry>020</entry>
               <entry>ISBN</entry>
-              <entry>Undefined</entry>
-              <entry>Undefined</entry>
+              <entry>undefined</entry>
+              <entry>undefined</entry>
               <entry>z</entry>
               <entry>Canceled/invalid ISBN</entry>
               <entry>T</entry>

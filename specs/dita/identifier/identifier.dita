@@ -7,7 +7,6 @@
             <p>
                 <table>
                     <title>MARC data sources</title>
-                    <desc>Working list of data elements for mapping.</desc>
                     <tgroup cols="6">
                         <thead>
                             <row>
