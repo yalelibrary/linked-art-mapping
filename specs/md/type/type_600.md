@@ -30,6 +30,7 @@ examples:
   # Voyager BIB IDs for testing
   - [14, 1221849]
 input:
+  - 600$0
   - 600$a
   - 600$b
   - 600$c
@@ -51,7 +52,7 @@ trim:
         
 ```
 
-1.  Skip `600` fields with second indicator `6` or `7`.
+1.  Skip `600` fields with 2nd indicator `6` or `7`.
 
 2.  Process any `$0` values.
 
@@ -108,7 +109,7 @@ trim:
 11. If no subdivisions are present, the referring resource should link directly to the referenced entity \(see second example below\).
 
 
-Top-level Type \(Concept\) entity with facets \[derived from BIB ID: 14\]:
+Top-level Type \(Concept\) entity with facets \[e.g., BIB ID: 14\]:
 
 ```
 
