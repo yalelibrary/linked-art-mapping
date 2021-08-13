@@ -31,13 +31,13 @@ strip:
 
 2.  For each `050$a`:
 
-    1.  Trim whitespace.
+    1.  Trim whitespace and punctuation.
 
-    2.  Remove any punctuation characters that are *not* a period \(`.`\).
+    2.  Replace any punctuation characters that are *not* a period \(`.`\) with a whitespace character.
 
 3.  Dedupe processed `050$a` values.
 
-4.  
+
 BIB ID: 907498
 
 Top-level Type \(Concept\) entity:

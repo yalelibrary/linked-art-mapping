@@ -9,9 +9,9 @@
                     <li><codeph>root -> type</codeph></li>
                     <li><codeph>root -> _label</codeph> [label of precoordinated subject heading, joined with double hyphens]</li>
                     <li><codeph>root -> identified_by -> content</codeph> [same as <codeph>_label</codeph>]</li>
-                    <li><codeph>root -> influenced_by -> id</codeph> [concept IRI for facet concept]</li>
-                    <li><codeph>root -> influenced_by -> type</codeph></li>
-                    <li><codeph>root -> influenced_by -> _label</codeph></li>
+                    <li><codeph>root -> created_by -> influenced_by -> id</codeph> [concept IRI for facet concept]</li>
+                    <li><codeph>root -> created_by -> influenced_by -> type</codeph></li>
+                    <li><codeph>root -> created_by -> influenced_by -> _label</codeph></li>
                 </ul>
             </p>
         </section>

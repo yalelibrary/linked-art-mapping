@@ -14,4 +14,5 @@
             -   [050 \(Library of Congress Call Number\)](type/type_050.md)
             -   [090 \(Locally Assigned LC-Type Call Number\)](type/type_090.md)
     -   [Subject Headings](type/type_subject.md)
+        -   [600 \(Personal Name Subject\)](type/type_600.md)
 

@@ -17,6 +17,8 @@
                 <topicref href="type/type_090.dita"/>
             </topicref>
         </topicref>
-        <topicref href="type/type_subject.dita" type="topic"/>
+        <topicref href="type/type_subject.dita" type="topic">
+            <topicref href="type/type_600.dita" type="task"/>
+        </topicref>
     </topicref>
 </map>

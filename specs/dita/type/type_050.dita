@@ -64,20 +64,15 @@ strip:
         <cmd>For each <codeph>050$a</codeph>:</cmd>
         <substeps>
           <substep>
-            <cmd>Trim whitespace.</cmd>
+            <cmd>Trim whitespace and punctuation.</cmd>
           </substep>
           <substep>
-            <cmd>Remove any punctuation characters that are <i>not</i> a period (<codeph>.</codeph>).</cmd>
+            <cmd>Replace any punctuation characters that are <i>not</i> a period (<codeph>.</codeph>) with a whitespace character.</cmd>
           </substep>
         </substeps>
       </step>
       <step>
         <cmd>Dedupe processed <codeph>050$a</codeph> values.</cmd>
-      </step>
-
-
-      <step>
-        <cmd/>
       </step>
     </steps>
     <result> BIB ID: <keyword>907498</keyword>

@@ -1,6 +1,6 @@
 # 090 \(Locally Assigned LC-Type Call Number\)
 
-Classification or call number that is taken from Library of Congress Classification or LC Classification Additions and Changes.
+Classification or call number that is locally assigned, but based on the Library of Congress Classification scheme.
 
 Usage: ~5.1 million values
 
@@ -31,9 +31,9 @@ strip:
 
 2.  For each `090$a`:
 
-    1.  Trim whitespace.
+    1.  Trim whitespace and punctuation.
 
-    2.  Remove any punctuation characters that are *not* a period \(`.`\).
+    2.  Replace any punctuation characters that are *not* a period \(`.`\) with a whitespace character.
 
 3.  Dedupe processed `090$a` values.
 

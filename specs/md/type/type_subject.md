@@ -8,9 +8,9 @@ For top-level resources, variable values are supplied for:
 -   `root -> type`
 -   `root -> _label` \[label of precoordinated subject heading, joined with double hyphens\]
 -   `root -> identified_by -> content` \[same as `_label`\]
--   `root -> influenced_by -> id` \[concept IRI for facet concept\]
--   `root -> influenced_by -> type`
--   `root -> influenced_by -> _label`
+-   `root -> created_by -> influenced_by -> id` \[concept IRI for facet concept\]
+-   `root -> created_by -> influenced_by -> type`
+-   `root -> created_by -> influenced_by -> _label`
 
 ## Embedded References
 
@@ -87,6 +87,9 @@ Embedded Type \(Concept\) entity for subject heading:
 ]               
                 
 ```
+
+-   **[600 \(Personal Name Subject\)](../type/type_600.md)**  
+Subject added entry in which the entry element is a personal name.
 
 **Parent topic:**[Type Entity \(Concept\)](../type/type.md)
 

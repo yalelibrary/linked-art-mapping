@@ -1,6 +1,6 @@
 <task id="task_050" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:generalTask.xsd">
   <title>090 (Locally Assigned LC-Type Call Number)</title>
-  <shortdesc>Classification or call number that is taken from Library of Congress Classification or LC Classification Additions and Changes.</shortdesc>
+  <shortdesc>Classification or call number that is locally assigned, but based on the Library of Congress Classification scheme.</shortdesc>
   <taskbody>
     <context>
       <data name="usage" value="5141318"/>
@@ -64,10 +64,10 @@ strip:
         <cmd>For each <codeph>090$a</codeph>:</cmd>
         <substeps>
           <substep>
-            <cmd>Trim whitespace.</cmd>
+            <cmd>Trim whitespace and punctuation.</cmd>
           </substep>
           <substep>
-            <cmd>Remove any punctuation characters that are <i>not</i> a period (<codeph>.</codeph>).</cmd>
+            <cmd>Replace any punctuation characters that are <i>not</i> a period (<codeph>.</codeph>) with a whitespace character.</cmd>
           </substep>
         </substeps>
       </step>
