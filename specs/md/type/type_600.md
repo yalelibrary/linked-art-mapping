@@ -37,25 +37,31 @@ input:
   - 600$g
   - 600$j
   - 600$q
+  - 600$t
   - 600$v
   - 600$x
   - 600$y
   - 600$z
+skip:
+  - 2nd indicator 6
+  - 2nd indicator 7
 trim:
   - punctuation
   - whitespace                
         
 ```
 
-1.  Process any `$0` values.
+1.  Skip `600` fields with second indicator `6` or `7`.
 
-2.  If the `$0` contains an HTTP URI, capture the value of the URI.
+2.  Process any `$0` values.
 
-3.  Capture the entity type \(Person, Place, Type, etc.\).
+3.  If the `$0` contains an HTTP URI, capture the value of the URI.
 
-4.  In the top-level entity, add an array with the key `equivalent` to capture identifiers for equivalent entities in external data sources.
+4.  Capture the entity type \(Person, Place, Type, etc.\).
 
-5.  For each `$0` that contains an HTTP URI:
+5.  In the top-level entity, add an array with the key `equivalent` to capture identifiers for equivalent entities in external data sources.
+
+6.  For each `$0` that contains an HTTP URI:
 
     1.  Add an object to the `equivalent` array.
 
@@ -86,22 +92,23 @@ trim:
                 
     ```
 
-6.  Capture the `600` personal name subfields: `a, b, c, d, g, j, q`.
+7.  Capture the `600` personal name subfields: `a, b, c, d, g, j, q`.
 
-7.  Join the subfields with a whitespace character.
+8.  Join the personal name subfields with a whitespace character.
 
-8.  Capture any `600` subdivision subfields: `v, x, y, z`
+9.  Check for additional subfields.
 
-9.  Join subdivision subfields with double hyphens \(`--`\).
+    |Subfield|Action|
+    |--------|------|
+    |**t**|Join the personal name string and `600$t` with a whitespace character.|
+    |**v, x, y, z**|Join the personal name string and subdivision subfields with double hyphens \(`--`\).|
 
-10. Join the personal name string and the subdivision string, if present, with double hyphens \(`--`\).
+10. If subdivisions are present, a faceted structure is output in the top-level concept entity.
 
-11. If subdivisions are present, a faceted structure is output in the top-level concept entity.
-
-12. If no subdivisions are present, the referring resource should link directly to the referenced entity \(see second example below\).
+11. If no subdivisions are present, the referring resource should link directly to the referenced entity \(see second example below\).
 
 
-Top-level Type \(Concept\) entity with facets \[BIB ID: 14\]:
+Top-level Type \(Concept\) entity with facets \[derived from BIB ID: 14\]:
 
 ```
 
@@ -135,7 +142,7 @@ Top-level Type \(Concept\) entity with facets \[BIB ID: 14\]:
         
 ```
 
-1.  Embedded Type \(Concept\) entity:
+1.  Embedded Type \(Concept\) entity \[BIB ID: 14\]:
 
     ```
     
