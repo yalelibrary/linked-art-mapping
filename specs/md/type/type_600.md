@@ -28,7 +28,7 @@ Subject added entry in which the entry element is a personal name.
 ---
 examples:
   # Voyager BIB IDs for testing
-  - [14, 1221849]
+  - [14, 1200196, 1221849]
 input:
   - 600$0
   - 600$a
