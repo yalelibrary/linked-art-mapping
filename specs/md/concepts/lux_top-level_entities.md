@@ -25,7 +25,7 @@ The LUX supertype scheme is divided into two levels: *types* and *formats*. Type
 
 MARC to Linked Art mappings are done at the level of the most specific format, with type and broader format relations inferred from the hierarchy.
 
-![LUX supertypes](/Users/tt434/Dropbox/YUL/ccd/data-transform/dita/resources/img/supertypes.svg)
+![LUX supertypes](../resources/img/supertypes.svg)
 
 |Linked Art core class|LUX entity type|LUX format \(level one\)|LUX format \(level two\)|LUX format \(level three\)|
 |---------------------|---------------|------------------------|------------------------|--------------------------|
