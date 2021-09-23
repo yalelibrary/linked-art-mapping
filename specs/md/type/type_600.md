@@ -13,7 +13,15 @@ Subject added entry in which the entry element is a personal name.
 |600|Personal Name Subject|0-3|0-7|e|Relator term|T|
 |600|Personal Name Subject|0-3|0-7|g|Miscellaneous information|T|
 |600|Personal Name Subject|0-3|0-7|j|Attribution qualifier|T|
+|600|Personal Name Subject|0-3|0-7|k|Form subheading|T|
+|600|Personal Name Subject|0-3|0-7|l|Language of a work|F|
+|600|Personal Name Subject|0-3|0-7|m|Medium of performance for music|T|
+|600|Personal Name Subject|0-3|0-7|n|Number of part/section of a work|T|
+|600|Personal Name Subject|0-3|0-7|o|Arranged statement for music|F|
+|600|Personal Name Subject|0-3|0-7|p|Name of part/section of a work|T|
 |600|Personal Name Subject|0-3|0-7|q|Fuller form of name|F|
+|600|Personal Name Subject|0-3|0-7|r|Key for music|F|
+|600|Personal Name Subject|0-3|0-7|s|Version|T|
 |600|Personal Name Subject|0-3|0-7|t|Title of a work|F|
 |600|Personal Name Subject|0-3|0-7|u|Affiliation|F|
 |600|Personal Name Subject|0-3|0-7|v|Form subdivision|T|
@@ -21,6 +29,9 @@ Subject added entry in which the entry element is a personal name.
 |600|Personal Name Subject|0-3|0-7|y|Chronological subdivision|T|
 |600|Personal Name Subject|0-3|0-7|z|Geographic subdivision|T|
 |600|Personal Name Subject|0-3|0-7|0|Authority record control number or standard number|T|
+|600|Personal Name Subject|0-3|0-7|1|Real World Object URI|T|
+|600|Personal Name Subject|0-3|0-7|2|Source of heading or term|F|
+|600|Personal Name Subject|0-3|0-7|3|Materials specified|F|
 |600|Personal Name Subject|0-3|0-7|4|Relationship|T|
 
 ```
@@ -35,9 +46,19 @@ input:
   - 600$b
   - 600$c
   - 600$d
+  - 600$f
   - 600$g
+  - 600$h
   - 600$j
+  - 600$k
+  - 600$l
+  - 600$m
+  - 600$n
+  - 600$o
+  - 600$p
   - 600$q
+  - 600$r
+  - 600$s
   - 600$t
   - 600$v
   - 600$x
@@ -52,21 +73,25 @@ trim:
         
 ```
 
-1.  Skip `600` fields with 2nd indicator `6` or `7`.
+1.  Test YAML:
 
-2.  Process any `$0` values.
+2.  Skip `600` fields with 2nd indicator `6` or `7`.
 
-3.  If the `$0` contains an HTTP URI, capture the value of the URI.
+3.  Process any `$0` values.
 
-4.  Capture the entity type \(Person, Place, Type, etc.\).
+4.  If the `$0` contains an HTTP URI, capture the value of the URI.
 
-5.  In the top-level entity, add an array with the key `equivalent` to capture identifiers for equivalent entities in external data sources.
+5.  Capture the entity type \(Person, Place, Type, etc.\).
 
-6.  For each `$0` that contains an HTTP URI:
+6.  In the top-level entity, add an array with the key `equivalent` to capture identifiers for equivalent entities in external data sources.
 
-    1.  Add an object to the `equivalent` array.
+7.  For each `$0` that contains a HTTP URI:
 
-    2.  Indicate the entity type.
+    1.  **If the URI is not already present**:
+
+    2.  Add an object to the `equivalent` array.
+
+    3.  Indicate the entity type.
 
     Example \(derived from BIB ID 1200196\):
 
@@ -93,23 +118,27 @@ trim:
                 
     ```
 
-7.  Capture the `600` personal name subfields: `a, b, c, d, g, j, q`.
+8.  Capture the `600` personal name subfields: `a, b, c, d, g, j, q`.
 
-8.  Join the personal name subfields with a whitespace character.
+9.  Join the personal name subfields with a whitespace character.
 
-9.  Check for additional subfields.
+10. Check for additional subfields.
 
-    |Subfield|Action|
-    |--------|------|
-    |**t**|Join the personal name string and `600$t` with a whitespace character.|
-    |**v, x, y, z**|Join the personal name string and subdivision subfields with double hyphens \(`--`\).|
+    1.  **Title** subfields follow `$t` and should be concatenated.
 
-10. If subdivisions are present, a faceted structure is output in the top-level concept entity.
+    2.  **Subdivision** subfields qualify a subject by form, topic, period, or place and should be concatenated.
 
-11. If no subdivisions are present, the referring resource should link directly to the referenced entity \(see second example below\).
+    |Subfields|Actions|
+    |---------|-------|
+    |**Title subfields: f, h, k, l, m, n, o, p, r, s, t**|Join the title subfields with a whitespace character. Join the person name string and the title string with a whitespace character.|
+    |**Subdivision subfields: v, x, y, z**|Join the personal name string \(and any title string\) and subdivision subfields with double hyphens \(`--`\).|
+
+11. If subdivisions are present, a faceted structure is output in the top-level concept entity.
+
+12. If no subdivisions are present, the referring resource should link directly to the referenced entity \(see second example below\).
 
 
-Top-level Type \(Concept\) entity with facets \[e.g., BIB ID: 14\]:
+Top-level Type \(Concept\) entity with facets \[e.g., BIB ID 14\]:
 
 ```
 
@@ -143,7 +172,7 @@ Top-level Type \(Concept\) entity with facets \[e.g., BIB ID: 14\]:
         
 ```
 
-1.  Embedded Type \(Concept\) entity \[BIB ID: 14\]:
+1.  Embedded Type \(Concept\) entity \[BIB ID 14\]:
 
     ```
     
@@ -157,7 +186,7 @@ Top-level Type \(Concept\) entity with facets \[e.g., BIB ID: 14\]:
             
     ```
 
-2.  Embedded Person entity as subject \[BIB ID: 1221849\]:
+2.  Embedded Person entity as subject \[BIB ID 1221849\]:
 
     ```
     

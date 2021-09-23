@@ -1,8 +1,14 @@
-# 001 \(BIB ID\)
+---
+author: timothy.thompson@yale.edu
+source: Library of Congress MARC Standards Office, https://www.loc.gov/marc/bibliographic/bd264.html
+publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
+category: [MARC 21 reference, Tables]
+keyword: [MARC 21, Bibliographic]
+---
 
-The Voyager BIB ID is a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.
+# 264 \(Production, Publication, Distribution, Manufacture, and Copyright Notice\)
 
-Usage: ~11.7 million values.
+Statement relating to the publication, printing, distribution, issue, release, or production of a work.
 
 |Tag|Tag Label|First Indicator|Second Indicator|Subfield|Subfield Label|Repeatable|
 |---|---------|---------------|----------------|--------|--------------|----------|
@@ -13,50 +19,7 @@ Usage: ~11.7 million values.
 |264|Production, Publication, Distribution, Manufacture, and Copyright Notice|\#-3|0-4|6|Linkage|F|
 |264|Production, Publication, Distribution, Manufacture, and Copyright Notice|\#-3|0-4|8|Field link and sequence number|F|
 
-```
+**Previous topic:**[260 \(Publication, Distribution, etc. \)](../tables/260_bib_table.md)
 
----
-examples:
-  # Voyager BIB IDs for testing
-  - [2, 3, 4]
-input:
-  - 001
-trim:
-  - whitespace
-                    
-```
-
-1.  Trim whitespace.
-
-2.  Concatenate value with `ils:yul:`.
-
-3.  Output JSON with values for BIB ID.
-
-
-BIB ID: `2`
-
-BIB ID: 2
-
-```
-
-"identified_by": [
-  {
-    "type": "Identifier",
-    "content": "ils:yul:2",
-    "classified_as": [
-      {
-        "id": "http://vocab.getty.edu/aat/300435704",
-        "type": "Type",
-        "_label": "System-Assigned Number"
-      }
-    ]
-  }
-]
-                        
-```
-
-**Related information**  
-
-
-[001 \(Control Number\)](../tables/001_bib_table.md)
+**Next topic:**[300 \(Physical Description\)](../tables/300_bib_table.md)
 
