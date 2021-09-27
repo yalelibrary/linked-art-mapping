@@ -1,15 +1,71 @@
 ---
-author: timothy.thompson@yale.edu
+author: [tt434, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
-category: Descriptive content
+category: Entity extraction
 ---
 
 # Models
 
 ## Source data
 
+```
+{
+  "name": "Models",
+  "sampleBibs": [9492648],
+  "fieldSpec": "ldr[6]:008[33]:006[0]:006[16]"
+}
+```
+
 ## Processing steps and output
 
+```
+---
+# Models mapping
+conditions:
+  OR:
+    - AND:
+      # Three-dimensional artifact or naturally occurring object
+      - - ldr[6]
+        - r 
+      - OR:
+        # Model
+        - - 008[33]
+          - q
+        # Diorama
+        - - 008[33]
+          - d
+    - AND:
+      # 3-D artifact
+      - - 006[0]
+        - r
+      - OR:
+        # Model
+        - - 006[16]
+          - q
+        # Diorama
+        - - 006[16]
+          - d
+```
+
 1.  
+```
+{
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300247279",
+      "type": "Type",
+      "_label": "Models",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300226816",
+          "type": "Type",
+          "_label": "Format"
+        }
+      ]
+    }
+  ]    		
+}
+```
+
 **Parent topic:**[ObjectFormats](../../concepts/supertypes/objectformats.md)
 

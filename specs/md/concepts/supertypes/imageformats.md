@@ -1,5 +1,5 @@
 ---
-author: timothy.thompson@yale.edu
+author: [tt434, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -8,6 +8,8 @@ category: Entity extraction
 
 -   **[Collages](../../concepts/supertypes/collages.md)**  
 
+-   **[Image Data](../../concepts/supertypes/imagedata.md)**  
+
 -   **[Drawings](../../concepts/supertypes/drawings.md)**  
 
 -   **[Maps](../../concepts/supertypes/maps.md)**  
@@ -15,6 +17,8 @@ category: Entity extraction
 -   **[Paintings](../../concepts/supertypes/paintings.md)**  
 
 -   **[Photographs](../../concepts/supertypes/photographs.md)**  
+
+-   **[Pictures](../../concepts/supertypes/pictures.md)**  
 
 -   **[Posters](../../concepts/supertypes/posters.md)**  
 

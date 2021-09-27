@@ -1,3 +1,7 @@
+---
+author: tt434
+---
+
 # MARC to Linked Art glossary
 
 -   **[Entification](../glossary/entification.md)**  

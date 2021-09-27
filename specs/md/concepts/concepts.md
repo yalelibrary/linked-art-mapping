@@ -1,13 +1,22 @@
 ---
-author: timothy.thompson@yale.edu
+author: [tt434, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 ---
 
 # Concepts
 
+Entities that represent what a resource is about.
+
+## Source data
+
+## Processing steps and output
+
 In Linked Art, Concept entities are represented by the `Type` class. Concept entities should be generated for classification numbers and subject headings in MARC.
 
-For each Concept entity, an embedded reference should be added within the "record-level" resource \(Textual Work, Visual Work, or Digital Object\).
+-   **[Subject headings](../concepts/subject_headings.md)**  
+Resources extracted from MARC 6XX entries.
+-   **[Classification numbers](../concepts/classification_numbers.md)**  
+
 
 **Parent topic:**[Related entities](../concepts/related_entities.md)
 

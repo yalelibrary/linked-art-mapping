@@ -1,15 +1,61 @@
 ---
-author: timothy.thompson@yale.edu
+author: [tt434, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
-category: Descriptive content
+category: Entity extraction
 ---
 
 # Kits
 
 ## Source data
 
+```
+{
+  "name": "Kits",
+  "sampleBibs": [8068082],
+  "fieldSpec": "ldr[6]:008[33]:006[0]"
+}
+```
+
 ## Processing steps and output
 
-1.  
-**Parent topic:**[ObjectFormats](../../concepts/supertypes/objectformats.md)
+```
+---
+# Kits mapping
+conditions:
+  OR:
+    # Kit
+    - - ldr[6]
+      - o
+    - AND:
+      # Three-dimensional artifact or naturally occurring object
+      - - ldr[6]
+        - r      
+      # Kit
+      - - 008[33]
+        - b        				     
+    # Kit
+    - - 006[0]
+      - o
+```
+
+```
+{
+  "classified_as": [    
+    {
+      "id": "http://vocab.getty.edu/aat/300247921",
+      "type": "Type",
+      "_label": "Kits",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300226816",
+          "type": "Type",
+          "_label": "Format"
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Parent topic:**[Collection formats](../../concepts/supertypes/collectionformats.md)
 

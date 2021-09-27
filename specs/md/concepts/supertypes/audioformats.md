@@ -1,5 +1,5 @@
 ---
-author: timothy.thompson@yale.edu
+author: [tt434, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -13,7 +13,7 @@ category: Entity extraction
 
 **Parent topic:**[LUX supertype taxonomy](../../concepts/supertypes/supertypes.md)
 
-**Previous topic:**[ArchivalFormats](../../concepts/supertypes/archivalformats.md)
+**Previous topic:**[Collection formats](../../concepts/supertypes/collectionformats.md)
 
 **Next topic:**[CartographicFormats](../../concepts/supertypes/cartographicformats.md)
 

@@ -1,5 +1,5 @@
 ---
-author: timothy.thompson@yale.edu
+author: [tt434, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -8,7 +8,7 @@ category: Entity extraction
 
 -   **[Atlases](../../concepts/supertypes/atlases.md)**  
 
--   **[GIS](../../concepts/supertypes/gis.md)**  
+-   **[Geospatial Data](../../concepts/supertypes/geospatialdata.md)**  
 
 -   **[Globes](../../concepts/supertypes/globes.md)**  
 

@@ -1,5 +1,5 @@
 ---
-author: timothy.thompson@yale.edu
+author: [tt434, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
 ---
@@ -31,30 +31,30 @@ The Library of Congress Control Number is a serially based identifier assigned t
 
 ```
 {
-	"identified_by": [
-	  {
-	    "type": "Identifier",
-	    "content": "66010930",
-	    "classified_as": [
-	      {
-	        "id": "http://vocab.getty.edu/aat/300417440",
-	        "type": "Type",
-	        "_label": "Owner-Assigned Number"
-	        }
-	    ],
-	    "attributed_by": [
-	      {
-	        "type": "AttributeAssignment",
-	        "carried_out_by": [
-	          {
-	            "type": "Group",
-	            "_label": "Library of Congress"
-	          }
-	        ]
-	      }
-	    ]
-	  }
-	]
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "content": "66010930",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300417440",
+          "type": "Type",
+          "_label": "Owner-Assigned Number"
+        }
+      ],
+      "attributed_by": [
+        {
+          "type": "AttributeAssignment",
+          "carried_out_by": [
+            {
+              "type": "Group",
+              "_label": "Library of Congress"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
 ```
 

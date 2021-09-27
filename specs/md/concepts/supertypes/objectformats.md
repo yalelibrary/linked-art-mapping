@@ -1,5 +1,5 @@
 ---
-author: timothy.thompson@yale.edu
+author: [tt434, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -8,11 +8,11 @@ category: Entity extraction
 
 -   **[Globes](../../concepts/supertypes/globes.md)**  
 
--   **[Kits](../../concepts/supertypes/kits.md)**  
-
 -   **[Models](../../concepts/supertypes/models.md)**  
 
 -   **[Realia](../../concepts/supertypes/realia.md)**  
+
+-   **[Toys and Games](../../concepts/supertypes/toysandgames.md)**  
 
 
 **Parent topic:**[LUX supertype taxonomy](../../concepts/supertypes/supertypes.md)

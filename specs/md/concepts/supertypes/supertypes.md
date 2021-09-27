@@ -1,6 +1,18 @@
+---
+author: tt434
+---
+
 # LUX supertype taxonomy
 
-1.  [ArchivalFormats](../../concepts/supertypes/archivalformats.md)  
+The Linked Art profile of the [CIDOC Conceptual Reference Model \(CRM\)](http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html) includes a limited number of core classes; these can be refined by referencing terms from a taxonomy or classification scheme. Because record-level entities can be of many types, a *supertype* scheme has been developed for use in LUX.
+
+The LUX supertype scheme is divided into two levels: *types* and *formats*. Types represent the mode of expression of a resource \(textual, visual, audible, etc.\), whereas formats can be thought of as specific instances of a type: for example, a *book* is an instance or format of *textual work*. Some formats, such as *Geospatial Data* are instances of two different types: *Datasets* and *Cartography*.
+
+MARC-to-Linked Art supertype mappings are done at the level of the most specific format, with type and broader format relations inferred from the hierarchy.
+
+
+
+1.  [Collection formats](../../concepts/supertypes/collectionformats.md)  
 
 2.  [AudioFormats](../../concepts/supertypes/audioformats.md)  
 
@@ -21,7 +33,5 @@
 10. [TextualFormats](../../concepts/supertypes/textualformats.md)  
 
 
-**Parent topic:**[LUX top-level entities](../../concepts/lux_top-level_entities.md)
-
-**Previous topic:**[Record-level entities](../../concepts/record_level_entities.md)
+**Parent topic:**[Record-level entities](../../concepts/record_level_entities.md)
 

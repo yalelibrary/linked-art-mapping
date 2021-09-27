@@ -1,4 +1,10 @@
+---
+author: tt434
+---
+
 # SoftwareFormats
+
+-   **[SoftwareApplications](../../concepts/supertypes/softwareapplications.md)**  
 
 -   **[Databases](../../concepts/supertypes/databases.md)**  
 

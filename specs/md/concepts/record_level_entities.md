@@ -1,17 +1,30 @@
+---
+author: [tt434, tt434]
+---
+
 # Record-level entities
 
-1.  [Digital Objects](../concepts/record_level_digital_objects.md)  
+Entities that correspond to resources held by the library \(books, journals, databases, archival collections, etc.\).
 
-2.  [Physical Objects](../concepts/physical_objects.md)  
+The base class for record-level entities is determined by the supertype mapping. When a record-level entity is mapped to more than one supertype format, and the formats have different base classes, the following order of priority is applied:
 
-3.  [Sets](../concepts/record_level_sets.md)  
+1.  `Set`
 
-4.  [Textual Works](../concepts/textual_works.md)  
+2.  `DigitalObject`
 
-5.  [Visual Works](../concepts/visual_works.md)  
+3.  `LinguisticObject`
+
+4.  `VisualItem`
+
+5.  `HumanMadeObject`
+
+
+YUL supertypes with a base class of `HumanMadeObject` must follow the concept/carrier model and point to a `VisualItem` where the supertype and any subjects are assigned.
+
+1.  [LUX supertype taxonomy](../concepts/supertypes/supertypes.md)  
 
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)
 
-**Next topic:**[LUX supertype taxonomy](../concepts/supertypes/supertypes.md)
+**Next topic:**[Related entities](../concepts/related_entities.md)
 

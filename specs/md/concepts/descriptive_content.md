@@ -1,3 +1,7 @@
+---
+author: tt434
+---
+
 # Descriptive content
 
 Content that represents attributes of an entity \(for example: identifiers, notes, publication information\).
