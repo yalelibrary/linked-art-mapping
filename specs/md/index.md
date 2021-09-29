@@ -65,7 +65,6 @@
             -   [Digital Objects](concepts/related_digital_objects.md)
             -   [Sets](concepts/related_sets.md)
 -   [Descriptive content](concepts/descriptive_content.md)
-    -   Descriptive content in LUX
     -   [Identifiers](concepts/identifiers.md)
         -   [Orbis BIB ID](tasks/identifiers/orbis_bib_id.md)
         -   [Library of Congress Control Number \(LCCN\)](tasks/identifiers/library_of_congress_control_number_lccn.md)

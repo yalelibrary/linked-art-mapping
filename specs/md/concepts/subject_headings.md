@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [tt434, tt434, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -11,73 +11,111 @@ Resources extracted from MARC 6XX entries.
 ## Source data
 
 ```
-{
-  "name": "SubjectHeadings",
-  "sampleBibs": [9564880, 13146411],
-  "fieldSpec": "60004abcdegjqvxyz:61004abcdegvxyz:61104acdegjnquvxyz:6300adfhklmnoprstvxyz:65004abcdegvxyz:65104abcdfghvxyz:65504abcvxyz:69004abcdegvxyz:69104abcdfgh:69204abcdegjq:69304abcdeg:69404acdegjnqu:6950adfhklmnoprst:75104abcdfgh:75204abcdfghvxyz",
-  "trimPunctuation": true
-}
+---
+name: SubjectHeadings
+sampleBibs:
+  - 9564880
+  - 13146411
+fieldSpec:
+  - 60004abcdegjqvxyz
+  - 61004abcdegvxyz
+  - 61104acdegjnquvxyz
+  - 6300adfhklmnoprstvxyz
+  - 65004abcdegvxyz
+  - 65104abcdfghvxyz
+  - 65504abcvxyz
+  - 69004abcdegvxyz
+  - 69104abcdfgh
+  - 69204abcdegjq
+  - 69304abcdeg
+  - 69404acdegjnqu
+  - 6950adfhklmnoprst
+  - 75104abcdfgh
+  - 75204abcdfghvxyz
+trimPunctuation: true
 ```
 
-1.  Generate and store the top-level resources, identified by an IRI.
+1.  Generate and store the top-level concept resources, identified by an IRI.
 
-    Variable values are supplied for:
+2.  Create top-level concepts by normalizing and merging the string value of each complete subject heading \(6XX field plus all subfields\).
 
-    -   `root -> id` **\[concept IRI\]**
-    -   `root -> type`
-    -   `root -> _label` **\[label of precoordinated subject heading, joined with double hyphens\]**
-    -   `root -> identified_by -> content` **\[same as `_label`\]**
-    -   `root -> created_by -> influenced_by -> id` **\[concept IRI for facet concept\]**
-    -   `root -> equivalent -> id` **\[reference to IRI from `$0`, if applicable\]**
-    -   `root -> equivalent -> type` **\[reference to resource type from `$0`, if applicable\]**
-    -   `root -> created_by -> influenced_by -> type`
-    -   `root -> created_by -> influenced_by -> _label`
-2.  Output the string value of the main heading \(preceding any subdivisions\) according to the table below.
+    |JSON structure|Description|
+    |--------------|-----------|
+    |`root → id`|Concept IRI|
+    |`root → type`|Semantic type of concept. Default value: `Type`|
+    |`root → _label`|Label of precoordinated subject heading, joined with double hyphens|
+    |`root → equivalent → id`|Reference to IRI from `$0`, if applicable|
+    |`root → equivalent → type`|Reference to resource type from `$0`, if applicable|
+    |`root → identified_by → content`|Same as `root → _label`|
+    |`root → created_by → influenced_by → id`|Concept IRI for facet concept|
+    |`root → created_by → influenced_by → type`|Semantic type of concept facet. See the [facet type mapping](subject_headings.md#facet_types_table) below.|
+    |`root → created_by → influenced_by → _label`|Facet label|
 
-3.  Join the subfields with double hyphens \(`--`\).
+3.  Within the top-level resource for the full subject heading, model each subdivision in the heading as a facet.
 
-    |MARC tag|Subfields|
-    |--------|---------|
-    |**600**|abcdgjq|
-    |**610**|abcdg|
-    |**611**|acdegnqu|
-    |**630**|adfhklmnoprst|
-    |**650**|abcdg|
-    |**651**|abcdfgh|
-    |**690**|abcdg|
-    |**691**|abcdfgh|
-    |**692**|abcdgjq|
-    |**693**|abcdg|
-    |**694**|acdgnqu|
-    |**695**|adfhklmnoprst|
+4.  Generate a top-level resource for each unique facet.
 
-4.  Within the top-level resource for the full subject heading, model each subdivision in the heading as a facet.
+    1.  Create facets by normalizing and merging the string value \(label\) of each facet resource according to the facet value mapping table below.
 
-    1.  Join the string values of the facets with double hyphens \(`--`\) to output the `_label` and `content` values of the full precoordinated heading.
+    2.  For each entry, join the subfields with a whitespace character.
 
-    2.  Generate a top-level resource for each unique facet.
+        |MARC tag|Subfields|
+        |--------|---------|
+        |6XX|v|
+        |6XX|x|
+        |6XX|y|
+        |6XX|z|
+        |600|abcdgjq|
+        |610|abcdg|
+        |611|acdegnqu|
+        |630|adfhklmnoprst|
+        |650|abcdg|
+        |651|abcdfgh|
+        |690|abcdg|
+        |691|abcdfgh|
+        |692|abcdgjq|
+        |693|abcdg|
+        |694|acdgnqu|
+        |695|adfhklmnoprst|
 
-    3.  Determine the `type` value for each facet from the tag and subfield values in MARC according to the table below.
+    3.  Determine the `type` value for each facet from the tag and subfield values in MARC according to the facet type mapping table below.
 
-    4.  Add an embedded reference to the facet resource within the top-level resource for the full heading.
+        |MARC values|Type|
+        |-----------|----|
+        |6XXvx|Type|
+        |6XXy|Period|
+        |6XXz|Place|
+        |600abcdgjq|Person|
+        |610abcdg|Group|
+        |611acdegnqu|Group|
+        |630adfhklmnoprst|LinguisticObject|
+        |650abcdg|Type|
+        |651abcdfgh|Place|
+        |690abcdg|Type|
+        |691abcdfgh|Place|
+        |692abcdgjq|Person|
+        |693abcdg|Group|
+        |694acdegnqu|Group|
+        |695adfhklmnoprst|LinguisticObject|
 
-    |MARC values|Type|
-    |-----------|----|
-    |**6XXvx**|Type|
-    |**6XXy**|Period|
-    |**6XXz**|Place|
-    |**600abcdgjq**|Person|
-    |**610abcdg**|Group|
-    |**611acdegnqu**|Group|
-    |**630adfhklmnoprst**|LinguisticObject|
-    |**650abcdg**|Type|
-    |**651abcdfgh**|Place|
-    |**690abcdg**|Type|
-    |**691abcdfgh**|Place|
-    |**692abcdgjq**|Person|
-    |**693abcdg**|Group|
-    |**694acdegnqu**|Group|
-    |**695adfhklmnoprst**|LinguisticObject|
+    ```
+    {
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://lux.collections.yale.edu/data/event/92a599a2-2117-43f9-be3e-6e07f36cb2a5",
+      "type": "Period",
+      "_label": "2nd century",
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "2nd century"
+        }
+      ]
+    }
+    ```
+
+5.  Join the string values of the facets with double hyphens \(`--`\) to output the `_label` and `content` values of the full precoordinated heading.
+
+6.  Add an embedded reference to the facet resources within the top-level resource for the full heading.
 
     `9564880`
 
@@ -126,7 +164,7 @@ Resources extracted from MARC 6XX entries.
     }
     ```
 
-5.  If a subject heading in MARC includes a `$0` with an IRI, output an `equivalent` reference.
+7.  If a 6XX field in MARC includes a `$0` with an IRI, output an `equivalent` reference.
 
     `13146411`
 
@@ -173,13 +211,14 @@ Resources extracted from MARC 6XX entries.
     }
     ```
 
-6.  In each referring record-level resource \(`LinguisticObject`, `VisualItem`, or `DigitalObject`\), add an embedded reference to the Concept entity.
+8.  In each referring record-level resource \(`LinguisticObject`, `VisualItem`, or `DigitalObject`\), add an embedded reference to the Concept entity.
 
-    Variable values are supplied for:
+    |JSON structure|Description|
+    |--------------|-----------|
+    |`root → about → id`|Must match the `id` of the top-level resource|
+    |`root → about → type`|Must match the `type` of the top-level resource|
+    |`root → about → _label`|Must match the `_label` of the top-level resource|
 
-    -   `root -> about -> id` **\[must match the `id` of the top-level resource\]**.
-    -   `root -> about -> type` **\[must match the `type` of the top-level resource\]**.
-    -   `root -> about -> _label` **\[must match the `_label` of the top-level resource\]**.
     `9564880`
 
     ```
@@ -200,5 +239,5 @@ Resources extracted from MARC 6XX entries.
     ```
 
 
-**Parent topic:**[Concepts](../concepts/concepts.md)
+**Previous topic:**[856 \(Electronic Location and Access\)](../tables/856_mfhd_table.md)
 
