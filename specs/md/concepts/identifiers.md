@@ -1,12 +1,12 @@
 ---
-author: tt434
+author: [timothy.thompson@yale.edu, tt434]
 ---
 
 # Identifiers
 
 Standard alphanumeric values used to uniquely identify a resource.
 
-Seven identifier fields are currently mapped for LUX.
+Six identifier types are currently mapped for LUX.
 
 -   **[Orbis BIB ID](../tasks/identifiers/orbis_bib_id.md)**  
 The Orbis BIB ID is a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.

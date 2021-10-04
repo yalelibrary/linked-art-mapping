@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -21,7 +21,7 @@ Digital objects are a special case because they can function as either conceptua
 
 1.  [Record-level entities](../concepts/record_level_entities.md)  
 Entities that correspond to resources held by the library \(books, journals, databases, archival collections, etc.\).
-2.  [Related entities](../concepts/related_entities.md)  
+2.  [Related entities](../tasks/related_entities.md)  
 Entities that represent the people, places, concepts, etc., that are connected to record-level resources.
 
 **Parent topic:**[Entity extraction](../concepts/entity_extraction.md)

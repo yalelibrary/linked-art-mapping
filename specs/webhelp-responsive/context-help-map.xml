@@ -79,12 +79,14 @@
                path="concepts/supertypes/newspapers.html"/>
    <appContext helpID="supertype_TextualData"
                path="concepts/supertypes/textualdata.html"/>
-   <appContext helpID="related_entities" path="concepts/related_entities.html"/>
+   <appContext helpID="related_entities" path="tasks/related_entities.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
-   <appContext helpID="subject_headings" path="concepts/subject_headings.html"/>
+   <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
    <appContext helpID="classification_numbers"
-               path="concepts/classification_numbers.html"/>
+               path="tasks/concepts/classification_numbers.html"/>
    <appContext helpID="events" path="concepts/events.html"/>
+   <appContext helpID="chronological_facets"
+               path="tasks/events/chronological_facets.html"/>
    <appContext helpID="groups" path="concepts/groups.html"/>
    <appContext helpID="people" path="concepts/people.html"/>
    <appContext helpID="places" path="concepts/places.html"/>
@@ -105,10 +107,50 @@
    <appContext helpID="publisher_or_distributor_number"
                path="tasks/identifiers/publisher_or_distributor_number.html"/>
    <appContext helpID="oclc_numbers" path="tasks/identifiers/oclc_numbers.html"/>
-   <appContext helpID="oclc_number" path="tasks/identifiers/oclc_number.html"/>
-   <appContext helpID="local_oclc_number"
-               path="tasks/identifiers/local_oclc_number.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
+   <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
+   <appContext helpID="reference_600_table_bib" path="tables/600_bib_table.html"/>
+   <appContext helpID="reference_610_table_bib" path="tables/610_bib_table.html"/>
+   <appContext helpID="reference_611_table_bib" path="tables/611_bib_table.html"/>
+   <appContext helpID="reference_630_table_bib" path="tables/630_bib_table.html"/>
+   <appContext helpID="reference_650_table_bib" path="tables/650_bib_table.html"/>
+   <appContext helpID="reference_651_table_bib" path="tables/651_bib_table.html"/>
+   <appContext helpID="reference_bib_653_table_bib" path="tables/653_bib_table.html"/>
+   <appContext helpID="reference_655_table_bib" path="tables/655_bib_table.html"/>
+   <appContext helpID="reference_656_table_bib" path="tables/656_bib_table.html"/>
+   <appContext helpID="reference_657_table_bib" path="tables/657_bib_table.html"/>
+   <appContext helpID="reference_662_table_bib" path="tables/662_bib_table.html"/>
+   <appContext helpID="reference_688_table_bib" path="tables/688_bib_table.html"/>
+   <appContext helpID="reference_bib_690_table_bib" path="tables/690_bib_table.html"/>
+   <appContext helpID="reference_bib_691_table_bib" path="tables/691_bib_table.html"/>
+   <appContext helpID="reference_bib_692_table_bib" path="tables/692_bib_table.html"/>
+   <appContext helpID="reference_bib_693_table_bib" path="tables/693_bib_table.html"/>
+   <appContext helpID="reference_bib_694_table_bib" path="tables/694_bib_table.html"/>
+   <appContext helpID="reference_bib_695_table_bib" path="tables/695_bib_table.html"/>
+   <appContext helpID="classification_numbers"
+               path="tasks/concepts/classification_numbers.html"/>
+   <appContext helpID="reference_050_table_bib" path="tables/050_bib_table.html"/>
+   <appContext helpID="reference_bib_090_table_bib" path="tables/090_bib_table.html"/>
+   <appContext helpID="chronological_facets"
+               path="tasks/events/chronological_facets.html"/>
+   <appContext helpID="reference_600_table_bib" path="tables/600_bib_table.html"/>
+   <appContext helpID="reference_610_table_bib" path="tables/610_bib_table.html"/>
+   <appContext helpID="reference_611_table_bib" path="tables/611_bib_table.html"/>
+   <appContext helpID="reference_630_table_bib" path="tables/630_bib_table.html"/>
+   <appContext helpID="reference_650_table_bib" path="tables/650_bib_table.html"/>
+   <appContext helpID="reference_651_table_bib" path="tables/651_bib_table.html"/>
+   <appContext helpID="reference_bib_653_table_bib" path="tables/653_bib_table.html"/>
+   <appContext helpID="reference_655_table_bib" path="tables/655_bib_table.html"/>
+   <appContext helpID="reference_656_table_bib" path="tables/656_bib_table.html"/>
+   <appContext helpID="reference_657_table_bib" path="tables/657_bib_table.html"/>
+   <appContext helpID="reference_662_table_bib" path="tables/662_bib_table.html"/>
+   <appContext helpID="reference_688_table_bib" path="tables/688_bib_table.html"/>
+   <appContext helpID="reference_bib_690_table_bib" path="tables/690_bib_table.html"/>
+   <appContext helpID="reference_bib_691_table_bib" path="tables/691_bib_table.html"/>
+   <appContext helpID="reference_bib_692_table_bib" path="tables/692_bib_table.html"/>
+   <appContext helpID="reference_bib_693_table_bib" path="tables/693_bib_table.html"/>
+   <appContext helpID="reference_bib_694_table_bib" path="tables/694_bib_table.html"/>
+   <appContext helpID="reference_bib_695_table_bib" path="tables/695_bib_table.html"/>
    <appContext helpID="voyager_bib_id" path="tasks/identifiers/orbis_bib_id.html"/>
    <appContext helpID="reference_bib_001_table_bib" path="tables/001_bib_table.html"/>
    <appContext helpID="library_of_congress_control_number_lccn"
@@ -123,8 +165,9 @@
    <appContext helpID="publisher_or_distributor_number"
                path="tasks/identifiers/publisher_or_distributor_number.html"/>
    <appContext helpID="reference_028_table_bib" path="tables/028_bib_table.html"/>
-   <appContext helpID="oclc_number" path="tasks/identifiers/oclc_number.html"/>
+   <appContext helpID="oclc_numbers" path="tasks/identifiers/oclc_numbers.html"/>
    <appContext helpID="reference_bib_035_table_bib" path="tables/035_bib_table.html"/>
+   <appContext helpID="reference_bib_079_table_bib" path="tables/079_bib_table.html"/>
    <appContext helpID="marc_to_linked_art_glossary"
                path="glossary/marc_to_linked_art_glossary.html"/>
    <appContext helpID="entify" path="glossary/entification.html"/>

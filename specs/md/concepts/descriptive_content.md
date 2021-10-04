@@ -1,5 +1,5 @@
 ---
-author: tt434
+author: timothy.thompson@yale.edu
 ---
 
 # Descriptive content
