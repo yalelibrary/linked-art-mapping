@@ -79,6 +79,13 @@
                path="concepts/supertypes/newspapers.html"/>
    <appContext helpID="supertype_TextualData"
                path="concepts/supertypes/textualdata.html"/>
+   <appContext helpID="name_title_entries" path="concepts/name_title_entries.html"/>
+   <appContext helpID="people_with_works"
+               path="tasks/name-title/people_with_works.html"/>
+   <appContext helpID="groups_with_works"
+               path="tasks/name-title/groups_with_works.html"/>
+   <appContext helpID="title_entries" path="concepts/title_entries.html"/>
+   <appContext helpID="standalone_works" path="concepts/standalone_works.html"/>
    <appContext helpID="related_entities" path="tasks/related_entities.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
@@ -88,6 +95,10 @@
    <appContext helpID="chronological_facets"
                path="tasks/events/chronological_facets.html"/>
    <appContext helpID="groups" path="concepts/groups.html"/>
+   <appContext helpID="top_level_group_entities"
+               path="concepts/top_level_group_entities.html"/>
+   <appContext helpID="groups_as_agents" path="concepts/groups_as_agents.html"/>
+   <appContext helpID="groups_as_subjects" path="concepts/groups_as_subjects.html"/>
    <appContext helpID="people" path="concepts/people.html"/>
    <appContext helpID="places" path="concepts/places.html"/>
    <appContext helpID="provenance_activities"

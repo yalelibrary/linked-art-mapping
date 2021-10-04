@@ -1,5 +1,5 @@
 ---
-author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
 ---
@@ -11,15 +11,15 @@ Formatted number used for sound recordings, printed music, other music-related m
 ## Source data
 
 ```
-
-{
-  "name": "PublisherOrDistributorNumber",
-  "sampleBibs": [4, 3802861, 15589896],
-  "fieldSpec": "028abq",
-  "trimPunctuation": false,
-  "scriptInclusion": "NONE"
-}        		        		
-        		
+---
+name: PublisherOrDistributorNumber
+sampleBibs:
+  - 4
+  - 3802861
+  - 15589896
+fieldSpec: 028abq
+trimPunctuation: false
+scriptInclusion: NONE
 ```
 
 ## Processing steps and output

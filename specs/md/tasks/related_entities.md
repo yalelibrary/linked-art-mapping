@@ -1,5 +1,5 @@
 ---
-author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -17,13 +17,9 @@ fieldSpec:
   - 10004abcdegjq
   - 11004abcdeg
   - 11104acdegjnqu
-  - 1300adfhklmnoprst
-  - 2400adfghklmnoprs
-  - 440a
   - 60004abcdegjqvxyz
   - 61004abcdegvxyz
   - 61104acdegjnquvxyz
-  - 6300adfhklmnoprstvxyz
   - 65004abcdegvxyz
   - 65104abcdfghvxyz 
   - 65504abcvxyz
@@ -32,32 +28,15 @@ fieldSpec:
   - 69204abcdegjq
   - 69304abcdeg
   - 69404acdegjnqu
-  - 6950adfhklmnoprst
-  - 7000abcdgjq
-  - 7100abcdg
+  - 7000abcdegjq
+  - 7100abcdeg
   - 71104acdegjnquvxyz
-  - 7300adfhklmnoprst
   - 75104abcdfgh
-  - 75204abcdfghvxyz
-  - 760ait
-  - 762ait
-  - 765at
-  - 767at
-  - 770at
-  - 772at
-  - 773at
-  - 774at
-  - 775at
-  - 776at
-  - 777at
-  - 780at
-  - 785at
-  - 786at
-  - 787at8000abcdgjq
+  - 75204abcdfghvxyz  
   - 8100abcdg
   - 81104acdegjnquvxyz
-  - 8300adfhklmnoprst
-
+trimPunctuation: true
+scriptInclusion: NONE
 ```
 
 ## Processing information
@@ -76,7 +55,7 @@ Entities that represent what a resource is about.
 -   **[Events](../concepts/events.md)**  
 Entities that represent time periods and/or discrete events related to a record-level resource.
 -   **[Groups](../concepts/groups.md)**  
-
+Entities that represent groups of people functioning collectively \(e.g., organizations and meetings/conferences\).
 -   **[People](../concepts/people.md)**  
 
 -   **[Places](../concepts/places.md)**  

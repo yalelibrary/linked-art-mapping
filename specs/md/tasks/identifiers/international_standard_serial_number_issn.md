@@ -1,5 +1,5 @@
 ---
-author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
 ---
@@ -11,15 +11,15 @@ The International Standard Serial Number is a unique identification number assig
 ## Source data
 
 ```
-
-{
-  "name": "Issn",
-  "sampleBibs": [4, 3802861, 15589896],
-  "fieldSpec": "022ayz",
-  "trimPunctuation": false,
-  "scriptInclusion": "NONE"
-}        		        		
-        		
+---
+name: Issn
+sampleBibs:
+  - 4
+  - 3802861
+  - 15589896
+fieldSpec: 022ayz
+trimPunctuation: false
+scriptInclusion: NONE
 ```
 
 ## Processing steps and output

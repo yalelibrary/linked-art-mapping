@@ -1,5 +1,5 @@
 ---
-author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
 ---
@@ -11,13 +11,15 @@ The Library of Congress Control Number is a serially based identifier assigned t
 ## Source data
 
 ```
-{
-  "name": "Lccn",
-  "sampleBibs": [4, 3802861, 15589896],
-  "fieldSpec": "010a",
-  "trimPunctuation": false,
-  "scriptInclusion": "NONE"
-}
+---
+name: Lccn
+sampleBibs:
+  - 4
+  - 3802861
+  - 15589896
+fieldSpec: 010a
+trimPunctuation: false
+scriptInclusion: NONE
 ```
 
 ## Processing steps and output

@@ -1,5 +1,7 @@
 ---
-author: [timothy.thompson@yale.edu, tt434]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
+category: Entity extraction
 ---
 
 # Chronological facets
@@ -35,14 +37,19 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Create top-level entities by normalizing and merging the string value of each distinct chronological facet.
+1.  Generate and store the top-level chronological facets, each identified by an IRI.
 
-    |JSON structure|Description|
-    |--------------|-----------|
-    |`root → id`|Concept IRI|
-    |`root → type`|Semantic type of entity. Default value: `Period`|
-    |`root → _label`|Label of facet|
-    |`root → identified_by → content`|Same as `root → _label`|
+    1.  Create a key for merging.
+
+    2.  Normalize and merge each unique string value.
+
+    |JSON structure|Description|Default|
+    |--------------|-----------|-------|
+    |`root → id`|Resource IRI| |
+    |`root → type`|Semantic type of entity|`Period`|
+    |`root → _label`|Label of facet| |
+    |`root → identified_by → type`| |`Name`|
+    |`root → identified_by → content`|Same as `root → _label`| |
 
     `12164046`
 
@@ -63,11 +70,11 @@ scriptInclusion: NONE
 
 2.  Add an embedded reference to the facet resource within the top-level resource for each referring subject heading.
 
-    |JSON structure|Description|
-    |--------------|-----------|
-    |`root → created_by → influenced_by → id`|Must match the `id` of the top-level resource|
-    |`root → type`|Must match the `type` of the top-level resource. Default value: `Period`|
-    |`root → _label`|Must match the `_label` of the top-level resource|
+    |JSON structure|Description|Default|
+    |--------------|-----------|-------|
+    |`root → created_by → influenced_by → id`|Must match the `id` of the top-level resource| |
+    |`root → type`|Must match the `type` of the top-level resource|`Period`|
+    |`root → _label`|Must match the `_label` of the top-level resource| |
 
     `12164046`
 

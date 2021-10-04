@@ -1,5 +1,5 @@
 ---
-author: [timothy.thompson@yale.edu, tt434]
+author: [tt434, timothy.thompson@yale.edu, tt434]
 ---
 
 # Identifiers

@@ -1,5 +1,5 @@
 ---
-author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
 ---
@@ -11,15 +11,16 @@ The International Standard Book Number \(ISBN\) is a publisher-assigned commerci
 ## Source data
 
 ```
-
-{
-  "name": "Isbn",
-  "sampleBibs": [693, 8827, 3802857, 13101718],
-  "fieldSpec": "020aqz",
-  "trimPunctuation": false,
-  "scriptInclusion": "NONE"
-}        		        		
-        		
+---
+name: Isbn
+sampleBibs:
+  - 693
+  - 8827
+  - 3802857
+  - 13101718
+fieldSpec: 020aqz
+trimPunctuation: false
+scriptInclusion: NONE
 ```
 
 ## Processing steps and output
