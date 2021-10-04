@@ -1,5 +1,5 @@
 ---
-author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
 ---
@@ -11,13 +11,15 @@ The Orbis BIB ID is a serially based identifier assigned to MARC 21 Bibliographi
 ## Source data
 
 ```
-{
-  "name": "OrbisBibId",
-  "sampleBibs": [2, 3, 4],
-  "fieldSpec": "001",
-  "trimPunctuation": false,
-  "scriptInclusion": "NONE"
-}
+---
+name: OrbisBibId
+sampleBibs:
+  - 2
+  - 3
+  - 4
+fieldSpec: 001
+trimPunctuation: false
+scriptInclusion: NONE
 ```
 
 ## Processing steps and output

@@ -1,5 +1,5 @@
 ---
-author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -33,15 +33,19 @@ scriptInclusion: NONE
 
 1.  Generate and store the top-level concept resources, each identified by an IRI.
 
-2.  Create top-level concepts by normalizing and merging the string value of each unique classification number.
+    1.  Create a key for merging.
 
-    1.  Replace any punctuation characters that are *not* a period \(`.`\) with a whitespace character.
+    2.  Replace any punctuation characters that are *not* a period \(`.`\) with a whitespace character.
 
-    |JSON structure|Description|
-    |--------------|-----------|
-    |`root → id`|Concept IRI|
-    |`root → _label`|Label of classification number|
-    |`root → identified_by → content`|Same as `root → _label`|
+    3.  Normalize and merge each unique string value.
+
+    |JSON structure|Description|Default|
+    |--------------|-----------|-------|
+    |`root → id`|Concept IRI| |
+    |`root → type`| |`Type`|
+    |`root → _label`|Label of classification number| |
+    |`root → identified_by → type`| |`Identifier`|
+    |`root → identified_by → content`|Same as `root → _label`| |
 
     `907498`
 
@@ -60,14 +64,15 @@ scriptInclusion: NONE
     }
     ```
 
-3.  In each referring record-level resource \(`LinguisticObject`, `VisualItem`, or `DigitalObject`\), add an embedded reference to the Concept entity.
+2.  In each referring record-level resource \(`LinguisticObject`, `VisualItem`, or `DigitalObject`\), add an embedded reference to the Concept entity.
 
     1.  The embedded reference should follow the classification of the resource in the same `classified_as` array.
 
-    |JSON structure|Description|
-    |--------------|-----------|
-    |`root → classified_as → id`|Must match the `id` of the top-level resource|
-    |`root → classified_as → _label`|Must match the `_label` of the top-level resource|
+    |JSON structure|Description|Default|
+    |--------------|-----------|-------|
+    |`root → classified_as → id`|Must match the `id` of the top-level resource| |
+    |`root → classified_as → type`| |`Type`|
+    |`root → classified_as → _label`|Must match the `_label` of the top-level resource| |
 
     `907498`
 
