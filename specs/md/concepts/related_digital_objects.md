@@ -1,8 +1,8 @@
 ---
-author: tt434
+author: timothy.thompson@yale.edu
 ---
 
 # Digital Objects
 
-**Parent topic:**[Related entities](../concepts/related_entities.md)
+**Parent topic:**[Related entities](../tasks/related_entities.md)
 

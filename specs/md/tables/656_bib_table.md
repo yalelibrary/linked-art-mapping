@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 source: Library of Congress MARC Standards Office, https://www.loc.gov/marc/bibliographic/bd656.html
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: [MARC 21 reference, Tables]
@@ -28,4 +28,11 @@ Index term that is descriptive of the occupation \(including avocation\) reflect
 **Previous topic:**[655 \(Index Term-Genre/Form\)](../tables/655_bib_table.md)
 
 **Next topic:**[657 \(Index Term-Function\)](../tables/657_bib_table.md)
+
+**Related information**  
+
+
+[Subject headings](../tasks/concepts/subject_headings.md)
+
+[Chronological facets](../tasks/events/chronological_facets.md)
 

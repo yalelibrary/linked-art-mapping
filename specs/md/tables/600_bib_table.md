@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 source: Library of Congress MARC Standards Office, https://www.loc.gov/marc/bibliographic/bd600.html
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: [MARC 21 reference, Tables]
@@ -47,4 +47,11 @@ Subject added entry in which the entry element is a personal name.
 **Previous topic:**[590](../tables/590_bib_table.md)
 
 **Next topic:**[610 \(Subject Added Entry-Corporate Name\)](../tables/610_bib_table.md)
+
+**Related information**  
+
+
+[Subject headings](../tasks/concepts/subject_headings.md)
+
+[Chronological facets](../tasks/events/chronological_facets.md)
 

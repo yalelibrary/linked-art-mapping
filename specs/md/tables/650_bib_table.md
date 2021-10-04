@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 source: Library of Congress MARC Standards Office, https://www.loc.gov/marc/bibliographic/bd650.html
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: [MARC 21 reference, Tables]
@@ -33,4 +33,11 @@ Subject added entry in which the entry element is a topical term.
 **Previous topic:**[630 \(Subject Added Entry-Uniform Title\)](../tables/630_bib_table.md)
 
 **Next topic:**[651 \(Subject Added Entry-Geographic Name\)](../tables/651_bib_table.md)
+
+**Related information**  
+
+
+[Subject headings](../tasks/concepts/subject_headings.md)
+
+[Chronological facets](../tasks/events/chronological_facets.md)
 

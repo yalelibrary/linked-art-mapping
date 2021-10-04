@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 source: Library of Congress MARC Standards Office, https://www.loc.gov/marc/bibliographic/bd657.html
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: [MARC 21 reference, Tables]
@@ -27,4 +27,11 @@ Index term that describes the activity or function that generated the described 
 **Previous topic:**[656 \(Index Term-Occupation\)](../tables/656_bib_table.md)
 
 **Next topic:**[662 \(Subject Added Entry-Hierarchical Place Name\)](../tables/662_bib_table.md)
+
+**Related information**  
+
+
+[Subject headings](../tasks/concepts/subject_headings.md)
+
+[Chronological facets](../tasks/events/chronological_facets.md)
 

@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
 ---
@@ -11,24 +11,32 @@ System number used by OCLC to manage records in the WorldCat system.
 ## Source data
 
 ```
-
-{
-  "name": "OclcNumber",
-  "sampleBibs": [4, 3802861, 907208, 15589896],
-  "fieldSpec": "035az:079az",
-  "trimPunctuation": false,
-  "scriptInclusion": "NONE"
-}        		
-        		
+---
+name: OclcNumber
+sampleBibs:
+  - 4
+  - 2395
+  - 3802861
+  - 907208
+  - 15589896
+fieldSpec: 
+  - 035az
+  - 079az
+trimPunctuation: false
+scriptInclusion: NONE
 ```
 
 ## Processing steps and output
 
-1.  Apply processing steps for [System Control Number \(OCLC Number\)](oclc_number.md) and [Local System Control Number \(OCLC Number\)](local_oclc_number.md).
+1.  Skip if the source data field contains a `$z` \(canceled/invalid control number\).
 
-2.  Dedupe values.
+2.  Get value of `$a`.
 
-3.  Output JSON-LD with the OCLC Number:
+    1.  Normalize `$a` \(lower case and remove punctuation characters\) to test the value.
+
+    2.  If the normalized value of `$a` starts with "oc", return the original value.
+
+    3.  Else, skip the source data field.
 
 
 `2395`
@@ -106,10 +114,12 @@ System number used by OCLC to manage records in the WorldCat system.
 }
 ```
 
--   **[System Control Number \(OCLC Number\)](../../tasks/identifiers/oclc_number.md)**  
-System number used by OCLC to manage records in the WorldCat system.
--   **[Local System Control Number \(OCLC Number\)](../../tasks/identifiers/local_oclc_number.md)**  
-System number used by OCLC to manage records in the WorldCat system.
-
 **Parent topic:**[Identifiers](../../concepts/identifiers.md)
+
+**Related information**  
+
+
+[035 \(System Control Number\)](../../tables/035_bib_table.md)
+
+[079](../../tables/079_bib_table.md)
 

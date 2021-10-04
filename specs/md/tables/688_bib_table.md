@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 source: Library of Congress MARC Standards Office, https://www.loc.gov/marc/bibliographic/bd688.html
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: [MARC 21 reference, Tables]
@@ -26,4 +26,11 @@ Subject added entry in which the entity type of the entry element is unspecified
 **Previous topic:**[662 \(Subject Added Entry-Hierarchical Place Name\)](../tables/662_bib_table.md)
 
 **Next topic:**[690](../tables/690_bib_table.md)
+
+**Related information**  
+
+
+[Subject headings](../tasks/concepts/subject_headings.md)
+
+[Chronological facets](../tasks/events/chronological_facets.md)
 

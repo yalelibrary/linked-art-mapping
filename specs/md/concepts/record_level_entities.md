@@ -1,5 +1,5 @@
 ---
-author: [tt434, tt434]
+author: [timothy.thompson@yale.edu, tt434]
 ---
 
 # Record-level entities
@@ -26,5 +26,5 @@ YUL supertypes with a base class of `HumanMadeObject` must follow the concept/ca
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)
 
-**Next topic:**[Related entities](../concepts/related_entities.md)
+**Next topic:**[Related entities](../tasks/related_entities.md)
 

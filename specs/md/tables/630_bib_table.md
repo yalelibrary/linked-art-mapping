@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 source: Library of Congress MARC Standards Office, https://www.loc.gov/marc/bibliographic/bd630.html
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: [MARC 21 reference, Tables]
@@ -42,4 +42,11 @@ Subject added entry in which the entry element is a uniform title.
 **Previous topic:**[611 \(Subject Added Entry-Meeting Name\)](../tables/611_bib_table.md)
 
 **Next topic:**[650 \(Subject Added Entry-Topical Term\)](../tables/650_bib_table.md)
+
+**Related information**  
+
+
+[Subject headings](../tasks/concepts/subject_headings.md)
+
+[Chronological facets](../tasks/events/chronological_facets.md)
 
