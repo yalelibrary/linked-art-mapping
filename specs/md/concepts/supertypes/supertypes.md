@@ -35,3 +35,5 @@ MARC-to-Linked Art supertype mappings are done at the level of the most specific
 
 **Parent topic:**[Record-level entities](../../concepts/record_level_entities.md)
 
+**Next topic:**[Related title entities](../../tasks/titles/related_title_entities.md)
+

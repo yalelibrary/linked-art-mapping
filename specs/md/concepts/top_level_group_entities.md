@@ -2,7 +2,7 @@
 author: [tt434, timothy.thompson@yale.edu, tt434]
 ---
 
-# Top-level group entities
+# Top-level Group entities
 
 Group entities extracted from both subject \(6XX\) and agent \(11X and 71X\) fields.
 

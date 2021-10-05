@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -12,7 +12,7 @@ Entities extracted from MARC 61X fields.
 
 ```
 ---
-name: GroupsAsAgents
+name: GroupsAsSubjects
 sampleBibs:
   - 68 # 610
   - 162 # 610
@@ -58,5 +58,5 @@ scriptInclusion: NONE
     ```
 
 
-**Parent topic:**[Top-level group entities](../concepts/top_level_group_entities.md)
+**Parent topic:**[Top-level Group entities](../concepts/top_level_group_entities.md)
 

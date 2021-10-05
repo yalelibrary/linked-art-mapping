@@ -14,7 +14,7 @@ Group entities may function either in creator/contributor \(agent\) roles or wit
 
 For Group entities that are part of name-title entries in MARC, see [Groups with works](../tasks/name-title/groups_with_works.md).
 
--   **[Top-level group entities](../concepts/top_level_group_entities.md)**  
+-   **[Top-level Group entities](../concepts/top_level_group_entities.md)**  
 Group entities extracted from both subject \(6XX\) and agent \(11X and 71X\) fields.
 
 **Parent topic:**[Related entities](../tasks/related_entities.md)
