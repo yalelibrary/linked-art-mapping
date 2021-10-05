@@ -12,11 +12,11 @@ The base class for record-level entities is determined by the supertype mapping.
 
 1.  `Set`
 
-2.  `DigitalObject`
+2.  `LinguisticObject`
 
-3.  `LinguisticObject`
+3.  `VisualItem`
 
-4.  `VisualItem`
+4.  `DigitalObject`
 
 5.  `HumanMadeObject`
 
