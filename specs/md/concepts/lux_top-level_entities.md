@@ -21,7 +21,9 @@ Digital objects are a special case because they can function as either conceptua
 
 1.  [Record-level entities](../concepts/record_level_entities.md)  
 Entities that correspond to resources held by the library \(books, journals, databases, archival collections, etc.\).
-2.  [Related entities](../tasks/related_entities.md)  
+2.  [Work-level entities](../concepts/work_level_entities.md)  
+
+3.  [Related entities](../tasks/related_entities.md)  
 Entities that represent the people, places, concepts, etc., that are connected to record-level resources.
 
 **Parent topic:**[Entity extraction](../concepts/entity_extraction.md)

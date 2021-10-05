@@ -79,6 +79,7 @@
                path="concepts/supertypes/newspapers.html"/>
    <appContext helpID="supertype_TextualData"
                path="concepts/supertypes/textualdata.html"/>
+   <appContext helpID="work_level_entities" path="concepts/work_level_entities.html"/>
    <appContext helpID="name_title_entries" path="concepts/name_title_entries.html"/>
    <appContext helpID="people_with_works"
                path="tasks/name-title/people_with_works.html"/>

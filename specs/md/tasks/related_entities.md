@@ -69,5 +69,5 @@ Entities that represent groups of people functioning collectively \(e.g., organi
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)
 
-**Previous topic:**[Record-level entities](../concepts/record_level_entities.md)
+**Previous topic:**[Work-level entities](../concepts/work_level_entities.md)
 

@@ -53,6 +53,7 @@
                     -   [JournalsAndPeriodicals](concepts/supertypes/journalsandperiodicals.md)
                         -   [Newspapers](concepts/supertypes/newspapers.md)
                     -   [Textual Data](concepts/supertypes/textualdata.md)
+        -   [Work-level entities](concepts/work_level_entities.md)
             -   [Name-title entries](concepts/name_title_entries.md)
                 -   [People with works](tasks/name-title/people_with_works.md)
                 -   [Groups with works](tasks/name-title/groups_with_works.md)

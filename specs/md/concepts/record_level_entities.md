@@ -1,5 +1,7 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
+category: Entity extraction
 ---
 
 # Record-level entities
@@ -23,12 +25,8 @@ YUL supertypes with a base class of `HumanMadeObject` must follow the concept/ca
 
 1.  [LUX supertype taxonomy](../concepts/supertypes/supertypes.md)  
 
-2.  [Name-title entries](../concepts/name_title_entries.md)  
-
-3.  [Title entries](../concepts/title_entries.md)  
-
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)
 
-**Next topic:**[Related entities](../tasks/related_entities.md)
+**Next topic:**[Work-level entities](../concepts/work_level_entities.md)
 
