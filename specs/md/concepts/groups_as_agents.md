@@ -42,12 +42,12 @@ scriptInclusion: NONE
     |--------------|-----------|-------|
     |`root → created_by → type`|Type of the related activity|`Creation`|
     |`root → created_by → part → type`| |`Creation`|
-    |``root → created_by → part → carried_out_by → id``|IRI of the Group entity| |
-    |``root → created_by → part → carried_out_by → type``| |`Group`|
-    |``root → created_by → part → carried_out_by → _label``|Must match the label of the top-level Group entity| |
-    |``root → created_by → part → classified_as → id``|Concept IRI used to classify the role of the Group in the record-level resource| |
-    |``root → created_by → part → classified_as → type``| |`Type`|
-    |``root → created_by → part → classified_as → _label``|Label of the concept used to classify the role of the Group in the record-level resource| |
+    |`root → created_by → part → carried_out_by → id`|IRI of the Group entity| |
+    |`root → created_by → part → carried_out_by → type`| |`Group`|
+    |`root → created_by → part → carried_out_by → _label`|Must match the label of the top-level Group entity| |
+    |`root → created_by → part → classified_as → id`|Concept IRI used to classify the role of the Group in the record-level resource| |
+    |`root → created_by → part → classified_as → type`| |`Type`|
+    |`root → created_by → part → classified_as → _label`|Label of the concept used to classify the role of the Group in the record-level resource| |
 
     `12164046`
 
@@ -79,5 +79,5 @@ scriptInclusion: NONE
     ```
 
 
-**Parent topic:**[Top-level group entities](../concepts/top_level_group_entities.md)
+**Parent topic:**[Top-level Group entities](../concepts/top_level_group_entities.md)
 

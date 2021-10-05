@@ -79,6 +79,8 @@
                path="concepts/supertypes/newspapers.html"/>
    <appContext helpID="supertype_TextualData"
                path="concepts/supertypes/textualdata.html"/>
+   <appContext helpID="related_title_entities"
+               path="tasks/titles/related_title_entities.html"/>
    <appContext helpID="work_level_entities" path="concepts/work_level_entities.html"/>
    <appContext helpID="name_title_entries" path="concepts/name_title_entries.html"/>
    <appContext helpID="people_with_works"
@@ -119,6 +121,9 @@
    <appContext helpID="publisher_or_distributor_number"
                path="tasks/identifiers/publisher_or_distributor_number.html"/>
    <appContext helpID="oclc_numbers" path="tasks/identifiers/oclc_numbers.html"/>
+   <appContext helpID="titles" path="concepts/titles.html"/>
+   <appContext helpID="main_title" path="tasks/titles/main_title.html"/>
+   <appContext helpID="sorting_title" path="tasks/titles/sorting_title.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
    <appContext helpID="reference_600_table_bib" path="tables/600_bib_table.html"/>
