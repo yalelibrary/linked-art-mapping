@@ -1,10 +1,10 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
 
-# People with works
+# People with works \[draft\]
 
 ## Source data
 
@@ -27,5 +27,5 @@ sampleBibs:
 
 ## Processing steps and output
 
-**Parent topic:**[Name-title entries](../../concepts/name_title_entries.md)
+**Parent topic:**[Name-title entries \[draft\]](../../concepts/name_title_entries.md)
 

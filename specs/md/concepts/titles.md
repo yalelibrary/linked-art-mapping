@@ -15,7 +15,7 @@ Titles provide names that identify a record-level resource. There are three type
 -   Alternative title
 
 
-Titles extracted from MARC `505` \(Formatted Contents Note\) are handled separately, as their own record-level entities: see [Related title entities](../tasks/titles/related_title_entities.md).
+Titles extracted from MARC `505` \(Formatted Contents Note\) are handled separately, as their own record-level entities: see [Related title entities \[draft\]](../tasks/titles/related_title_entities.md).
 
 -   **[Main title](../tasks/titles/main_title.md)**  
 Main title of the record-level resource, from MARC `245` and parallel `880` fields \(if applicable\).

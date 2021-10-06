@@ -56,18 +56,18 @@ Entities that represent what a resource is about.
 Entities that represent time periods and/or discrete events related to a record-level resource.
 -   **[Groups](../concepts/groups.md)**  
 Entities that represent groups of people functioning collectively \(e.g., organizations and meetings/conferences\).
--   **[People](../concepts/people.md)**  
+-   **[People \[draft\]](../concepts/people.md)**  
 
--   **[Places](../concepts/places.md)**  
+-   **[Places \[draft\]](../concepts/places.md)**  
 
--   **[Provenance Activities](../concepts/provenance_activities.md)**  
+-   **[Provenance Activities \[draft\]](../concepts/provenance_activities.md)**  
 
--   **[Digital Objects](../concepts/related_digital_objects.md)**  
+-   **[Digital Objects \[draft\]](../concepts/related_digital_objects.md)**  
 
--   **[Sets](../concepts/related_sets.md)**  
+-   **[Sets \[draft\]](../concepts/related_sets.md)**  
 
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)
 
-**Previous topic:**[Work-level entities](../concepts/work_level_entities.md)
+**Previous topic:**[Work-level entities \[draft\]](../concepts/work_level_entities.md)
 

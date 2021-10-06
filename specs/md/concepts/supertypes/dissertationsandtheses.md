@@ -4,7 +4,7 @@ publisher: YUL Technical Services, Resource Discovery Services, Metadata Service
 category: Descriptive content
 ---
 
-# DissertationsAndTheses
+# Dissertations and Theses
 
 Texts written for the purpose of fulfilling an academic requirement.
 

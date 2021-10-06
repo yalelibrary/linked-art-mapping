@@ -1,11 +1,11 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, tt434]
 ---
 
-# Title entries
+# Title entries \[draft\]
 
--   **[Standalone works](../tasks/titles/standalone_works.md)**  
+-   **[Standalone works \[draft\]](../tasks/titles/standalone_works.md)**  
 
 
-**Parent topic:**[Work-level entities](../concepts/work_level_entities.md)
+**Parent topic:**[Work-level entities \[draft\]](../concepts/work_level_entities.md)
 

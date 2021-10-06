@@ -12,7 +12,7 @@ Content represented as words in a particular language, and/or the objects carryi
 Long form texts, divided into sections and/or the physical, paged objects that carry them.
 -   **[Broadsides](../../concepts/supertypes/broadsides.md)**  
 
--   **[DissertationsAndTheses](../../concepts/supertypes/dissertationsandtheses.md)**  
+-   **[Dissertations and Theses](../../concepts/supertypes/dissertationsandtheses.md)**  
 Texts written for the purpose of fulfilling an academic requirement.
 -   **[Journals and Periodicals](../../concepts/supertypes/journalsandperiodicals.md)**  
 Works published in pieces over time, typically at regular intervals.

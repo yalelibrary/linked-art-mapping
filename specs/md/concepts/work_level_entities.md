@@ -1,12 +1,12 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, tt434]
 ---
 
-# Work-level entities
+# Work-level entities \[draft\]
 
--   **[Name-title entries](../concepts/name_title_entries.md)**  
+-   **[Name-title entries \[draft\]](../concepts/name_title_entries.md)**  
 
--   **[Title entries](../concepts/title_entries.md)**  
+-   **[Title entries \[draft\]](../concepts/title_entries.md)**  
 
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)

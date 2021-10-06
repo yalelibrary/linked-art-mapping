@@ -70,5 +70,5 @@ The following diagram \(by Rob Sanderson\) provides an overview of the model.
 
 **Previous topic:**[LUX supertype taxonomy](../concepts/supertypes/supertypes.md)
 
-**Next topic:**[Related title entities](../tasks/titles/related_title_entities.md)
+**Next topic:**[Related title entities \[draft\]](../tasks/titles/related_title_entities.md)
 

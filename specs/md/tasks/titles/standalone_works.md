@@ -1,8 +1,8 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, tt434]
 ---
 
-# Standalone works
+# Standalone works \[draft\]
 
-**Parent topic:**[Title entries](../../concepts/title_entries.md)
+**Parent topic:**[Title entries \[draft\]](../../concepts/title_entries.md)
 

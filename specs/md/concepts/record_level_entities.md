@@ -25,10 +25,10 @@ The base class for record-level entities is determined by the supertype mapping.
 
 2.  [Content and carriers](../tasks/content_and_carriers.md)  
 
-3.  [Related title entities](../tasks/titles/related_title_entities.md)  
+3.  [Related title entities \[draft\]](../tasks/titles/related_title_entities.md)  
 
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)
 
-**Next topic:**[Work-level entities](../concepts/work_level_entities.md)
+**Next topic:**[Work-level entities \[draft\]](../concepts/work_level_entities.md)
 
