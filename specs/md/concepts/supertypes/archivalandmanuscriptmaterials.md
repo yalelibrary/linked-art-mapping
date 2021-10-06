@@ -9,11 +9,16 @@ category: Entity extraction
 ## Source data
 
 ```
-{
-  "name": "Archival and Manuscript Materials",
-  "sampleBibs": [3779671],
-  "fieldSpec": "ldr[6]:006[0]:655a:690a"
-}
+---
+name: ArchivalAndManuscriptMaterials
+sampleBibs:
+  - 3779671
+fieldSpec:
+  - ldr[6]
+  - 006[0]
+  - 655a
+  - 690a
+
 ```
 
 ## Processing steps and output
@@ -72,5 +77,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[Collection formats](../../concepts/supertypes/collectionformats.md)
+**Parent topic:**[Collections](../../concepts/supertypes/collectionformats.md)
 

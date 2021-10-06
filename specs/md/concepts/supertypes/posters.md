@@ -6,14 +6,21 @@ category: Entity extraction
 
 # Posters
 
+Notices, usually decorative or pictorial, intended to be posted to advertise, promote, or publicize an activity, cause, product, or service; also, decorative, mass-produced prints intended for hanging. For small printed notices or advertisements intended for distribution by hand, use "handbills."
+
 ## Source data
 
 ```
-{
-  "name": "Posters",
-  "sampleBibs": [11221175],
-  "fieldSpec": "007[0]:007[1]:300a:650v:655a"
-}
+---
+name: Posters
+sampleBibs:
+  - 11221175
+fieldSpec:
+  - 007[0]
+  - 007[1]
+  - 300a
+  - 650v
+  - 655a
 ```
 
 ## Processing steps and output
@@ -35,7 +42,6 @@ conditions:
     - lower-case(655a) contains 'posters'
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -55,5 +61,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Parent topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 

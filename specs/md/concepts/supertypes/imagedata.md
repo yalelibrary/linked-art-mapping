@@ -9,11 +9,11 @@ category: Entity extraction
 ## Source data
 
 ```
-{
-  "name": "ImageData",
-  "sampleBibs": [14624188],
-  "fieldSpec": "090a"
-}
+---
+name: ImageData
+sampleBibs:
+  - 14624188
+fieldSpec: 090a
 ```
 
 ## Processing steps and output
@@ -26,7 +26,6 @@ conditions:
     - yuldsetimg
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -46,7 +45,7 @@ conditions:
 }
 ```
 
-**Parent topic:**[DataAndFiles](../../concepts/supertypes/dataandfiles.md)
+**Parent topic:**[Data and Files](../../concepts/supertypes/dataandfiles.md)
 
-**Parent topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Parent topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 

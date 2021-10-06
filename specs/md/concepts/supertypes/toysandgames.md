@@ -9,11 +9,16 @@ category: Entity extraction
 ## Source data
 
 ```
-{
-  "name": "ToysAndGames",
-  "sampleBibs": [8465357],
-  "fieldSpec": "ldr[6]:008[33]:006[0]:006[16]:655a"
-}
+---
+name: ToysAndGames
+sampleBibs:
+  - 8465357
+fieldSpec: 
+  - ldr[6]
+  - 008[33]
+  - 006[0]
+  - 006[16]
+  - 655a
 ```
 
 ## Processing steps and output
@@ -68,5 +73,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[ObjectFormats](../../concepts/supertypes/objectformats.md)
+**Parent topic:**[Objects](../../concepts/supertypes/objectformats.md)
 

@@ -6,14 +6,20 @@ category: Entity extraction
 
 # Prints
 
+Pictorial works produced by transferring images by means of a matrix such as a plate, block, or screen, using any of various printing processes.
+
 ## Source data
 
 ```
-{
-  "name": "Prints",
-  "sampleBibs": [8902194],
-  "fieldSpec": "007[0]:007[1]:300a:655a"
-}
+---
+name: Prints
+sampleBibs:
+  - 8902194
+fieldSpec: 
+  - 007[0]
+  - 007[1]
+  - 300a
+  - 655a
 ```
 
 ## Processing steps and output
@@ -41,7 +47,6 @@ conditions:
         - lower-case(655a) contains 'photo'
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -61,5 +66,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Parent topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 

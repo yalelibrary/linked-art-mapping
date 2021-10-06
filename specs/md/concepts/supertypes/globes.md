@@ -6,14 +6,22 @@ category: Entity extraction
 
 # Globes
 
+Representations of the Earth, heavens, or another planet in the form of a ball.
+
 ## Source data
 
 ```
-{
-  "name": "Globes",
-  "sampleBibs": [11416653],
-  "fieldSpec": "ldr[6]:008[25]:006[0]:006[8]:007[0]:655a"
-}
+---
+name: Globes
+sampleBibs:
+  - 11416653
+fieldSpec: 
+  - ldr[6]
+  - 008[25]
+  - 006[0]
+  - 006[8]
+  - 007[0]
+  - 655a
 ```
 
 ## Processing steps and output
@@ -54,7 +62,6 @@ conditions:
     - lower-case(655a) contains 'globe'
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -74,7 +81,7 @@ conditions:
 }
 ```
 
-**Parent topic:**[CartographicFormats](../../concepts/supertypes/cartographicformats.md)
+**Parent topic:**[Cartography](../../concepts/supertypes/cartographicformats.md)
 
-**Parent topic:**[ObjectFormats](../../concepts/supertypes/objectformats.md)
+**Parent topic:**[Objects](../../concepts/supertypes/objectformats.md)
 

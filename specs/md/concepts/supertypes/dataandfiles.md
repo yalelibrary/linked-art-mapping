@@ -4,17 +4,20 @@ publisher: YUL Technical Services, Resource Discovery Services, Metadata Service
 category: Entity extraction
 ---
 
-# DataAndFiles
+# Data and Files
 
 ## Source data
 
 ```
-{
-  "name": "DataAndFiles",
-  "sampleBibs": [10086214],
-  "fieldSpec": "090a:336ab:655a",
-  "trimPunctuation": true
-}
+---
+name: DataAndFiles
+sampleBibs:
+  - 10086214
+fieldSpec: 
+  - 090a
+  - 336ab
+  - 655a
+trimPunctuation: true
 ```
 
 ## Processing steps and output
@@ -32,21 +35,19 @@ conditions:
     - - 336b
       - cod
     - lower-case(655a) equals trim-punctuation('data sets')
-  NOT:
-    - OR:         
-      - - 090a
-        - - yuldsetgis
-          - yuldsetimg          
-          - yuldsettxt          
-      - - 336a
-        - - cartographic dataset          
-      - - 336b
-        - - crd          
-      - lower-case(655a) contains 'geospatial'
-      - lower-case(655a) equals trim-punctuation('text corpora')
+  NOT:     
+    - - 090a
+      - - yuldsetgis
+        - yuldsetimg          
+        - yuldsettxt          
+    - - 336a
+      - cartographic dataset          
+    - - 336b
+      - crd          
+    - lower-case(655a) contains 'geospatial'
+    - lower-case(655a) equals trim-punctuation('text corpora')
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -73,5 +74,5 @@ conditions:
 -   **[Textual Data](../../concepts/supertypes/textualdata.md)**  
 
 
-**Parent topic:**[DataFormats](../../concepts/supertypes/dataformats.md)
+**Parent topic:**[Datasets](../../concepts/supertypes/dataformats.md)
 

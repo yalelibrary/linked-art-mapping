@@ -1,19 +1,17 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
 
-# MovingImageFormats
+# Moving Images
 
--   **[Film](../../concepts/supertypes/film.md)**  
-
--   **[Video](../../concepts/supertypes/video.md)**  
+-   **[Motion Pictures](../../concepts/supertypes/motionpictures.md)**  
 
 
 **Parent topic:**[LUX supertype taxonomy](../../concepts/supertypes/supertypes.md)
 
-**Previous topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Previous topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 
-**Next topic:**[NotationFormats](../../concepts/supertypes/notationformats.md)
+**Next topic:**[Scores and Notation](../../concepts/supertypes/notationformats.md)
 

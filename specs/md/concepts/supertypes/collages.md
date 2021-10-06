@@ -6,14 +6,22 @@ category: Entity extraction
 
 # Collages
 
+Works in two dimensions or very low relief that were made by gluing paper, fabrics, photographs, or other materials onto a flat surface.
+
 ## Source data
 
 ```
-{
-  "name": "Collages",
-  "sampleBibs": [7647390],
-  "fieldSpec": "ldr[6]:006[0]:007[0]:007[1]:300a:655a"
-}
+---
+name: Collages
+sampleBibs:
+  - 7647390
+fieldSpec: 
+  - ldr[6]
+  - 006[0]
+  - 007[0]
+  - 007[1]
+  - 300a
+  - 655a
 ```
 
 ## Processing steps and output
@@ -42,7 +50,6 @@ conditions:
       - lower-case(655a) contains 'collage'
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -62,5 +69,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Parent topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 

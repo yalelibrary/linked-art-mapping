@@ -6,14 +6,24 @@ category: Entity extraction
 
 # Maps
 
+Refers to graphic or photogrammetric representations of the Earth's surface or a part of it, including physical features and political boundaries, where each point corresponds to a geographical or celestial position according to a definite scale or projection. The term may also refer to similar depictions of other planets, suns, other heavenly bodies, or areas of the heavens. Maps are typically depicted on a flat medium, such as on paper, a wall, or a computer screen.
+
 ## Source data
 
 ```
-{
-  "name": "Maps",
-  "sampleBibs": [10547059],
-  "fieldSpec": "ldr[6]:008[25]:006[0]:006[8]:007[0]:007[1]:650av:655a"
-}
+---
+name: Maps
+sampleBibs:
+  - 10547059
+fieldSpec: 
+  - ldr[6]
+  - 008[25]
+  - 006[0]
+  - 006[8]
+  - 007[0]
+  - 007[1]
+  - 650av
+  - 655a
 ```
 
 ## Processing steps and output
@@ -79,7 +89,6 @@ conditions:
       - lower-case(655a) contains 'globe'
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -99,7 +108,7 @@ conditions:
 }
 ```
 
-**Parent topic:**[CartographicFormats](../../concepts/supertypes/cartographicformats.md)
+**Parent topic:**[Cartography](../../concepts/supertypes/cartographicformats.md)
 
-**Parent topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Parent topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 

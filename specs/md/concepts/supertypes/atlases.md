@@ -6,14 +6,23 @@ category: Entity extraction
 
 # Atlases
 
+Volumes of maps, with or without descriptive text, which may be issued to supplement or accompany texts or be published independently.
+
 ## Source data
 
 ```
-{
-  "name": "Atlases",
-  "sampleBibs": [5607075],
-  "fieldSpec": "ldr[6]:008[25]:006[0]:006[8]:007[0]:650v:655a"
-}
+---
+name: Atlases
+sampleBibs:
+  - 5607075
+fieldSpec: 
+  - ldr[6]
+  - 008[25]
+  - 006[0]
+  - 006[8]
+  - 007[0]
+  - 650v
+  - 655a
 ```
 
 ## Processing steps and output
@@ -61,7 +70,6 @@ conditions:
     - lower-case(655a) contains 'atlas'
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -81,7 +89,7 @@ conditions:
 }
 ```
 
-**Parent topic:**[CartographicFormats](../../concepts/supertypes/cartographicformats.md)
+**Parent topic:**[Cartography](../../concepts/supertypes/cartographicformats.md)
 
 **Parent topic:**[Books](../../concepts/supertypes/books.md)
 

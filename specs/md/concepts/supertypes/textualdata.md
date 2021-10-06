@@ -9,11 +9,12 @@ category: Entity extraction
 ## Source data
 
 ```
-{
-  "name": "TextualData",
-  "sampleBibs": [],
-  "fieldSpec": "090a"
-}
+---
+name: TextualData
+sampleBibs:
+  - 4941452
+fieldSpec: 
+  - 090a
 ```
 
 ## Processing steps and output
@@ -26,7 +27,6 @@ conditions:
     - yuldsettxt
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -46,7 +46,7 @@ conditions:
 }
 ```
 
-**Parent topic:**[DataAndFiles](../../concepts/supertypes/dataandfiles.md)
+**Parent topic:**[Data and Files](../../concepts/supertypes/dataandfiles.md)
 
-**Parent topic:**[TextualFormats](../../concepts/supertypes/textualformats.md)
+**Parent topic:**[Textual Works](../../concepts/supertypes/textualformats.md)
 
