@@ -9,11 +9,15 @@ category: Entity extraction
 ## Source data
 
 ```
-{
-  "name": "Models",
-  "sampleBibs": [9492648],
-  "fieldSpec": "ldr[6]:008[33]:006[0]:006[16]"
-}
+---
+name: Models
+sampleBibs:
+  - 9492648
+fieldSpec: 
+  - ldr[6]
+  - 008[33]
+  - 006[0]
+  - 006[16]
 ```
 
 ## Processing steps and output
@@ -47,7 +51,6 @@ conditions:
           - d
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -67,5 +70,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[ObjectFormats](../../concepts/supertypes/objectformats.md)
+**Parent topic:**[Objects](../../concepts/supertypes/objectformats.md)
 

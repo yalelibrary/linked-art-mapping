@@ -9,11 +9,13 @@ category: Descriptive content
 ## Source data
 
 ```
-{
-  "name": "Music",
-  "sampleBibs": [7780497],
-  "fieldSpec": "ldr[6]:006[0]"
-}
+---
+name: Music
+sampleBibs:
+  - 7780497
+fieldSpec: 
+  - ldr[6]
+  - 006[0]
 ```
 
 ## Processing steps and output
@@ -30,7 +32,6 @@ conditions:
       - j
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -50,5 +51,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[AudioFormats](../../concepts/supertypes/audioformats.md)
+**Parent topic:**[Audio](../../concepts/supertypes/audioformats.md)
 

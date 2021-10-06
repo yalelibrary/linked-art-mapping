@@ -6,14 +6,22 @@ category: Entity extraction
 
 # Slides
 
+An image on film or glass, usually positive, intended to be viewed by means of light passing through the image.
+
 ## Source data
 
 ```
-{
-  "name": "Slides",
-  "sampleBibs": [6491786],
-  "fieldSpec": "ldr[6]:008[33]:006[0]:006[16]:007[0]:007[1]"
-}
+---
+name: Slides
+sampleBibs:
+  - 6491786
+fieldSpec: 
+  - ldr[6]
+  - 008[33]
+  - 006[0]
+  - 006[16]
+  - 007[0]
+  - 007[1]
 ```
 
 ## Processing steps and output
@@ -64,7 +72,6 @@ conditions:
           - t
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -84,5 +91,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Parent topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 

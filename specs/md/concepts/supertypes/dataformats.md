@@ -1,17 +1,17 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
 
-# DataFormats
+# Datasets
 
--   **[DataAndFiles](../../concepts/supertypes/dataandfiles.md)**  
+-   **[Data and Files](../../concepts/supertypes/dataandfiles.md)**  
 
 
 **Parent topic:**[LUX supertype taxonomy](../../concepts/supertypes/supertypes.md)
 
-**Previous topic:**[CartographicFormats](../../concepts/supertypes/cartographicformats.md)
+**Previous topic:**[Cartography](../../concepts/supertypes/cartographicformats.md)
 
-**Next topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Next topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 

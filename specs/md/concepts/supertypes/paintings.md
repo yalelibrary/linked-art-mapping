@@ -6,14 +6,21 @@ category: Entity extraction
 
 # Paintings
 
+Unique works in which images are formed primarily by the direct application of pigments suspended in oil, water, egg yolk, molten wax, or other liquid, arranged in masses of color, onto a generally two-dimensional surface.
+
 ## Source data
 
 ```
-{
-  "name": "Paintings",
-  "sampleBibs": [12433502],
-  "fieldSpec": "007[0]:007[1]:300a:650v:655a"
-}
+---
+name: Paintings
+sampleBibs:
+  - 12433502
+fieldSpec: 
+  - 007[0]
+  - 007[1]
+  - 300a
+  - 650v
+  - 655a
 ```
 
 ## Processing steps and output
@@ -34,7 +41,6 @@ conditions:
     - lower-case(655a) contains 'painting'
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -54,5 +60,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Parent topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 

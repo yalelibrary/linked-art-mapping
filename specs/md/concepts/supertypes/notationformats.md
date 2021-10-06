@@ -1,19 +1,19 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
 
-# NotationFormats
+# Scores and Notation
 
--   **[NotatedMovement](../../concepts/supertypes/notatedmovement.md)**  
+-   **[Notated Movement](../../concepts/supertypes/notatedmovement.md)**  
 
--   **[NotatedMusic](../../concepts/supertypes/notatedmusic.md)**  
+-   **[Notated Music](../../concepts/supertypes/notatedmusic.md)**  
 
 
 **Parent topic:**[LUX supertype taxonomy](../../concepts/supertypes/supertypes.md)
 
-**Previous topic:**[MovingImageFormats](../../concepts/supertypes/movingimageformats.md)
+**Previous topic:**[Moving Images](../../concepts/supertypes/movingimageformats.md)
 
-**Next topic:**[ObjectFormats](../../concepts/supertypes/objectformats.md)
+**Next topic:**[Objects](../../concepts/supertypes/objectformats.md)
 

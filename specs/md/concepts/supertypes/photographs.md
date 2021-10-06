@@ -6,14 +6,21 @@ category: Entity extraction
 
 # Photographs
 
+Refers to still images produced from radiation-sensitive materials generally by means of the chemical action of light on a sensitive film, paper, glass, or metal.
+
 ## Source data
 
 ```
-{
-  "name": "Photographs",
-  "sampleBibs": [6734224],
-  "fieldSpec": "007[0]:007[1]:300a:650v:655a"
-}
+---
+name: Photographs
+sampleBibs:
+  - 6734224
+fieldSpec: 
+  - 007[0]
+  - 007[1]
+  - 300a
+  - 650v
+  - 655a
 ```
 
 ## Processing steps and output
@@ -48,7 +55,6 @@ conditions:
     - lower-case(655a) contains 'photo'
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -68,5 +74,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Parent topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 

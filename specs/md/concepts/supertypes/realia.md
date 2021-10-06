@@ -6,14 +6,20 @@ category: Descriptive content
 
 # Realia
 
+Three-dimensional items not covered by more specific terms \(e.g., clothing, stitchery, fabrics, tools, utensils\), and naturally occurring objects.
+
 ## Source data
 
 ```
-{
-  "name": "Realia",
-  "sampleBibs": [9088029],
-  "fieldSpec": "ldr[6]:008[33]:006[0]:006[16]"
-}
+---
+name: Realia
+sampleBibs:
+  - 9088029
+fieldSpec: 
+  - ldr[6]
+  - 008[33]
+  - 006[0]
+  - 006[16]
 ```
 
 ## Processing steps and output
@@ -47,7 +53,6 @@ conditions:
           - z
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -67,5 +72,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[ObjectFormats](../../concepts/supertypes/objectformats.md)
+**Parent topic:**[Objects](../../concepts/supertypes/objectformats.md)
 

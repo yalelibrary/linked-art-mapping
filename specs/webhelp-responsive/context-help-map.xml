@@ -45,8 +45,8 @@
    <appContext helpID="supertype_Slides" path="concepts/supertypes/slides.html"/>
    <appContext helpID="supertype_MovingImageFormats"
                path="concepts/supertypes/movingimageformats.html"/>
-   <appContext helpID="supertype_Film" path="concepts/supertypes/film.html"/>
-   <appContext helpID="supertype_Video" path="concepts/supertypes/video.html"/>
+   <appContext helpID="supertype_MotionPictures"
+               path="concepts/supertypes/motionpictures.html"/>
    <appContext helpID="supertype_NotationFormats"
                path="concepts/supertypes/notationformats.html"/>
    <appContext helpID="supertype_NotatedMovement"
@@ -79,6 +79,7 @@
                path="concepts/supertypes/newspapers.html"/>
    <appContext helpID="supertype_TextualData"
                path="concepts/supertypes/textualdata.html"/>
+   <appContext helpID="content_and_carriers" path="tasks/content_and_carriers.html"/>
    <appContext helpID="related_title_entities"
                path="tasks/titles/related_title_entities.html"/>
    <appContext helpID="work_level_entities" path="concepts/work_level_entities.html"/>
@@ -88,7 +89,7 @@
    <appContext helpID="groups_with_works"
                path="tasks/name-title/groups_with_works.html"/>
    <appContext helpID="title_entries" path="concepts/title_entries.html"/>
-   <appContext helpID="standalone_works" path="concepts/standalone_works.html"/>
+   <appContext helpID="standalone_works" path="tasks/titles/standalone_works.html"/>
    <appContext helpID="related_entities" path="tasks/related_entities.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>

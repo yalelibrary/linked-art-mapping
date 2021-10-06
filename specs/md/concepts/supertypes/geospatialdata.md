@@ -9,11 +9,17 @@ category: Entity extraction
 ## Source data
 
 ```
-{
-  "name": "GeospatialData",
-  "sampleBibs": [11909897],
-  "fieldSpec": "ldr[6]:008[25]:006[0]:006[8]:007[0]:655a"
-}
+---
+name: GeospatialData
+sampleBibs:
+  - 11909897
+fieldSpec: 
+  - ldr[6]
+  - 008[25]
+  - 006[0]
+  - 006[8]
+  - 007[0]
+  - 655a
 ```
 
 ## Processing steps and output
@@ -42,7 +48,6 @@ conditions:
     - lower-case(655a) contains 'geospatial'
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -62,7 +67,7 @@ conditions:
 }
 ```
 
-**Parent topic:**[CartographicFormats](../../concepts/supertypes/cartographicformats.md)
+**Parent topic:**[Cartography](../../concepts/supertypes/cartographicformats.md)
 
-**Parent topic:**[DataAndFiles](../../concepts/supertypes/dataandfiles.md)
+**Parent topic:**[Data and Files](../../concepts/supertypes/dataandfiles.md)
 

@@ -17,6 +17,6 @@ The transformation from MARC to Linked Art requires that both **records** and **
 -   Entities corresponding to records \(bibliographic and holdings\) should not be merged and deduplicated at this stage. For example, multiple editions of the novel *Beloved* will not be **[FRBRized](../glossary/frbr.md)** or linked to a common Work entity. However, they should all be linked to a single Person entity for the author Toni Morrison.
 
 
--   **[LUX top-level entities](../concepts/lux_top-level_entities.md)**  
+1.  [LUX top-level entities](../concepts/lux_top-level_entities.md)  
 Eleven top-level entities are required for use in LUX.
 

@@ -12,20 +12,20 @@ The base class for record-level entities is determined by the supertype mapping.
 
 1.  `Set`
 
-2.  `DigitalObject`
+2.  `LinguisticObject`
 
-3.  `LinguisticObject`
+3.  `VisualItem`
 
-4.  `VisualItem`
+4.  `DigitalObject`
 
 5.  `HumanMadeObject`
 
 
-YUL supertypes with a base class of `HumanMadeObject` must follow the concept/carrier model and point to a `VisualItem` where the supertype and any subjects are assigned.
-
 1.  [LUX supertype taxonomy](../concepts/supertypes/supertypes.md)  
 
-2.  [Related title entities](../tasks/titles/related_title_entities.md)  
+2.  [Content and carriers](../tasks/content_and_carriers.md)  
+
+3.  [Related title entities](../tasks/titles/related_title_entities.md)  
 
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)

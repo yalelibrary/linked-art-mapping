@@ -9,11 +9,14 @@ category: Descriptive content
 ## Source data
 
 ```
-{
-  "name": "Sound",
-  "sampleBibs": [11144096],
-  "fieldSpec": "ldr[6]:006[0]:007[0]"
-}
+---
+name: Sound
+sampleBibs:
+  - 11144096
+fieldSpec: 
+  - ldr[6]
+  - 006[0]
+  - 007[0]
 ```
 
 ## Processing steps and output
@@ -32,7 +35,6 @@ conditions:
       - s
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -52,5 +54,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[AudioFormats](../../concepts/supertypes/audioformats.md)
+**Parent topic:**[Audio](../../concepts/supertypes/audioformats.md)
 

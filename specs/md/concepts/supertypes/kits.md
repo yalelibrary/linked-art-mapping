@@ -6,14 +6,19 @@ category: Entity extraction
 
 # Kits
 
+“Mixture of various components issued as a unit and intended primarily for instructional purposes. No one component is identifiable as the predominant component of the item.”
+
 ## Source data
 
 ```
-{
-  "name": "Kits",
-  "sampleBibs": [8068082],
-  "fieldSpec": "ldr[6]:008[33]:006[0]"
-}
+---
+name: Kits
+sampleBibs:
+  - 8068082
+fieldSpec: 
+  - ldr[6]
+  - 008[33]
+  - 006[0]
 ```
 
 ## Processing steps and output
@@ -57,5 +62,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[Collection formats](../../concepts/supertypes/collectionformats.md)
+**Parent topic:**[Collections](../../concepts/supertypes/collectionformats.md)
 

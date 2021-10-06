@@ -6,14 +6,23 @@ category: Entity extraction
 
 # Drawings
 
+Visual works produced by drawing, typically by the application of lines on a surface, often paper, by using a pencil, pen, chalk, or some other tracing instrument to focus on the delineation of form rather than the application of color.
+
 ## Source data
 
 ```
-{
-  "name": "Drawings",
-  "sampleBibs": [],
-  "fieldSpec": "ldr[6]:006[0]:007[0]:007[1]:300a:650v:655a"
-}
+---
+name: Drawings
+sampleBibs:
+  - 12903124
+fieldSpec: 
+  - ldr[6]
+  - 006[0]
+  - 007[0]
+  - 007[1]
+  - 300a
+  - 650v
+  - 655a
 ```
 
 ## Processing steps and output
@@ -47,7 +56,6 @@ conditions:
       - lower-case(655a) contains 'drawings'
 ```
 
-1.  
 ```
 {
   "classified_as": [
@@ -67,5 +75,5 @@ conditions:
 }
 ```
 
-**Parent topic:**[ImageFormats](../../concepts/supertypes/imageformats.md)
+**Parent topic:**[Visual Works](../../concepts/supertypes/imageformats.md)
 
