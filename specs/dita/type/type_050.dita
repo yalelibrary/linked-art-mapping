@@ -1,0 +1,117 @@
+<task id="task_050" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:generalTask.xsd">
+  <title>050 (Library of Congress Call Number)</title>
+  <shortdesc>Classification or call number that is taken from Library of Congress Classification or LC Classification Additions and Changes.</shortdesc>
+  <taskbody>
+    <context>
+      <data name="usage" value="11539534"/>
+      <p>Usage: ~11.5 million values</p>
+      <table>
+        <tgroup cols="7">
+          <thead>
+            <row>
+              <entry>Tag</entry>
+              <entry>Tag Label</entry>
+              <entry>First Indicator</entry>
+              <entry>Second Indicator</entry>
+              <entry>Subfield</entry>
+              <entry>Subfield Label</entry>
+              <entry>Repeatable</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>050</entry>
+              <entry>Library of Congress Call Number</entry>
+              <entry>#-1</entry>
+              <entry>0-4</entry>
+              <entry>a</entry>
+              <entry>Classification number</entry>
+              <entry>T</entry>
+            </row>
+            <row>
+              <entry>050</entry>
+              <entry>Library of Congress Call Number</entry>
+              <entry>#-1</entry>
+              <entry>0-4</entry>
+              <entry>b</entry>
+              <entry>Item number</entry>
+              <entry>F</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <codeblock><![CDATA[
+---
+examples:
+  # Voyager BIB IDs for testing
+  - [4, 236, 907498]
+input:
+  - 050$a
+trim:
+  - punctuation
+  - whitespace
+strip:
+  - punctuation
+  - preserve:
+    - period
+]]></codeblock>
+    </context>
+    <steps>
+      <step>
+        <cmd>Process any <codeph>050$a</codeph> values.</cmd>
+      </step>
+      <step>
+        <cmd>For each <codeph>050$a</codeph>:</cmd>
+        <substeps>
+          <substep>
+            <cmd>Trim whitespace and punctuation.</cmd>
+          </substep>
+          <substep>
+            <cmd>Replace any punctuation characters that are <i>not</i> a period (<codeph>.</codeph>) with a whitespace character.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Dedupe processed <codeph>050$a</codeph> values.</cmd>
+      </step>
+    </steps>
+    <result> BIB ID: <keyword>907498</keyword>
+      <p>Top-level Type (Concept) entity: <codeblock><![CDATA[
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/concept/f0c0c4d0-532d-4438-a26f-15c261fb4f6c",
+  "type": "Type",
+  "_label": "PT3818",
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "content": "PT3818"
+    }
+  ]
+}                
+        ]]></codeblock></p>
+      <p>Embedded Type (Concept) entity: <codeblock><![CDATA[
+"classified_as": [
+  {
+    "id": "http://vocab.getty.edu/aat/300028051",
+    "type": "Type",
+    "_label": "Books",
+    "classified_as": [
+      {
+        "id": "http://vocab.getty.edu/aat/300226816",
+        "type": "Type",
+        "_label": "Form"
+      }
+    ]
+  },
+  {
+    "id": "https://lux.collections.yale.edu/data/concept/f0c0c4d0-532d-4438-a26f-15c261fb4f6c",
+    "type": "Type",
+    "_label": "PT3818"
+  }
+]                
+        ]]></codeblock>
+      </p>
+    </result>
+  </taskbody>
+</task>

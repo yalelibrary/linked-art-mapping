@@ -1,0 +1,62 @@
+<task id="task_roles_e_4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:generalTask.xsd">
+  <title>Subfields e and 4</title>
+  <shortdesc>Relator terms</shortdesc>
+  <taskbody>
+    <steps>
+      <step id="start">
+        <cmd>Process any <codeph>$e</codeph> (relationship term) or <codeph>$4</codeph> (relationship code) values.</cmd>
+      </step>
+      <step>
+        <cmd>If the <codeph>$0</codeph> contains an HTTP URI, capture the value of the URI.</cmd>
+      </step>
+      <step>
+        <cmd>Capture the entity type (Person, Place, Type, etc.).</cmd>
+      </step>
+      
+      <step>
+        <cmd>In the top-level entity, add an array with the key <codeph>equivalent</codeph> to capture identifiers for equivalent entities in external data sources.</cmd>
+      </step>
+      <step id="end">
+        <cmd>For each <codeph>$0</codeph> that contains an HTTP URI:</cmd>
+        <substeps>          
+          <substep>
+            <cmd>Add an object to the <codeph>equivalent</codeph> array.</cmd>
+          </substep>
+          <substep>
+            <cmd>Indicate the entity type.</cmd>
+          </substep>
+        </substeps>
+        <stepresult>
+          <p>Example (derived from BIB ID <keyword>1200196</keyword>):</p>
+          <codeblock><![CDATA[
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/person/4660f0b7-984e-46a1-8f2b-ba0f0781c8e2",
+  "type": "Person",
+  "_label": "Thurber, James, 1894-1961",
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "Thurber, James, 1894-1961"
+    }
+  ],
+  "equivalent": [
+    {
+      "id": "http://id.loc.gov/authorities/names/n80036584",
+      "type": "Person"
+    }
+  ]
+}                        
+            ]]></codeblock>
+        </stepresult>
+      </step>
+      <step>
+        <cmd/>
+      </step>
+    </steps>
+    <result> BIB ID: <keyword>1200196</keyword> (derived) <codeblock><![CDATA[
+
+        ]]></codeblock>
+    </result>
+  </taskbody>
+</task>
