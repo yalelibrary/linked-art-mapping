@@ -4,6 +4,7 @@
    <appContext helpID="lux_entities" path="concepts/lux_top-level_entities.html"/>
    <appContext helpID="record_level_entities"
                path="concepts/record_level_entities.html"/>
+   <appContext helpID="content_and_carriers" path="tasks/content_and_carriers.html"/>
    <appContext helpID="supertypes" path="concepts/supertypes/supertypes.html"/>
    <appContext helpID="supertype_CollectionFormats"
                path="concepts/supertypes/collectionformats.html"/>
@@ -79,9 +80,8 @@
                path="concepts/supertypes/newspapers.html"/>
    <appContext helpID="supertype_TextualData"
                path="concepts/supertypes/textualdata.html"/>
-   <appContext helpID="content_and_carriers" path="tasks/content_and_carriers.html"/>
    <appContext helpID="related_title_entities"
-               path="tasks/titles/related_title_entities.html"/>
+               path="tasks/names-and-labels/related_title_entities.html"/>
    <appContext helpID="work_level_entities" path="concepts/work_level_entities.html"/>
    <appContext helpID="name_title_entries" path="concepts/name_title_entries.html"/>
    <appContext helpID="people_with_works"
@@ -89,7 +89,8 @@
    <appContext helpID="groups_with_works"
                path="tasks/name-title/groups_with_works.html"/>
    <appContext helpID="title_entries" path="concepts/title_entries.html"/>
-   <appContext helpID="standalone_works" path="tasks/titles/standalone_works.html"/>
+   <appContext helpID="standalone_works"
+               path="tasks/names-and-labels/standalone_works.html"/>
    <appContext helpID="related_entities" path="tasks/related_entities.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
@@ -122,9 +123,11 @@
    <appContext helpID="publisher_or_distributor_number"
                path="tasks/identifiers/publisher_or_distributor_number.html"/>
    <appContext helpID="oclc_numbers" path="tasks/identifiers/oclc_numbers.html"/>
-   <appContext helpID="titles" path="concepts/titles.html"/>
-   <appContext helpID="main_title" path="tasks/titles/main_title.html"/>
-   <appContext helpID="sorting_title" path="tasks/titles/sorting_title.html"/>
+   <appContext helpID="titles" path="concepts/names_and_labels.html"/>
+   <appContext helpID="root_label" path="tasks/names-and-labels/root_label.html"/>
+   <appContext helpID="primary_name" path="tasks/names-and-labels/primary_name.html"/>
+   <appContext helpID="sorting_name" path="tasks/names-and-labels/sorting_name.html"/>
+   <appContext helpID="name" path="tasks/names-and-labels/name.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
    <appContext helpID="reference_600_table_bib" path="tables/600_bib_table.html"/>

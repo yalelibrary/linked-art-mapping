@@ -10,6 +10,6 @@ Descriptive content may include references to top-level entities, but typically 
 
 1.  [Identifiers](../concepts/identifiers.md)  
 Standard alphanumeric values used to uniquely identify a resource.
-2.  [Titles](../concepts/titles.md)  
-Names supplied for record-level resources.
+2.  [Names and labels](../concepts/names_and_labels.md)  
+Names and supplied for top-level resources.
 

@@ -10,15 +10,6 @@ Eleven top-level entities are required for use in LUX.
 
 In LUX, top-level entities can be divided into *record-level* entities, which correspond to resources held by the library \(books, journals, databases, archival collections, etc.\), and *related* entities, which correspond to the people, places, concepts, etc., connected to those resources in some way.
 
-In Linked Art, record-level entities are further divided into two categories:
-
--   Conceptual entities, which represent the intellectual content of a resource
-
--   Physical objects, which carry that content in a tangible form
-
-
-Digital objects are a special case because they can function as either conceptual entities or content carriers, depending on the context.
-
 1.  [Record-level entities](../concepts/record_level_entities.md)  
 Entities that correspond to resources held by the library \(books, journals, databases, archival collections, etc.\).
 2.  [Work-level entities \[draft\]](../concepts/work_level_entities.md)  

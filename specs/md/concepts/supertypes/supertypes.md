@@ -4,9 +4,7 @@ author: [tt434, timothy.thompson@yale.edu]
 
 # LUX supertype taxonomy
 
-The Linked Art profile of the [CIDOC Conceptual Reference Model \(CRM\)](http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html) includes a limited number of core classes; these can be refined by referencing terms from a taxonomy or classification scheme. Because record-level entities can be of many types, a *supertype* scheme has been developed for use in LUX.
-
-The LUX supertype scheme is divided into two levels: *types* and *formats*. Types represent the mode of expression of a resource \(textual, visual, audible, etc.\), whereas formats can be thought of as specific instances of a type: for example, a *Book* is an instance or format of *Textual Works*. Some formats, such as *Geospatial Data* are instances of two different types: *Datasets* and *Cartography*.
+Taxonomy of content types and related formats for classifying record-level resources in LUX.
 
 MARC-to-Linked Art supertype mappings are done at the level of the most specific format, with type and broader format relations inferred from the hierarchy.
 
@@ -35,5 +33,7 @@ Content represented as words in a particular language, and/or the objects carryi
 
 **Parent topic:**[Record-level entities](../../concepts/record_level_entities.md)
 
-**Next topic:**[Content and carriers](../../tasks/content_and_carriers.md)
+**Previous topic:**[Content and carriers](../../tasks/content_and_carriers.md)
+
+**Next topic:**[Related title entities \[draft\]](../../tasks/names-and-labels/related_title_entities.md)
 

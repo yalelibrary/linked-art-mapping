@@ -4,13 +4,34 @@ author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 
 # Content and carriers
 
-YUL supertypes with a base class of `LinguisticObject` or `VisualItem` must follow the content/carrier model. In MARC-based systems, this model corresponds roughly to the distinction between bibliographic records and holdings/item records.
+In Linked Art, record-level entities are divided into two categories:
+
+-   Conceptual entities, which represent the intellectual content of a resource:
+
+    -   `DigitalObject`
+
+    -   `LinguisticObject`
+
+    -   `Set`
+
+    -   `VisualItem`
+
+-   Carrier entities, which carry that content in a particular form:
+
+    -   `DigitalObject`
+
+    -   `HumanMadeObject`
+
+
+**Note:** Digital objects are a special case because they can function as both conceptual entities and content carriers, depending on the context.
+
+Resources with a base class of `LinguisticObject` or `VisualItem` must follow the content/carrier model. In MARC-based systems, this model corresponds roughly to the distinction between bibliographic records and holdings records.
 
 For each record-level resource with a base class of `LinguisticObject` or `VisualItem` \(the *content* level\), one or more resources with a base class of `HumanMadeObject` \(the *carrier* level\) must be generated.
 
 These `HumanMadeObject` resources must point to the `LinguisticObject` or `VisualItem` resource that they instantiate and where the supertype and any subjects, etc., are assigned.
 
-The following diagram \(by Rob Sanderson\) provides an overview of the model.
+The following diagram \(by Rob Sanderson\) provides a high-level overview of the Linked Art model.
 
 ![](../resources/img/base-model-classes.png)
 
@@ -68,7 +89,5 @@ The following diagram \(by Rob Sanderson\) provides an overview of the model.
 
 **Parent topic:**[Record-level entities](../concepts/record_level_entities.md)
 
-**Previous topic:**[LUX supertype taxonomy](../concepts/supertypes/supertypes.md)
-
-**Next topic:**[Related title entities \[draft\]](../tasks/titles/related_title_entities.md)
+**Next topic:**[LUX supertype taxonomy](../concepts/supertypes/supertypes.md)
 
