@@ -10,16 +10,12 @@ Main title of a record-level entity.
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`
-
- `HumanMadeObject`
+|`LinguisticObject` `HumanMadeObject`
 
 |Repeat on both JSON-LD documents.
 
 |
-|`VisualItem`
-
- `HumanMadeObject`
+|`VisualItem` `HumanMadeObject`
 
 |Repeat on both JSON-LD documents.
 
