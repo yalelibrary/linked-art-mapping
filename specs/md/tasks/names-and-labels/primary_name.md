@@ -10,24 +10,10 @@ Main title of a record-level entity.
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject` `HumanMadeObject`
-
-|Repeat on both JSON-LD documents.
-
-|
-|`VisualItem` `HumanMadeObject`
-
-|Repeat on both JSON-LD documents.
-
-|
-|`Set → members_exemplified_by → HumanMadeObject`
-
-|Do not repeat on nested `members_exemplified_by → HumanMadeObject` resource.
-
-|
-|`DigitalObject`
-
-| |
+|`LinguisticObject` `HumanMadeObject`|Repeat on both JSON-LD documents.|
+|`VisualItem` `HumanMadeObject`|Repeat on both JSON-LD documents.|
+|`Set → members_exemplified_by → HumanMadeObject`|Do not repeat on nested `members_exemplified_by → HumanMadeObject` resource.|
+|`DigitalObject`| |
 
 **Note:** The primary name is mirrored in parallel non-Latin script titles, when present.
 

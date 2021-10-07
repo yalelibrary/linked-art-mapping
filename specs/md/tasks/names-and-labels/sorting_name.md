@@ -10,24 +10,10 @@ Sorting title of a record-level entity. Taken from MARC `245` with initial artic
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject` `HumanMadeObject`
-
-|Do not repeat on `HumanMadeObject` JSON-LD document.
-
-|
-|`VisualItem` `HumanMadeObject`
-
-|Do not repeat on `HumanMadeObject` JSON-LD document.
-
-|
-|`Set → members_exemplified_by → HumanMadeObject`
-
-|Do not repeat on nested `members_exemplified_by → HumanMadeObject` resource.
-
-|
-|`DigitalObject`
-
-| |
+|`LinguisticObject` `HumanMadeObject`|Do not repeat on `HumanMadeObject` JSON-LD document.|
+|`VisualItem` `HumanMadeObject`|Do not repeat on `HumanMadeObject` JSON-LD document.|
+|`Set → members_exemplified_by → HumanMadeObject`|Do not repeat on nested `members_exemplified_by → HumanMadeObject` resource.|
+|`DigitalObject`| |
 
 ## Source data
 
