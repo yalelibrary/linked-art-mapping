@@ -12,7 +12,7 @@ Main title of a record-level entity.
 |-------|-----|
 |`LinguisticObject` `HumanMadeObject`|Repeat on both JSON-LD documents.|
 |`VisualItem` `HumanMadeObject`|Repeat on both JSON-LD documents.|
-|`Set → members_exemplified_by → HumanMadeObject`|Do not repeat on nested `members_exemplified_by → HumanMadeObject` resource.|
+|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
 |`DigitalObject`| |
 
 **Note:** The primary name is mirrored in parallel non-Latin script titles, when present.
@@ -57,7 +57,7 @@ scriptInclusion: BOTH
     |`root → identified_by → [1] → classified_as → id`|IRI of the concept used to classify the non-Latin main title|[http://vocab.getty.edu/aat/300404670](http://vocab.getty.edu/aat/300404670)|
     |`root → identified_by → [1] → classified_as → type`| |`Type`|
     |`root → identified_by → [1] → classified_as → _label`|Label of the concept used to classify the non-Latin main title|`Primary Name`|
-    |`root → identified_by → [1] → language → id`|IRI of the Language entity for the non-Latin main title|Currently, specific language values are not assigned. A single IRI representing an undefined \(`und`\) language should be assigned for all parallele non-Latin script values.|
+    |`root → identified_by → [1] → language → id`|IRI of the Language entity for the non-Latin main title|Currently, specific language values are not assigned. A single IRI representing an undefined \(`und`\) language should be assigned for all parallel non-Latin script values.|
     |`root → identified_by → [1] → language → type`| |`Language`|
     |`root → identified_by → [1] → language → _label`| |`und`|
 
@@ -117,5 +117,5 @@ scriptInclusion: BOTH
     ```
 
 
-**Parent topic:**[Names and labels](../../concepts/names_and_labels.md)
+**Parent topic:**[Names](../../tasks/names-and-labels/names.md)
 

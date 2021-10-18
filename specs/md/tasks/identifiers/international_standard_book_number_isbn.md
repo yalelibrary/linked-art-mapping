@@ -8,6 +8,13 @@ category: Descriptive content
 
 The International Standard Book Number \(ISBN\) is a publisher-assigned commercial book identifier that is intended to be unique. May appear in 10- or 13-digit formats.
 
+|Domains|Usage|
+|-------|-----|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
+|`DigitalObject`| |
+
 ## Source data
 
 ```

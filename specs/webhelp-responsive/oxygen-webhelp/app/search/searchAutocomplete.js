@@ -1,4 +1,4 @@
-define(["keywords", "searchHistoryItems", "options", "jquery", "jquery.ui"], function(keywordsInfo, searchHistory, options, $) {
+define(["keywords", "searchHistoryItems", "options", "util", "jquery", "jquery.ui"], function(keywordsInfo, searchHistory, options, util, $) {
 
 // Install search autocomplete
 
@@ -154,13 +154,14 @@ define(["keywords", "searchHistoryItems", "options", "jquery", "jquery.ui"], fun
             auObj._renderItem = function (ul, item) {
                 // Text to search
                 var tts = $("#textToSearch").val();
-
+				tts = util.sanitize(tts);
                 tts = tts.toLowerCase();
                 var words = tts.split(" ");
 
                 /*console.log("Render item:", item);*/
 
                 var proposal = item.label;
+                proposal = util.sanitize(proposal);
 
                 // Highlight words from search query
                 var pw = proposal.split(" ");

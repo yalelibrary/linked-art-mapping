@@ -28,6 +28,7 @@
 
 .hazardstatement--danger {
   background-color: #c8102e;
+  border-color: #000;
   color: #fff;
 }
 
@@ -37,8 +38,8 @@
 
 .hazardstatement--attention, .hazardstatement--fastpath, .hazardstatement--important, .hazardstatement--note, .hazardstatement--notice, .hazardstatement--other, .hazardstatement--remember, .hazardstatement--restriction, .hazardstatement--tip {
   background-color: #0072ce;
+  border-color: #000;
   color: #fff;
-  font-style: italic;
 }
 
 .codeblock {

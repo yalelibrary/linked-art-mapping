@@ -39,7 +39,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
 
 1.  For each MARC bibliographic record, determine the supertype of the resource and generate a JSON-LD document with a `type` value corresponding to the base class of the supertype.
 
-    **Note:** This example is meant to illustrate the content/carrier distinction and does not represent a complete JSON-LD document.
+    **Note:** This example is meant to illustrate the base class/supertype association and does not represent a complete JSON-LD document.
 
     ```
     {
@@ -64,8 +64,15 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
     }
     ```
 
-2.  For each MARC holdings record attached to a bibliographic record, generate a JSON-LD document with a base class of `HumanMadeObject`.
+2.  For each MARC holdings record attached to a bibliographic record:
 
+    -   If the base class derived from the supertype is `LinguisticObject` or `VisualItem`, generate a JSON-LD document with a base class of `HumanMadeObject`.
+
+        **Note:** For supertypes with two possible base classes \(such as [Globes](../concepts/supertypes/globes.md)\), apply the [order of preference](../concepts/record_level_entities.md#ol_dcd_kh4_brb) for base classes.
+
+    -   If the base class derived from the supertype is `Set`, generate an embedded `Set → members_exemplified_by → HumanMadeObject` resource to record carrier-level information.
+    -   If the base class derived from the supertype is `DigitalObject`, do not generate a separate carrier-level resource. Record both content- and carrier-level information in a single JSON-LD document, with `DigitalObject` as base class.
+    -   If the supertype is one of `Models`, `Realia`, or `Toys and Games`, do not generate a separate carrier-level resource. Record both content- and carrier-level information in a single JSON-LD document, with a base class of `HumanMadeObject`.
 3.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then the `HumanMadeObject` resource must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources.
 
     **Note:** This example is meant to illustrate the content/carrier distinction and does not represent a complete JSON-LD document.

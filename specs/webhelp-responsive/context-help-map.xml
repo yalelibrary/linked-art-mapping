@@ -124,10 +124,14 @@
                path="tasks/identifiers/publisher_or_distributor_number.html"/>
    <appContext helpID="oclc_numbers" path="tasks/identifiers/oclc_numbers.html"/>
    <appContext helpID="titles" path="concepts/names_and_labels.html"/>
-   <appContext helpID="root_label" path="tasks/names-and-labels/root_label.html"/>
+   <appContext helpID="name" path="tasks/names-and-labels/names.html"/>
    <appContext helpID="primary_name" path="tasks/names-and-labels/primary_name.html"/>
    <appContext helpID="sorting_name" path="tasks/names-and-labels/sorting_name.html"/>
-   <appContext helpID="name" path="tasks/names-and-labels/name.html"/>
+   <appContext helpID="label" path="tasks/names-and-labels/labels.html"/>
+   <appContext helpID="root_label" path="tasks/names-and-labels/root_label.html"/>
+   <appContext helpID="notes" path="concepts/notes_and_statements.html"/>
+   <appContext helpID="attribution_statement"
+               path="tasks/notes-and-statements/attribution_statement.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
    <appContext helpID="reference_600_table_bib" path="tables/600_bib_table.html"/>

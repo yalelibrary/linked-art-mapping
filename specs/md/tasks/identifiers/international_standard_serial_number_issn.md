@@ -8,6 +8,13 @@ category: Descriptive content
 
 The International Standard Serial Number is a unique identification number assigned to a continuing resource.
 
+|Domains|Usage|
+|-------|-----|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
+|`DigitalObject`| |
+
 ## Source data
 
 ```

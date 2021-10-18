@@ -58,3 +58,10 @@ abbr, abbr[title] {
     text-decoration: none;
     border-bottom: none;
 }
+
+/* Bootstrap sets line height on the titles and body. We need to clear it, and control it from our 
+   CSS files that are in WH and also in the styles basket. The styles basket does not use bootstrap. */ 
+body, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    line-height: inherit;
+}
+

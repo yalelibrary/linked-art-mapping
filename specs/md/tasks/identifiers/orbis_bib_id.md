@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
 ---
@@ -7,6 +7,13 @@ category: Descriptive content
 # Orbis BIB ID
 
 The Orbis BIB ID is a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.
+
+|Domains|Usage|
+|-------|-----|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
+|`DigitalObject`| |
 
 ## Source data
 

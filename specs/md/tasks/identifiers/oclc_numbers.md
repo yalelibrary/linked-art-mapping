@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
 ---
@@ -7,6 +7,13 @@ category: Descriptive content
 # System Control Numbers \(OCLC Numbers\)
 
 System number used by OCLC to manage records in the WorldCat system.
+
+|Domains|Usage|
+|-------|-----|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
+|`DigitalObject`| |
 
 ## Source data
 
@@ -32,11 +39,9 @@ scriptInclusion: NONE
 
 2.  Get value of `$a`.
 
-    1.  Normalize `$a` \(lower case and remove punctuation characters\) to test the value.
+    1.  If the value of `$a` after `(OCoLC)` \(if present\) starts with "oc", return the original value.
 
-    2.  If the normalized value of `$a` starts with "oc", return the original value.
-
-    3.  Else, skip the source data field.
+    2.  Else, skip the source data field.
 
 
 `2395`

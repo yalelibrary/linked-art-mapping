@@ -8,6 +8,13 @@ category: Descriptive content
 
 Formatted number used for sound recordings, printed music, other music-related materials, and video recordings.
 
+|Domains|Usage|
+|-------|-----|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
+|`DigitalObject`| |
+
 ## Source data
 
 ```

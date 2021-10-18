@@ -187,10 +187,10 @@
     }
 
     .wh_top_menu ul ul {
-        background-color: #0f0f0f;
+        background-color: #e6e6e6; /* OSB-273 - Fix default colors for menu items */
     }
     .wh_top_menu ul ul li {
-        border-top-color: #4b545f;
+        border-top-color: #ffffff; /* OSB-273 - Fix default colors for menu items */
     }
     .wh_top_menu ul ul li.has-children:after{
         color:silver;
