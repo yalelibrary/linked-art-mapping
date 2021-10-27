@@ -19,7 +19,7 @@ Corresponds to the `245c` statement of responsibility in MARC.
 
 ```
 ---
-name: PrimaryName
+name: AttributionStatement
 sampleBibs:
   - 7778409
 fieldSpec:

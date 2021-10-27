@@ -130,8 +130,34 @@
    <appContext helpID="label" path="tasks/names-and-labels/labels.html"/>
    <appContext helpID="root_label" path="tasks/names-and-labels/root_label.html"/>
    <appContext helpID="notes" path="concepts/notes_and_statements.html"/>
+   <appContext helpID="abstract" path="tasks/notes-and-statements/abstract.html"/>
+   <appContext helpID="arrangement_note"
+               path="tasks/notes-and-statements/arrangement_note.html"/>
    <appContext helpID="attribution_statement"
                path="tasks/notes-and-statements/attribution_statement.html"/>
+   <appContext helpID="bibliography_statement"
+               path="tasks/notes-and-statements/bibliography_statement.html"/>
+   <appContext helpID="cartographic_statement"
+               path="tasks/notes-and-statements/cartographic_statement.html"/>
+   <appContext helpID="citation" path="tasks/notes-and-statements/citation.html"/>
+   <appContext helpID="digital_file_note"
+               path="tasks/notes-and-statements/digital_file_note.html"/>
+   <appContext helpID="indexing_statement"
+               path="tasks/notes-and-statements/indexing_statement.html"/>
+   <appContext helpID="language_statement"
+               path="tasks/notes-and-statements/language_statement.html"/>
+   <appContext helpID="local_note" path="tasks/notes-and-statements/local_note.html"/>
+   <appContext helpID="material_statement"
+               path="tasks/notes-and-statements/material_statement.html"/>
+   <appContext helpID="note" path="tasks/notes-and-statements/note.html"/>
+   <appContext helpID="physical_statement"
+               path="tasks/notes-and-statements/physical_statement.html"/>
+   <appContext helpID="preferred_citation_note"
+               path="tasks/notes-and-statements/preferred_citation_note.html"/>
+   <appContext helpID="provenance_statement"
+               path="tasks/notes-and-statements/provenance_statement.html"/>
+   <appContext helpID="reproduction_statement"
+               path="tasks/notes-and-statements/reproduction_statement.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
    <appContext helpID="reference_600_table_bib" path="tables/600_bib_table.html"/>
