@@ -52,31 +52,35 @@ scriptInclusion: NONE
 
     ```
     {
-      "type": "LinguisticObject",
-      "content": "A boy grows to manhood while attempting to subdue the evil he unleashed on the world as an apprentice to the Master Wizard.",
-      "classified_as": [
+      "referred_to_by": [
         {
-          "id": "http://vocab.getty.edu/aat/300026032",
-          "type": "Type",
-          "_label": "Abstract",
+          "type": "LinguisticObject",
+          "content": "A boy grows to manhood while attempting to subdue the evil he unleashed on the world as an apprentice to the Master Wizard.",
           "classified_as": [
             {
-              "id": "http://vocab.getty.edu/aat/300418049",
+              "id": "http://vocab.getty.edu/aat/300026032",
               "type": "Type",
-              "_label": "Brief Text"
+              "_label": "Abstract",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300418049",
+                  "type": "Type",
+                  "_label": "Brief Text"
+                }
+              ]
             }
-          ]
-        }
-      ],
-      "identified_by": [
-        {
-          "type": "Name",
-          "content": "Summary, Etc.",
-          "classified_as": [
+          ],
+          "identified_by": [
             {
-              "id": "http://vocab.getty.edu/aat/300404669",
-              "type": "Type",
-              "_label": "Display Title"
+              "type": "Name",
+              "content": "Summary, Etc.",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404669",
+                  "type": "Type",
+                  "_label": "Display Title"
+                }
+              ]
             }
           ]
         }

@@ -91,6 +91,7 @@
    <appContext helpID="title_entries" path="concepts/title_entries.html"/>
    <appContext helpID="standalone_works"
                path="tasks/names-and-labels/standalone_works.html"/>
+   <appContext helpID="citation_entities" path="concepts/citation_entities.html"/>
    <appContext helpID="related_entities" path="tasks/related_entities.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
@@ -137,6 +138,8 @@
                path="tasks/notes-and-statements/attribution_statement.html"/>
    <appContext helpID="bibliography_statement"
                path="tasks/notes-and-statements/bibliography_statement.html"/>
+   <appContext helpID="biography_statement"
+               path="tasks/notes-and-statements/biography_statement.html"/>
    <appContext helpID="cartographic_statement"
                path="tasks/notes-and-statements/cartographic_statement.html"/>
    <appContext helpID="citation" path="tasks/notes-and-statements/citation.html"/>
@@ -152,10 +155,14 @@
    <appContext helpID="note" path="tasks/notes-and-statements/note.html"/>
    <appContext helpID="physical_statement"
                path="tasks/notes-and-statements/physical_statement.html"/>
+   <appContext helpID="dimension_statement"
+               path="tasks/notes-and-statements/dimension_statement.html"/>
    <appContext helpID="preferred_citation_note"
                path="tasks/notes-and-statements/preferred_citation_note.html"/>
    <appContext helpID="provenance_statement"
                path="tasks/notes-and-statements/provenance_statement.html"/>
+   <appContext helpID="acquisition_statement"
+               path="tasks/notes-and-statements/acquisition_statement.html"/>
    <appContext helpID="reproduction_statement"
                path="tasks/notes-and-statements/reproduction_statement.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>

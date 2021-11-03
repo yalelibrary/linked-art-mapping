@@ -8,6 +8,8 @@ author: [tt434, timothy.thompson@yale.edu, tt434]
 
 -   **[Title entries \[draft\]](../concepts/title_entries.md)**  
 
+-   **[Citation entities \[draft\]](../concepts/citation_entities.md)**  
+
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)
 
