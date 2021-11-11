@@ -56,7 +56,7 @@ conditions:
     {
       "id": "http://vocab.getty.edu/aat/300033963",
       "type": "Type",
-      "_label": "Sound",
+      "_label": "Collages",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300226816",
