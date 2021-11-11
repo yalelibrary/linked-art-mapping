@@ -59,7 +59,7 @@ conditions:
 {
   "classified_as": [
     {
-      "id": "http://vocab.getty.edu/aat/300033973",
+      "id": "http://vocab.getty.edu/aat/300046300",
       "type": "Type",
       "_label": "Photographs",
       "classified_as": [
