@@ -51,7 +51,7 @@ conditions:
         - - 007[1]
           - v
     - lower-case(300a) contains 'photograph'
-    - lower-case(650v) contains 'photographs'
+    - lower-case(650v) contains 'photograph'
     - lower-case(655a) contains 'photo'
 ```
 
