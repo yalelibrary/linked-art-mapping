@@ -52,7 +52,7 @@ conditions:
           - - 007[1]
             - l              
       - lower-case(300a) contains 'drawing'
-      - lower-case(650v) contains 'drawings'
+      - lower-case(650v) contains 'drawing'
       - lower-case(655a) contains 'drawings'
 ```
 
