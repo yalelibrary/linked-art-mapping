@@ -20,7 +20,7 @@ fieldSpec:
   - 110014abcdeg
   - 111014acdegjnqu
 trimPunctuation: true
-scriptInclusion: NONE
+scriptInclusion: BOTH
 ```
 
 ## Processing steps and output
