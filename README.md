@@ -1,2 +1,2 @@
 # linked-art-mapping
-## Current version: 0.5
+## Current version: 0.6
