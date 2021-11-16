@@ -6,7 +6,7 @@ category: Entity extraction
 
 # People as agents
 
-Entities extracted from MARC 11X and 71X fields.
+Entities extracted from MARC 100 and 700 fields.
 
 ## Source data
 
