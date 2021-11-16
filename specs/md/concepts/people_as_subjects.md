@@ -6,7 +6,7 @@ category: Entity extraction
 
 # People as subjects
 
-Entities extracted from MARC 61X fields.
+Entities extracted from MARC 600 fields.
 
 ## Source data
 
