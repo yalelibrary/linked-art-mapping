@@ -62,9 +62,9 @@ scriptInclusion: BOTH
 
 
 -   **[People as agents](../concepts/people_as_agents.md)**  
-Entities extracted from MARC 11X and 71X fields.
+Entities extracted from MARC 100 and 700 fields.
 -   **[People as subjects](../concepts/people_as_subjects.md)**  
-Entities extracted from MARC 61X fields.
+Entities extracted from MARC 600 fields.
 
 **Parent topic:**[People](../concepts/people.md)
 
