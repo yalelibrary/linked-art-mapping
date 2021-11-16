@@ -30,27 +30,27 @@ sampleBibs:
   - 838469 # 694
 # Source data fields
 fieldSpec:
-  - 11004abcdg
-  - 11104acdgjnqu
-  - 61004abcdgvxyz
-  - 61104acdegnquvxyz
-  - 69304abcdg
-  - 69404acdegnqu
-  - 7100abcdg
-  - 71104acdegnquvxyz       
+  - 11001abcdg
+  - 11101cdgjnqu
+  - 61001abcdgvxyz
+  - 61101acdegnquvxyz
+  - 69301abcdgvxyz
+  - 69401acdegnquvxyz
+  - 71001abcdg
+  - 71101acdegnquvxyz       
 trimPunctuation: true
 scriptInclusion: NONE
 ```
 
 ## Processing steps and output
 
-1.  Generate and store the top-level concept resources, each identified by an IRI.
+1.  Generate and store the top-level group resources, each identified by an IRI.
 
-    1.  Join all subfields to create a key for merging.
+    1.  Join all subfields \(except for `0` or `1`\) to create a key for merging.
 
     2.  Normalize and merge each unique string value.
 
-    3.  If a source data field in MARC includes a `$0` with an IRI, output an `equivalent` reference.
+    3.  If a source data field in MARC includes a subfield `0` or `1` with an IRI, output an `equivalent` reference.
 
     |JSON structure|Description|Default|
     |--------------|-----------|-------|

@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -36,16 +36,18 @@ fieldSpec:
   - 8100abcdg
   - 81104acdegjnquvxyz
 trimPunctuation: true
-scriptInclusion: NONE
+scriptInclusion: BOTH
 ```
 
 ## Processing information
 
 1.  Extract related entities from MARC bibliographic records and assign an IRI to each distinct entity.
 
-    1.  Create top-level related entities by normalizing and merging the string value of the source data subfields.
+    1.  Create top-level related entities by joining all subfields and to create a key for merging.
 
-    2.  Apply specific processing steps for each related entity type \(Concepts, Events, etc.\).
+    2.  Normalize and merge each unique string value.
+
+    3.  Apply specific processing steps for each related entity type \(Concepts, Events, etc.\).
 
 2.  Add embedded references to related entities within corresponding record-level resources \(`DigitalObject`, `HumanMadeObject`, `LinguisticObject`, `Set`, `VisualItem`\).
 
@@ -56,7 +58,7 @@ Entities that represent what a resource is about.
 Entities that represent time periods and/or discrete events related to a record-level resource.
 -   **[Groups](../concepts/groups.md)**  
 Entities that represent groups of people functioning collectively \(e.g., organizations and meetings/conferences\).
--   **[People \[draft\]](../concepts/people.md)**  
+-   **[People](../concepts/people.md)**  
 
 -   **[Places \[draft\]](../concepts/places.md)**  
 

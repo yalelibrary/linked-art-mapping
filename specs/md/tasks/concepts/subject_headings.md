@@ -32,14 +32,14 @@ fieldSpec:
   - 69404acdegjnquvxyz
   - 6950adfhklmnoprstvxyz  
 trimPunctuation: true
-scriptInclusion: NONE
+scriptInclusion: BOTH
 ```
 
 ## Processing steps and output
 
 1.  Generate and store the top-level chronological facets, each identified by an IRI.
 
-    1.  Join all subfields to create a key for merging.
+    1.  Join all subfields \(except for `0`\) to create a key for merging.
 
     2.  Normalize and merge each unique string value.
 

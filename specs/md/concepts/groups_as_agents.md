@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -24,10 +24,10 @@ sampleBibs:
   - 947 # 711
 # Source data fields
 fieldSpec:
-  - 11004abcdeg
-  - 11104acdegjnqu
-  - 7100abcdeg
-  - 71104acdegjnquvxyz  
+  - 11001abcdeg
+  - 11101acdegjnqu
+  - 71001abcdeg
+  - 71101acdegjnqu
 trimPunctuation: true
 scriptInclusion: NONE
 ```

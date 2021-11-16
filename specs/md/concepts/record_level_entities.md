@@ -29,7 +29,7 @@ The base class for record-level entities is determined by the supertype mapping.
 
 2.  [LUX supertype taxonomy](../concepts/supertypes/supertypes.md)  
 Taxonomy of content types and related formats for classifying record-level resources in LUX.
-3.  [Related title entities \[draft\]](../tasks/names-and-labels/related_title_entities.md)  
+3.  [Related title entities](../tasks/names-and-labels/related_title_entities.md)  
 
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)

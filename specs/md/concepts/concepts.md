@@ -13,6 +13,8 @@ In Linked Art, Concept entities are represented by the `Type` class. Concept ent
 Resources extracted from MARC 6XX entries.
 -   **[Classification numbers](../tasks/concepts/classification_numbers.md)**  
 Resources extracted from MARC 050 and 090 entries.
+-   **[Roles](../tasks/concepts/roles.md)**  
+Roles for related entities.
 
 **Parent topic:**[Related entities](../tasks/related_entities.md)
 

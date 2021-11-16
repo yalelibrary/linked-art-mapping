@@ -25,10 +25,10 @@ sampleBibs:
   - 838469 # 694
 # Source data fields
 fieldSpec:
-  - 61004abcdeg
-  - 61104acdegjnqu
-  - 69304abcdeg
-  - 69404acdegjnqu  
+  - 6100abcdeg
+  - 6110acdegjnqu
+  - 6930abcdegvxyz
+  - 6940acdegjnquvxyz  
 trimPunctuation: true
 scriptInclusion: NONE
 ```

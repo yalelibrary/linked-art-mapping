@@ -35,5 +35,5 @@ Content represented as words in a particular language, and/or the objects carryi
 
 **Previous topic:**[Content and carriers](../../tasks/content_and_carriers.md)
 
-**Next topic:**[Related title entities \[draft\]](../../tasks/names-and-labels/related_title_entities.md)
+**Next topic:**[Related title entities](../../tasks/names-and-labels/related_title_entities.md)
 
