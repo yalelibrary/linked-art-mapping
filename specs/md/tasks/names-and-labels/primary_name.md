@@ -2,6 +2,7 @@
 author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
+keyword: [Assigned, Completed, Deployed]
 ---
 
 # Primary name
@@ -12,7 +13,7 @@ Main title of a record-level entity.
 |-------|-----|
 |`LinguisticObject` `HumanMadeObject`|Repeat on both JSON-LD documents.|
 |`VisualItem` `HumanMadeObject`|Repeat on both JSON-LD documents.|
-|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
+|`Set`|Do not repeat on nested`members_exemplified_by → HumanMadeObject`.|
 |`DigitalObject`| |
 
 **Note:** The primary name is mirrored in parallel non-Latin script titles, when present.
@@ -34,26 +35,26 @@ scriptInclusion: BOTH
 
 ## Processing steps and output
 
-1.  Process the main title values \(MARC `245` and parallel `880`, if applicable\).
+1.  Process the main title values \(MARC`245`and parallel`880`, if applicable\).
 
-    1.  Join the string value of MARC `245` subfields `abfghknps` \(excluding `$6`\) with a whitespace character.
+    1.  Join the string value of MARC`245`subfields`abfghknps`\(excluding`$6`\) with a whitespace character.
 
-    2.  If applicable, join the string value of parallel MARC `880` subfields `abfghknps` \(excluding `$6`\) with a whitespace character.
+    2.  If applicable, join the string value of parallel MARC`880`subfields`abfghknps`\(excluding`$6`\) with a whitespace character.
 
     |JSON structure|Description|Default|
     |--------------|-----------|-------|
-    |`root → id`|IRI of the record-level entity||
+    |`root → id`|IRI of the record-level entity| |
     |`root → type`|Base class of the record-level entity| |
-    |`root → _label`|Label of the record-level entity. If the main title has a non-Latin script alternative in a MARC `880` field, that alternative value should be displayed as the label.| |
-    |`root → identified_by → [0]`|First item in `identified_by` array should correspond to MARC `245`| |
+    |`root → _label`|Label of the record-level entity. If the main title has a non-Latin script alternative in a MARC`880`field, that alternative value should be displayed as the label.| |
+    |`root → identified_by → [0]`|First item in`identified_by`array should correspond to MARC`245`| |
     |`root → identified_by → [0] → type`| |`Name`|
-    |`root → identified_by → [0] → content`|String value of MARC `245` subfields| |
+    |`root → identified_by → [0] → content`|String value of MARC`245`subfields| |
     |`root → identified_by → [0] → classified_as → id`|IRI of the concept used to classify the main title|[http://vocab.getty.edu/aat/300404670](http://vocab.getty.edu/aat/300404670)|
     |`root → identified_by → [0] → classified_as → type`| |`Type`|
     |`root → identified_by → [0] → classified_as → _label`|Label of the concept used to classify the main title|`Primary Name`|
-    |`root → identified_by → [1]`|Second item in the `identified_by` array should correspond to MARC `880`, if applicable| |
+    |`root → identified_by → [1]`|Second item in the`identified_by`array should correspond to MARC`880`, if applicable| |
     |`root → identified_by → [1] → type`| |`Name`|
-    |`root → identified_by → [1] → content`|String value of MARC `880` subfields| |
+    |`root → identified_by → [1] → content`|String value of MARC`880`subfields| |
     |`root → identified_by → [1] → classified_as → id`|IRI of the concept used to classify the non-Latin main title|[http://vocab.getty.edu/aat/300404670](http://vocab.getty.edu/aat/300404670)|
     |`root → identified_by → [1] → classified_as → type`| |`Type`|
     |`root → identified_by → [1] → classified_as → _label`|Label of the concept used to classify the non-Latin main title|`Primary Name`|

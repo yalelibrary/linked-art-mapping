@@ -7,7 +7,7 @@ publisher: YUL Technical Services, Resource Discovery Services, Metadata Service
 
 Entities that represent what a resource is about.
 
-In Linked Art, Concept entities are represented by the `Type` class. Concept entities should be generated for subject headings and classification numbers in MARC.
+In Linked Art, Concept entities are represented by the`Type`class. Concept entities should be generated for subject headings and classification numbers in MARC.
 
 -   **[Subject headings](../tasks/concepts/subject_headings.md)**  
 Resources extracted from MARC 6XX entries.

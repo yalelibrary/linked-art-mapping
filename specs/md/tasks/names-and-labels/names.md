@@ -4,7 +4,7 @@ author: [tt434, timothy.thompson@yale.edu, tt434]
 
 # Names
 
-In Linked Art, `Name` is a resource type \(class\) that is invoked whenever a resource needs to be identified by name.
+In Linked Art,`Name`is a resource type \(class\) that is invoked whenever a resource needs to be identified by name.
 
 1.  Identify top-level resources by name.
 
@@ -71,7 +71,7 @@ In Linked Art, `Name` is a resource type \(class\) that is invoked whenever a re
 -   **[Primary name](../../tasks/names-and-labels/primary_name.md)**  
 Main title of a record-level entity.
 -   **[Sorting name](../../tasks/names-and-labels/sorting_name.md)**  
-Sorting title of a record-level entity. Taken from MARC `245` with initial articles removed.
+Sorting title of a record-level entity. Taken from MARC`245`with initial articles removed.
 
 **Parent topic:**[Names and labels](../../concepts/names_and_labels.md)
 

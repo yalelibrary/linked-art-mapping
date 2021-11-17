@@ -2,6 +2,7 @@
 author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
+keyword: [Assigned, Completed, Deployed]
 ---
 
 # Library of Congress Control Number \(LCCN\)
@@ -10,9 +11,9 @@ The Library of Congress Control Number is a serially based identifier assigned t
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
-|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related`HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related`HumanMadeObject`.|
+|`Set`|Do not repeat on nested`members_exemplified_by → HumanMadeObject`.|
 |`DigitalObject`| |
 
 ## Source data
@@ -31,9 +32,9 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Get value of `010a`.
+1.  Get value of`010a`.
 
-2.  Output JSON-LD with the LCCN:
+2.  Output JSON-LD with theLCCN:
 
 
 `4`

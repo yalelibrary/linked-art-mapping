@@ -6,10 +6,10 @@ author: [tt434, timothy.thompson@yale.edu, tt434]
 
 Standard alphanumeric values used to uniquely identify a resource.
 
-Six identifier types are currently mapped for LUX.
+Six identifier types are currently mapped forLUX.
 
 -   **[Orbis BIB ID](../tasks/identifiers/orbis_bib_id.md)**  
-The Orbis BIB ID is a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.
+TheOrbis BIB IDis a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.
 -   **[Library of Congress Control Number \(LCCN\)](../tasks/identifiers/library_of_congress_control_number_lccn.md)**  
 The Library of Congress Control Number is a serially based identifier assigned to resources that also appear in the catalog of the Library of Congress.
 -   **[International Standard Book Number \(ISBN\)](../tasks/identifiers/international_standard_book_number_isbn.md)**  

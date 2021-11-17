@@ -20,15 +20,15 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Process each entry in a `505` contents note as a top-level `LinguisticObject`.
+1.  Process each entry in a`505`contents note as a top-level`LinguisticObject`.
 
-    1.  If subfields `grt` are present, join the string values of MARC `505agrt` with a whitespace character.
+    1.  If subfields`grt`are present, join the string values of MARC`505agrt`with a whitespace character.
 
     2.  Split the joined string on double hyphen characters \(`--`\).
 
     3.  For each title entry, generate and store a top-level related title entity, each identified by an IRI.
 
-    4.  Within each top-level related title entity, include a `part_of` reference to the `LinguisticObject` representing the bibliographic record with the `505` contents note.
+    4.  Within each top-level related title entity, include a`part_of`reference to the`LinguisticObject`representing the bibliographic record with the`505`contents note.
 
     `3931`
 
@@ -62,5 +62,5 @@ scriptInclusion: NONE
 
 **Parent topic:**[Record-level entities](../../concepts/record_level_entities.md)
 
-**Previous topic:**[LUX supertype taxonomy](../../concepts/supertypes/supertypes.md)
+**Previous topic:**[LUXsupertype taxonomy](../../tasks/supertypes/supertypes.md)
 

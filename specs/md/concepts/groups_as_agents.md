@@ -36,7 +36,7 @@ scriptInclusion: NONE
 
 1.  Add an embedded reference to the Group entity within the top-level resource.
 
-    **Note:** The role of the Group entity is derived from `$e` for MARC 110 and 710 and from `$j` for MARC 111 and 711. When those subfields are absent, a generic role of `creator` is assigned when 11X is the source or `contributor` when 71X is the source.
+    **Note:** The role of the Group entity is derived from`$e`for MARC 110 and 710 and from`$j`for MARC 111 and 711. When those subfields are absent, a generic role of`creator`is assigned when 11X is the source or`contributor`when 71X is the source.
 
     |JSON structure|Description|Default|
     |--------------|-----------|-------|

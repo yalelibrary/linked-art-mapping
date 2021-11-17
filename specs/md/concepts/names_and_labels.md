@@ -6,7 +6,7 @@ author: [tt434, timothy.thompson@yale.edu, tt434]
 
 Names and labels supplied for top-level resources.
 
-Titles extracted from MARC `505` \(Formatted Contents Note\) are handled separately, as their own record-level entities: see [Related title entities](../tasks/names-and-labels/related_title_entities.md).
+Titles extracted from MARC`505`\(Formatted Contents Note\) are handled separately, as their own record-level entities: see[Related title entities](../tasks/names-and-labels/related_title_entities.md).
 
 -   **[Names](../tasks/names-and-labels/names.md)**  
 

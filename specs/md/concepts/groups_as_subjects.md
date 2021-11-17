@@ -39,9 +39,9 @@ scriptInclusion: NONE
 
     |JSON structure|Description|Default|
     |--------------|-----------|-------|
-    |`root → about → id`|Must match the `id` of the top-level resource| |
+    |`root → about → id`|Must match the`id`of the top-level resource| |
     |`root → about → type`| |`Group`|
-    |`root → about → _label`| |Must match the `label` of the top-level resource|
+    |`root → about → _label`| |Must match the`label`of the top-level resource|
 
     `68`
 

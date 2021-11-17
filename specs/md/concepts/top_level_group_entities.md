@@ -46,11 +46,11 @@ scriptInclusion: NONE
 
 1.  Generate and store the top-level group resources, each identified by an IRI.
 
-    1.  Join all subfields \(except for `0` or `1`\) to create a key for merging.
+    1.  Join all subfields \(except for`0`or`1`\) to create a key for merging.
 
     2.  Normalize and merge each unique string value.
 
-    3.  If a source data field in MARC includes a subfield `0` or `1` with an IRI, output an `equivalent` reference.
+    3.  If a source data field in MARC includes a subfield`0`or`1`with an IRI, output an`equivalent`reference.
 
     |JSON structure|Description|Default|
     |--------------|-----------|-------|
@@ -61,9 +61,9 @@ scriptInclusion: NONE
     |`root → classified_as → type`| |`Type`|
     |`root → classified_as → _label`| |`Organization`|
     |`root → identified_by → type`| |`Name`|
-    |`root → identified_by → content`|Same as `root → _label`| |
-    |`root → equivalent → id`|Reference to IRI from `$0`, if applicable| |
-    |`root → equivalent → type`|Reference to resource type from `$0`, if applicable|`Group`|
+    |`root → identified_by → content`|Same as`root → _label`| |
+    |`root → equivalent → id`|Reference to IRI from`$0`, if applicable| |
+    |`root → equivalent → type`|Reference to resource type from`$0`, if applicable|`Group`|
     |`root → equivalent → classified_as → id`|Concept IRI used to classify the equivalent resource|[http://vocab.getty.edu/aat/300025948](http://vocab.getty.edu/aat/300025948)|
     |`root → equivalent → classified_as → type`| |`Type`|
     |`root → equivalent → classified_as → _label`| |`Organization`|

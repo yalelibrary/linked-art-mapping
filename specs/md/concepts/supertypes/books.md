@@ -42,7 +42,7 @@ conditions:
       - - ldr[6]
         - a
       # Serial component part
-      - - ldr[7]
+      - - ldr[6]
         - b
       - OR:
         # Updating looseleaf

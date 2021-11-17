@@ -5,81 +5,75 @@
    <appContext helpID="record_level_entities"
                path="concepts/record_level_entities.html"/>
    <appContext helpID="content_and_carriers" path="tasks/content_and_carriers.html"/>
-   <appContext helpID="supertypes" path="concepts/supertypes/supertypes.html"/>
+   <appContext helpID="supertypes" path="tasks/supertypes/supertypes.html"/>
    <appContext helpID="supertype_CollectionFormats"
-               path="concepts/supertypes/collectionformats.html"/>
+               path="tasks/supertypes/collectionformats.html"/>
    <appContext helpID="supertype_ArchivalAndManuscriptMaterials"
-               path="concepts/supertypes/archivalandmanuscriptmaterials.html"/>
-   <appContext helpID="supertype_Kits" path="concepts/supertypes/kits.html"/>
+               path="tasks/supertypes/archivalandmanuscriptmaterials.html"/>
+   <appContext helpID="supertype_Kits" path="tasks/supertypes/kits.html"/>
    <appContext helpID="supertype_AudioFormats"
-               path="concepts/supertypes/audioformats.html"/>
-   <appContext helpID="supertype_Music" path="concepts/supertypes/music.html"/>
-   <appContext helpID="supertype_Sound" path="concepts/supertypes/sound.html"/>
+               path="tasks/supertypes/audioformats.html"/>
+   <appContext helpID="supertype_Music" path="tasks/supertypes/music.html"/>
+   <appContext helpID="supertype_Sound" path="tasks/supertypes/sound.html"/>
    <appContext helpID="supertype_CartographicFormats"
-               path="concepts/supertypes/cartographicformats.html"/>
-   <appContext helpID="supertype_Atlases" path="concepts/supertypes/atlases.html"/>
+               path="tasks/supertypes/cartographicformats.html"/>
+   <appContext helpID="supertype_Atlases" path="tasks/supertypes/atlases.html"/>
    <appContext helpID="supertype_GeospatialData"
-               path="concepts/supertypes/geospatialdata.html"/>
-   <appContext helpID="supertype_Globes" path="concepts/supertypes/globes.html"/>
-   <appContext helpID="supertype_Maps" path="concepts/supertypes/maps.html"/>
-   <appContext helpID="supertype_DataFormats"
-               path="concepts/supertypes/dataformats.html"/>
+               path="tasks/supertypes/geospatialdata.html"/>
+   <appContext helpID="supertype_Globes" path="tasks/supertypes/globes.html"/>
+   <appContext helpID="supertype_Maps" path="tasks/supertypes/maps.html"/>
+   <appContext helpID="supertype_DataFormats" path="tasks/supertypes/dataformats.html"/>
    <appContext helpID="supertype_DataAndFiles"
-               path="concepts/supertypes/dataandfiles.html"/>
+               path="tasks/supertypes/dataandfiles.html"/>
    <appContext helpID="supertype_GeospatialData"
-               path="concepts/supertypes/geospatialdata.html"/>
-   <appContext helpID="supertype_ImageData" path="concepts/supertypes/imagedata.html"/>
-   <appContext helpID="supertype_TextualData"
-               path="concepts/supertypes/textualdata.html"/>
+               path="tasks/supertypes/geospatialdata.html"/>
+   <appContext helpID="supertype_ImageData" path="tasks/supertypes/imagedata.html"/>
+   <appContext helpID="supertype_TextualData" path="tasks/supertypes/textualdata.html"/>
    <appContext helpID="supertype_ImageFormats"
-               path="concepts/supertypes/imageformats.html"/>
-   <appContext helpID="supertype_Collages" path="concepts/supertypes/collages.html"/>
-   <appContext helpID="supertype_ImageData" path="concepts/supertypes/imagedata.html"/>
-   <appContext helpID="supertype_Drawings" path="concepts/supertypes/drawings.html"/>
-   <appContext helpID="supertype_Maps" path="concepts/supertypes/maps.html"/>
-   <appContext helpID="supertype_Paintings" path="concepts/supertypes/paintings.html"/>
-   <appContext helpID="supertype_Photographs"
-               path="concepts/supertypes/photographs.html"/>
-   <appContext helpID="supertype_Pictures" path="concepts/supertypes/pictures.html"/>
-   <appContext helpID="supertype_Posters" path="concepts/supertypes/posters.html"/>
-   <appContext helpID="supertype_Prints" path="concepts/supertypes/prints.html"/>
-   <appContext helpID="supertype_Slides" path="concepts/supertypes/slides.html"/>
+               path="tasks/supertypes/imageformats.html"/>
+   <appContext helpID="supertype_Collages" path="tasks/supertypes/collages.html"/>
+   <appContext helpID="supertype_ImageData" path="tasks/supertypes/imagedata.html"/>
+   <appContext helpID="supertype_Drawings" path="tasks/supertypes/drawings.html"/>
+   <appContext helpID="supertype_Maps" path="tasks/supertypes/maps.html"/>
+   <appContext helpID="supertype_Paintings" path="tasks/supertypes/paintings.html"/>
+   <appContext helpID="supertype_Photographs" path="tasks/supertypes/photographs.html"/>
+   <appContext helpID="supertype_Pictures" path="tasks/supertypes/pictures.html"/>
+   <appContext helpID="supertype_Posters" path="tasks/supertypes/posters.html"/>
+   <appContext helpID="supertype_Prints" path="tasks/supertypes/prints.html"/>
+   <appContext helpID="supertype_Slides" path="tasks/supertypes/slides.html"/>
    <appContext helpID="supertype_MovingImageFormats"
-               path="concepts/supertypes/movingimageformats.html"/>
+               path="tasks/supertypes/movingimageformats.html"/>
    <appContext helpID="supertype_MotionPictures"
-               path="concepts/supertypes/motionpictures.html"/>
+               path="tasks/supertypes/motionpictures.html"/>
    <appContext helpID="supertype_NotationFormats"
-               path="concepts/supertypes/notationformats.html"/>
+               path="tasks/supertypes/notationformats.html"/>
    <appContext helpID="supertype_NotatedMovement"
-               path="concepts/supertypes/notatedmovement.html"/>
+               path="tasks/supertypes/notatedmovement.html"/>
    <appContext helpID="supertype_NotatedMusic"
-               path="concepts/supertypes/notatedmusic.html"/>
+               path="tasks/supertypes/notatedmusic.html"/>
    <appContext helpID="supertype_ObjectFormats"
-               path="concepts/supertypes/objectformats.html"/>
-   <appContext helpID="supertype_Globes" path="concepts/supertypes/globes.html"/>
-   <appContext helpID="supertype_Models" path="concepts/supertypes/models.html"/>
-   <appContext helpID="supertype_Realia" path="concepts/supertypes/realia.html"/>
+               path="tasks/supertypes/objectformats.html"/>
+   <appContext helpID="supertype_Globes" path="tasks/supertypes/globes.html"/>
+   <appContext helpID="supertype_Models" path="tasks/supertypes/models.html"/>
+   <appContext helpID="supertype_Realia" path="tasks/supertypes/realia.html"/>
    <appContext helpID="supertype_ToysAndGames"
-               path="concepts/supertypes/toysandgames.html"/>
+               path="tasks/supertypes/toysandgames.html"/>
    <appContext helpID="supertype_SoftwareFormats"
-               path="concepts/supertypes/softwareformats.html"/>
+               path="tasks/supertypes/softwareformats.html"/>
    <appContext helpID="supertype_SoftwareApplications"
-               path="concepts/supertypes/softwareapplications.html"/>
-   <appContext helpID="supertype_Databases" path="concepts/supertypes/databases.html"/>
+               path="tasks/supertypes/softwareapplications.html"/>
+   <appContext helpID="supertype_Databases" path="tasks/supertypes/databases.html"/>
    <appContext helpID="supertype_TextualFormats"
-               path="concepts/supertypes/textualformats.html"/>
-   <appContext helpID="supertype_Books" path="concepts/supertypes/books.html"/>
-   <appContext helpID="supertype_Atlases" path="concepts/supertypes/atlases.html"/>
-   <appContext helpID="supertype_Broadsides"
-               path="concepts/supertypes/broadsides.html"/>
+               path="tasks/supertypes/textualformats.html"/>
+   <appContext helpID="supertype_Books" path="tasks/supertypes/books.html"/>
+   <appContext helpID="supertype_Atlases" path="tasks/supertypes/atlases.html"/>
+   <appContext helpID="supertype_Broadsides" path="tasks/supertypes/broadsides.html"/>
    <appContext helpID="supertype_DissertationsAndTheses"
-               path="concepts/supertypes/dissertationsandtheses.html"/>
+               path="tasks/supertypes/dissertationsandtheses.html"/>
    <appContext helpID="supertype_JournalsAndPeriodicals"
-               path="concepts/supertypes/journalsandperiodicals.html"/>
-   <appContext helpID="supertype_Newspapers"
-               path="concepts/supertypes/newspapers.html"/>
-   <appContext helpID="supertype_TextualData"
-               path="concepts/supertypes/textualdata.html"/>
+               path="tasks/supertypes/journalsandperiodicals.html"/>
+   <appContext helpID="supertype_Newspapers" path="tasks/supertypes/newspapers.html"/>
+   <appContext helpID="supertype_TextualData" path="tasks/supertypes/textualdata.html"/>
    <appContext helpID="related_title_entities"
                path="tasks/names-and-labels/related_title_entities.html"/>
    <appContext helpID="work_level_entities" path="concepts/work_level_entities.html"/>

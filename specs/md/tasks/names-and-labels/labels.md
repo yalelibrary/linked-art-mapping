@@ -6,7 +6,7 @@ author: [tt434, timothy.thompson@yale.edu, tt434]
 
 The label of a resource.
 
-The generic `_label` property is used to provide a human-readable label for a top-level or embedded resource.
+The generic`_label`property is used to provide a human-readable label for a top-level or embedded resource.
 
 `9447`
 

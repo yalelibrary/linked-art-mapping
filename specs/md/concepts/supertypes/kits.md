@@ -2,6 +2,7 @@
 author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
+keyword: Deployed
 ---
 
 # Kits

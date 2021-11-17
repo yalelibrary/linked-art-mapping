@@ -2,6 +2,7 @@
 author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
+keyword: [Assigned, Completed, Deployed]
 ---
 
 # International Standard Serial Number \(ISSN\)
@@ -10,9 +11,9 @@ The International Standard Serial Number is a unique identification number assig
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
-|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related`HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related`HumanMadeObject`.|
+|`Set`|Do not repeat on nested`members_exemplified_by → HumanMadeObject`.|
 |`DigitalObject`| |
 
 ## Source data
@@ -31,11 +32,11 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Skip `022` if `022y` \(incorrect ISSN\) or `022z` \(cancelled ISSN\).
+1.  Skip`022`if`022y`\(incorrect ISSN\) or`022z`\(cancelled ISSN\).
 
-2.  Get value of `022a`.
+2.  Get value of`022a`.
 
-3.  Output JSON-LD with the ISSN:
+3.  Output JSON-LD with theISSN:
 
 
 `464630`

@@ -21,8 +21,6 @@ sampleBibs:
   - 174 # 800t
   - 36117 # 692t
   - 44029 # 692t
-  
-
 ```
 
 ## Processing steps and output

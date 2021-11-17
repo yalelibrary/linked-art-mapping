@@ -4,13 +4,13 @@ author: [tt434, timothy.thompson@yale.edu, tt434]
 
 # Attribution statement
 
-Corresponds to the `245c` statement of responsibility in MARC.
+Corresponds to the`245c`statement of responsibility in MARC.
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
-|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related`HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related`HumanMadeObject`.|
+|`Set`|Do not repeat on nested`members_exemplified_by → HumanMadeObject`.|
 |`DigitalObject`| |
 
 **Note:** The attribution statement is mirrored in parallel non-Latin script values, when present.
@@ -31,12 +31,12 @@ scriptInclusion: BOTH
 
 ## Processing steps and output
 
-1.  Process the attribution statement values \(MARC `245c` and parallel `880c`, if applicable\).
+1.  Process the attribution statement values \(MARC`245c`and parallel`880c`, if applicable\).
 
     |JSON structure|Description|Default|
     |--------------|-----------|-------|
     |`root → referred_to_by → [0] → type`| |`LinguisticObject`|
-    |`root → referred_to_by → [0] → content`|String value of MARC `245c` subfield| |
+    |`root → referred_to_by → [0] → content`|String value of MARC`245c`subfield| |
     |`root → referred_to_by → [0] → classified_as → [0] → id`|IRI of the concept used to classify the statement|[http://vocab.getty.edu/aat/300056109](http://vocab.getty.edu/aat/300056109)|
     |`root → referred_to_by → [0] → classified_as → [0] → type`| |`Type`|
     |`root → referred_to_by → [0] → classified_as → [0] → _label`|Label of the concept used to classify the statement|`Attribution Statement`|
@@ -46,7 +46,7 @@ scriptInclusion: BOTH
     |`root → referred_to_by → [0] → classified_as → [1] → id`|IRI of the concept used to classify the statement|[http://vocab.getty.edu/aat/300404333](http://vocab.getty.edu/aat/300404333)|
     |`root → referred_to_by → [0] → classified_as → [1] → type`| |`Type`|
     |`root → referred_to_by → [0] → classified_as → [0] → _label`|Label of the concept used to classify the statement|`Transcribed`|
-    |`root → referred_to_by → [1]`|Following item in the `referred_to_by` array should correspond to MARC `880`, if applicable|[http://vocab.getty.edu/aat/300418049](http://vocab.getty.edu/aat/300418049)|
+    |`root → referred_to_by → [1]`|Following item in the`referred_to_by`array should correspond to MARC`880`, if applicable|[http://vocab.getty.edu/aat/300418049](http://vocab.getty.edu/aat/300418049)|
     |`root → referred_to_by → [1] → language → id`|IRI of the Language entity for the non-Latin statement|Currently, specific language values are not assigned. A single IRI representing an undefined \(`und`\) language should be assigned for all parallel non-Latin script values.|
     |`root → referred_to_by → [1] → language → type`| |`Language`|
     |`root → referred_to_by → [1] → language → _label`| |`und`|
