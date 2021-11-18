@@ -4,7 +4,7 @@
     -   [LUX top-level entities](concepts/lux_top-level_entities.md)
         -   [Record-level entities](concepts/record_level_entities.md)
             -   [Content and carriers](tasks/content_and_carriers.md)
-            -   [LUXsupertype taxonomy](tasks/supertypes/supertypes.md)
+            -   [LUX supertype taxonomy](tasks/supertypes/supertypes.md)
                 -   [Collections](tasks/supertypes/collectionformats.md)
                     -   [Archival and Manuscript Materials](tasks/supertypes/archivalandmanuscriptmaterials.md)
                     -   [Kits](tasks/supertypes/kits.md)

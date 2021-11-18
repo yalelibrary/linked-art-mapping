@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 ---
 
 # Notes and statements
@@ -11,7 +11,7 @@ Notes and descriptive statements are collected within a`referred_to_by`array.
 Nineteen note and statement types are currently mapped forLUX.
 
 -   **[Abstract](../tasks/notes-and-statements/abstract.md)**  
-Corresponds to the `520` note field in MARC.
+Corresponds to the`520`note field in MARC.
 -   **[Arrangement note](../tasks/notes-and-statements/arrangement_note.md)**  
 Corresponds to the `351` note field in MARC.
 -   **[Attribution statement](../tasks/notes-and-statements/attribution_statement.md)**  
@@ -31,9 +31,9 @@ Cumulative Index/Finding Aids Note
 -   **[Language statement](../tasks/notes-and-statements/language_statement.md)**  
 Textual information on the language or notation system used to convey the content of the described materials.
 -   **[Local note](../tasks/notes-and-statements/local_note.md)**  
-Corresponds to the `590` Local Note field at YUL.
+Corresponds to the`590`Local Note field at YUL.
 -   **[Medium of performance](../tasks/notes-and-statements/material_statement.md)**  
-Corresponds to the `382` field in MARC.
+Corresponds to the`382`field in MARC.
 -   **[Note](../tasks/notes-and-statements/note.md)**  
 
 -   **[Physical statement](../tasks/notes-and-statements/physical_statement.md)**  

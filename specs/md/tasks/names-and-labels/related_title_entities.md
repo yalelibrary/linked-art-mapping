@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 ---
 
 # Related title entities
@@ -62,5 +62,5 @@ scriptInclusion: NONE
 
 **Parent topic:**[Record-level entities](../../concepts/record_level_entities.md)
 
-**Previous topic:**[LUXsupertype taxonomy](../../tasks/supertypes/supertypes.md)
+**Previous topic:**[LUX supertype taxonomy](../../tasks/supertypes/supertypes.md)
 

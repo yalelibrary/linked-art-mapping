@@ -1,13 +1,13 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 ---
 
 # Note
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject` `HumanMadeObject`|If a note field contains a `5005` subfield, an attempt may be made to match it to the appropriate `HumanMadeObject` \(derived from a corresponding MARC holdings records\). Otherwise, it should be attached to the main `LinguisticObject` resource.|
-|`VisualItem` `HumanMadeObject`|If a note field contains a `5005` subfield, an attempt may be made to match it to the appropriate `HumanMadeObject` \(derived from a corresponding MARC holdings records\). Otherwise, it should be attached to the main `VisualItem` resource.|
+|`LinguisticObject` `HumanMadeObject`|If a note field contains a`5005`subfield, an attempt may be made to match it to the appropriate`HumanMadeObject`\(derived from a corresponding MARC holdings records\). Otherwise, it should be attached to the main`LinguisticObject`resource.|
+|`VisualItem` `HumanMadeObject`|If a note field contains a`5005`subfield, an attempt may be made to match it to the appropriate`HumanMadeObject`\(derived from a corresponding MARC holdings records\). Otherwise, it should be attached to the main`VisualItem`resource.|
 |`DigitalObject`| |
 
 ## Source data
@@ -26,18 +26,18 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Check to see whether the `500` note contains subfield `5`.
+1.  Check to see whether the`500`note contains subfield`5`.
 
     `$a A contribution by T.S. Eliot titled "The class and the elite" appears in v.11, no. 6 (Oct. 1945). $5 CtY-BR`
 
-    -   If the `500` note contains subfield `5`, attempt to match it against a corresponding location in an associated holdings record.
+    -   If the`500`note contains subfield`5`, attempt to match it against a corresponding location in an associated holdings record.
 
-        If a match is made, attach the local note to the `HumanMadeObject` resource corresponding to the matching holdings record.
+        If a match is made, attach the local note to the`HumanMadeObject`resource corresponding to the matching holdings record.
 
-    -   Else, attach the local note to the `LinguisticObject` resource corresponding to the bibliographic record.
+    -   Else, attach the local note to the`LinguisticObject`resource corresponding to the bibliographic record.
     **Note:** These examples are meant to illustrate general notes and do not represent complete JSON-LD documents.
 
-    **Note:** This example illustrates a case in which a `500` note contains subfield `5` has been successfully matched against the location/call number in a holdings record.
+    **Note:** This example illustrates a case in which a`500`note contains subfield`5`has been successfully matched against the location/call number in a holdings record.
 
     `2814209`
 
@@ -106,7 +106,7 @@ scriptInclusion: NONE
     }
     ```
 
-    **Note:** This example illustrates a case in which a `500` note does **not** contain a subfield `5`.
+    **Note:** This example illustrates a case in which a`500`note does**not**contain a subfield`5`.
 
     `2`
 

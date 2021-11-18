@@ -1,15 +1,15 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 ---
 
 # Local note
 
-Corresponds to the `590` Local Note field at YUL.
+Corresponds to the`590`Local Note field at YUL.
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject` `HumanMadeObject`|If a local note begins with a location/call number prefix, an attempt may be made to match it to the appropriate `HumanMadeObject` \(derived from a corresponding MARC holdings records\). Otherwise, it should be attached to the main `LinguisticObject` resource.|
-|`VisualItem` `HumanMadeObject`|If a local note begins with a location/call number prefix, an attempt may be made to match it to the appropriate `HumanMadeObject` \(derived from a corresponding MARC holdings records\). Otherwise, it should be attached to the main `VisualItem` resource.|
+|`LinguisticObject` `HumanMadeObject`|If a local note begins with a location/call number prefix, an attempt may be made to match it to the appropriate`HumanMadeObject`\(derived from a corresponding MARC holdings records\). Otherwise, it should be attached to the main`LinguisticObject`resource.|
+|`VisualItem` `HumanMadeObject`|If a local note begins with a location/call number prefix, an attempt may be made to match it to the appropriate`HumanMadeObject`\(derived from a corresponding MARC holdings records\). Otherwise, it should be attached to the main`VisualItem`resource.|
 |`DigitalObject`| |
 
 ## Source data
@@ -31,17 +31,17 @@ scriptInclusion: NONE
 
 1.  Check for a location/call number prefix at the start of the local note.
 
-    “BEIN Kosinski 135: ”
+    “BEIN Kosinski 135:”
 
     -   If the local note begins with a location/call number prefix, attempt to match it against a corresponding location/call number combination in an associated holdings record.
 
-        If a match is made, attach the local note to the `HumanMadeObject` resource corresponding to the matching holdings record.
+        If a match is made, attach the local note to the`HumanMadeObject`resource corresponding to the matching holdings record.
 
-    -   Else, attach the local note to the `LinguisticObject` resource corresponding to the bibliographic record.
-2.  Process the local note values \(MARC `590ab`\).
+    -   Else, attach the local note to the`LinguisticObject`resource corresponding to the bibliographic record.
+2.  Process the local note values \(MARC`590ab`\).
 
     -   If both subfields \(`590ab`\) are present, join them with a whitespace character.
-    -   Else, output the string value of `590a`.
+    -   Else, output the string value of`590a`.
     **Note:** These examples are meant to illustrate local notes and do not represent complete JSON-LD documents.
 
     **Note:** This example illustrates a case in which a location/call number prefix has been successfully matched against the location/call number in a holdings record.
@@ -151,7 +151,7 @@ scriptInclusion: NONE
     }
     ```
 
-    **Note:** This example illustrates a case in which a location/call number prefix has **not** been matched against a location/call number in a holdings record, but rather attached to a `LinguisticObject` resource.
+    **Note:** This example illustrates a case in which a location/call number prefix has**not**been matched against a location/call number in a holdings record, but rather attached to a`LinguisticObject`resource.
 
     `17`
 

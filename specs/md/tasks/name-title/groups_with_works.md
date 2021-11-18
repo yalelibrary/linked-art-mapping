@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -29,7 +29,6 @@ sampleBibs:
   - 27598 # 611t
   - 39783 # 693t
   - 496806 # 693t
-
 ```
 
 ## Processing steps and output

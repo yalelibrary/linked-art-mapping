@@ -1,14 +1,14 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 ---
 
 # Reproduction statement
 
 |Domains|Usage|
 |-------|-----|
-|`HumanMadeObject`|Do not repeat on related `LinguisticObject`.|
-|`HumanMadeObject`|Do not repeat on related `VisualItem`.|
-|`members_exemplified_by → HumanMadeObject`|Do not repeat on containing `Set`.|
+|`HumanMadeObject`|Do not repeat on related`LinguisticObject`.|
+|`HumanMadeObject`|Do not repeat on related`VisualItem`.|
+|`members_exemplified_by → HumanMadeObject`|Do not repeat on containing`Set`.|
 
 ## Source data
 
@@ -26,17 +26,17 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Process the acquisition statement values \(MARC `5333abcdefn`\).
+1.  Process the acquisition statement values \(MARC`5333abcdefn`\).
 
-    1.  Join the string values of `5333abcdefn` with a whitespace character.
+    1.  Join the string values of`5333abcdefn`with a whitespace character.
 
-    2.  If subfield `3` is present, but does not appear first in the subfield sequence, prefix the statement with the value of subfield `3`.
+    2.  If subfield`3`is present, but does not appear first in the subfield sequence, prefix the statement with the value of subfield`3`.
 
-    3.  Test the value of `3` to see whether it ends with a colon.
+    3.  Test the value of`3`to see whether it ends with a colon.
 
-    4.  If no colon is present, **trim punctuation** and concatenate the value with a colon \(`:`\).
+    4.  If no colon is present,**trim punctuation**and concatenate the value with a colon \(`:`\).
 
-    5.  Else, output the value of subfield `3`.
+    5.  Else, output the value of subfield`3`.
 
     ```
     533  $3 Logbooks, 1799-1805 $a Microfilm. $b [Washington, D.C.] : $c The Library of Congress Photoduplication Service, $d 1982. $e 1 microfilm reel ; 35 mm. $f (Papers of Edward Preble, 1680-1912 ; no. 18,525)

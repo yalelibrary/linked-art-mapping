@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -17,7 +17,7 @@ Representations of the Earth, heavens, or another planet in the form of a ball.
 -   **[Maps](../../tasks/supertypes/maps.md)**  
 Refers to graphic or photogrammetric representations of the Earth's surface or a part of it, including physical features and political boundaries, where each point corresponds to a geographical or celestial position according to a definite scale or projection. The term may also refer to similar depictions of other planets, suns, other heavenly bodies, or areas of the heavens. Maps are typically depicted on a flat medium, such as on paper, a wall, or a computer screen.
 
-**Parent topic:**[LUXsupertype taxonomy](../../tasks/supertypes/supertypes.md)
+**Parent topic:**[LUX supertype taxonomy](../../tasks/supertypes/supertypes.md)
 
 **Previous topic:**[Audio](../../tasks/supertypes/audioformats.md)
 

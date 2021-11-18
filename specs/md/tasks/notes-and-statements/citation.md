@@ -1,13 +1,13 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 ---
 
 # Citation
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related`HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related`HumanMadeObject`.|
 |`DigitalObject`| |
 
 ## Source data
@@ -26,14 +26,14 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Check for `510u`
+1.  Check for`510u`
 
-    -   If `510u` is present with a Wikidata URI \(e.g., [http://www.wikidata.org/entity/Q107432855](http://www.wikidata.org/entity/Q107432855)\), generate a top-level citation entity with an `equivalent` reference to the Wikidata URI \(see [Citation entities](../citation_entities.md)\).
-    -   Else, [output an inline citation object](#step_m53_cph_krb) in the `referred_to_by` array.
-2.  When `510u` is present with a Wikidata URI, output a reference to the top-level citation entity.
+    -   If`510u`is present with a Wikidata URI \(e.g.,[http://www.wikidata.org/entity/Q107432855](http://www.wikidata.org/entity/Q107432855)\), generate a top-level citation entity with an`equivalent`reference to the Wikidata URI \(see[Citation entities](../citation_entities.md)\).
+    -   Else,[output an inline citation object](#step_m53_cph_krb)in the`referred_to_by`array.
+2.  When`510u`is present with a Wikidata URI, output a reference to the top-level citation entity.
 
-    -   If subfields `510b` or `510c` are present, join them with `510a`, using a whitespace character, as the `_label` value in the reference.
-    -   Else, output the string value of the top-level citation entity name as the `_label` value in the reference.
+    -   If subfields`510b`or`510c`are present, join them with`510a`, using a whitespace character, as the`_label`value in the reference.
+    -   Else, output the string value of the top-level citation entity name as the`_label`value in the reference.
     **Note:** This example is meant to illustrate a citation reference and does not represent a complete JSON-LD document.
 
     `10563633`
@@ -50,10 +50,10 @@ scriptInclusion: NONE
     }
     ```
 
-3.  When no `510u` is present with a Wikidata URI, process the values for inline citations \(MARC `510abc`\).
+3.  When no`510u`is present with a Wikidata URI, process the values for inline citations \(MARC`510abc`\).
 
-    -   If subfields `510b` or `510c` are present, join all subfields with a whitespace character.
-    -   Else, output the string value of `510a`.
+    -   If subfields`510b`or`510c`are present, join all subfields with a whitespace character.
+    -   Else, output the string value of`510a`.
     **Note:** This example is meant to illustrate an inline citation and does not represent a complete JSON-LD document.
 
     `909399`

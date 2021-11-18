@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -27,7 +27,7 @@ Pictorial works produced by transferring images by means of a matrix such as a p
 -   **[Slides](../../tasks/supertypes/slides.md)**  
 An image on film or glass, usually positive, intended to be viewed by means of light passing through the image.
 
-**Parent topic:**[LUXsupertype taxonomy](../../tasks/supertypes/supertypes.md)
+**Parent topic:**[LUX supertype taxonomy](../../tasks/supertypes/supertypes.md)
 
 **Previous topic:**[Datasets](../../tasks/supertypes/dataformats.md)
 

@@ -1,13 +1,13 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 ---
 
 # Dimension statement
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related`HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related`HumanMadeObject`.|
 |`DigitalObject`| |
 
 ## Source data
@@ -26,19 +26,19 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Process the physical statement values \(MARC `3003acef`\).
+1.  Process the physical statement values \(MARC`3003acef`\).
 
-    1.  Create separate dimension statements for `3003af` and `3003e` \(identified as `Extent` statements\), and for `3003c` \(identified as a `Dimensions` statement.
+    1.  Create separate dimension statements for`3003af`and`3003e`\(identified as`Extent`statements\), and for`3003c`\(identified as a`Dimensions`statement.
 
-    2.  Join fields `3003af`, `3003e`, or `3003c` with a whitespace character.
+    2.  Join fields`3003af`,`3003e`, or`3003c`with a whitespace character.
 
-    3.  If subfield `3` is present, but does not appear first in the subfield sequence, prefix the statement with the value of subfield `3`.
+    3.  If subfield`3`is present, but does not appear first in the subfield sequence, prefix the statement with the value of subfield`3`.
 
-    4.  Test the value of `3` to see whether it ends with a colon.
+    4.  Test the value of`3`to see whether it ends with a colon.
 
     5.  If no colon is present, concatenate the value with a colon \(`:`\).
 
-    6.  Else, output the value of subfield `3`.
+    6.  Else, output the value of subfield`3`.
 
         ```
         300  $3 Copy 1: $a 1 album (32 photographic prints) : $b b & w ; $c 13.4 x 20.6 cm.

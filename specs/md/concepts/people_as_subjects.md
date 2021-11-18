@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -28,7 +28,7 @@ scriptInclusion: BOTh
 
 1.  Add an embedded reference to the Person entity within the top-level resource.
 
-    **Note:** If a MARC `600` or `692` entry includes subdivision subfields \(`vxyz`\), then the heading should be treated as a Concept \(`Type`\) entity \(see [Subject headings](subject_headings.md)\).
+    **Note:** If a MARC`600`or`692`entry includes subdivision subfields \(`vxyz`\), then the heading should be treated as a Concept \(`Type`\) entity \(see[Subject headings](subject_headings.md)\).
 
     `7`
 

@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -27,7 +27,7 @@ The base class for record-level entities is determined by the supertype mapping.
 
 1.  [Content and carriers](../tasks/content_and_carriers.md)  
 
-2.  [LUXsupertype taxonomy](../tasks/supertypes/supertypes.md)  
+2.  [LUX supertype taxonomy](../tasks/supertypes/supertypes.md)  
 Taxonomy of content types and related formats for classifying record-level resources inLUX.
 3.  [Related title entities](../tasks/names-and-labels/related_title_entities.md)  
 

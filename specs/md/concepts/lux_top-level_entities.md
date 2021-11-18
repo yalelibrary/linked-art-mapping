@@ -1,14 +1,14 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
 
 # LUX top-level entities
 
-Eleven top-level entities are required for use in LUX.
+Eleven top-level entities are required for use inLUX.
 
-In LUX, top-level entities can be divided into *record-level* entities, which correspond to resources held by the library \(books, journals, databases, archival collections, etc.\), and *related* entities, which correspond to the people, places, concepts, etc., connected to those resources through some standard relationship.
+InLUX, top-level entities can be divided into*record-level*entities, which correspond to resources held by the library \(books, journals, databases, archival collections, etc.\), and*related*entities, which correspond to the people, places, concepts, etc., connected to those resources through some standard relationship.
 
 1.  [Record-level entities](../concepts/record_level_entities.md)  
 Entities that correspond to resources held by the library \(books, journals, databases, archival collections, etc.\).

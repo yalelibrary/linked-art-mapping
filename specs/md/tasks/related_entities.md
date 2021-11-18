@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -49,7 +49,7 @@ scriptInclusion: BOTH
 
     3.  Apply specific processing steps for each related entity type \(Concepts, Events, etc.\).
 
-2.  Add embedded references to related entities within corresponding record-level resources \(`DigitalObject`, `HumanMadeObject`, `LinguisticObject`, `Set`, `VisualItem`\).
+2.  Add embedded references to related entities within corresponding record-level resources \(`DigitalObject`,`HumanMadeObject`,`LinguisticObject`,`Set`,`VisualItem`\).
 
 
 -   **[Concepts](../concepts/concepts.md)**  

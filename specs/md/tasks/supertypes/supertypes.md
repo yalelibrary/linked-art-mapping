@@ -1,8 +1,8 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: timothy.thompson@yale.edu
 ---
 
-# LUXsupertype taxonomy
+# LUX supertype taxonomy
 
 Taxonomy of content types and related formats for classifying record-level resources inLUX.
 

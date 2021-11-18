@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -18,5 +18,5 @@ The transformation from MARC to Linked Art requires that both **records** and **
 
 
 1.  [LUX top-level entities](../concepts/lux_top-level_entities.md)  
-Eleven top-level entities are required for use in LUX.
+Eleven top-level entities are required for use inLUX.
 

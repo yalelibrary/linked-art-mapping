@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 ---
 
 # Top-level Person entities
@@ -25,11 +25,11 @@ scriptInclusion: BOTH
 
 1.  Generate and store the top-level person resources, each identified by an IRI.
 
-    1.  Join all subfields \(except for `0` or `1`\) to create a key for merging.
+    1.  Join all subfields \(except for`0`or`1`\) to create a key for merging.
 
     2.  Normalize and merge each unique string value.
 
-    3.  If a source data field in MARC includes a subfield `0` or `1` with an IRI, output an `equivalent` reference.
+    3.  If a source data field in MARC includes a subfield`0`or`1`with an IRI, output an`equivalent`reference.
 
     `693`
 

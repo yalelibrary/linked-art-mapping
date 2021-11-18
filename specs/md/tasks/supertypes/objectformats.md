@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -15,7 +15,7 @@ Three-dimensional items not covered by more specific terms \(e.g., clothing, sti
 -   **[Toys and Games](../../tasks/supertypes/toysandgames.md)**  
 
 
-**Parent topic:**[LUXsupertype taxonomy](../../tasks/supertypes/supertypes.md)
+**Parent topic:**[LUX supertype taxonomy](../../tasks/supertypes/supertypes.md)
 
 **Previous topic:**[Scores and Notation](../../tasks/supertypes/notationformats.md)
 

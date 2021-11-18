@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -11,7 +11,7 @@ category: Entity extraction
 -   **[Sound](../../tasks/supertypes/sound.md)**  
 
 
-**Parent topic:**[LUXsupertype taxonomy](../../tasks/supertypes/supertypes.md)
+**Parent topic:**[LUX supertype taxonomy](../../tasks/supertypes/supertypes.md)
 
 **Previous topic:**[Collections](../../tasks/supertypes/collectionformats.md)
 

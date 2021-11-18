@@ -1,13 +1,13 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 ---
 
 # Bibliography statement
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related`HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related`HumanMadeObject`.|
 |`DigitalObject`| |
 
 ## Source data
@@ -25,7 +25,7 @@ scriptInclusion: BOTH
 
 ## Processing steps and output
 
-1.  Process the bibliography statement value \(MARC `504a`\).
+1.  Process the bibliography statement value \(MARC`504a`\).
 
     **Note:** This example is meant to illustrate a bibliography statement and does not represent a complete JSON-LD document.
 

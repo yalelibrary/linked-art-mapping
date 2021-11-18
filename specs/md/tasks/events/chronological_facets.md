@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -49,7 +49,7 @@ scriptInclusion: NONE
     |`root → type`|Semantic type of entity|`Period`|
     |`root → _label`|Label of facet| |
     |`root → identified_by → type`| |`Name`|
-    |`root → identified_by → content`|Same as `root → _label`| |
+    |`root → identified_by → content`|Same as`root → _label`| |
 
     `12164046`
 
@@ -72,9 +72,9 @@ scriptInclusion: NONE
 
     |JSON structure|Description|Default|
     |--------------|-----------|-------|
-    |`root → created_by → influenced_by → id`|Must match the `id` of the top-level resource| |
-    |`root → type`|Must match the `type` of the top-level resource|`Period`|
-    |`root → _label`|Must match the `_label` of the top-level resource| |
+    |`root → created_by → influenced_by → id`|Must match the`id`of the top-level resource| |
+    |`root → type`|Must match the`type`of the top-level resource|`Period`|
+    |`root → _label`|Must match the`_label`of the top-level resource| |
 
     `12164046`
 

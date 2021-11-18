@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu, timothy.thompson@yale.edu, tt434]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -39,7 +39,7 @@ scriptInclusion: BOTH
 
 1.  Generate and store the top-level chronological facets, each identified by an IRI.
 
-    1.  Join all subfields \(except for `0`\) to create a key for merging.
+    1.  Join all subfields \(except for`0`\) to create a key for merging.
 
     2.  Normalize and merge each unique string value.
 
@@ -48,15 +48,15 @@ scriptInclusion: BOTH
     |`root → id`|Concept IRI| |
     |`root → type`|Semantic type of concept|`Type`|
     |`root → _label`|Label of precoordinated subject heading, joined with double hyphens| |
-    |`root → equivalent → id`|Reference to IRI from `$0`, if applicable| |
-    |`root → equivalent → type`|Reference to resource type from `$0`, if applicable| |
+    |`root → equivalent → id`|Reference to IRI from`$0`, if applicable| |
+    |`root → equivalent → type`|Reference to resource type from`$0`, if applicable| |
     |`root → identified_by → type`| |`Name`|
-    |`root → identified_by → content`|Same as `root → _label`| |
+    |`root → identified_by → content`|Same as`root → _label`| |
     |`root → identified_by → classified_as → id`| |[http://vocab.getty.edu/aat/300404670](http://vocab.getty.edu/aat/300404670)|
     |`root → identified_by → classified_as → type`| |`Type`|
     |`root → identified_by → classified_as → _label`| |`Primary Name`|
     |`root → created_by → influenced_by → id`|Concept IRI for facet concept| |
-    |`root → created_by → influenced_by → type`|Semantic type of concept facet. See the [facet type mapping](../../concepts/subject_headings.md#facet_types_table) below.| |
+    |`root → created_by → influenced_by → type`|Semantic type of concept facet. See the[facet type mapping](../../concepts/subject_headings.md#facet_types_table)below.| |
     |`root → created_by → influenced_by → _label`|Facet label| |
 
 2.  Within the top-level resource for the full subject heading, model each subdivision in the heading as a facet.
@@ -86,7 +86,7 @@ scriptInclusion: BOTH
         |694|acdgnqu|
         |695|adfhklmnoprst|
 
-    3.  Determine the `type` value for each facet from the tag and subfield values in MARC according to the facet type mapping table below.
+    3.  Determine the`type`value for each facet from the tag and subfield values in MARC according to the facet type mapping table below.
 
         |MARC values|Type|
         |-----------|----|
@@ -123,7 +123,7 @@ scriptInclusion: BOTH
     }
     ```
 
-4.  Join the string values of the facets with double hyphens \(`--`\) to output the `_label` and `content` values of the full precoordinated heading.
+4.  Join the string values of the facets with double hyphens \(`--`\) to output the`_label`and`content`values of the full precoordinated heading.
 
 5.  Add an embedded reference to the facet resources within the top-level resource for the full heading.
 
@@ -174,7 +174,7 @@ scriptInclusion: BOTH
     }
     ```
 
-6.  If a 6XX field in MARC includes a `$0` with an IRI, output an `equivalent` reference.
+6.  If a 6XX field in MARC includes a`$0`with an IRI, output an`equivalent`reference.
 
     `13146411`
 
@@ -221,13 +221,13 @@ scriptInclusion: BOTH
     }
     ```
 
-7.  In each referring record-level resource \(`LinguisticObject`, `VisualItem`, or `DigitalObject`\), add an embedded reference to the Concept entity.
+7.  In each referring record-level resource \(`LinguisticObject`,`VisualItem`, or`DigitalObject`\), add an embedded reference to the Concept entity.
 
     |JSON structure|Description|Default|
     |--------------|-----------|-------|
-    |`root → about → id`|Must match the `id` of the top-level resource| |
-    |`root → about → type`|Must match the `type` of the top-level resource| |
-    |`root → about → _label`|Must match the `_label` of the top-level resource| |
+    |`root → about → id`|Must match the`id`of the top-level resource| |
+    |`root → about → type`|Must match the`type`of the top-level resource| |
+    |`root → about → _label`|Must match the`_label`of the top-level resource| |
 
     `9564880`
 

@@ -1,5 +1,5 @@
 ---
-author: [tt434, timothy.thompson@yale.edu]
+author: timothy.thompson@yale.edu
 ---
 
 # MARC to Linked Art glossary
