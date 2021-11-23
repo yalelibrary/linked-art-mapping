@@ -41,9 +41,9 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
         |----|--------|
         |Store the first character in the string.|first|
         |Store the rest of the string following the first character.|rest|
-        |Store the last four characters of rest.|rightHand|
-        |Store the substring of rest to the left ofrightHand.|leftHand|
-        |Clean the value of leftHand:
+        |Store the last four characters of `rest`.|rightHand|
+        |Store the substring of rest to the left of `rightHand`.|leftHand|
+        |Clean the value of `leftHand`:
 
         1.  Convert the value to lower case.
         2.  Remove leading zeroes or occurrences of the letter *o* \(a typo for zero\).
