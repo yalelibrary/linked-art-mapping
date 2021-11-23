@@ -1,5 +1,6 @@
 ---
 author: timothy.thompson@yale.edu
+keyword: 
 ---
 
 # Top-level Person entities
@@ -15,8 +16,8 @@ sampleBibs:
   - 693 # 100, 700
 # Source data fields
 fieldSpec:
-  - 10001abcdgjq
-  - 70001abcdgjq
+  - 100014abcdegjq
+  - 700014abcdegjq
 trimPunctuation: true
 scriptInclusion: BOTH
 ```

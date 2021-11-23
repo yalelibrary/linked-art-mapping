@@ -48,6 +48,8 @@ Corresponds to the`382`field in MARC.
 
 -   **[Reproduction statement](../tasks/notes-and-statements/reproduction_statement.md)**  
 
+-   **[Production statement \[draft\]](../tasks/notes-and-statements/production_statement.md)**  
+
 
 **Parent topic:**[Descriptive content](../concepts/descriptive_content.md)
 

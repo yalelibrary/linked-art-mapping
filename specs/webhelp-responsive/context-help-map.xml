@@ -106,6 +106,14 @@
    <appContext helpID="people_as_agents" path="concepts/people_as_agents.html"/>
    <appContext helpID="people_as_subjects" path="concepts/people_as_subjects.html"/>
    <appContext helpID="places" path="concepts/places.html"/>
+   <appContext helpID="top_level_place_entities"
+               path="concepts/top_level_place_entities.html"/>
+   <appContext helpID="places_as_agents" path="concepts/places_as_agents.html"/>
+   <appContext helpID="places_as_subjects" path="concepts/places_as_subjects.html"/>
+   <appContext helpID="places_from_fixed_field_008"
+               path="concepts/places_from_fixed_field_008.html"/>
+   <appContext helpID="places_with_geographic_coordinates"
+               path="concepts/places_with_geographic_coordinates.html"/>
    <appContext helpID="provenance_activities"
                path="concepts/provenance_activities.html"/>
    <appContext helpID="related_digital_objects"
@@ -164,6 +172,8 @@
                path="tasks/notes-and-statements/acquisition_statement.html"/>
    <appContext helpID="reproduction_statement"
                path="tasks/notes-and-statements/reproduction_statement.html"/>
+   <appContext helpID="production_statement"
+               path="tasks/notes-and-statements/production_statement.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
    <appContext helpID="reference_600_table_bib" path="tables/600_bib_table.html"/>

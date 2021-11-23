@@ -2,6 +2,7 @@
 author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
+keyword: 
 ---
 
 # People as subjects
@@ -18,10 +19,10 @@ sampleBibs:
   - 14 # 600
 # Source data fields
 fieldSpec:
-  - 60001abcdgjqvxyz
-  - 69201abcdgjqvxyz
+  - 600014abcdgjqvxyz
+  - 692014abcdgjqvxyz
 trimPunctuation: true
-scriptInclusion: BOTh
+scriptInclusion: BOTH
 ```
 
 ## Processing steps and output

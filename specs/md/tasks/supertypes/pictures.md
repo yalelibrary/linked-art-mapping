@@ -2,7 +2,7 @@
 author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
-keyword: [Assigned, Completed]
+keyword: [Assigned, Completed, Deployed]
 ---
 
 # Pictures

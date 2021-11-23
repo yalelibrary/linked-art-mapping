@@ -1,5 +1,6 @@
 ---
 author: timothy.thompson@yale.edu
+keyword: [Assigned, Completed, Deployed]
 ---
 
 # Related title entities

@@ -35,7 +35,7 @@ scriptInclusion: NONE
 
     1.  Create a key for merging.
 
-    2.  Replace any punctuation characters that are*not*a period \(`.`\) with a whitespace character.
+    2.  Replace any punctuation characters that are *not* a period \(`.`\) with a whitespace character.
 
     3.  Normalize and merge each unique string value.
 
