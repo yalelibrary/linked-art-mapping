@@ -43,9 +43,9 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
         |Store the rest of the string following `first`.|rest|
         |Store the last four characters of `rest`.|rightHand|
         |Store the substring of `rest` to the left of `rightHand`.|leftHand|
-        |Clean the value of `leftHand`: 1.  Convert the value to lower case. 2.  Remove leading zeroes or occurrences of the letter *o* \(a typo for zero\).|cleanedLeftHand|
+        |Clean the value of `leftHand`: <br/> 1.  Convert the value to lower case. <br/> 2.  Remove leading zeroes or occurrences of the letter *o* \(a typo for zero\).|cleanedLeftHand|
         |Concatenate the value of `cleanedLeftHand` and `rightHand` with a period \(`.`\).|decimalValue|
-        |Determine the sign of `decimalValue`. 1. If first equals **-**, **W**, or **S**, the sign is negative. 2. Else, it is positive \(unsigned\). |signedDecimalValue|
+        |Determine the sign of `decimalValue`. <br/> - If first equals `-`, `W`, or `S`, the sign is negative. <br/> - Else, it is positive \(unsigned\). |signedDecimalValue|
 
 3.  Construct the WKT string.
 
