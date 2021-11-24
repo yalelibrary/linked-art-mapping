@@ -40,13 +40,12 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
         |Step|Variable|
         |----|--------|
         |Store the first character in the string.|first|
-        |Store the rest of the string following `first`.|rest|
+        |Store the rest of the string following `first`.|`rest`|
         |Store the last four characters of `rest`.|rightHand|
         |Store the substring of `rest` to the left of `rightHand`.|leftHand|
         |Clean the value of `leftHand`: <br/> 1.  Convert the value to lower case. <br/> 2.  Remove leading zeroes or occurrences of the letter *o* \(a typo for zero\).|cleanedLeftHand|
         |Concatenate the value of `cleanedLeftHand` and `rightHand` with a period \(`.`\).|decimalValue|
-        |Determine the sign of `decimalValue`. <br/> -   If `first` equals `-`, `W`, or `S`, the sign is negative. <br/> -   Else, it is positive \(unsigned\).
-|signedDecimalValue|
+        |Determine the sign of `decimalValue`. <br/> -   If `first` equals `-`, `W`, or `S`, the sign is negative. <br/> -   Else, it is positive \(unsigned\).|signedDecimalValue|
 
 3.  Construct the WKT string.
 
@@ -62,9 +61,15 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
     "POINT(" + 034d + " " + 034f + ")"
     ```
 
-4.  Add an embedded reference to the Place entity within the record-level resource.
+4.  Generate a top-level Place resource, identified by an IRI, with the value of the WKT coordinates.
 
-    1.  As the `_label` of the Place entity, take the string value of the **first** `651a` subject heading in the MARC bibliographic record.
+    1.  Use the value of the WKT string as a key for matching and merging Place entities with the same coordinates.
+
+    2.  As the `_label` and `Primary Name`of the Place entity, take the string value of the **first** `651a` subject heading in the MARC bibliographic record.
+
+    3.  Include the string value of additional `651a` subject headings as `Name` objects in the `identified_by` array.
+
+    4.  If a WKT string matches an existing entry, but the labels extracted from `651a` are different, do not change the existing `_label` or `Primary Name`, but add a new `Name` object to the `identified_by` array for the top-level Place entity.
 
     `970151`
 
@@ -77,22 +82,8 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
     ```
 
     ```
-    {
-      "represents": [
-        {
-          "id": "https://lux.collections.yale.edu/data/place/place1",
-          "type": "Place"
-          "_label": "Kingstown (Saint Vincent and the Grenadines)"
-        }
-      ]
-    }
+    651 0 $a Saint Vincent $v Maps.
     ```
-
-5.  Generate a top-level Place resource, identified by an IRI, with the value of the WKT coordinates.
-
-    1.  Use the value of the WKT string as a key for matching and merging Place entities with the same coordinates.
-
-    2.  As the `_label` and `Primary Name`of the Place entity, take the string value of the **first** `651a` subject heading in the MARC bibliographic record.
 
     `970151`
 
@@ -113,9 +104,31 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
               "_label": "Primary Name"
             }
           ]
+        },
+        {
+          "type": "Name",
+          "content": "Saint Vincent"
         }
       ],
       "defined_by": "POLYGON((-61.1800 13.2300, -61.0600 13.2300, -61.0600 13.0600, -61.1800 13.0600, -61.1800 13.2300))"
+    }
+    ```
+
+5.  Add an embedded reference to the Place entity within the record-level resource.
+
+    1.  As the `_label` of the Place entity, take the value of the top-level entity `_label`.
+
+    `970151`
+
+    ```
+    {
+      "represents": [
+        {
+          "id": "https://lux.collections.yale.edu/data/place/place1",
+          "type": "Place"
+          "_label": "Kingstown (Saint Vincent and the Grenadines)"
+        }
+      ]
     }
     ```
 
