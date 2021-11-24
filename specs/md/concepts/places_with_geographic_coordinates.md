@@ -30,7 +30,7 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
 
     If `034d == 034e and 034f == 034g`, select the first nonempty occurrence of 034d and 034f.
 
-    Else, select the first nonemtpy occurrence of each distinct subfield.
+    Else, select the first nonempty occurrence of each distinct subfield.
 
 2.  Check the subfield values.
 
