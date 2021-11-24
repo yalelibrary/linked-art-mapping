@@ -40,7 +40,7 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
         |Step|Variable|
         |----|--------|
         |Store the first character in the string.|first|
-        |Store the rest of the string following `first`.|`rest`|
+        |Store the rest of the string following `first`.|rest|
         |Store the last four characters of `rest`.|rightHand|
         |Store the substring of `rest` to the left of `rightHand`.|leftHand|
         |Clean the value of `leftHand`: <br/> 1.  Convert the value to lower case. <br/> 2.  Remove leading zeroes or occurrences of the letter *o* \(a typo for zero\).|cleanedLeftHand|
