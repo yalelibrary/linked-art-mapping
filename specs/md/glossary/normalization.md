@@ -6,7 +6,7 @@ category: MARC to Linked Art mapping glossary
 
 # Normalization
 
-String normalization on the string that includes the following steps:
+String normalization includes the following steps:
 
 1.  Remove diacritics from the string, if appropriate.
     -   Convert Latin characters to 7-bit US-ASCII
