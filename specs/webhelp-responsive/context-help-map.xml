@@ -238,6 +238,7 @@
    <appContext helpID="marc_to_linked_art_glossary"
                path="glossary/marc_to_linked_art_glossary.html"/>
    <appContext helpID="entify" path="glossary/entification.html"/>
+   <appContext helpID="normalization" path="glossary/normalization.html"/>
    <appContext helpID="frbr" path="glossary/frbr.html"/>
    <appContext helpID="reference_bib_001_table_bib" path="tables/001_bib_table.html"/>
    <appContext helpID="reference_bib_010_table_bib" path="tables/010_bib_table.html"/>

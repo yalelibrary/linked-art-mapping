@@ -122,5 +122,6 @@
         -   [Production statement \[draft\]](tasks/notes-and-statements/production_statement.md)
 -   [MARC to Linked Art glossary](glossary/marc_to_linked_art_glossary.md)
     -   [Entification](glossary/entification.md)
+    -   [Normalization](glossary/normalization.md)
     -   [Functional Requirements for Bibliographic Records \(FRBR\)](glossary/frbr.md)
 

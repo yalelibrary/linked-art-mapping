@@ -6,6 +6,8 @@ author: timothy.thompson@yale.edu
 
 -   **[Entification](../glossary/entification.md)**  
 
+-   **[Normalization](../glossary/normalization.md)**  
+
 -   **[Functional Requirements for Bibliographic Records \(FRBR\)](../glossary/frbr.md)**  
 
 
