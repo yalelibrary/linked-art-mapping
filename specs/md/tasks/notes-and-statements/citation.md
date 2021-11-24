@@ -7,8 +7,8 @@ keyword: Assigned
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related`HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related`HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
 |`DigitalObject`| |
 
 ## Source data
@@ -28,7 +28,7 @@ scriptInclusion: NONE
 ## Processing steps and output
 
 1.  Check for`510u`
-
+    -   Ignore `510u` if it does not contain a URI containing the string `wikidata.org` and skip to step 3, below.
     -   If`510u`is present with a Wikidata URI \(e.g.,[http://www.wikidata.org/entity/Q107432855](http://www.wikidata.org/entity/Q107432855)\), generate a top-level citation entity with an`equivalent`reference to the Wikidata URI \(see[Citation entities](../citation_entities.md)\).
     -   Else,[output an inline citation object](#step_m53_cph_krb)in the`referred_to_by`array.
 2.  When`510u`is present with a Wikidata URI, output a reference to the top-level citation entity.
