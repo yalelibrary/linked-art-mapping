@@ -13,6 +13,7 @@ Place entities derived from `MARC 034`.
 ---
 name: PlacesWithGeographicCoordinatets
 sampleBibs:
+  - 970151 # 008, 034
   - 3906934 # 008, 034
 # Source data fields
 fieldSpec:
