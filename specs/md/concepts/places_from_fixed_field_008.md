@@ -11,7 +11,7 @@ Place entities derived from `MARC 008`.
 
 ```
 ---
-name: PlaceEntities
+name: PlacesFrom008
 sampleBibs:
   - 404281 # 008, published
   - 2744420 # 008, created
@@ -69,88 +69,104 @@ The code represents a place of publication, production, execution, or sometimes 
     } 
     ```
 
-2.  Add an embedded reference to the place entity within the record-level resource.
+2.  Use the supertype value of the record-level resource to determine the type of place represented by the `008[15-17]` value.
+
+    -   If the record-level supertype is one of the following:
+
+        -   Any `Visual Works` format
+        -   `Dissertations and Theses`
+        -   `Models`
+        -   `Realia`
+        then the type of place is `creation`.
+
+    -   If the record-level supertype is equal to `Archival and Manuscript Materials`, then the type of place is `location`.
+    -   Else, the type of place is `publication`.
+3.  Add an embedded reference to the place entity within the record-level resource.
 
     1.  As the `_label` of the place entity, take the value of the top-level entity label.
 
-    2.  Process `008[15-17]` code re
+    2.  Process `creation` places.
 
-    `404281`
+        `2744420`
 
-    ```
-    {
-      "used_for": [
+        ```
         {
-          "type": "Activity",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300054686",
-              "type": "Type",
-              "_label": "Publishing"
-            }
-          ],
-          "took_place_at": [
-            {
-              "id": "https://lux.collections.yale.edu/data/place/3dcbc9fa-ca9c-4fa1-bd0e-d25e93f461e5",
-              "type": "Place"
-            }
-          ]
-        }
-      ]
-    }
-    ```
-
-    `2744420`
-
-    ```
-    {
-      "created_by": {
-        "type": "Creation",
-        "part": [
-          {
+          "created_by": {
             "type": "Creation",
-            "carried_out_by": [
+            "part": [
               {
-                "id": "https://lux.collections.yale.edu/data/person/6694afea-e43b-4d8d-9005-03b63540e8b5",
-                "type": "Person",
-                "_label": "Wu, Shengwu"
+                "type": "Creation",
+                "carried_out_by": [
+                  {
+                    "id": "https://lux.collections.yale.edu/data/person/6694afea-e43b-4d8d-9005-03b63540e8b5",
+                    "type": "Person",
+                    "_label": "Wu, Shengwu"
+                  }
+                ],
+                "classified_as": [
+                  {
+                    "id": "https://lux.collections.yale.edu/data/concept/9d2c734e-afd3-44bd-972d-8cf441423edc",
+                    "type": "Type",
+                    "_label": "creator"
+                  }
+                ]
               }
             ],
-            "classified_as": [
+            "took_place_at": [
               {
-                "id": "https://lux.collections.yale.edu/data/concept/9d2c734e-afd3-44bd-972d-8cf441423edc",
-                "type": "Type",
-                "_label": "creator"
+                "id": "https://lux.collections.yale.edu/data/place/3dcbc9fa-ca9c-4fa1-bd0e-d25e93f461e5",
+                "type": "Place"
               }
             ]
           }
-        ],
-        "took_place_at": [
-          {
-            "id": "https://lux.collections.yale.edu/data/place/3dcbc9fa-ca9c-4fa1-bd0e-d25e93f461e5",
-            "type": "Place"
-          }
-        ]
-      }
-    }
-    ```
-
-    `11167038`
-
-    ```
-    {
-      "attributed_by": [
-        {
-          "type": "AttributeAssignment",
-          "_label": "location",
-          "assigned": {
-            "id": "https://lux.collections.yale.edu/data/place/1585b6fe-6613-49fb-b254-3b911d5796bf",
-            "type": "Place"
-          }
         }
-      ]
-    }
-    ```
+        ```
+
+    3.  Process `location` places
+
+        `11167038`
+
+        ```
+        {
+          "attributed_by": [
+            {
+              "type": "AttributeAssignment",
+              "_label": "location",
+              "assigned": {
+                "id": "https://lux.collections.yale.edu/data/place/1585b6fe-6613-49fb-b254-3b911d5796bf",
+                "type": "Place"
+              }
+            }
+          ]
+        }
+        ```
+
+    4.  Process `publication` places.
+
+        `404281`
+
+        ```
+        {
+          "used_for": [
+            {
+              "type": "Activity",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300054686",
+                  "type": "Type",
+                  "_label": "Publishing"
+                }
+              ],
+              "took_place_at": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/place/3dcbc9fa-ca9c-4fa1-bd0e-d25e93f461e5",
+                  "type": "Place"
+                }
+              ]
+            }
+          ]
+        }
+        ```
 
 
 **Parent topic:**[Top-level Place entities](../concepts/top_level_place_entities.md)
