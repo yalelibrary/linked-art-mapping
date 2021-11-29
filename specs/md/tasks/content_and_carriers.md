@@ -27,7 +27,7 @@ In Linked Art, record-level entities are divided into two categories:
 
 Resources with a base class of `LinguisticObject` or `VisualItem` must follow the content/carrier model. In MARC-based systems, this model corresponds roughly to the distinction between bibliographic records and holdings records.
 
-For each record-level resource with a base class of `LinguisticObject` or `VisualItem` \(the*content*level\), one or more resources with a base class of `HumanMadeObject` \(the*carrier*level\) must be generated.
+For each record-level resource with a base class of `LinguisticObject` or `VisualItem` \(the *content* level\), one or more resources with a base class of `HumanMadeObject` \(the*carrier*level\) must be generated.
 
 These `HumanMadeObject` resources must point to the `LinguisticObject` or `VisualItem` resource that they instantiate and where the supertype and any subjects, etc., are assigned.
 
