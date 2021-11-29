@@ -19,16 +19,16 @@ sampleBibs:
   - 13146411
 # Source data fields
 fieldSpec:
-  - 60004abcdegjqvxyz
+  - 600014abcdegjqvxyz
   - 61004abcdegvxyz
   - 61104acdegjnquvxyz
-  - 6300adfhklmnoprstvxyz
+  - 63004adfhklmnoprstvxyz
   - 65004abcdegvxyz
   - 65104abcdfghvxyz
   - 65504abcvxyz
   - 69004abcdegvxyz
   - 69104abcdfghvxyz
-  - 69204abcdegjqvxyz
+  - 692014abcdegjqvxyz
   - 69304abcdegvxyz
   - 69404acdegjnquvxyz
   - 6950adfhklmnoprstvxyz  
@@ -40,9 +40,15 @@ scriptInclusion: BOTH
 
 1.  Generate and store the top-level chronological facets, each identified by an IRI.
 
-    1.  Join all subfields \(except for`0`\) to create a key for merging.
+    1.  Join all subfields except for those listed below to create a key for matching and merging.
 
-    2.  Normalize and merge each unique string value.
+        |Fields|Subfields|
+        |------|---------|
+        |6XX|04|
+        |6XX except 611|e|
+        |611|j|
+
+    2.  Normalize and match string values.
 
     |JSON structure|Description|Default|
     |--------------|-----------|-------|
@@ -175,7 +181,7 @@ scriptInclusion: BOTH
     }
     ```
 
-6.  If a 6XX field in MARC includes a`$0`with an IRI, output an`equivalent`reference.
+6.  If a 6XX field in MARC includes a`$0` or `1` with an IRI, output an`equivalent`reference.
 
     `13146411`
 

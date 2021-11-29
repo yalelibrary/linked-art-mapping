@@ -80,7 +80,7 @@
                 -   [Top-level Place entities](concepts/top_level_place_entities.md)
                     -   [Places as agents](concepts/places_as_agents.md)
                     -   [Places as subjects \[draft\]](concepts/places_as_subjects.md)
-                    -   [Places from fixed field 008 \[draft\]](concepts/places_from_fixed_field_008.md)
+                    -   [Places from fixed field 008](concepts/places_from_fixed_field_008.md)
                     -   [Places with geographic coordinates](concepts/places_with_geographic_coordinates.md)
             -   [Provenance Activities \[draft\]](concepts/provenance_activities.md)
             -   [Digital Objects \[draft\]](concepts/related_digital_objects.md)

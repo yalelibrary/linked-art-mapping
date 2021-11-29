@@ -25,37 +25,51 @@ sampleBibs:
   - 838469 # 694
 # Source data fields
 fieldSpec:
-  - 6100abcdeg
-  - 6110acdegjnqu
-  - 6930abcdegvxyz
-  - 6940acdegjnquvxyz  
+  - 610014abcdegvxyz
+  - 611014acdegjnquvxyz
+  - 693014abcdegvxyz
+  - 694014acdegjnquvxyz  
 trimPunctuation: true
-scriptInclusion: NONE
+scriptInclusion: BOTH
 ```
 
 ## Processing steps and output
 
-1.  Add an embedded reference to the Group entity within the top-level resource.
+1.  Add an embedded reference to the group entity within the top-level resource.
 
-    |JSON structure|Description|Default|
-    |--------------|-----------|-------|
-    |`root → about → id`|Must match the`id`of the top-level resource| |
-    |`root → about → type`| |`Group`|
-    |`root → about → _label`| |Must match the`label`of the top-level resource|
+    **Note:** If a MARC `6XX` entry includes subdivision subfields \(`vxyz`\), then the heading should be treated as a concept \(`Type`\) entity: see [Subject headings](subject_headings.md).
 
-    `68`
+    1.  Process concept/group references.
 
-    ```
-    {
-      "about": [
+        `7731`
+
+        ```
         {
-          "id": "https://lux.collections.yale.edu/data/group/a3d54906-5375-46a0-b0df-d6be7d6ecb7f",
-          "type": "Group",
-          "_label": "United States. National Archives and Records Service"
+          "about": [
+            {
+              "id": "https://lux.collections.yale.edu/data/concept/54f5b059-a062-426a-a554-fe123c479779",
+              "type": "Type",
+              "_label": "Lebanon. Majlis al-Nūwāb--Elections--1968"
+            }
+          ]
         }
-      ]
-    }
-    ```
+        ```
+
+    2.  Process direct group references.
+
+        `68`
+
+        ```
+        {
+          "about": [
+            {
+              "id": "https://lux.collections.yale.edu/data/group/a3d54906-5375-46a0-b0df-d6be7d6ecb7f",
+              "type": "Group",
+              "_label": "United States. National Archives and Records Service"
+            }
+          ]
+        }
+        ```
 
 
 **Parent topic:**[Top-level Group entities](../concepts/top_level_group_entities.md)

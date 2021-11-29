@@ -19,11 +19,11 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  For each MARC`510`, if subfield`u`is present with a Wikidata URI \(e.g.,[http://www.wikidata.org/entity/Q107432855](http://www.wikidata.org/entity/Q107432855)\), generate a top-level citation entity with an`equivalent`reference to the Wikidata URI.
+1.  For each MARC `510`, if subfield`u` is present with a Wikidata URI \(e.g.,[http://www.wikidata.org/entity/Q107432855](http://www.wikidata.org/entity/Q107432855)\), generate a top-level citation entity with an `equivalent` reference to the Wikidata URI.
 
-    1.  Use the Wikidata URI as a key for merging citation entities.
+    1.  Use the Wikidata URI as a key for matching and merging citation entities.
 
-    2.  Use the value of`510a`as the`_label`and primary name of the citation entity.
+    2.  Use the value of `510a` as the `_label` and `Primary Name` of the citation entity.
 
     `3931`
 

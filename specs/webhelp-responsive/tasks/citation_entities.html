@@ -47,7 +47,7 @@
 
             <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
                 
-                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="entity_extraction-d2090e53-mi" data-tocid="entity_extraction-d2090e53" data-state="not-ready" class=" topicref " data-id="entity_extraction"><span class="title"><a href="../concepts/entity_extraction.html">Entity extraction</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="descriptive_content-d2090e4038-mi" data-tocid="descriptive_content-d2090e4038" data-state="not-ready" class=" topicref " data-id="descriptive_content"><span class="title"><a href="../concepts/descriptive_content.html">Descriptive content</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="marc_to_linked_art_glossary-d2090e6476-mi" data-tocid="marc_to_linked_art_glossary-d2090e6476" data-state="not-ready" class=" topicref " data-id="marc_to_linked_art_glossary"><span class="title"><a href="../glossary/marc_to_linked_art_glossary.html">MARC to Linked Art glossary</a></span></span></li></ul></nav>
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="entity_extraction-d2090e53-mi" data-tocid="entity_extraction-d2090e53" data-state="not-ready" class=" topicref " data-id="entity_extraction"><span class="title"><a href="../concepts/entity_extraction.html">Entity extraction</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="descriptive_content-d2090e4042-mi" data-tocid="descriptive_content-d2090e4042" data-state="not-ready" class=" topicref " data-id="descriptive_content"><span class="title"><a href="../concepts/descriptive_content.html">Descriptive content</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="marc_to_linked_art_glossary-d2090e6480-mi" data-tocid="marc_to_linked_art_glossary-d2090e6480" data-state="not-ready" class=" topicref " data-id="marc_to_linked_art_glossary"><span class="title"><a href="../glossary/marc_to_linked_art_glossary.html">MARC to Linked Art glossary</a></span></span></li></ul></nav>
                 <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
                 
             </div>
@@ -136,13 +136,13 @@ scriptInclusion: NONE</code></pre>
       
     </section>
     <section class="- topic/ol task/steps ol steps"><div class="- topic/ol task/steps ol steps"><div class="- topic/li task/step li step p">
-        <span class="- topic/ph task/cmd ph cmd">For each MARC<code class="+ topic/ph pr-d/codeph ph codeph">510</code>, if subfield<code class="+ topic/ph pr-d/codeph ph codeph">u</code>is present with a Wikidata URI (e.g.,<a class="- topic/xref xref" href="http://www.wikidata.org/entity/Q107432855" target="_blank" rel="external noopener">http://www.wikidata.org/entity/Q107432855</a>), generate a top-level citation entity with an<code class="+ topic/ph pr-d/codeph ph codeph">equivalent</code>reference to the Wikidata URI.</span>
+        <span class="- topic/ph task/cmd ph cmd">For each MARC <code class="+ topic/ph pr-d/codeph ph codeph">510</code>, if subfield<code class="+ topic/ph pr-d/codeph ph codeph">u</code> is present with a Wikidata URI (e.g.,<a class="- topic/xref xref" href="http://www.wikidata.org/entity/Q107432855" target="_blank" rel="external noopener">http://www.wikidata.org/entity/Q107432855</a>), generate a top-level citation entity with an <code class="+ topic/ph pr-d/codeph ph codeph">equivalent</code> reference to the Wikidata URI.</span>
         <ol type="a" class="- topic/ol task/substeps ol substeps">
           <li class="- topic/li task/substep li substep">
-            <span class="- topic/ph task/cmd ph cmd">Use the Wikidata URI as a key for merging citation entities.</span>
+            <span class="- topic/ph task/cmd ph cmd">Use the Wikidata URI as a key for matching and merging citation entities.</span>
           </li>
           <li class="- topic/li task/substep li substep">
-            <span class="- topic/ph task/cmd ph cmd">Use the value of<code class="+ topic/ph pr-d/codeph ph codeph">510a</code>as the<code class="+ topic/ph pr-d/codeph ph codeph">_label</code>and primary name of the citation entity.</span>
+            <span class="- topic/ph task/cmd ph cmd">Use the value of <code class="+ topic/ph pr-d/codeph ph codeph">510a</code> as the <code class="+ topic/ph pr-d/codeph ph codeph">_label</code> and <code class="+ topic/ph pr-d/codeph ph codeph">Primary Name</code> of the citation entity.</span>
           </li>
         </ol>
         <div class="- topic/itemgroup task/stepresult itemgroup stepresult">

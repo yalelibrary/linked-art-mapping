@@ -1,5 +1,5 @@
 ---
-author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: MARC to Linked Art mapping glossary
 ---
@@ -8,8 +8,7 @@ category: MARC to Linked Art mapping glossary
 
 String normalization includes the following steps:
 
-1.  Remove diacritics from the string, if appropriate.
-    -   Convert Latin characters to 7-bit US-ASCII
+1.  Remove diacritics from the string, as appropriate.
 2.  Convert the characters to lower case.
 3.  Trim leading and trailing whitespace.
 4.  Convert internal whitespace to single whitespace characters.

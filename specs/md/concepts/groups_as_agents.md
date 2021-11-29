@@ -8,6 +8,17 @@ category: Entity extraction
 
 Entities extracted from MARC 11X and 71X fields.
 
+As agents, groups can contribute to creation activities or production activities. The table below summarizes the domain and properties used in activities involving group entities.
+
+**Note:** The role of the group entity is derived from `$e` or `$4` for MARC 110 and 710 and from `$j` or `$4` for MARC 111 and 711. When those subfields are absent, a generic role of `creator` is assigned when 11X is the source or `contributor` when 71X is the source.
+
+|Domains|Property path|Usage|
+|-------|-------------|-----|
+|`LinguisticObject` `VisualItem`|`created_by → part → carried_out_by`| |
+|`HumanMadeObject`|`produced_by → part → carried_out_by`| |
+|`Set`|`created_by → part → carried_out_by`|Do not include agent references in nested`members_exemplified_by → HumanMadeObject`.|
+|`DigitalObject`|`created_by → part → carried_out_by`| |
+
 ## Source data
 
 ```
@@ -22,6 +33,7 @@ sampleBibs:
   - 127 # 111
   - 426 # 711
   - 947 # 711
+  - 5132502 # produced_by
 # Source data fields
 fieldSpec:
   - 11001abcdeg
@@ -29,54 +41,67 @@ fieldSpec:
   - 71001abcdeg
   - 71101acdegjnqu
 trimPunctuation: true
-scriptInclusion: NONE
+scriptInclusion: BOTH
 ```
 
 ## Processing steps and output
 
-1.  Add an embedded reference to the Group entity within the top-level resource.
+1.  Add an embedded reference to the group entity within the record-level resource.
 
-    **Note:** The role of the Group entity is derived from`$e`for MARC 110 and 710 and from`$j`for MARC 111 and 711. When those subfields are absent, a generic role of`creator`is assigned when 11X is the source or`contributor`when 71X is the source.
+    1.  Process creation activities.
 
-    |JSON structure|Description|Default|
-    |--------------|-----------|-------|
-    |`root → created_by → type`|Type of the related activity|`Creation`|
-    |`root → created_by → part → type`| |`Creation`|
-    |`root → created_by → part → carried_out_by → id`|IRI of the Group entity| |
-    |`root → created_by → part → carried_out_by → type`| |`Group`|
-    |`root → created_by → part → carried_out_by → _label`|Must match the label of the top-level Group entity| |
-    |`root → created_by → part → classified_as → id`|Concept IRI used to classify the role of the Group in the record-level resource| |
-    |`root → created_by → part → classified_as → type`| |`Type`|
-    |`root → created_by → part → classified_as → _label`|Label of the concept used to classify the role of the Group in the record-level resource| |
+        `127`
 
-    `12164046`
-
-    ```
-    {
-      "created_by": {
-        "type": "Creation",
-        "part": [
-          {
+        ```
+        {
+          "created_by": {
             "type": "Creation",
-            "carried_out_by": [
+            "part": [
               {
-                "id": "https://lux.collections.yale.edu/data/group/1bd89c27-47b9-40f0-8023-568af073edbd",
-                "type": "Group",
-                "_label": "International Congress for Logic, Methodology, and Philosophy of Science (3d : 1967 : Amsterdam)"
-              }
-            ],
-            "classified_as": [
-              {
-                "id": "https://lux.collections.yale.edu/data/concept/9d2c734e-afd3-44bd-972d-8cf441423edc",
-                "type": "Type",
-                "_label": "creator"
+                "type": "Creation",
+                "carried_out_by": [
+                  {
+                    "id": "https://lux.collections.yale.edu/data/group/1bd89c27-47b9-40f0-8023-568af073edbd",
+                    "type": "Group",
+                    "_label": "International Congress for Logic, Methodology, and Philosophy of Science (3d : 1967 : Amsterdam)"
+                  }
+                ],
+                "classified_as": [
+                  {
+                    "id": "https://lux.collections.yale.edu/data/concept/9d2c734e-afd3-44bd-972d-8cf441423edc",
+                    "type": "Type",
+                    "_label": "creator"
+                  }
+                ]
               }
             ]
           }
-        ]
-      }
-    }
-    ```
+        }
+        ```
+
+    2.  Process production activities \(domain: `HumanMadeObject → shows → VisualItem`\).
+
+        `5132502`
+
+        ```
+        {
+          "produced_by": {
+            "type": "Production",
+            "part": [
+              {
+                "type": "Production",
+                "carried_out_by": [
+                  {
+                    "id": "https://lux.collections.yale.edu/data/group/545215f9-7d4a-4d4e-904e-ec6acf6e78da",
+                    "type": "Group",
+                    "_label": "United States. Bureau of Alcohol, Tobacco, and Firearm"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+        ```
 
 
 **Parent topic:**[Top-level Group entities](../concepts/top_level_group_entities.md)

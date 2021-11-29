@@ -17,6 +17,8 @@ sampleBibs:
 # Source data fields
 fieldSpec:
   - 100014abcdegjq
+  - 600014abcdegjq
+  - 692014abcdegjq
   - 700014abcdegjq
 trimPunctuation: true
 scriptInclusion: BOTH
@@ -26,11 +28,15 @@ scriptInclusion: BOTH
 
 1.  Generate and store the top-level person resources, each identified by an IRI.
 
-    1.  Join all subfields \(except for`0`or`1`\) to create a key for merging.
+    1.  Join all subfields except for those listed below to create a key for matching and merging.
 
-    2.  Normalize and merge each unique string value.
+        |Fields|Subfields|
+        |------|---------|
+        |All|014e|
 
-    3.  If a source data field in MARC includes a subfield`0`or`1`with an IRI, output an`equivalent`reference.
+    2.  Normalize and match string values.
+
+    3.  If a source data field in MARC includes a subfield `0` or `1` with an IRI, output an `equivalent` reference.
 
     `693`
 
