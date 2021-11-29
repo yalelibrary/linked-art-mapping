@@ -32,22 +32,8 @@ scriptInclusion: NONE
     |Subfields|Instructions|
     |---------|------------|
     |**382a**|Output the string value.|
-    |**382an**|For each`382an`pair, join the following values with a whitespace character:
-
-    1.  “Number of”
-    2.  `382a`value
-    3.  “performers:”
-    4.  `382n`value +“.”
-|
-    |**382ans**|For`382s`following one or more`382an`pairs, join the following values with a whitespace character:
-
-    1.  “Number of”
-    2.  `382a`value
-    3.  “performers:”
-    4.  `382n`value +“.”
-    5.  “Total number of performers:”
-    6.  `382s`value +“.”
-|
+    |**382an**|For each `382an` pair, join the following values with a whitespace character: <br/> 1.  “Number of” <br/> 2.  `382a` <br/> 3.  “performers:” <br/> 4.  `382n` + “.”|
+    |**382ans**|For`382s`following one or more`382an`pairs, join the following values with a whitespace character: <br/> 1.  “Number of” <br/> 2.  `382a` <br/> 3.  “performers:” <br/> 4.  `382n` + “.” <br/> 5.  “Total number of performers:” <br/> 6.  `382s` + “.”|
 
     **Note:** This example is meant to illustrate a medium of performance statement and does not represent a complete JSON-LD document.
 
