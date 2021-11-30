@@ -24,7 +24,7 @@ fieldSpec:
   - 5906ab
   - 8806ab
 trimPunctuation: false
-scriptInclusion: NONE
+scriptInclusion: BOTH
 ```
 
 ## Processing steps and output
