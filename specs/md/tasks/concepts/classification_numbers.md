@@ -15,6 +15,7 @@ Resources extracted from MARC 050 and 090 entries.
 name: ClassificationNumbers
 sampleBibs:
   - 4
+  - 11 # 050 and 090
   - 236
   - 907498
   - 4824458
@@ -31,21 +32,13 @@ stripPunctuation:
 scriptInclusion: NONE
 ```
 
-1.  Generate and store the top-level concept resources, each identified by an IRI.
+1.  For each unique `050a` or `090a` value, generate and store a top-level concept resources, identified by an IRI.
 
-    1.  Create a key for merging.
+2.  Create a key for matching.
 
-    2.  Replace any punctuation characters that are *not* a period \(`.`\) with a whitespace character.
+    1.  Replace any punctuation characters that are *not* a period \(`.`\) with a whitespace character.
 
-    3.  Normalize and merge each unique string value.
-
-    |JSON structure|Description|Default|
-    |--------------|-----------|-------|
-    |`root → id`|Concept IRI| |
-    |`root → type`| |`Type`|
-    |`root → _label`|Label of classification number| |
-    |`root → identified_by → type`| |`Identifier`|
-    |`root → identified_by → content`|Same as`root → _label`| |
+    2.  [Normalize](../../glossary/normalization.md) and match/merge each unique string value.
 
     `907498`
 
@@ -64,20 +57,19 @@ scriptInclusion: NONE
     }
     ```
 
-2.  In each referring record-level resource \(`LinguisticObject`,`VisualItem`, or`DigitalObject`\), add an embedded reference to the Concept entity.
+3.  In the referring record-level resource \(`LinguisticObject`, `VisualItem`, or `DigitalObject`\), add an embedded reference for each concept entity.
 
-    1.  The embedded reference should follow theclassification of the resource in the same`classified_as`array.
+    1.  If there is more than concept entity, sort them by their string values in alphanumeric order.
 
-    |JSON structure|Description|Default|
-    |--------------|-----------|-------|
-    |`root → classified_as → id`|Must match the`id`of the top-level resource| |
-    |`root → classified_as → type`| |`Type`|
-    |`root → classified_as → _label`|Must match the`_label`of the top-level resource| |
+    **Note:** The embedded reference should follow the classification of the resource in the same `classified_as` array.
 
-    `907498`
+    `11`
 
     ```
     {
+      "id": "https://lux.collections.yale.edu/data/text/8697aefe-8ffa-4f73-bf3d-f4883a5c26dd",
+      "type": "LinguisticObject",
+      "_label": "Governmental accounting, auditing, and financial reporting",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300028051",
@@ -92,11 +84,16 @@ scriptInclusion: NONE
           ]
         },
         {
-          "id": "https://lux.collections.yale.edu/data/concept/f0c0c4d0-532d-4438-a26f-15c261fb4f6c",
+          "id": "https://lux.collections.yale.edu/data/concept/090-1",
           "type": "Type",
-          "_label": "PT3818"
-        }
-      ]      
+          "_label": "HJ9771"
+        },
+        {
+          "id": "https://lux.collections.yale.edu/data/concept/e372cfe2-988e-41c7-ab4a-30dea4dce28b",
+          "type": "Type",
+          "_label": "HJ9773"
+        }    
+      ]
     }
     ```
 
