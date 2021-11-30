@@ -32,7 +32,7 @@ stripPunctuation:
 scriptInclusion: NONE
 ```
 
-1.  For each unique `050a` or `090a` value, generate and store a top-level concept resources, identified by an IRI.
+1.  For each unique `050a` or `090a` value, generate and store a top-level concept resource, identified by an IRI.
 
 2.  Create a key for matching.
 
