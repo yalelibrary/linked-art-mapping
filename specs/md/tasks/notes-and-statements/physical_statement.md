@@ -20,7 +20,7 @@ sampleBibs:
   - 3811379
 fieldSpec:
   - 3003acef
-trimPunctuation: true
+trimPunctuation: false
 scriptInclusion: NONE
 ```
 
@@ -28,7 +28,7 @@ scriptInclusion: NONE
 
 1.  Process the physical statement values \(MARC `3003acef`\).
 
-    1.  Trim punctuation and normalize space for each subfield, except `3`: see instructions below.
+    1.  Do not trim punctuation from subfields.
 
     2.  Join fields `300acef` with a whitespace character.
 
