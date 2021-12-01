@@ -20,7 +20,7 @@ sampleBibs:
   - 3811379
 fieldSpec:
   - 3003acef
-trimPunctuation: false
+trimPunctuation: true
 scriptInclusion: NONE
 ```
 
@@ -28,15 +28,17 @@ scriptInclusion: NONE
 
 1.  Process the physical statement values \(MARC `3003acef`\).
 
-    1.  Join fields `300acef` with a whitespace character.
+    1.  Trim punctuation and normalize space for each subfield, except `3`: see instructions below.
 
-    2.  If subfield `3` is present, but does not appear first in the subfield sequence, prefix the statement with the value of subfield `3`.
+    2.  Join fields `300acef` with a whitespace character.
 
-    3.  Test the value of `3` to see whether it ends with a colon.
+    3.  If subfield `3` is present, but does not appear first in the subfield sequence, prefix the statement with the value of subfield `3`.
 
-    4.  If no colon is present, concatenate the value with a colon \(`:`\).
+    4.  Test the value of `3` to see whether it ends with a colon.
 
-    5.  Else, output the value of subfield `3`.
+    5.  If no colon is present, concatenate the value with a colon \(`:`\).
+
+    6.  Else, output the value of subfield `3`.
 
         ```
         300  $3 Copy 1: $a 1 album (32 photographic prints) : $b b & w ; $c 13.4 x 20.6 cm.
