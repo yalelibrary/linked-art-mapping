@@ -33,7 +33,7 @@ scriptInclusion: BOTH
 
         |Fields|Subfields|
         |------|---------|
-        |651\| 0\|, 691|014evxyz|
+        |651\| 0\|, 691|014e|
 
     2.  For `6XXz`, select the subfield value.
 
