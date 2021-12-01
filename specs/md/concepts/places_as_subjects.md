@@ -32,7 +32,7 @@ scriptInclusion: BOTH
 
         |Fields|Subfields|
         |------|---------|
-        |651\| 0\|, 691|014evxyz|
+        |651\| 0\|, 691|014e|
 
     2.  [Normalize](../glossary/normalization.md) and match string values.
 
