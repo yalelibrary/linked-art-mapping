@@ -60,7 +60,7 @@ Entities that represent time periods and/or discrete events related to a record-
 Entities that represent groups of people functioning collectively \(e.g., organizations and meetings/conferences\).
 -   **[People](../concepts/people.md)**  
 
--   **[Places \[draft\]](../concepts/places.md)**  
+-   **[Places](../concepts/places.md)**  
 
 -   **[Provenance Activities \[draft\]](../concepts/provenance_activities.md)**  
 

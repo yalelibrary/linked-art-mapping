@@ -4,7 +4,7 @@ author: timothy.thompson@yale.edu
 
 # People
 
-Person entities are represented by the`Person`class.
+Person entities are represented by the `Person` class.
 
 Person entities may function either in creator/contributor \(agent\) roles or within subject/concept structures.
 

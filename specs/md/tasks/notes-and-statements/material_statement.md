@@ -4,12 +4,12 @@ author: timothy.thompson@yale.edu
 
 # Medium of performance
 
-Corresponds to the`382`field in MARC.
+Corresponds to the `382` field in MARC.
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related`HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related`HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
 |`DigitalObject`| |
 
 ## Source data
@@ -27,7 +27,7 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Process the medium of performance values \(MARC`382ans`\).
+1.  Process the medium of performance values \(MARC `382ans`\).
 
     |Subfields|Instructions|
     |---------|------------|

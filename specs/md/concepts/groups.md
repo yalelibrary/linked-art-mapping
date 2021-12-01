@@ -8,7 +8,7 @@ category: MARC to Linked Art mapping
 
 Entities that represent groups of people functioning collectively \(e.g., organizations and meetings/conferences\).
 
-Group entities are represented by the`Group`class.
+Group entities are represented by the `Group` class.
 
 Group entities may function either in creator/contributor \(agent\) roles or within subject/concept structures.
 

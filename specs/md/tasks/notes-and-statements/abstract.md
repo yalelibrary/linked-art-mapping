@@ -1,6 +1,6 @@
 ---
 author: timothy.thompson@yale.edu
-keyword: Assigned
+keyword: [Assigned, Completed]
 ---
 
 # Abstract

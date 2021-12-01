@@ -1,5 +1,6 @@
 ---
 author: timothy.thompson@yale.edu
+keyword: Assigned
 ---
 
 # Local note
@@ -24,7 +25,7 @@ fieldSpec:
   - 5906ab
   - 8806ab
 trimPunctuation: false
-scriptInclusion: BOTH
+scriptInclusion: NONE
 ```
 
 ## Processing steps and output

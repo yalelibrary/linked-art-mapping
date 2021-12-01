@@ -1,5 +1,6 @@
 ---
 author: timothy.thompson@yale.edu
+keyword: [Assigned, Completed]
 ---
 
 # Preferred citation note

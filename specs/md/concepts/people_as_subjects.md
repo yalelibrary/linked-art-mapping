@@ -27,9 +27,9 @@ scriptInclusion: BOTH
 
 ## Processing steps and output
 
-1.  Add an embedded reference to the Person entity within the top-level resource.
+1.  Add an embedded reference to the person entity within the record-level resource.
 
-    **Note:** If a MARC`600`or`692`entry includes subdivision subfields \(`vxyz`\), then the heading should be treated as a concept \(`Type`\) entity: see[Subject headings](subject_headings.md).
+    **Note:** If a MARC `600` or `692` entry includes subdivision subfields \(`vxyz`\), then the heading should be treated as a concept \(`Type`\) entity: see [Subject headings](subject_headings.md).
 
     1.  Process concept/person references.
 

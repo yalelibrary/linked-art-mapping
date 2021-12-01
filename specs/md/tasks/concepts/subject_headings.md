@@ -19,16 +19,16 @@ sampleBibs:
   - 13146411
 # Source data fields
 fieldSpec:
-  - 600014abcdegjqvxyz
+  - 60004abcdegjqvxyz
   - 61004abcdegvxyz
   - 61104acdegjnquvxyz
   - 63004adfhklmnoprstvxyz
   - 65004abcdegvxyz
-  - 65104abcdfghvxyz
+  - 651| 0|04abcdfghvxyz
   - 65504abcvxyz
   - 69004abcdegvxyz
   - 69104abcdfghvxyz
-  - 692014abcdegjqvxyz
+  - 69204abcdegjqvxyz
   - 69304abcdegvxyz
   - 69404acdegjnquvxyz
   - 6950adfhklmnoprstvxyz  
@@ -50,22 +50,6 @@ scriptInclusion: BOTH
 
     2.  Normalize and match string values.
 
-    |JSON structure|Description|Default|
-    |--------------|-----------|-------|
-    |`root → id`|Concept IRI| |
-    |`root → type`|Semantic type of concept|`Type`|
-    |`root → _label`|Label of precoordinated subject heading, joined with double hyphens| |
-    |`root → equivalent → id`|Reference to IRI from`$0`, if applicable| |
-    |`root → equivalent → type`|Reference to resource type from`$0`, if applicable| |
-    |`root → identified_by → type`| |`Name`|
-    |`root → identified_by → content`|Same as`root → _label`| |
-    |`root → identified_by → classified_as → id`| |[http://vocab.getty.edu/aat/300404670](http://vocab.getty.edu/aat/300404670)|
-    |`root → identified_by → classified_as → type`| |`Type`|
-    |`root → identified_by → classified_as → _label`| |`Primary Name`|
-    |`root → created_by → influenced_by → id`|Concept IRI for facet concept| |
-    |`root → created_by → influenced_by → type`|Semantic type of concept facet. See the[facet type mapping](../../concepts/subject_headings.md#facet_types_table)below.| |
-    |`root → created_by → influenced_by → _label`|Facet label| |
-
 2.  Within the top-level resource for the full subject heading, model each subdivision in the heading as a facet.
 
 3.  Generate a top-level resource for each unique facet.
@@ -85,7 +69,7 @@ scriptInclusion: BOTH
         |611|acdegnqu|
         |630|adfhklmnoprst|
         |650|abcdg|
-        |651|abcdfgh|
+        |651\| 0\||abcdfgh|
         |690|abcdg|
         |691|abcdfgh|
         |692|abcdgjq|
@@ -105,7 +89,7 @@ scriptInclusion: BOTH
         |611acdegnqu|Group|
         |630adfhklmnoprst|LinguisticObject|
         |650abcdg|Type|
-        |651abcdfgh|Place|
+        |651\| 0\|abcdfgh|Place|
         |690abcdg|Type|
         |691abcdfgh|Place|
         |692abcdgjq|Person|
@@ -181,7 +165,7 @@ scriptInclusion: BOTH
     }
     ```
 
-6.  If a 6XX field in MARC includes a`$0` or `1` with an IRI, output an`equivalent`reference.
+6.  If a 6XX field in MARC includes a`$0`with an IRI, output an`equivalent`reference.
 
     `13146411`
 
@@ -229,12 +213,6 @@ scriptInclusion: BOTH
     ```
 
 7.  In each referring record-level resource \(`LinguisticObject`,`VisualItem`, or`DigitalObject`\), add an embedded reference to the Concept entity.
-
-    |JSON structure|Description|Default|
-    |--------------|-----------|-------|
-    |`root → about → id`|Must match the`id`of the top-level resource| |
-    |`root → about → type`|Must match the`type`of the top-level resource| |
-    |`root → about → _label`|Must match the`_label`of the top-level resource| |
 
     `9564880`
 

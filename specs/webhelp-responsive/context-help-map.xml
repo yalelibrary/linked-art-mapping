@@ -110,6 +110,7 @@
                path="concepts/top_level_place_entities.html"/>
    <appContext helpID="places_as_agents" path="concepts/places_as_agents.html"/>
    <appContext helpID="places_as_subjects" path="concepts/places_as_subjects.html"/>
+   <appContext helpID="associated_places" path="concepts/associated_places.html"/>
    <appContext helpID="places_from_fixed_field_008"
                path="concepts/places_from_fixed_field_008.html"/>
    <appContext helpID="places_with_geographic_coordinates"
