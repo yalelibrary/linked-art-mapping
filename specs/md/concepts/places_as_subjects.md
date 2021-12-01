@@ -18,7 +18,6 @@ sampleBibs:
   - 2820839 # 691
 # Source data fields
 fieldSpec:
-  - 6XXz
   - 651| 0|014aegvxyz
   - 691014aegvxyz      
 trimPunctuation: true
