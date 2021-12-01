@@ -32,13 +32,11 @@ scriptInclusion: BOTH
 
         |Fields|Subfields|
         |------|---------|
-        |651\| 0\|, 691|014e|
+        |651\| 0\|, 691|014evxyz|
 
-    2.  For `6XXz`, select the subfield value.
+    2.  [Normalize](../glossary/normalization.md) and match string values.
 
-    3.  [Normalize](../glossary/normalization.md) and match string values.
-
-    4.  If a source data field in MARC includes a subfield `0` or `1` with an IRI, output an `equivalent` reference.
+    3.  If a source data field in MARC includes a subfield `0` or `1` with an IRI, output an `equivalent` reference.
 
     `2792`
 
@@ -74,7 +72,7 @@ scriptInclusion: BOTH
 
     **Note:**
 
-    If a MARC `651| 0|` or `691` entry includes subdivision subfields `vxy`, then the heading should be treated as a concept \(`Type`\) entity: see [Subject headings](subject_headings.md).
+    If a MARC `651| 0|` or `691` entry includes subdivision subfields `vxyz`, then the heading should be treated as a concept \(`Type`\) entity: see [Subject headings](subject_headings.md).
 
     1.  Process concept/place references.
 
