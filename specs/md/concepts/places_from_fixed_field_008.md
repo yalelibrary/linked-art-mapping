@@ -47,6 +47,7 @@ The code represents a place of publication, production, execution, or sometimes 
       "@context": "https://linked.art/ns/v1/linked-art.json",
       "id": "https://lux.collections.yale.edu/data/place/3dcbc9fa-ca9c-4fa1-bd0e-d25e93f461e5",
       "type": "Place",
+      "_label": "France",
       "identified_by": [
         {
           "type": "Name",
@@ -115,7 +116,8 @@ The code represents a place of publication, production, execution, or sometimes 
             "took_place_at": [
               {
                 "id": "https://lux.collections.yale.edu/data/place/3dcbc9fa-ca9c-4fa1-bd0e-d25e93f461e5",
-                "type": "Place"
+                "type": "Place",
+                "_label": "France"
               }
             ]
           }
@@ -134,7 +136,8 @@ The code represents a place of publication, production, execution, or sometimes 
               "_label": "location",
               "assigned": {
                 "id": "https://lux.collections.yale.edu/data/place/1585b6fe-6613-49fb-b254-3b911d5796bf",
-                "type": "Place"
+                "type": "Place",
+                "_label": "Connecticut"
               }
             }
           ]
