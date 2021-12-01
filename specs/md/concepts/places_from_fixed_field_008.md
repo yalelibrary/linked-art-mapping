@@ -163,7 +163,8 @@ The code represents a place of publication, production, execution, or sometimes 
               "took_place_at": [
                 {
                   "id": "https://lux.collections.yale.edu/data/place/3dcbc9fa-ca9c-4fa1-bd0e-d25e93f461e5",
-                  "type": "Place"
+                  "type": "Place",
+                  "_label": "France"
                 }
               ]
             }
