@@ -19,60 +19,16 @@ sampleBibs:
 # Source data fields
 fieldSpec:
   - 651| 0|014aegvxyz
-  - 691014aegvxyz      
+  - 691014aegvxyz         
 trimPunctuation: true
 scriptInclusion: BOTH
 ```
 
 ## Processing steps and output
 
-1.  Generate and store the top-level place resources, each identified by an IRI.
+1.  Add an embedded reference to the place entity within the record-level resource.
 
-    1.  For `651| 0|` and `691`, join all subfields **except** for those listed below to create a key for matching and merging.
-
-        |Fields|Subfields|
-        |------|---------|
-        |651\| 0\|, 691|014e|
-
-    2.  [Normalize](../glossary/normalization.md) and match string values.
-
-    3.  If a source data field in MARC includes a subfield `0` or `1` with an IRI, output an `equivalent` reference.
-
-    `2792`
-
-    ```
-    {
-      "@context": "https://linked.art/ns/v1/linked-art.json",
-      "id": "https://lux.collections.yale.edu/data/place/321da6c7-2e81-4145-90eb-39f1df9c454e",
-      "type": "Place",
-      "_label": "Byzantine Empire",
-      "identified_by": [
-        {
-          "type": "Name",
-          "content": "Byzantine Empire",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300404670",
-              "type": "Type",
-              "_label": "Primary Name"
-            }
-          ]
-        }
-      ],
-      "equivalent": [
-        {
-          "id": "http://id.loc.gov/authorities/names/n80085269",
-          "type": "Place"
-        }
-      ]
-    }
-    ```
-
-2.  Add an embedded reference to the place entity within the record-level resource.
-
-    **Note:**
-
-    If a MARC `651| 0|` or `691` entry includes subdivision subfields `vxyz`, then the heading should be treated as a concept \(`Type`\) entity: see [Subject headings](subject_headings.md).
+    **Note:** If a MARC `6XX` entry includes subdivision subfields \(`vxyz`\), then the heading should be treated as a concept \(`Type`\) entity: see [Subject headings](subject_headings.md).
 
     1.  Process concept/place references.
 
