@@ -4,9 +4,48 @@ author: timothy.thompson@yale.edu
 
 # LUX supertype taxonomy
 
-Taxonomy of content types and related formats for classifying record-level resources inLUX.
+Taxonomy of content types and related formats for classifying record-level resources in LUX.
 
 MARC-to-Linked Art supertype mappings are done at the level of the most specific format, with type and broader format relations inferred from the hierarchy.
+
+The supertype of a resource is used to determine its base class or document type in the Linked Art model.
+
+|Base class|Content type|Format level one|Format level two|
+|----------|------------|----------------|----------------|
+|DigitalObject|Datasets|[Data and Files](dataandfiles.md)|[Geospatial Data](geospatialdata.md)|
+|DigitalObject|Datasets|[Data and Files](dataandfiles.md)|[Image Data](imagedata.md)|
+|DigitalObject|Datasets|[Data and Files](dataandfiles.md)|[Textual Data](textualdata.md)|
+|DigitalObject|Software and Electronic Media|[Software Applications](softwareapplications.md)|[Databases](databases.md)|
+|HumanMadeObject|Objects|[Globes](globes.md)| |
+|HumanMadeObject|Objects|[Models](models.md)| |
+|HumanMadeObject|Objects|[Realia](realia.md)| |
+|HumanMadeObject|Objects|[Toys and Games](toysandgames.md)| |
+|LinguisticObject|Audio|[Music](music.md)| |
+|LinguisticObject|Audio|[Sound](sound.md)| |
+|LinguisticObject|Moving Images|[Motion Pictures](motionpictures.md)| |
+|LinguisticObject|Scores and Notation|[Notated Movement](notatedmovement.md)| |
+|LinguisticObject|Scores and Notation|[Notated Music](notatedmusic.md)| |
+|LinguisticObject|Textual Works|[Books](books.md)|[Atlases](atlases.md)|
+|LinguisticObject|Textual Works|[Broadsides](broadsides.md)| |
+|LinguisticObject|Textual Works|[Dissertations and Theses](dissertationsandtheses.md)| |
+|LinguisticObject|Textual Works|[Journals and Periodicals](journalsandperiodicals.md)|[Newspapers](newspapers.md)|
+|LinguisticObject|Textual Works|[Textual Data](textualdata.md)| |
+|Set|Collections|[Archival and Manuscript Materials](archivalandmanuscriptmaterials.md)| |
+|Set|Collections|[Kits](kits.md)| |
+|VisualItem|Cartography|[Atlases](atlases.md)| |
+|VisualItem|Cartography|[Geospatial Data](geospatialdata.md)| |
+|VisualItem|Cartography|[Globes](globes.md)| |
+|VisualItem|Cartography|[Maps](maps.md)| |
+|VisualItem|Visual Works|[Collages](collages.md)| |
+|VisualItem|Visual Works|[Drawings](drawings.md)| |
+|VisualItem|Visual Works|[Image Data](imagedata.md)| |
+|VisualItem|Visual Works|[Maps](maps.md)| |
+|VisualItem|Visual Works|[Paintings](drawings.md)| |
+|VisualItem|Visual Works|[Photographs](photographs.md)| |
+|VisualItem|Visual Works|[Pictures](pictures.md)| |
+|VisualItem|Visual Works|[Posters](posters.md)| |
+|VisualItem|Visual Works|[Prints](prints.md)| |
+|VisualItem|Visual Works|[Slides](slides.md)| |
 
 
 
