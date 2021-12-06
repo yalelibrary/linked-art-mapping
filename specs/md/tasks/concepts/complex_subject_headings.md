@@ -328,5 +328,5 @@ scriptInclusion: BOTH
 
 **Parent topic:**[Related entities](../../tasks/related_entities.md)
 
-[1](#fnsrc_1) Top-level genre/form resources should include a `Form` classification, as shown in the [single entity specification](simple_subject_headings.md#genre_form_substep).
+[1](#fnsrc_1) Top-level genre/form resources should include a `Format` classification, as shown in the [single entity specification](simple_subject_headings.md#genre_form_substep).
 
