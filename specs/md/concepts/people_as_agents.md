@@ -39,7 +39,7 @@ scriptInclusion: BOTH
 
 ## Processing steps and output
 
-1.  Add an embedded reference to the person entity within the record-level resource.
+1.  After applying the instructions in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](../tasks/concepts/simple_subject_headings.md), add an embedded reference to the person entity within the record-level resource.
 
     1.  Process creation activities.
 
@@ -226,5 +226,5 @@ scriptInclusion: BOTH
         ```
 
 
-**Parent topic:**[Top-level Person entities](../concepts/top_level_person_entities.md)
+**Parent topic:**[People](../concepts/people.md)
 

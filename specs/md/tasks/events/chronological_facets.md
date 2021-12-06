@@ -9,110 +9,11 @@ keyword: [Assigned, Completed, Deployed]
 
 Resources extracted from MARC 6XXy.
 
-## Source data
-
-```
----
-name: ChronologicalFacets
-sampleBibs:
-  - 9564880
-  - 12164046
-# Source data fields
-fieldSpec:
-  - 600y
-  - 610y
-  - 611y
-  - 630y
-  - 650y
-  - 651y
-  - 655y
-  - 690y
-  - 691y
-  - 692y
-  - 693y
-  - 694y
-  - 695y
-trimPunctuation: true
-scriptInclusion: NONE
-```
+Event entities represented by chronological subdivisions appear only in complex subject heading structures.
 
 ## Processing steps and output
 
-1.  Generate and store the top-level chronological facets, each identified by an IRI.
-
-    1.  Create a key for merging.
-
-    2.  Normalize and merge each unique string value.
-
-    |JSON structure|Description|Default|
-    |--------------|-----------|-------|
-    |`root → id`|Resource IRI| |
-    |`root → type`|Semantic type of entity|`Period`|
-    |`root → _label`|Label of facet| |
-    |`root → identified_by → type`| |`Name`|
-    |`root → identified_by → content`|Same as`root → _label`| |
-
-    `12164046`
-
-    ```
-    {
-      "@context": "https://linked.art/ns/v1/linked-art.json",
-      "id": "https://lux.collections.yale.edu/data/event/73c0ba3c-e469-4969-be1c-0479c856add3",
-      "type": "Period",
-      "_label": "World War, 1914-1918",
-      "identified_by": [
-        {
-          "type": "Name",
-          "content": "World War, 1914-1918"
-        }
-      ]
-    }
-    ```
-
-2.  Add an embedded reference to the facet resource within the top-level resource for each referring subject heading.
-
-    |JSON structure|Description|Default|
-    |--------------|-----------|-------|
-    |`root → created_by → influenced_by → id`|Must match the`id`of the top-level resource| |
-    |`root → type`|Must match the`type`of the top-level resource|`Period`|
-    |`root → _label`|Must match the`_label`of the top-level resource| |
-
-    `12164046`
-
-    ```
-    {
-      "@context": "https://linked.art/ns/v1/linked-art.json",
-      "id": "https://lux.collections.yale.edu/data/concept/003c6a29-8b30-4e90-9664-ea7d65f8e4ec",
-      "type": "Type",
-      "_label": "Russia. Voennyĭ flot--History--World War, 1914-1918",
-      "identified_by": [
-        {
-          "type": "Name",
-          "content": "Russia. Voennyĭ flot--History--World War, 1914-1918"
-        }
-      ],
-      "created_by": {
-        "type": "Creation",
-        "influenced_by": [
-          {
-            "id": "https://lux.collections.yale.edu/data/group/9110fd4b-6992-4e75-89f9-cae80221d79c",
-            "type": "Group",
-            "_label": "Russia. Voennyĭ flot"
-          },
-          {
-            "id": "https://lux.collections.yale.edu/data/concept/d43ab750-6e8d-4f7c-b3e2-d5a8dc134a37",
-            "type": "Type",
-            "_label": "History"
-          },
-          {
-            "id": "https://lux.collections.yale.edu/data/event/73c0ba3c-e469-4969-be1c-0479c856add3",
-            "type": "Period",
-            "_label": "World War, 1914-1918"
-          }
-        ]
-      }
-    }
-    ```
+1.  See the [Complex subject/genre headings and hierarchical associated places](../concepts/complex_subject_headings.md) specification for details.
 
 
 **Parent topic:**[Events](../../concepts/events.md)

@@ -8,7 +8,7 @@ category: MARC to Linked Art mapping glossary
 
 String normalization includes the following steps:
 
-1.  Remove diacritics from the string, as appropriate.
+1.  Remove diacritics from the string.
 2.  Convert the characters to lower case.
 3.  Trim leading and trailing whitespace.
 4.  Convert internal whitespace to single whitespace characters.

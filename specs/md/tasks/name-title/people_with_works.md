@@ -25,5 +25,5 @@ sampleBibs:
 
 ## Processing steps and output
 
-**Parent topic:**[Name-title entries \[draft\]](../../concepts/name_title_entries.md)
+**Parent topic:**[Complex works \[draft\]](../../tasks/concepts/name_title_entries.md)
 

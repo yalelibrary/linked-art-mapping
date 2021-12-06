@@ -46,7 +46,7 @@ scriptInclusion: BOTH
 
 ## Processing steps and output
 
-1.  Add an embedded reference to the group entity within the record-level resource.
+1.  After applying the instructions in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](../tasks/concepts/simple_subject_headings.md), add an embedded reference to the group entity within the record-level resource.
 
     1.  Process creation activities.
 
@@ -104,5 +104,5 @@ scriptInclusion: BOTH
         ```
 
 
-**Parent topic:**[Top-level Group entities](../concepts/top_level_group_entities.md)
+**Parent topic:**[Groups](../concepts/groups.md)
 

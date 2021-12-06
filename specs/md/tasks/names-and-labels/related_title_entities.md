@@ -61,7 +61,5 @@ scriptInclusion: NONE
     ```
 
 
-**Parent topic:**[Record-level entities](../../concepts/record_level_entities.md)
-
-**Previous topic:**[LUX supertype taxonomy](../../tasks/supertypes/supertypes.md)
+**Parent topic:**[Related entities](../../tasks/related_entities.md)
 

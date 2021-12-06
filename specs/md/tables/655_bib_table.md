@@ -34,7 +34,7 @@ Terms indicating the genre, form, and/or physical characteristics of the materia
 **Related information**  
 
 
-[Subject headings](../tasks/concepts/subject_headings.md)
+[Subject and genre/form headings](../tasks/concepts/subject_headings.md)
 
 [Chronological facets](../tasks/events/chronological_facets.md)
 

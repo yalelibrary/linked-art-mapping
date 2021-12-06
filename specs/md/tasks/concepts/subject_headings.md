@@ -2,236 +2,55 @@
 author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
-keyword: [Assigned, Completed, Deployed]
+keyword: Assigned
 ---
 
-# Subject headings
+# Subject and genre/form headings
 
 Resources extracted from MARC 6XX entries.
 
-## Source data
-
-```
----
-name: SubjectHeadings
-sampleBibs:
-  - 9564880
-  - 13146411
-# Source data fields
-fieldSpec:
-  - 60004abcdegjqvxyz
-  - 61004abcdegvxyz
-  - 61104acdegjnquvxyz
-  - 63004adfhklmnoprstvxyz
-  - 65004abcdegvxyz
-  - 651| 0|04abcdfghvxyz
-  - 65504abcvxyz
-  - 69004abcdegvxyz
-  - 69104abcdfghvxyz
-  - 69204abcdegjqvxyz
-  - 69304abcdegvxyz
-  - 69404acdegjnquvxyz
-  - 6950adfhklmnoprstvxyz  
-trimPunctuation: true
-scriptInclusion: BOTH
-```
-
 ## Processing steps and output
 
-1.  Generate and store the top-level chronological facets, each identified by an IRI.
+1.  After applying the instructions in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](simple_subject_headings.md) or [Complex subject/genre headings and hierarchical associated places](complex_subject_headings.md), add an embedded reference to the concept entity within the record-level resource.
 
-    1.  Join all subfields except for those listed below to create a key for matching and merging.
+    1.  As the \_label of the concept entity, take the value of the top-level entity label.
 
-        |Fields|Subfields|
-        |------|---------|
-        |6XX|04|
-        |6XX except 611|e|
-        |611|j|
+    2.  Process simple concept references.
 
-    2.  Normalize and match string values.
+        `3`
 
-2.  Within the top-level resource for the full subject heading, model each subdivision in the heading as a facet.
-
-3.  Generate a top-level resource for each unique facet.
-
-    1.  Create facets by normalizing and merging the string value \(label\) of each facet resource according to the facet value mapping table below.
-
-    2.  For rows with multiple subfields, join the subfields with a whitespace character.
-
-        |MARC tag|Subfields|
-        |--------|---------|
-        |6XX|v|
-        |6XX|x|
-        |6XX|y|
-        |6XX|z|
-        |600|abcdgjq|
-        |610|abcdg|
-        |611|acdegnqu|
-        |630|adfhklmnoprst|
-        |650|abcdg|
-        |651\| 0\||abcdfgh|
-        |690|abcdg|
-        |691|abcdfgh|
-        |692|abcdgjq|
-        |693|abcdg|
-        |694|acdgnqu|
-        |695|adfhklmnoprst|
-
-    3.  Determine the`type`value for each facet from the tag and subfield values in MARC according to the facet type mapping table below.
-
-        |MARC values|Type|
-        |-----------|----|
-        |6XXvx|Type|
-        |6XXy|Period|
-        |6XXz|Place|
-        |600abcdgjq|Person|
-        |610abcdg|Group|
-        |611acdegnqu|Group|
-        |630adfhklmnoprst|LinguisticObject|
-        |650abcdg|Type|
-        |651\| 0\|abcdfgh|Place|
-        |690abcdg|Type|
-        |691abcdfgh|Place|
-        |692abcdgjq|Person|
-        |693abcdg|Group|
-        |694acdegnqu|Group|
-        |695adfhklmnoprst|LinguisticObject|
-
-    `9564880`
-
-    ```
-    {
-      "@context": "https://linked.art/ns/v1/linked-art.json",
-      "id": "https://lux.collections.yale.edu/data/event/92a599a2-2117-43f9-be3e-6e07f36cb2a5",
-      "type": "Period",
-      "_label": "2nd century",
-      "identified_by": [
+        ```
         {
-          "type": "Name",
-          "content": "2nd century"
-        }
-      ]
-    }
-    ```
-
-4.  Join the string values of the facets with double hyphens \(`--`\) to output the`_label`and`content`values of the full precoordinated heading.
-
-5.  Add an embedded reference to the facet resources within the top-level resource for the full heading.
-
-    `9564880`
-
-    ```
-    {
-      "@context": "https://linked.art/ns/v1/linked-art.json",
-      "id": "https://lux.collections.yale.edu/data/concept/24f1b754-9566-4f38-8c61-9ce4082606aa",
-      "type": "Type",
-      "_label": "Death--Religious aspects--Christianity--History--2nd century",
-      "identified_by": [
-        {
-          "type": "Name",
-          "content": "Death--Religious aspects--Christianity--History--2nd century"
-        }
-      ],
-      "created_by": {
-        "type": "Creation",
-        "influenced_by": [
-          {
-            "id": "https://lux.collections.yale.edu/data/concept/c54ba0ac-c106-4afe-8007-cb4a34cf0bd7",
-            "type": "Type",
-            "_label": "Death"
-          },
-          {
-            "id": "https://lux.collections.yale.edu/data/concept/b273c64d-a9bb-4c2e-bb3f-5c13a6825a55",
-            "type": "Type",
-            "_label": "Religious aspects"
-          },
-          {
-            "id": "https://lux.collections.yale.edu/data/concept/33a05e84-57bc-4f1d-a792-0de7758bd0d8",
-            "type": "Type",
-            "_label": "Christianity"
-          },
-          {
-            "id": "https://lux.collections.yale.edu/data/concept/d43ab750-6e8d-4f7c-b3e2-d5a8dc134a37",
-            "type": "Type",
-            "_label": "History"
-          },
-          {
-            "id": "https://lux.collections.yale.edu/data/event/92a599a2-2117-43f9-be3e-6e07f36cb2a5",
-            "type": "Period",
-            "_label": "2nd century"
-          }
-        ]
-      }
-    }
-    ```
-
-6.  If a 6XX field in MARC includes a`$0`with an IRI, output an`equivalent`reference.
-
-    `13146411`
-
-    ```
-    {
-      "@context": "https://linked.art/ns/v1/linked-art.json",
-      "id": "https://lux.collections.yale.edu/data/concept/2dba70e6-3702-4bbc-953c-1fdee7460594",
-      "type": "Type",
-      "_label": "Earth (Planet)--Maps",
-      "identified_by": [
-        {
-          "type": "Name",
-          "content": "Earth (Planet)--Maps",
-          "classified_as": [
+          "about": [
             {
-              "id": "http://vocab.getty.edu/aat/300404670",
+              "id": "https://lux.collections.yale.edu/data/concept/522b36c5-57c4-4026-9deb-ff1aeb3ef187",
               "type": "Type",
-              "_label": "Primary Name"
+              "_label": "Paleoecology"
             }
           ]
         }
-      ],
-      "equivalent": [
+        ```
+
+    3.  Process complex concept references.
+
+        `9564880`
+
+        ```
         {
-          "id": "http://id.loc.gov/authorities/subjects/sh2013000103",
-          "type": "Type"
+          "about": [
+            {
+              "id": "https://lux.collections.yale.edu/data/concept/c5ba671b-c41d-40f5-983f-beb38b75b5b2",
+              "type": "Type",
+              "_label": "Death -- Religious aspects -- Christianity"
+            },
+            {
+              "id": "https://lux.collections.yale.edu/data/concept/24f1b754-9566-4f38-8c61-9ce4082606aa",
+              "type": "Type",
+              "_label": "Death -- Religious aspects -- Christianity -- History--2nd century"
+            }
+          ]
         }
-      ],
-      "created_by": {
-        "type": "Creation",
-        "influenced_by": [
-          {
-            "id": "https://lux.collections.yale.edu/data/place/f0c5212e-e671-4c59-a745-581b350f191d",
-            "type": "Place",
-            "_label": "Earth (Planet)"
-          },
-          {
-            "id": "https://lux.collections.yale.edu/data/concept/c5974fce-ed0d-4556-a2f6-bd98965ffc50",
-            "type": "Type",
-            "_label": "Maps"
-          }
-        ]
-      }
-    }
-    ```
-
-7.  In each referring record-level resource \(`LinguisticObject`,`VisualItem`, or`DigitalObject`\), add an embedded reference to the Concept entity.
-
-    `9564880`
-
-    ```
-    {
-      "about": [
-        {
-          "id": "https://lux.collections.yale.edu/data/concept/c5ba671b-c41d-40f5-983f-beb38b75b5b2",
-          "type": "Type",
-          "_label": "Death--Religious aspects--Christianity"
-        },
-        {
-          "id": "https://lux.collections.yale.edu/data/concept/24f1b754-9566-4f38-8c61-9ce4082606aa",
-          "type": "Type",
-          "_label": "Death--Religious aspects--Christianity--History--2nd century"
-        }
-      ]
-    }
-    ```
+        ```
 
 
 **Parent topic:**[Concepts](../../concepts/concepts.md)

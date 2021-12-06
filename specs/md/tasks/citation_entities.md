@@ -19,7 +19,7 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  For each MARC `510`, if subfield`u` is present with a Wikidata URI \(e.g.,[http://www.wikidata.org/entity/Q107432855](http://www.wikidata.org/entity/Q107432855)\), generate a top-level citation entity with an `equivalent` reference to the Wikidata URI.
+1.  For each MARC `510`, if subfield`u` is present and includes a URI containing the string `wikidata.org` \(e.g.,[http://www.wikidata.org/entity/Q107432855](http://www.wikidata.org/entity/Q107432855)\), generate a top-level citation entity with an `equivalent` reference to the Wikidata URI.
 
     1.  Use the Wikidata URI as a key for matching and merging citation entities.
 
@@ -55,5 +55,5 @@ scriptInclusion: NONE
     ```
 
 
-**Parent topic:**[Work-level entities \[draft\]](../concepts/work_level_entities.md)
+**Parent topic:**[Related entities](../tasks/related_entities.md)
 

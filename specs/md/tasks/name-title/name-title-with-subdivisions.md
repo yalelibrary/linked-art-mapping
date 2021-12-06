@@ -1,10 +1,10 @@
 ---
-author: timothy.thompson@yale.edu
+author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
 
-# Groups with works \[draft\]
+# Complex works as complex subjects \[draft\]
 
 ## Source data
 
