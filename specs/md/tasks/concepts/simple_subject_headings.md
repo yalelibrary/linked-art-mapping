@@ -347,103 +347,17 @@ scriptInclusion: BOTH
         }
         ```
 
-2.  Add an embedded reference to the top-level entity within the record-level resource.
+2.  In each referring record-level resource \(`LinguisticObject`, `VisualItem`, or `DigitalObject`\), add an embedded reference to the concept entity.
 
-    1.  Process concept references.
+    1.  For concept \(`Type`\) entities, see [Subject and genre/form headings](subject_headings.md).
 
-        `3`
+    2.  For associated places, see [Associated places](../../concepts/associated_places.md).
 
-        ```
-        {
-          "about": [
-            {
-              "id": "https://lux.collections.yale.edu/data/concept/522b36c5-57c4-4026-9deb-ff1aeb3ef187",
-              "type": "Type",
-              "_label": "Paleoecology"
-            }
-          ]
-        }
-        ```
+    3.  For other place entities, see [Places as agents](../../concepts/places_as_agents.md) and [Places as subjects](../../concepts/places_as_subjects.md).
 
-    2.  Process genre/form references.
+    4.  For person entities, see [People as subjects](../../concepts/people_as_subjects.md) and [People as subjects](../../concepts/people_as_subjects.md).
 
-        `4504`
-
-        ```
-        {
-          "about": [
-            {
-              "id": "https://lux.collections.yale.edu/data/concept/43427eb8-ebc3-4197-9dfd-9a55ceee894b",
-              "type": "Type",
-              "_label": "Photoplay editions"
-            }
-          ]
-        }
-        ```
-
-    3.  Process group references.
-
-        `68`
-
-        ```
-        {
-          "about": [
-            {
-              "id": "https://lux.collections.yale.edu/data/group/a3d54906-5375-46a0-b0df-d6be7d6ecb7f",
-              "type": "Group",
-              "_label": "United States. National Archives and Records Service"
-            }
-          ]
-        }
-        ```
-
-    4.  Process person references.
-
-        `907221`
-
-        ```
-        {
-          "about": [
-            {
-              "id": "https://lux.collections.yale.edu/data/person/25ae094b-ee19-465b-aaf1-2ec08ce28bfd",
-              "type": "Person",
-              "_label": "Perizonius, Jacobus, 1651-1715"
-            }
-          ]
-        }
-        ```
-
-    5.  Process place references.
-
-        `6017172`
-
-        ```
-        {
-          "about": [
-            {
-              "id": "https://lux.collections.yale.edu/data/place/ff9095c9-db47-423d-938b-5c2e3fe9e177",
-              "type": "Place",
-              "_label": "Aleppo (Syria)"
-            }
-          ]
-        }
-        ```
-
-    6.  Process work references.
-
-        `227`
-
-        ```
-        {
-          "about": [
-            {
-              "id": "https://lux.collections.yale.edu/data/text/ea02530e-580f-41a8-92ac-d9e302ec5fbe",
-              "type": "LinguisticObject",
-              "_label": "Munich Four-Power Agreement (1938)"
-            }
-          ]
-        }
-        ```
+    5.  For group entities, see [Groups as subjects](../../concepts/groups_as_subjects.md) and [Groups as subjects](../../concepts/groups_as_subjects.md).
 
 
 **Parent topic:**[Related entities](../../tasks/related_entities.md)
