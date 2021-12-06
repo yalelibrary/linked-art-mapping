@@ -333,7 +333,14 @@ scriptInclusion: BOTH
           "identified_by": [
             {
               "type": "Name",
-              "content": "Munich Four-Power Agreement (1938)"
+              "content": "Munich Four-Power Agreement (1938)",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404670",
+                  "type": "Type",
+                  "_label": "Primary Name"
+                }
+              ]
             }
           ],
           "equivalent": [
