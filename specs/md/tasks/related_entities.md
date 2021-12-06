@@ -29,7 +29,7 @@ In MARC, entries can be either simple or complex. Simple entries contain a refer
 -   Place
 -   Work
 
-Complex entries include a reference to two or more entity types. Complex entries are used to record name/title references and subject headings with subdivisions.
+Complex entries include a reference to two or more component parts. Complex entries are used to record name/title references and subject headings with subdivisions.
 
 |Linked Art class|MARC code|Entity type|MARC type|
 |----------------|---------|-----------|---------|
