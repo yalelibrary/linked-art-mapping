@@ -119,7 +119,7 @@ scriptInclusion: BOTH
         |611acdegnqu|Group|
         |650abcdg|Type|
         |651\| 0\|ag|Place|
-        |655a[1](#fntarg_1)|Type|
+        |655a[<sup>1</sup>](#fnsrc_1)|Type|
         |690abcdg|Type|
         |691ag|Place|
         |692abcdgjq|Person|
