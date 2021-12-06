@@ -141,7 +141,7 @@ scriptInclusion: BOTH
 
     6.  Process top-level genre/form resources.
 
-        **Note:** Top-level resources representing genre/form headings should include an additional `classified_as` for `Format` to distinguish them from topical subject headings.
+        **Note:** Top-level resources representing genre/form headings should include an additional `classified_as` for `Form` to distinguish them from topical subject headings.
 
         `4504`
 
@@ -355,9 +355,9 @@ scriptInclusion: BOTH
 
     3.  For other place entities, see [Places as agents](../../concepts/places_as_agents.md) and [Places as subjects](../../concepts/places_as_subjects.md).
 
-    4.  For person entities, see [People as subjects](../../concepts/people_as_subjects.md) and [People as subjects](../../concepts/people_as_subjects.md).
+    4.  For person entities, see [People as agents](../../concepts/people_as_agents.md) and [People as subjects](../../concepts/people_as_subjects.md).
 
-    5.  For group entities, see [Groups as subjects](../../concepts/groups_as_subjects.md) and [Groups as subjects](../../concepts/groups_as_subjects.md).
+    5.  For group entities, see [Groups as agents](../../concepts/groups_as_agents.md) and [Groups as subjects](../../concepts/groups_as_subjects.md).
 
 
 **Parent topic:**[Related entities](../../tasks/related_entities.md)
