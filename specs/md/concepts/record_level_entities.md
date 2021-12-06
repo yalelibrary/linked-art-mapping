@@ -25,6 +25,7 @@ The base class for record-level entities is determined by the supertype mapping.
 5.  `HumanMadeObject`
 
 
+
 1.  [Content and carriers](../tasks/content_and_carriers.md)  
 
 2.  [LUX supertype taxonomy](../tasks/supertypes/supertypes.md)  
