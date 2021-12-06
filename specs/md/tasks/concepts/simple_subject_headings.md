@@ -139,7 +139,7 @@ scriptInclusion: BOTH
 
     6.  Process top-level genre/form resources.
 
-        **Note:** Top-level resources representing genre/form headings should include an additional `classified_as` for `Form` to distinguish them from topical subject headings.
+        **Note:** Top-level resources representing genre/form headings should include an additional `classified_as` for `Format` to distinguish them from topical subject headings.
 
         `4504`
 
