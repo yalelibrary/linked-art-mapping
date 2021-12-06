@@ -46,7 +46,7 @@ Resources extracted from MARC 6XX entries.
             {
               "id": "https://lux.collections.yale.edu/data/concept/24f1b754-9566-4f38-8c61-9ce4082606aa",
               "type": "Type",
-              "_label": "Death -- Religious aspects -- Christianity -- History--2nd century"
+              "_label": "Death -- Religious aspects -- Christianity -- History -- 2nd century"
             }
           ]
         }
