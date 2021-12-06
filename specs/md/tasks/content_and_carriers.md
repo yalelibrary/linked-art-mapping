@@ -68,7 +68,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
 
     -   If the base class derived from the supertype is `LinguisticObject` or `VisualItem`, generate a JSON-LD document with a base class of `HumanMadeObject`.
 
-        **Note:** For supertypes with two possible base classes \(such as [Globes](supertypes/globes.md)\), apply the [order of preference](../concepts/record_level_entities.md#ol_dcd_kh4_brb) for base classes.
+        **Note:** For supertypes with two possible base classes \(such as [Globes](supertypes/globes.md)\), apply the [order of precedence](../concepts/record_level_entities.md#sl_dcd_kh4_brb) for base classes.
 
     -   If the base class derived from the supertype is `Set`, generate an embedded `Set → members_exemplified_by → HumanMadeObject` resource to record carrier-level information.
     -   If the base class derived from the supertype is `DigitalObject`, do not generate a separate carrier-level resource. Record both content- and carrier-level information in a single JSON-LD document, with `DigitalObject` as base class.
