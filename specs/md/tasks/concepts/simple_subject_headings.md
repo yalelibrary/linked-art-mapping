@@ -352,7 +352,7 @@ scriptInclusion: BOTH
         }
         ```
 
-2.  In each referring record-level resource \(`LinguisticObject`, `VisualItem`, or `DigitalObject`\), add an embedded reference to the concept entity.
+2.  In each referring record-level resource, add an embedded reference to the top-level entity.
 
     1.  For concept \(`Type`\) entities, see [Subject and genre/form headings](subject_headings.md).
 
