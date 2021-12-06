@@ -10,7 +10,7 @@ Entities that correspond to resources held by the library \(books, journals, dat
 
 The Linked Art profile of the [CIDOC Conceptual Reference Model \(CRM\)](http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html) includes a limited number of core or base classes. These can be refined by referencing terms from a taxonomy or classification scheme. Because record-level entities can be of many types, a*supertype*scheme has been developed for use in LUX.
 
-The LUX supertype scheme is divided into two levels:*types*and*formats*. Types represent the mode of expression of a resource \(textual, visual, audible, etc.\), whereas formats can be thought of as specific instances of a type: for example, a*Book*is an instance or format of*Textual Works*. Some formats, such as*Geospatial Data*are instances of two different types:*Datasets*and*Cartography*.
+The LUX supertype scheme is divided into two levels: *types* and *formats*. Types represent the mode of expression of a resource \(textual, visual, audible, etc.\), whereas formats can be thought of as specific instances of a type: for example, a *Book* is an instance or format of *Textual Works*. Some formats, such as *Geospatial Data* are instances of two different types: *Datasets* and *Cartography*.
 
 The base class for record-level entities is determined by the supertype mapping. When a record-level entity is mapped to more than one supertype format, and the formats have different base classes, the following order of priority is applied:
 
