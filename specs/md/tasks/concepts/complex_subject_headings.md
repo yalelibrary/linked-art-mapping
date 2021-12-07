@@ -50,7 +50,7 @@ scriptInclusion: BOTH
 
         |Fields|Subfields|
         |------|---------|
-        |All|04|
+        |All|014|
         |All except X11 and 694|e|
         |X11 and 694|j|
 
