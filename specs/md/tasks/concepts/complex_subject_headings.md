@@ -9,7 +9,9 @@ keyword: Assigned
 
 Subject headings representing two or more entity types.
 
-Apply these instructions for field `752` \(hierarchical place name\) and when a `6XX` field includes any of the subdivision subfields `vxyz` .
+Apply these instructions for field `752` \(hierarchical place name\) and when a `6XX` field includes any of the subdivision subfields `vxyz`.
+
+**Note:** `600`, `610`, `611`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works \[draft\]](name_title_entries.md).
 
 ## Source data
 
@@ -18,12 +20,14 @@ Apply these instructions for field `752` \(hierarchical place name\) and when a 
 name: ComplexSubjectHeadingsAndAsociatedPlaces
 sampleBibs:
   - 9564880
+  - 3145537 # 630
   - 13146411
 # Source data fields
 fieldSpec:
   - 60004abcdegjqvxyz
   - 61004abcdegvxyz
   - 61104acdegjnquvxyz
+  - 630014adfghklmnoprstvxyz
   - 65004abcdegvxyz
   - 651| 0|014aegvxyz
   - 65504abcvxyz
@@ -32,6 +36,7 @@ fieldSpec:
   - 69204abcdegjqvxyz
   - 69304abcdegvxyz
   - 69404acdegjnquvxyz
+  - 695014adfghklmnoprstvxyz
   - 752014abcdefgh
 trimPunctuation: true
 scriptInclusion: BOTH
@@ -51,11 +56,14 @@ scriptInclusion: BOTH
 
     2.  Apply the following mapping table to create a key for matching and merging. For rows in the table with multiple subfields, join the subfields with a whitespace character.
 
+        **Note:** `600`, `610`, `611`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works \[draft\]](name_title_entries.md).
+
         |Linked Art class|MARC tag|Subfields|
         |----------------|--------|---------|
         |Person|600|abcdgjqvxyz|
         |Group|610|abcdgvxyz|
         |Group|611|acdegnquvxyz|
+        |LinguisticObject|630|adfhklmnoprst|
         |Concept|650|abcdgvxyz|
         |Place|651\| 0\||agvxyz|
         |Type|655|avxyz|
@@ -64,6 +72,7 @@ scriptInclusion: BOTH
         |Person|692|abcdgjqvxyz|
         |Group|693|abcdgvxyz|
         |Group|694|acdgnquvxyz|
+        |LinguisticObject|695|adfhklmnoprst|
         |Place|752|abcdfgh|
 
     3.  [Normalize](../../glossary/normalization.md) and match string values.
@@ -89,6 +98,7 @@ scriptInclusion: BOTH
         |600|abcdgjq|
         |610|abcdg|
         |611|acdegnqu|
+        |630|adfhklmnoprst|
         |650|abcdg|
         |651\| 0\||a|
         |651\| 0\||g|
@@ -99,6 +109,7 @@ scriptInclusion: BOTH
         |692|abcdgjq|
         |693|abcdg|
         |694|acdgnqu|
+        |695|adfhklmnoprst|
         |752|a|
         |752|b|
         |752|c|
@@ -117,6 +128,7 @@ scriptInclusion: BOTH
         |600abcdgjq|Person|
         |610abcdg|Group|
         |611acdegnqu|Group|
+        |630adfhklmnoprst|LinguisticObject|
         |650abcdg|Type|
         |651\| 0\|ag|Place|
         |655a|Type|
@@ -125,6 +137,7 @@ scriptInclusion: BOTH
         |692abcdgjq|Person|
         |693abcdg|Group|
         |694acdegnqu|Group|
+        |695adfhklmnoprst|LinguisticObject|
 
         **Note:** Top-level genre/form \(`655`\) resources should include a `Format` classification, as shown in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](simple_subject_headings.md).
 
@@ -207,7 +220,6 @@ scriptInclusion: BOTH
             ]
           }
         }
-        
         ```
 
     2.  Process `6XX` entries for complex subject headings.
@@ -260,6 +272,43 @@ scriptInclusion: BOTH
                 "id": "https://lux.collections.yale.edu/data/event/92a599a2-2117-43f9-be3e-6e07f36cb2a5",
                 "type": "Period",
                 "_label": "2nd century"
+              }
+            ]
+          }
+        }
+        ```
+
+        `3145537`
+
+        ```
+        {
+          "@context": "https://linked.art/ns/v1/linked-art.json",
+          "id": "https://lux.collections.yale.edu/data/concept/06eddac8-f6b9-442c-a0e5-c7a5a2c55ba1",
+          "type": "Type",
+          "_label": "Qurʼan -- Hermeneutics -- History",
+          "identified_by": [
+            {
+              "type": "Name",
+              "content": "Qurʼan -- Hermeneutics -- History"
+            }
+          ],
+          "created_by": {
+            "type": "Creation",
+            "influenced_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/text/1a429a8f-b77c-4956-811c-c9fc5237eb8d",
+                "type": "LinguisticObject",
+                "_label": "Qurʼan"
+              },
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/71abaf42-a479-41bf-bd6f-2cf6aeca2060",
+                "type": "Type",
+                "_label": "Hermeneutics"
+              },
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/d43ab750-6e8d-4f7c-b3e2-d5a8dc134a37",
+                "type": "Type",
+                "_label": "History"
               }
             ]
           }
@@ -324,6 +373,8 @@ scriptInclusion: BOTH
     4.  For people as subjects, see [People as subjects](../../concepts/people_as_subjects.md).
 
     5.  For groups as subjects, see [Groups as subjects](../../concepts/groups_as_subjects.md).
+
+    6.  For works as subjects, see [Works as subjects \[draft\]](../name-title/works_as_subjects.md).
 
 
 **Parent topic:**[Related entities](../../tasks/related_entities.md)
