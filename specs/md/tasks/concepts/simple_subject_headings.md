@@ -11,7 +11,7 @@ Related resources that represent a single entity type.
 
 Apply these instructions for source data fields that reference a single entity.
 
-**Note:** `X00`, `X10`, and `X11` entries that include a subfield `t` should note be process by this spec. See instead [Complex works \[draft\]](name_title_entries.md).
+**Note:** `X00`, `X10`, `X11`, and `69X` entries that include a subfield `t` should not be process by this spec. See instead [Complex works \[draft\]](name_title_entries.md).
 
 ## Source data
 
