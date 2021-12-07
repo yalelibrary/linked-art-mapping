@@ -119,12 +119,14 @@ scriptInclusion: BOTH
         |611acdegnqu|Group|
         |650abcdg|Type|
         |651\| 0\|ag|Place|
-        |655a[<sup>1</sup>](#fnsrc_1)|Type|
+        |655a|Type|
         |690abcdg|Type|
         |691ag|Place|
         |692abcdgjq|Person|
         |693abcdg|Group|
         |694acdegnqu|Group|
+
+        **Note:** Top-level genre/form \(`655`\) resources should include a `Format` classification, as shown in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](simple_subject_headings.md).
 
     `9564880`
 
@@ -311,22 +313,18 @@ scriptInclusion: BOTH
     }
     ```
 
-7.  In each referring record-level resource, add an embedded reference to the top-level entity.
+7.  In each referring record-level resource \(`DigitalObject`, `HumanMadeObject`, `LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the concept entity.
 
     1.  For concept \(`Type`\) entities, see [Subject and genre/form headings](subject_headings.md).
 
-    2.  For associated place \(`Place`\), entities see [Associated places](../../concepts/associated_places.md).
+    2.  For associated places, see [Associated places](../../concepts/associated_places.md).
 
     3.  For places as subjects, see [Places as subjects](../../concepts/places_as_subjects.md).
 
-    4.  For places as subjects, see [Places as subjects](../../concepts/places_as_subjects.md).
+    4.  For people as subjects, see [People as subjects](../../concepts/people_as_subjects.md).
 
-    5.  For people as subjects, see [People as subjects](../../concepts/people_as_subjects.md).
-
-    6.  For groups as subjects, see [Groups as subjects](../../concepts/groups_as_subjects.md).
+    5.  For groups as subjects, see [Groups as subjects](../../concepts/groups_as_subjects.md).
 
 
 **Parent topic:**[Related entities](../../tasks/related_entities.md)
-
-[1](#fnsrc_1) Top-level genre/form resources should include a `Format` classification, as shown in the [single entity specification](simple_subject_headings.md#genre_form_substep).
 
