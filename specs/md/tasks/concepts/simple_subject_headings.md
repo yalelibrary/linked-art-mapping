@@ -86,6 +86,8 @@ scriptInclusion: BOTH
 
     2.  Apply the following mapping table to create a key for matching and merging. For rows in the table with multiple subfields, join the subfields with a whitespace character.
 
+        **Note:** `X00`, `X10`, `X11`, and `69X` entries that include a subfield `t` should not be processed using this spec. See instead [Complex works \[draft\]](name_title_entries.md).
+
         |Linked Art class|MARC tag|Subfields|
         |----------------|--------|---------|
         |Person|X00|abcdgjq|
