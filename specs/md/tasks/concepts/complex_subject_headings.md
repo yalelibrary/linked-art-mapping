@@ -167,7 +167,7 @@ scriptInclusion: BOTH
           "@context": "https://linked.art/ns/v1/linked-art.json",
           "id": "https://lux.collections.yale.edu/data/place/752-place",
           "type": "Place",
-          "_label": "United States -- New York (State) -- New York--Brooklyn",
+          "_label": "United States -- New York (State) -- New York -- Brooklyn",
           "identified_by": [
             {
               "type": "Name",
