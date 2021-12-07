@@ -237,7 +237,7 @@ scriptInclusion: BOTH
           "@context": "https://linked.art/ns/v1/linked-art.json",
           "id": "https://lux.collections.yale.edu/data/group/4583e5ce-fc9d-4e1c-aa61-a822d346dccc",
           "type": "Group",
-          "_label": "Congreso de Cu\u0301cuta (1821)",
+          "_label": "Congreso de Cúcuta (1821)",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300054788",
