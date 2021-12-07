@@ -9,7 +9,7 @@ keyword: Assigned
 
 Related resources that represent a single entity type.
 
-Apply these instructions for source data fields that reference a single entity.
+Apply these instructions for source data fields that reference a single entity, without component parts.
 
 ## Source data
 
