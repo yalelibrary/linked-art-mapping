@@ -10,11 +10,13 @@ MARC-to-Linked Art supertype mappings are done at the level of the most specific
 
 The supertype of a resource is used to determine its base class or document type in the Linked Art model.
 
+**Note:** For supertypes that map to more than one base class, the primary class is indicated as `**\[primary\]**` in the base class column.
+
 |Base class|Content type|Format level one|Format level two|
 |----------|------------|----------------|----------------|
-|DigitalObject|Datasets|[Data and Files](dataandfiles.md)|[Geospatial Data](geospatialdata.md)|
-|DigitalObject|Datasets|[Data and Files](dataandfiles.md)|[Image Data](imagedata.md)|
-|DigitalObject|Datasets|[Data and Files](dataandfiles.md)|[Textual Data](textualdata.md)|
+|DigitalObject `**\[primary\]**`|Datasets|[Data and Files](dataandfiles.md)|[Geospatial Data](geospatialdata.md)|
+|DigitalObject `**\[primary\]**`|Datasets|[Data and Files](dataandfiles.md)|[Image Data](imagedata.md)|
+|DigitalObject `**\[primary\]**`|Datasets|[Data and Files](dataandfiles.md)|[Textual Data](textualdata.md)|
 |DigitalObject|Software and Electronic Media|[Software Applications](softwareapplications.md)|[Databases](databases.md)|
 |HumanMadeObject|Objects|[Globes](globes.md)| |
 |HumanMadeObject|Objects|[Models](models.md)| |
@@ -32,9 +34,9 @@ The supertype of a resource is used to determine its base class or document type
 |LinguisticObject|Textual Works|[Textual Data](textualdata.md)| |
 |Set|Collections|[Archival and Manuscript Materials](archivalandmanuscriptmaterials.md)| |
 |Set|Collections|[Kits](kits.md)| |
-|VisualItem|Cartography|[Atlases](atlases.md)| |
+|VisualItem `**\[primary\]**`|Cartography|[Atlases](atlases.md)| |
 |VisualItem|Cartography|[Geospatial Data](geospatialdata.md)| |
-|VisualItem|Cartography|[Globes](globes.md)| |
+|VisualItem `**\[primary\]**`|Cartography|[Globes](globes.md)| |
 |VisualItem|Cartography|[Maps](maps.md)| |
 |VisualItem|Visual Works|[Collages](collages.md)| |
 |VisualItem|Visual Works|[Drawings](drawings.md)| |
