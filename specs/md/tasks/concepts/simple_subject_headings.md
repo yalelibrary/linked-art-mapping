@@ -370,6 +370,8 @@ scriptInclusion: BOTH
 
     5.  For group entities, see [Groups as agents](../../concepts/groups_as_agents.md) and [Groups as subjects](../../concepts/groups_as_subjects.md).
 
+    6.  For work entities, see [Works in whole/part relationships](../name-title/works_as_whole_part.md) and [Works as subjects \[draft\]](../name-title/works_as_subjects.md).
+
 
 **Parent topic:**[Related entities](../../tasks/related_entities.md)
 
