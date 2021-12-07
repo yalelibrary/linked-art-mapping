@@ -9,6 +9,8 @@ keyword: Assigned
 
 Related resources that represent a single entity type.
 
+Apply these instructions for source data fields that reference a single entity, without component parts.
+
 ## Source data
 
 ```
@@ -44,11 +46,11 @@ fieldSpec:
   - 100014abcdegjq
   - 110014abcdeg
   - 111014cdegjnqu
-  - 130014adfghklmnoprs
+  - 130014adfghklmnoprst
   - 600014abcdegjq
   - 610014abcdeg
   - 611014acdegjnqu
-  - 630014adfghklmnoprs
+  - 630014adfghklmnoprst
   - 65004abcdeg
   - 651| 0|014ae
   - 655014abc
@@ -61,9 +63,9 @@ fieldSpec:
   - 700014abcdegjq
   - 710014abcdeg
   - 711014acdegjnqu
-  - 730014adfghklmnoprs
+  - 730014adfghklmnoprst
   - 751014ae
-  - 830014adfghklmnoprs
+  - 830014adfghklmnoprst
 trimPunctuation: true
 scriptInclusion: BOTH
 ```
@@ -87,7 +89,7 @@ scriptInclusion: BOTH
         |Person|X00|abcdgjq|
         |Group|X10|abcdg|
         |Group|X11|acdegnqu|
-        |LinguisticObject|X30|adfhklmnoprs|
+        |LinguisticObject|X30|adfhklmnoprst|
         |Concept|650|abcdg|
         |Place|651\| 0\||a|
         |Type|655|a|
@@ -96,7 +98,7 @@ scriptInclusion: BOTH
         |Person|692|abcdgjq|
         |Group|693|abcdg|
         |Group|694|acdgnqu|
-        |LinguisticObject|695|adfhklmnoprs|
+        |LinguisticObject|695|adfhklmnoprst|
         |Place|751|a|
 
     3.  [Normalize](../../glossary/normalization.md) and match string values.
@@ -242,7 +244,7 @@ scriptInclusion: BOTH
           "identified_by": [
             {
               "type": "Name",
-              "content": "Congreso de Cu\u0301cuta (1821)",
+              "content": "Congreso de Cúcuta (1821)",
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300404670",
@@ -320,7 +322,7 @@ scriptInclusion: BOTH
         }
         ```
 
-    11. Process top-level work resources.
+    11. Process top-level standalone work resources.
 
         `227`
 
@@ -352,7 +354,7 @@ scriptInclusion: BOTH
         }
         ```
 
-2.  In each referring record-level resource, add an embedded reference to the top-level entity.
+2.  In each referring record-level resource \(`DigitalObject`, `HumanMadeObject`, `LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the concept entity.
 
     1.  For concept \(`Type`\) entities, see [Subject and genre/form headings](subject_headings.md).
 
