@@ -266,7 +266,7 @@ scriptInclusion: BOTH
         }
         ```
 
-6.  If a `752` or 6XX field in MARC includes a `$0` with an IRI, output an`equivalent`reference.
+6.  If a `752` or `6XX` field in MARC includes a `$0` with an IRI, output an`equivalent`reference.
 
     `13146411`
 
