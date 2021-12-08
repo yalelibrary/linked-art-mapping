@@ -18,11 +18,13 @@ The LUX supertype scheme is divided into two levels: *types* and *formats*. Type
 
 The base class for record-level entities is determined by the supertype mapping. When a record-level entity is mapped to more than one supertype format, and the formats have different base classes, the following order of precedence is applied:
 
--   `Set`
--   `LinguisticObject`
--   `VisualItem`
--   `DigitalObject`
--   `HumanMadeObject`
+1.  `Set`
+2.  `LinguisticObject`
+3.  `VisualItem`
+4.  `DigitalObject`
+5.  `HumanMadeObject`
+
+For formats that are instances of two different types, one base class has been marked as **primary**. For these supertypes, only the primary base class should be used as the `Type` of the record-level resources.
 
 1.  [Content and carriers](../tasks/content_and_carriers.md)  
 
