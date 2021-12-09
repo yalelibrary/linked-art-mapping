@@ -2,7 +2,7 @@
 author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 ---
 
-# Works \[draft\]
+# Works
 
 Work entities are represented by the `LinguisticObject` class.
 
