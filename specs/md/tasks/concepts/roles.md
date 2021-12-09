@@ -35,7 +35,7 @@ scriptInclusion: NONE
 
     1.  Create a key for merging.
 
-    2.  Replace any punctuation characters that are*not*a period \(`.`\) with a whitespace character.
+    2.  Replace any punctuation characters that are *not* a period \(`.`\) with a whitespace character.
 
     3.  Normalize and merge each unique string value.
 
@@ -64,15 +64,15 @@ scriptInclusion: NONE
     }
     ```
 
-2.  In each referring record-level resource \(`LinguisticObject`,`VisualItem`, or`DigitalObject`\), add an embedded reference to the Concept entity.
+2.  In each referring record-level resource, add an embedded reference to the Concept entity.
 
-    1.  The embedded reference should follow theclassification of the resource in the same`classified_as`array.
+    1.  The embedded reference should follow the classification of the resource in the same `classified_as` array.
 
     |JSON structure|Description|Default|
     |--------------|-----------|-------|
-    |`root → classified_as → id`|Must match the`id`of the top-level resource| |
+    |`root → classified_as → id`|Must match the `id` of the top-level resource| |
     |`root → classified_as → type`| |`Type`|
-    |`root → classified_as → _label`|Must match the`_label`of the top-level resource| |
+    |`root → classified_as → _label`|Must match the `_label` of the top-level resource| |
 
     `907498`
 

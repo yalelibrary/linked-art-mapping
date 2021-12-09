@@ -12,7 +12,7 @@ Group entities are represented by the `Group` class.
 
 Group entities may function either in creator/contributor \(agent\) roles or within subject/concept structures.
 
-For Group entities that are part of name/title entries in MARC, see[Groups with works](../tasks/name-title/groups_with_works.md).
+For group entities that are part of name/title entries in MARC, see [Complex works](../tasks/concepts/name_title_entries.md).
 
 -   **[Groups as agents](../concepts/groups_as_agents.md)**  
 Entities extracted from MARC 11X and 71X fields.

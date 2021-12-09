@@ -74,37 +74,28 @@
                path="tasks/supertypes/journalsandperiodicals.html"/>
    <appContext helpID="supertype_Newspapers" path="tasks/supertypes/newspapers.html"/>
    <appContext helpID="supertype_TextualData" path="tasks/supertypes/textualdata.html"/>
+   <appContext helpID="related_entities" path="tasks/related_entities.html"/>
+   <appContext helpID="simple_subject_headings"
+               path="tasks/concepts/simple_subject_headings.html"/>
+   <appContext helpID="complex_subject_headings"
+               path="tasks/concepts/complex_subject_headings.html"/>
+   <appContext helpID="citation_entities" path="tasks/citation_entities.html"/>
    <appContext helpID="related_title_entities"
                path="tasks/names-and-labels/related_title_entities.html"/>
-   <appContext helpID="work_level_entities" path="concepts/work_level_entities.html"/>
-   <appContext helpID="name_title_entries" path="concepts/name_title_entries.html"/>
-   <appContext helpID="people_with_works"
-               path="tasks/name-title/people_with_works.html"/>
-   <appContext helpID="groups_with_works"
-               path="tasks/name-title/groups_with_works.html"/>
-   <appContext helpID="title_entries" path="concepts/title_entries.html"/>
-   <appContext helpID="standalone_works"
-               path="tasks/names-and-labels/standalone_works.html"/>
-   <appContext helpID="citation_entities" path="tasks/citation_entities.html"/>
-   <appContext helpID="related_entities" path="tasks/related_entities.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
-   <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
    <appContext helpID="classification_numbers"
                path="tasks/concepts/classification_numbers.html"/>
+   <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
    <appContext helpID="roles" path="tasks/concepts/roles.html"/>
    <appContext helpID="events" path="concepts/events.html"/>
    <appContext helpID="chronological_facets"
                path="tasks/events/chronological_facets.html"/>
    <appContext helpID="groups" path="concepts/groups.html"/>
-   <appContext helpID="top_level_group_entities"
-               path="concepts/top_level_group_entities.html"/>
    <appContext helpID="groups_as_agents" path="concepts/groups_as_agents.html"/>
    <appContext helpID="groups_as_subjects" path="concepts/groups_as_subjects.html"/>
    <appContext helpID="people" path="concepts/people.html"/>
-   <appContext helpID="top_level_person_entities"
-               path="concepts/top_level_person_entities.html"/>
    <appContext helpID="people_as_agents" path="concepts/people_as_agents.html"/>
-   <appContext helpID="people_as_subjects" path="concepts/people_as_subjects.html"/>
+   <appContext helpID="places_as_subjects" path="concepts/places_as_subjects.html"/>
    <appContext helpID="places" path="concepts/places.html"/>
    <appContext helpID="top_level_place_entities"
                path="concepts/top_level_place_entities.html"/>
@@ -115,6 +106,15 @@
                path="concepts/places_from_fixed_field_008.html"/>
    <appContext helpID="places_with_geographic_coordinates"
                path="concepts/places_with_geographic_coordinates.html"/>
+   <appContext helpID="works" path="concepts/works.html"/>
+   <appContext helpID="name_title_entries"
+               path="tasks/concepts/name_title_entries.html"/>
+   <appContext helpID="standalone_works"
+               path="tasks/name-title/works_as_subjects.html"/>
+   <appContext helpID="name-title-with-subdivisions"
+               path="tasks/name-title/name-title-with-subdivisions.html"/>
+   <appContext helpID="works_as_whole_part"
+               path="tasks/name-title/works_as_whole_part.html"/>
    <appContext helpID="provenance_activities"
                path="concepts/provenance_activities.html"/>
    <appContext helpID="related_digital_objects"

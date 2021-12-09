@@ -11,7 +11,7 @@ Related resources that represent a single entity type.
 
 Apply these instructions for source data fields that reference a single entity.
 
-**Note:** `X00`, `X10`, `X11`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works \[draft\]](name_title_entries.md).
+**Note:** `X00`, `X10`, `X11`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works](name_title_entries.md).
 
 ## Source data
 
@@ -45,12 +45,12 @@ sampleBibs:
   - 6017172 # 651
 # Source data fields
 fieldSpec:
-  - 100014abcdegjq
-  - 110014abcdeg
+  - 100014abcdegjqu
+  - 110014abcdegu
   - 111014cdegjnqu
   - 130014adfghklmnoprst
-  - 600014abcdegjq
-  - 610014abcdeg
+  - 600014abcdegjqu
+  - 610014abcdegu
   - 611014acdegjnqu
   - 630014adfghklmnoprst
   - 65004abcdeg
@@ -58,12 +58,12 @@ fieldSpec:
   - 655014abc
   - 690014abcdeg
   - 691014ae       
-  - 692014abcdegjq
-  - 693014abcdeg
+  - 692014abcdegjqu
+  - 693014abcdegu
   - 694014acdegjnqu
   - 695014adfhklmnoprst
-  - 700014abcdegjq
-  - 710014abcdeg
+  - 700014abcdegjqu
+  - 710014abcdegu
   - 711014acdegjnqu
   - 730014adfghklmnoprst
   - 751014ae
@@ -86,11 +86,11 @@ scriptInclusion: BOTH
 
     2.  Apply the following mapping table to create a key for matching and merging. For rows in the table with multiple subfields, join the subfields with a whitespace character.
 
-        **Note:** `X00`, `X10`, `X11`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works \[draft\]](name_title_entries.md).
+        **Note:** `X00`, `X10`, `X11`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works](name_title_entries.md).
 
         |Linked Art class|MARC tag|Subfields|
         |----------------|--------|---------|
-        |Person|X00|abcdgjq|
+        |Person|X00|abcdgjqu|
         |Group|X10|abcdg|
         |Group|X11|acdegnqu|
         |LinguisticObject|X30|adfhklmnoprst|
@@ -370,7 +370,7 @@ scriptInclusion: BOTH
 
     5.  For group entities, see [Groups as agents](../../concepts/groups_as_agents.md) and [Groups as subjects](../../concepts/groups_as_subjects.md).
 
-    6.  For work entities, see [Works in whole/part relationships \[draft\]](../name-title/works_as_whole_part.md) and [Works as subjects \[draft\]](../name-title/works_as_subjects.md).
+    6.  For work entities, see [Works as subjects](../name-title/works_as_subjects.md) and [Works in whole/part relationships](../name-title/works_as_whole_part.md).
 
 
 **Parent topic:**[Related entities](../../tasks/related_entities.md)

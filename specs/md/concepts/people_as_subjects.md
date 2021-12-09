@@ -55,12 +55,12 @@ scriptInclusion: BOTH
             {
               "id": "https://lux.collections.yale.edu/data/concept/46c465f1-3c49-4a5d-bd4c-01e2146cba44",
               "type": "Type",
-              "_label": "Colvert, James B.--Autograph"
+              "_label": "Colvert, James B. -- Autograph"
             },
             {
               "id": "https://lux.collections.yale.edu/data/concept/7925767c-c120-49b6-977d-bce3d34750db",
               "type": "Type",
-              "_label": "Bowers, Fredson--Autograph"
+              "_label": "Bowers, Fredson -- Autograph"
             }
           ]
         }

@@ -11,7 +11,7 @@ Subject headings representing two or more entity types.
 
 Apply these instructions for field `752` \(hierarchical place name\) and when a `6XX` field includes any of the subdivision subfields `vxyz`.
 
-**Note:** `600`, `610`, `611`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works \[draft\]](name_title_entries.md).
+**Note:** `600`, `610`, `611`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works](name_title_entries.md).
 
 ## Source data
 
@@ -24,8 +24,8 @@ sampleBibs:
   - 13146411
 # Source data fields
 fieldSpec:
-  - 60004abcdegjqvxyz
-  - 61004abcdegvxyz
+  - 60004abcdegjquvxyz
+  - 61004abcdeguvxyz
   - 61104acdegjnquvxyz
   - 630014adfghklmnoprstvxyz
   - 65004abcdegvxyz
@@ -33,8 +33,8 @@ fieldSpec:
   - 65504abcvxyz
   - 69004abcdegvxyz
   - 691014aegvxyz         
-  - 69204abcdegjqvxyz
-  - 69304abcdegvxyz
+  - 69204abcdegjquvxyz
+  - 69304abcdeguvxyz
   - 69404acdegjnquvxyz
   - 695014adfghklmnoprstvxyz
   - 752014abcdefgh
@@ -56,7 +56,7 @@ scriptInclusion: BOTH
 
     2.  Apply the following mapping table to create a key for matching and merging. For rows in the table with multiple subfields, join the subfields with a whitespace character.
 
-        **Note:** `600`, `610`, `611`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works \[draft\]](name_title_entries.md).
+        **Note:** `600`, `610`, `611`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works](name_title_entries.md).
 
         |Linked Art class|MARC tag|Subfields|
         |----------------|--------|---------|
@@ -165,7 +165,7 @@ scriptInclusion: BOTH
     }
     ```
 
-4.  Join the string values of the facets with space-surrounded double hyphens \(`--`\) to output the`_label`and`content`values of the full precoordinated heading.
+4.  Join the string values of the facets with space-surrounded double hyphens \(`--`\) to output the `_label` and `content` values of the full precoordinated heading.
 
 5.  Add an embedded reference to the facet resources within the top-level resource for the full heading.
 
@@ -374,7 +374,7 @@ scriptInclusion: BOTH
 
     5.  For groups as subjects, see [Groups as subjects](../../concepts/groups_as_subjects.md).
 
-    6.  For works as subjects, see [Works as subjects \[draft\]](../name-title/works_as_subjects.md).
+    6.  For works as subjects, see [Works as subjects](../name-title/works_as_subjects.md).
 
 
 **Parent topic:**[Related entities](../../tasks/related_entities.md)
