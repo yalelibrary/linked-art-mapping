@@ -77,7 +77,7 @@
                     -   [Associated places](concepts/associated_places.md)
                     -   [Places from fixed field 008](concepts/places_from_fixed_field_008.md)
                     -   [Places with geographic coordinates](concepts/places_with_geographic_coordinates.md)
-            -   [Works \[draft\]](concepts/works.md)
+            -   [Works](concepts/works.md)
                 -   [Complex works](tasks/concepts/name_title_entries.md)
                 -   [Works as subjects](tasks/name-title/works_as_subjects.md)
                     -   [Complex works as complex subjects](tasks/name-title/name-title-with-subdivisions.md)
