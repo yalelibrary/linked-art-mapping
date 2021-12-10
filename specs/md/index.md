@@ -121,7 +121,7 @@
         -   [Acquisition statement](tasks/notes-and-statements/acquisition_statement.md)
         -   [Reproduction statement](tasks/notes-and-statements/reproduction_statement.md)
         -   [Production statement \[draft\]](tasks/notes-and-statements/production_statement.md)
-    -   [Dates](tasks/dates/dates.md)
+    -   [Dates \[draft\]](tasks/dates/dates.md)
 -   [MARC to Linked Art glossary](glossary/marc_to_linked_art_glossary.md)
     -   [Entification](glossary/entification.md)
     -   [Normalization](glossary/normalization.md)
