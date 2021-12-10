@@ -26,7 +26,7 @@ sampleBibs:
 fieldSpec:
   - mfhd852bhim
 trimPunctuation: true
-scriptInclusion: BOTH
+scriptInclusion: NONE
 ```
 
 ## Processing steps and output
