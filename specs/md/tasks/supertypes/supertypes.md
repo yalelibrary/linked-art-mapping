@@ -18,10 +18,10 @@ The supertype of a resource is used to determine its base class or document type
 |DigitalObject **\[primary\]**|Datasets|[Data and Files](dataandfiles.md)|[Image Data](imagedata.md)|
 |DigitalObject **\[primary\]**|Datasets|[Data and Files](dataandfiles.md)|[Textual Data](textualdata.md)|
 |DigitalObject|Software and Electronic Media|[Software Applications](softwareapplications.md)|[Databases](databases.md)|
-|HumanMadeObject|Objects|[Globes](globes.md)| |
-|HumanMadeObject|Objects|[Models](models.md)| |
-|HumanMadeObject|Objects|[Realia](realia.md)| |
-|HumanMadeObject|Objects|[Toys and Games](toysandgames.md)| |
+|LinguisticObject|Objects|[Globes](globes.md)| |
+|LinguisticObject|Objects|[Models](models.md)| |
+|LinguisticObject|Objects|[Realia](realia.md)| |
+|LinguisticObject|Objects|[Toys and Games](toysandgames.md)| |
 |LinguisticObject|Audio|[Music](music.md)| |
 |LinguisticObject|Audio|[Sound](sound.md)| |
 |LinguisticObject|Moving Images|[Motion Pictures](motionpictures.md)| |
