@@ -23,13 +23,15 @@ In Linked Art, record-level entities are divided into two categories:
     -   `HumanMadeObject`
 
 
-**Note:** Digital objects are a special case because they can function as both conceptual entities and content carriers, depending on the context.
+**Note:** For supertypes under the `Datasets` and `Software and Electronic Media` content types, a single `DigitalObject` resource should be generated, representing both content and carrier in a single resource.
 
 Resources with a base class of `LinguisticObject` or `VisualItem` must follow the content/carrier model. In MARC-based systems, this model corresponds roughly to the distinction between bibliographic records and holdings records.
 
-For each record-level resource with a base class of `LinguisticObject` or `VisualItem` \(the *content* level\), one or more resources with a base class of `HumanMadeObject` \(the *carrier* level\) must be generated.
+For each record-level resource with a base class of `LinguisticObject` or `VisualItem` \(the *content* level\), one or more resources with a base class of `HumanMadeObject` or `DigitalObject` \(the *carrier* level\) must be generated.
 
-These `HumanMadeObject` resources must point to the `LinguisticObject` or `VisualItem` resource that they instantiate and where the supertype and any subjects, etc., are assigned.
+**Note:** `DigitalObject` carriers should be generated when the MFHD `852b` has a value of `yulint` or `yulintx`.
+
+These `HumanMadeObject` or `DigitalObject` resources must point to the `LinguisticObject` or `VisualItem` resource that they instantiate and where the supertype and any subjects, etc., are assigned.
 
 The following diagram \(by Rob Sanderson\) provides a high-level overview of the Linked Art model.
 
@@ -66,14 +68,14 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
 
 2.  For each MARC holdings record attached to a bibliographic record:
 
-    -   If the base class derived from the supertype is `LinguisticObject` or `VisualItem`, generate a JSON-LD document with a base class of `HumanMadeObject`.
-
-        **Note:** For supertypes with two possible base classes \(such as [Globes](supertypes/globes.md)\), apply the [order of preference](../concepts/record_level_entities.md#ol_dcd_kh4_brb) for base classes.
-
+    -   If the base class derived from the supertype is `LinguisticObject` or `VisualItem`:
+        -   If the MFHD `852b` is `yulint` or `yulintx`, generate a JSON-LD document with a base class of `DigitalObject`.
+        -   Else, generate a JSON-LD document with a base class of `HumanMadeObject`.
     -   If the base class derived from the supertype is `Set`, generate an embedded `Set → members_exemplified_by → HumanMadeObject` resource to record carrier-level information.
     -   If the base class derived from the supertype is `DigitalObject`, do not generate a separate carrier-level resource. Record both content- and carrier-level information in a single JSON-LD document, with `DigitalObject` as base class.
-    -   If the supertype is one of `Models`, `Realia`, or `Toys and Games`, do not generate a separate carrier-level resource. Record both content- and carrier-level information in a single JSON-LD document, with a base class of `HumanMadeObject`.
-3.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then the `HumanMadeObject` resource must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources.
+    **Note:** For supertypes with two possible base classes \(such as [Globes](supertypes/globes.md)\), apply the [order of preference](../concepts/record_level_entities.md#) for base classes.
+
+3.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then the `HumanMadeObject` resource must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
 
     **Note:** This example is meant to illustrate the content/carrier distinction and does not represent a complete JSON-LD document.
 
