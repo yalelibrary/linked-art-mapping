@@ -11,7 +11,7 @@ Locations and call numbers are derived from MARC holdings records \(MFHDs\).
 
 |Domains|Usage|
 |-------|-----|
-|`HumanMadeObject`|Do not repeat on related `LinguisticObject` or `VisualItem`.|
+|`HumanMadeObject` `DigitalObject`|Do not repeat on related `LinguisticObject` or `VisualItem`.|
 |`DigitalObject`| |
 |`Set → members_exemplified_by → HumanMadeObject`|Do not repeat on containing `Set`.|
 
