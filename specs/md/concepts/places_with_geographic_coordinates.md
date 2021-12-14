@@ -28,15 +28,15 @@ scriptInclusion: NONE
 
 Geographic coordinates should be recorded as points or polygons using the [WKT syntax](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry). MARC 034 subfields representing latitude and longitude are not always clean or consistent, so care should be taken when processing the data. Sometimes, the data will be in decimal form \(e.g., `085.000000`\) and sometimes in *hdddmmss* \(hemisphere-degrees-minutes-seconds\) form.
 
-1.  Sometimes the latitude/longitude coordinates will be repeated in each pair of subfields. First check to see whether the information is repeated or whether there are four different values.
+1.  Processing each `034` field separately and generate a separate top-level place resource for each.
+
+    Sometimes the latitude/longitude coordinates will be repeated in each pair of subfields. First check to see whether the information is repeated or whether there are four different values.
 
     If `034d == 034e and 034f == 034g`, select the first nonempty occurrence of 034d and 034f.
 
     Else, select the first nonempty occurrence of each distinct subfield.
 
-2.  For each `034` field, generate a separate top-level place resource.
-
-3.  Check the subfield values.
+2.  Check the subfield values.
 
     1.  If the subfield contains a period \(`.`\), assume the value is in decimal form and continue processing.
     2.  Else, parse the data in *hdddmmss* form and convert it to decimal form:
@@ -47,17 +47,11 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
         |Store the rest of the string following `first`.|rest|
         |Store the last four characters of `rest`.|rightHand|
         |Store the substring of `rest` to the left of `rightHand`.|leftHand|
-        |Clean the value of `leftHand`:
-
-        1.  Convert the value to lower case.
-        2.  Remove leading zeroes or occurrences of the letter *o* \(a typo for zero\).
-|cleanedLeftHand|
+        |Clean the value of `leftHand`: <br/> 1.  Convert the value to lower case. <br/> 2.  Remove leading zeroes or occurrences of the letter *o* \(a typo for zero\).|cleanedLeftHand|
         |Concatenate the value of `cleanedLeftHand` and `rightHand` with a period \(`.`\).|decimalValue|
-        |Determine the sign of `decimalValue`.        -   If `first` equals `-`, `W`, or `S`, the sign is negative.
-        -   Else, it is positive \(unsigned\).
-|signedDecimalValue|
+        |Determine the sign of `decimalValue`. <br/> -   If `first` equals `-`, `W`, or `S`, the sign is negative. <br/> -   Else, it is positive \(unsigned\).|signedDecimalValue|
 
-4.  Construct the WKT string.
+3.  Construct the WKT string.
 
     If 034 includes four distinct subfield values, construct a WKT polygon:
 
@@ -71,7 +65,7 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
     "POINT(" + 034d + " " + 034f + ")"
     ```
 
-5.  Generate a top-level place resource, identified by an IRI, with the value of the WKT coordinates.
+4.  Generate a top-level place resource, identified by an IRI, with the value of the WKT coordinates.
 
     1.  Use the value of the WKT string as a key for matching and merging Place entities with the same coordinates.
 
@@ -124,7 +118,7 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
     }
     ```
 
-6.  Add an embedded reference to the place entity within the record-level resource.
+5.  Add an embedded reference to the place entity within the record-level resource.
 
     1.  As the `_label` of the place entity, take the value of the top-level entity label.
 
