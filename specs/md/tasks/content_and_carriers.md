@@ -80,7 +80,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
 
 **Note:** These examples are meant to illustrate the content/carrier distinction and do not represent complete JSON-LD document.
 
-`HumanMadeObject → carries → LingusticObject` \[`7778409`\]
+`HumanMadeObject → carries → LinguisticObject` \[`7778409`\]
 
 ```
 {
