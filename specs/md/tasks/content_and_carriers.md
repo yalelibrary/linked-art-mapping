@@ -216,7 +216,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
 }
 ```
 
-`HumanMadeObject → shows → VisualItem` \[``\]
+`HumanMadeObject → shows → VisualItem` \[`9777342`\]
 
 ```
 {
