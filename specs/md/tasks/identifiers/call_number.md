@@ -11,7 +11,7 @@ Locations and call numbers are derived from MARC holdings records \(MFHDs\).
 
 |Domains|Usage|
 |-------|-----|
-|`HumanMadeObject` `DigitalObject`|Do not repeat on related `LinguisticObject` or `VisualItem`.|
+|`HumanMadeObject`|Do not repeat on related `LinguisticObject` or `VisualItem`.|
 |`DigitalObject`| |
 |`Set → members_exemplified_by → HumanMadeObject`|Do not repeat on containing `Set`.|
 
@@ -50,7 +50,9 @@ scriptInclusion: NONE
 
 5.  If the value is equal to either `withdrawn` or `suppressed`, skip the `852` field.
 
-6.  If the normalized value of subfield `b` starts with `yulint`, skip the `852` field.
+6.  If the normalized value of subfield `b` starts with `yulint`, there is no call number.
+
+    **Note:** MFHDs with an `852b` value of `yulint` or `yulintx` should be converted to `DigitalObject` carrier resources. See [Content and carriers](../content_and_carriers.md).
 
 7.  Select and save the value of subfield `b`.
 
@@ -74,9 +76,9 @@ scriptInclusion: NONE
 
 10. Select and save the value of subfield `m`.
 
-11. Join the values of subfields `852him` with a whitespace character. This is the `call number`
+11. Join the values of subfields `852him` with a whitespace character. This is the `call number`.
 
-12. Concatenate the `call number` with the `location name`
+12. Concatenate the `call number` with the `location name`.
 
 
 `12244893`
