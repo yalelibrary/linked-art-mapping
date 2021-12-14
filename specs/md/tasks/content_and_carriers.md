@@ -77,24 +77,377 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
 
 3.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then the `HumanMadeObject` resource must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
 
-    **Note:** This example is meant to illustrate the content/carrier distinction and does not represent a complete JSON-LD document.
 
-    ```
+**Note:** These examples are meant to illustrate the content/carrier distinction and do not represent complete JSON-LD document.
+
+`HumanMadeObject → carries → LingusticObject` \[`7778409`\]
+
+```
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/object/8e0bdbff-ebb1-4f9b-b98b-e97d64a01ff9",
+  "type": "HumanMadeObject",
+  "_label": "麗澤論說集錄 : [十卷]",
+  "carries": [
     {
-      "@context": "https://linked.art/ns/v1/linked-art.json",
-      "id": "https://lux.collections.yale.edu/data/object/8e0bdbff-ebb1-4f9b-b98b-e97d64a01ff9",
-      "type": "HumanMadeObject",
-      "_label": "麗澤論說集錄 : [十卷]",
-      "carries": [
+      "id": "https://lux.collections.yale.edu/data/text/416165c2-1108-4acd-b7ab-008f773a2ba3",
+      "type": "LinguisticObject",
+      "_label": "麗澤論說集錄 : [十卷]"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "content": "BL1840 .L84 2003 [Library Shelving Facility (LSF)]",
+      "classified_as": [
         {
-          "id": "https://lux.collections.yale.edu/data/text/416165c2-1108-4acd-b7ab-008f773a2ba3",
-          "type": "LinguisticObject",
-          "_label": "麗澤論說集錄 : [十卷]"
+          "id": "http://vocab.getty.edu/aat/300311706",
+          "type": "Type",
+          "_label": "Call Number"
+        }
+      ]
+    },
+    {
+      "type": "Name",
+      "content": "Li ze lun shuo ji lu : [shi juan]",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ]
+    },
+    {
+      "type": "Name",
+      "content": "\u9e97\u6fa4\u8ad6\u8aaa\u96c6\u9304 : [\u5341\u5377]",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ],
+      "language": [
+        {
+          "id": "https://lux.collections.yale.edu/data/concept/70cb6397-2b2f-400c-b887-70fd80969c8b",
+          "type": "Language",
+          "_label": "und"
         }
       ]
     }
-    ```
+  ],
+  "referred_to_by": [
+    {
+      "type": "LinguisticObject",
+      "content": "in collection",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300133046",
+          "type": "Type",
+          "_label": "Access Statement",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LinguisticObject",
+      "content": "5 v. ; 33 cm",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435452",
+          "type": "Type",
+          "_label": "Physical Statement",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Physical Description",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404669",
+              "type": "Type",
+              "_label": "Display Title"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subject_of": [
+    {
+      "type": "LinguisticObject",
+      "_label": "Text of Repository Page",
+      "digitally_carried_by": [
+        {
+          "type": "DigitalObject",
+          "_label": "Repository Page",
+          "access_point": [
+            {
+              "id": "https://search.library.yale.edu/catalog/7778409",
+              "type": "DigitalObject"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "member_of": [
+    {
+      "id": "https://lux.collections.yale.edu/data/set/ef3a133a-f7b4-4548-bfa0-019d5da7b1c1",
+      "type": "Set",
+      "_label": "General Collection (YUL)"
+    }
+  ]
+}
+```
 
+`HumanMadeObject → shows → VisualItem` \[``\]
+
+```
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/object/000564c6-1615-47e6-b379-192e16a3e14a",
+  "type": "HumanMadeObject",
+  "_label": "Lessons for shaving!!! [graphic]",
+  "shows": [
+    {
+      "id": "https://lux.collections.yale.edu/data/visual/fd3d836b-1cd1-47d9-a38e-002ce325601b",
+      "type": "VisualItem",
+      "_label": "Lessons for shaving!!! [graphic]"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "content": "796.04.16.02++ [Lewis Walpole Library]",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300311706",
+          "type": "Type",
+          "_label": "Call Number"
+        }
+      ]
+    },
+    {
+      "type": "Name",
+      "content": "Lessons for shaving!!! [graphic]",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ]
+    }
+  ],
+  "referred_to_by": [
+    {
+      "type": "LinguisticObject",
+      "content": "in collection",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300133046",
+          "type": "Type",
+          "_label": "Access Statement",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LinguisticObject",
+      "content": "1 print : etching on wove paper, hand-colored ; plate mark 34.8 x 48 cm, on sheet 38 x 50 cm",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435452",
+          "type": "Type",
+          "_label": "Physical Statement",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Physical Description",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404669",
+              "type": "Type",
+              "_label": "Display Title"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subject_of": [
+    {
+      "type": "LinguisticObject",
+      "_label": "Text of Repository Page",
+      "digitally_carried_by": [
+        {
+          "type": "DigitalObject",
+          "_label": "Repository Page",
+          "access_point": [
+            {
+              "id": "https://search.library.yale.edu/catalog/9777342",
+              "type": "DigitalObject"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "member_of": [
+    {
+      "id": "https://lux.collections.yale.edu/data/set/e8647339-0041-4eeb-bd83-079f931e9e06",
+      "type": "Set",
+      "_label": "Special Collections (YUL)"
+    }
+  ],
+  "produced_by": {
+    "type": "Production",
+    "part": [
+      {
+        "type": "Production",
+        "carried_out_by": [
+          {
+            "id": "https://lux.collections.yale.edu/data/person/6a4346f3-b238-47d4-a6d0-980c21c0a307",
+            "type": "Person",
+            "_label": "Woodward, G. M. (George Moutard), approximately 1760-1809"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+`DigitalObject → digitally_carries → LinguisticObject` \[`6546882`\]
+
+```
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/object/e161c7e7-7a78-4976-8774-0de867c3222d",
+  "type": "DigitalObject",
+  "_label": "ZYX and his fairy, or, The soul in search of peace [electronic resource]",
+  "carries": [
+    {
+      "id": "https://lux.collections.yale.edu/data/text/7210e343-ce9d-4853-8454-a7c4e88644db",
+      "type": "LinguisticObject",
+      "_label": "ZYX and his fairy, or, The soul in search of peace [electronic resource]"
+    }
+  ]
+}
+
+```
+
+`DigitalObject → digitally_shows → VisualItem` \[`12237283`\]
+
+```
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/object/ed9af261-e373-40fa-8248-48afb62eb3c2",
+  "type": "DigitalObject",
+  "_label": "Sarah Malcolm [graphic] : executed in Fleet Street, March the 7th 1733 for robbing [the] chambers of Mrs. Lydia Duncomb in [the] Temple, & murdering her, Eliz. Harrison, & Ann Price",
+  "shows": [
+    {
+      "id": "https://lux.collections.yale.edu/data/visual/8cf565ab-f2ad-4af2-9840-c18f36d6fe08",
+      "type": "VisualItem",
+      "_label": "Sarah Malcolm [graphic] : executed in Fleet Street, March the 7th 1733 for robbing [the] chambers of Mrs. Lydia Duncomb in [the] Temple, & murdering her, Eliz. Harrison, & Ann Price"
+    }
+  ]
+}
+```
+
+Standalone `DigitalObject` \[`12244893`\]
+
+```
+{
+  "id": "https://lux.collections.yale.edu/data/digital/0283cba8-169b-4950-bb88-5ba3cdd4ca1d",
+  "type": "DigitalObject",
+  "_label": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年)",
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "content": "QC990.J32 H576 2014 CD [Library Shelving Facility (LSF)]",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300311706",
+          "type": "Type",
+          "_label": "Call Number"
+        }
+      ]
+    },
+    {
+      "type": "Name",
+      "content": "Hirosaki hanchō nikki hiroiyomi : kishō saigai nado no kijutsu o chūshin ni. Vol.2, (1741-nen-1868-nen)",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ]
+    },
+    {
+      "type": "Name",
+      "content": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年)",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ],
+      "language": [
+        {
+          "id": "https://lux.collections.yale.edu/data/concept/70cb6397-2b2f-400c-b887-70fd80969c8b",
+          "type": "Language",
+          "_label": "und"
+        }
+      ]
+    },
+    {
+      "type": "Name",
+      "content": "Hirosaki hanchō nikki hiroiyomi : kishō saigai nado no kijutsu o chūshin ni. Vol.2, (1741-nen-1868-nen)",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404672",
+          "type": "Type",
+          "_label": "Sorting Name"
+        }
+      ]
+    }
+  ]
+}
+```
 
 **Parent topic:**[Record-level entities](../concepts/record_level_entities.md)
 
