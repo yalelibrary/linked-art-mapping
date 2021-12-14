@@ -357,7 +357,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
   "id": "https://lux.collections.yale.edu/data/object/e161c7e7-7a78-4976-8774-0de867c3222d",
   "type": "DigitalObject",
   "_label": "ZYX and his fairy, or, The soul in search of peace [electronic resource]",
-  "carries": [
+  "digitally_carries": [
     {
       "id": "https://lux.collections.yale.edu/data/text/7210e343-ce9d-4853-8454-a7c4e88644db",
       "type": "LinguisticObject",
@@ -376,7 +376,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
   "id": "https://lux.collections.yale.edu/data/object/ed9af261-e373-40fa-8248-48afb62eb3c2",
   "type": "DigitalObject",
   "_label": "Sarah Malcolm [graphic] : executed in Fleet Street, March the 7th 1733 for robbing [the] chambers of Mrs. Lydia Duncomb in [the] Temple, & murdering her, Eliz. Harrison, & Ann Price",
-  "shows": [
+  "digitally_shows": [
     {
       "id": "https://lux.collections.yale.edu/data/visual/8cf565ab-f2ad-4af2-9840-c18f36d6fe08",
       "type": "VisualItem",
