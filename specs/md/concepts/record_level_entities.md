@@ -26,6 +26,15 @@ The base class for record-level entities is determined by the supertype mapping.
 
 For formats that are instances of two different types, one base class has been marked as **primary**. For these supertypes, only the primary base class should be used as the `Type` of the record-level resources.
 
+## Record processing rules
+
+Apply the following rules to the processing of bibliographic \(bib\) and holdings \(mfhd\) records:
+
+-   Ignore all suppressed bibs and mfhds.
+-   Ignore bibs with no related mfhds \(orphan bibs\).
+-   Ignore bibs that are unsuppressed, but whose related mfhds are all suppressed.
+-   Ignore mfhds that are unsuppressed, but whose related bib is suppressed.
+
 1.  [Content and carriers](../tasks/content_and_carriers.md)  
 
 2.  [LUX supertype taxonomy](../tasks/supertypes/supertypes.md)  
