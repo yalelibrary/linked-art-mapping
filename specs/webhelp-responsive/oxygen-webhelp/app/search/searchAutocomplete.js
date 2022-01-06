@@ -1,4 +1,4 @@
-define(["keywords", "searchHistoryItems", "options", "util", "jquery", "jquery.ui"], function(keywordsInfo, searchHistory, options, util, $) {
+define(["keywords", "dom-sanitizer", "searchHistoryItems", "options", "jquery", "jquery.ui"], function(keywordsInfo, domSanitizer, searchHistory, options, $) {
 
 // Install search autocomplete
 
@@ -154,18 +154,21 @@ define(["keywords", "searchHistoryItems", "options", "util", "jquery", "jquery.u
             auObj._renderItem = function (ul, item) {
                 // Text to search
                 var tts = $("#textToSearch").val();
-				tts = util.sanitize(tts);
                 tts = tts.toLowerCase();
                 var words = tts.split(" ");
 
                 /*console.log("Render item:", item);*/
 
                 var proposal = item.label;
-                proposal = util.sanitize(proposal);
 
                 // Highlight words from search query
                 var pw = proposal.split(" ");
-                var newProposal = "";
+                // span with proposal label
+                var proposalLabel =
+                    $("<span>", {
+                        class: "search-autocomplete-proposal-label",
+                        "data-value": item.value
+                    });
                 for (var pwi = 0; pwi < pw.length; pwi++) {
                     var cpw = pw[pwi];
                     if (cpw.trim().length > 0) {
@@ -182,15 +185,16 @@ define(["keywords", "searchHistoryItems", "options", "util", "jquery", "jquery.u
                                     w = w.replace("\\", "\\\\")
                                         .replace(")", "\\)")
                                         .replace("(", "\\(");
-                                    var cpwh = cpw.replace(
-                                        new RegExp("(" + w + ")", 'i'),
-                                        "<span class='search-autocomplete-proposal-hg'>$1</span>");
+                                    var cpwh = cpw.replace(new RegExp("(" + w + ")", 'i'), "<span class='not-inserted'>$1</span>");
                                 } catch (e) {
                                     debug(e);
                                 }
 
-                                if (cpwh != cpw) {
-                                    newProposal += cpwh;
+                                if (cpwh !== cpw) {
+                                    var spanHg = $("<span>", {
+                                        class: "search-autocomplete-proposal-hg"
+                                    }).text(cpw);
+                                    proposalLabel.append(spanHg);
                                     added = true;
                                     break;
                                 }
@@ -198,11 +202,12 @@ define(["keywords", "searchHistoryItems", "options", "util", "jquery", "jquery.u
                         }
 
                         if (!added) {
-                            newProposal += cpw;
+                            var textNode = document.createTextNode(cpw);
+                            proposalLabel.append(textNode)
                         }
 
                         if (pwi < pw.length - 1) {
-                            newProposal += " ";
+                            proposalLabel.append(" ");
                         }
                     }
                 }
@@ -217,22 +222,17 @@ define(["keywords", "searchHistoryItems", "options", "util", "jquery", "jquery.u
                         html: icon
                     });
 
-                // span with proposal label
-                var proposalLabel =
-                    $("<span>", {
-                        class: "search-autocomplete-proposal-label",
-                        "data-value": item.value,
-                        html: newProposal
-                    });
-
                 // span with remove from history
                 var removeButton;
                 if (item.type == 'history') {
-                    removeButton =
-                        $("<span>", {
-                            class: "search-autocomplete-proposal-type-history",
-                            html: "<a data-value='" + item.value + "' class='oxy-icon oxy-icon-remove' />"
-                        });
+                    var link = $("<a>", {
+                        class: "oxy-icon oxy-icon-remove",
+                        "data-value": item.value
+                    });
+                    removeButton = $("<span>", {
+                        class: "search-autocomplete-proposal-type-history"
+                    });
+                    domSanitizer.appendHtmlNode(link, removeButton);
                     $(removeButton).find("a").on("click", function (event) {
                         removeHistoryItem(this);
 
@@ -252,7 +252,8 @@ define(["keywords", "searchHistoryItems", "options", "util", "jquery", "jquery.u
                     class: "ui-menu-item-wrapper"
                 });
                 li.append(divWrapper);
-                divWrapper.append(proposalIcon).append(proposalLabel);
+                divWrapper.append(proposalIcon);
+                domSanitizer.appendHtmlNode(proposalLabel, divWrapper);
 
                 if (removeButton != null) {
                     divWrapper.append(removeButton);
@@ -270,6 +271,11 @@ define(["keywords", "searchHistoryItems", "options", "util", "jquery", "jquery.u
             $(window).resize(function () {
                 var autocompleteObj = $("#textToSearch").autocomplete("instance");
                 autocompleteObj.search();
+            });
+
+            //Close autocomplete on scroll
+            $(window).scroll(function () {
+              $("#textToSearch").autocomplete("close");
             });
         }
     });

@@ -1,22 +1,35 @@
-define(["options", 'util', 'jquery', 'jquery.highlight'], function(options, util, $) {
+define(["options", "dom-sanitizer", 'util', 'jquery', 'jquery.highlight'], function(options, domSanitizer, util, $) {
     // Add some Bootstrap classes when document is ready
     var highlighted = false;
+
+    /* WH-2521 - Mark the document when it was fully loaded.
+	 * This will allow us, for example, to apply transitions only if the document has been fully loaded.
+     * Otherwise, there will be color transitions between styles from different CSS files noticeable during page loading. */
+	$(document).ready(function () {
+        $('html > body').addClass('doc-ready');
+    });
 
     $(document).ready(function () {
         var scrollPosition = $(window).scrollTop();
         handleSideTocPosition(scrollPosition);
         handlePageTocPosition(scrollPosition);
+        handleCloseTocButtonPosition('#wh_close_publication_toc_button');
 
         $(window).scroll(function() {
             scrollPosition = handleSideTocPosition(scrollPosition);
             scrollPosition = handlePageTocPosition(scrollPosition);
+            scrollPosition = handleCloseTocButtonPosition('#wh_close_publication_toc_button');
         });
         $(window).resize(function(){
             $("#wh_publication_toc").removeAttr('style');
             scrollPosition = handleSideTocPosition(scrollPosition);
             scrollPosition = handlePageTocPosition(scrollPosition);
+            scrollPosition = handleCloseTocButtonPosition('#wh_close_publication_toc_button');
         });
-
+        
+        // WH-2740 Current topic should always be selected and visible in the publication toc
+        displayActiveTopicInPublicationToc();
+        
         // Show/hide the button which expands/collapse the subtopics
         // if there are at least two subtopics in a topic
         var countSubtopics = $('.topic.nested1').length;
@@ -49,8 +62,9 @@ define(["options", 'util', 'jquery', 'jquery.highlight'], function(options, util
              });
             $('.zoom').click(function(){
                 $('#modal_img_large').css("display","block");
+                $('#modal_img_container').append("<img class=\"modal-content\" id=\"modal-img\" alt=\"\" />"); 
                 $("#modal-img").attr('src',$(this).attr('src') );
-                $("#caption").html( $(this).attr('alt') );
+                $("#caption").text( domSanitizer.sanitize($(this).attr('alt')) );
             });
         }
 
@@ -93,7 +107,75 @@ define(["options", 'util', 'jquery', 'jquery.highlight'], function(options, util
                 }
             }
         }
+        
+        // Show the close topic toc button.
+        if(pageToc.length) {
+            $('#wh_close_topic_toc_button').removeClass("d-none");
+            $('#wh_close_topic_toc_button').addClass("d-lg-block");
+        }
+        
+        // Show the close publication toc button.
+        if(sideToc.length) {
+            $('#wh_close_publication_toc_button').removeClass("d-none");
+            $('#wh_close_publication_toc_button').addClass("d-md-block");
+        }
+        
+        // WH-2482 Handler for the button that closes the topic toc.
+        $('#wh_close_topic_toc_button').click(function() {
+            // Check page toc is in DOM.
+            if(pageToc.length) {
+                var topicContentColumn = 10;
+                var topicTocColumns = 2;
+                if(sideToc.length) {
+                    topicContentColumn = 7;
+                    if(sideToc.hasClass("d-md-none")) {
+                        topicContentColumn = 10;    
+                    }
+                }
+                
+                // Check page toc is displayed to the user.
+                if(pageToc.hasClass("d-lg-block")) {
+                    $(this).addClass("clicked");
+                    $(this).attr('aria-expanded', false);
+                    pageToc.removeClass("d-lg-block");
+                    pageToc.addClass("d-lg-none");
+                    
+                    var topicContentParent = $('.wh_topic_content').parent();
+                    if (topicContentParent !== undefined) {
+                        topicContentParent.removeClass(`col-lg-${topicContentColumn}`);
+                        topicContentParent.addClass(`col-lg-${topicContentColumn + topicTocColumns}`);
+                        topicContentParent.addClass("closed-page-toc");
+                    }
+                 } else {
+                    $(this).removeClass("clicked");
+                    $(this).attr('aria-expanded', true);
+                    pageToc.removeClass("d-lg-none");
+                    pageToc.addClass("d-lg-block");
+                    
+                    var topicContentParent = $('.wh_topic_content').parent();
+                    if (topicContentParent !== undefined) {
+                        topicContentParent.removeClass(`col-lg-${topicContentColumn + topicTocColumns}`);
+                        topicContentParent.removeClass("closed-page-toc");
+                        topicContentParent.addClass(`col-lg-${topicContentColumn}`);
+                    }
+                    
+                    var tocWidth =  parseInt(pageToc.outerWidth()) - parseInt(pageToc.css("padding-left")) - parseInt(pageToc.css("padding-right"));
+                    $(".wh_topic_toc").css("width", tocWidth);
+                 }
+                 
+                 $(this).css('right', Math.round($("#wh_topic_toc").outerWidth()) * (-1) + 5);
+            }
+        });
 
+        // WH-2482 Handler for the button that closes the publication toc.
+        $('#wh_close_publication_toc_button').click(function () {
+                closePublicationToc(sideToc, pageToc);
+        });
+        
+        $('#wh_toc_button').click(function () {
+                closePublicationToc(sideToc, pageToc);
+        });
+        
         // WH-1518: Hide the Breadcrumb tooltip if it is empty.
         var breadcrumb = $('.wh_breadcrumb');
         var breadcrumbShortDesc = breadcrumb.find('.topicref .wh-tooltip .shortdesc:empty');
@@ -168,6 +250,100 @@ define(["options", 'util', 'jquery', 'jquery.highlight'], function(options, util
         });
     });
 
+/* *
+ * @description Toggles the expand/collapse for the publication toc.
+ */
+function closePublicationToc(sideToc, pageToc) {
+	// Check publication toc is in DOM.
+    if(sideToc.length) {
+        var topicContentColumn = 9;
+        var publicationTocColumns = 3;
+        if(pageToc.length) {
+            topicContentColumn = 7;
+            if(pageToc.hasClass("d-lg-none")) {
+                topicContentColumn = 9;    
+            }
+        }
+        
+        // Check publication toc is displayed to the user.
+        if(sideToc.hasClass("d-md-block") && sideToc.is(':visible')) {
+            $('#wh_close_publication_toc_button').attr('aria-expanded', false);
+            $('#wh_toc_button').attr('aria-expanded', false);
+            $('#wh_close_publication_toc_button').addClass("clicked");
+            sideToc.removeClass(`col-lg-${publicationTocColumns} col-md-${publicationTocColumns}`);
+            sideToc.removeClass("d-sm-block");
+            sideToc.removeClass("d-md-block");
+            sideToc.addClass("d-none");
+            sideToc.addClass("d-sm-none");
+            sideToc.addClass("d-md-none");
+            
+            var topicContentParent = $('.wh_topic_content').parent();
+            if (topicContentParent !== undefined) {
+                topicContentParent.removeClass(`col-lg-${topicContentColumn} col-md-9`);
+                topicContentParent.addClass(`col-lg-${topicContentColumn + publicationTocColumns} col-md-12`);
+                topicContentParent.addClass("closed-publication-toc");
+            }
+         } else {
+            $('#wh_close_publication_toc_button').attr('aria-expanded', true);
+            $('#wh_toc_button').attr('aria-expanded', true);
+            $('#wh_close_publication_toc_button').removeClass("clicked");
+            sideToc.addClass(`col-lg-${publicationTocColumns} col-md-${publicationTocColumns}`);
+            sideToc.removeClass("d-none");
+            sideToc.removeClass("d-sm-none");
+            sideToc.removeClass("d-md-none");
+            sideToc.addClass("d-sm-block");
+            sideToc.addClass("d-md-block");
+            
+            var topicContentParent = $('.wh_topic_content').parent();
+            if (topicContentParent !== undefined) {
+                topicContentParent.removeClass(`col-lg-${topicContentColumn + publicationTocColumns} col-md-12`);
+                topicContentParent.removeClass("closed-publication-toc");
+                topicContentParent.addClass(`col-lg-${topicContentColumn} col-md-9`);
+            }
+            
+            var tocWidth = parseInt(sideToc.outerWidth()) - parseInt(sideToc.css("padding-left")) - parseInt(sideToc.css("padding-right"));
+            $(".wh_publication_toc").css("width", tocWidth);
+         }
+         
+         $('#wh_close_publication_toc_button').css('left', $("#wh_publication_toc").outerWidth() * (-1) + 5);
+    }
+}
+
+/* *
+ * @description Handle the vertical position for the close page and publication toc buttons.
+ */
+function handleCloseTocButtonPosition(buttonId) {
+    var searchHeight = $('.wh_search_input').outerHeight(true);
+
+    $(buttonId).css('left', $("#wh_publication_toc").outerWidth() * (-1) + 5);
+    if($(window).scrollTop() > searchHeight) {
+        var offset = $(window).scrollTop() - searchHeight;
+        $(buttonId).css('top', offset - 5);
+    } else {
+        $(buttonId).css('top', '-5px');
+    }
+    
+    return $(window).scrollTop();
+}
+
+/**
+ * @description Display the active topic in publication toc.
+ */
+function displayActiveTopicInPublicationToc() {
+    var $sideToc = $(".wh_publication_toc");
+    var $slideSection = $('#wh_topic_body');
+    if ($sideToc.length > 0 && $slideSection.length > 0) {
+        var sideTocTopPos = $(".wh_publication_toc").offset().top;
+        var sideTocBottomPos = sideTocTopPos + parseInt($(".wh_publication_toc").outerHeight());
+        var activeElementPos = $('.wh_publication_toc .active > .topicref a').offset().top;
+        // Check if the selected topic is visibile in the top 80% of the publication toc. 
+        if(activeElementPos > 0.8 * sideTocBottomPos) {
+            var sideTocMiddlePos = (sideTocTopPos + sideTocBottomPos) / 2;
+            $(".wh_publication_toc").animate({scrollTop: activeElementPos - sideTocMiddlePos}, 0);
+        }
+    }
+}
+
 /**
  * @description Handle the vertical position of the side toc
  */
@@ -178,8 +354,18 @@ function handleSideTocPosition(scrollPosition) {
     var $navSection = $(".wh_tools");
     var bottomNavOffset = 0;
     var $slideSection = $('#wh_topic_body');
-    var topOffset = 20;
-    var visibleAreaHeight = parseInt($(window).height()) - parseInt($(".wh_footer").outerHeight());
+    
+    var searchHeight = $('.wh_search_input').outerHeight(true);
+    var visibleSearchHeight;
+    
+    if ($(window).scrollTop() > searchHeight) {
+      visibleSearchHeight = 0;
+    } else {
+      visibleSearchHeight = searchHeight - $(window).scrollTop();
+    }
+    
+    var topOffset = $(".wh_tools").parent().outerHeight() + $(".wh_header").outerHeight() + visibleSearchHeight;
+    var visibleAreaHeight = parseInt($(window).height()) - parseInt($(".wh_footer").outerHeight()) - topOffset;
 
     if ($sideToc.length > 0 && $slideSection.length > 0) {
         var minVisibleOffset = $(window).scrollTop();
@@ -203,18 +389,42 @@ function handleSideTocPosition(scrollPosition) {
         if (bottomNavOffset > minVisibleOffset) {
             minVisibleOffset = bottomNavOffset;
         }
-        if (tocHeight  <=   visibleAreaHeight) {
+        
+        if (tocHeight <= visibleAreaHeight + visibleSearchHeight) {
             var cHeight = parseInt($('.wh_content_area').height());
             if (parseInt(minVisibleOffset - topOffset) <=  $(window).scrollTop() && parseInt($(window).width()) > 767) {
                 $('.wh_content_area').css('min-height', cHeight+'px');
-                $sideToc.css("top", topOffset + "px").css("width", tocWidth + "px").css("position", "fixed").css("z-index", "999");
+                $sideToc.css("top", topOffset + "px").css("width", tocWidth + "px").css("position", "fixed").css("z-index", "997").css("overflow-y", "auto").css("overflow-x", "hidden");
+                if(visibleAreaHeight + topOffset > $(".wh_footer").offset().top) {
+                    $sideToc.css("max-height", $(".wh_footer").offset().top - topOffset - parseInt($(".wh_footer").css("margin-top")))
+                } else {
+                    if($(".wh_footer")[0].getBoundingClientRect().top < $(window).height()) {
+                        $sideToc.css("max-height", visibleAreaHeight - parseInt($(".wh_footer").css("margin-top")));
+                    } else {
+                        $sideToc.css("max-height", visibleAreaHeight);
+                    }
+                }
             } else {
                 $sideToc.removeAttr('style');
             }
-        } else {
+        } else if (parseInt($(window).width()) < 767) {
             $sideToc.removeAttr('style');
+        } else {
+            $sideToc.css("position", "fixed").css("z-index", "997").css("width", tocWidth + "px").css("overflow-y", "auto").css("overflow-x", "hidden");
+            if(scrollPosition > 0) {
+                $sideToc.css("top", topOffset + "px");
+            }
+            if(visibleAreaHeight + topOffset > $(".wh_footer").offset().top) {
+                $sideToc.css("max-height", $(".wh_footer").offset().top - topOffset - parseInt($(".wh_footer").css("margin-top")))
+            } else {
+                if($(".wh_footer")[0].getBoundingClientRect().top < $(window).height()) {
+                    $sideToc.css("max-height", visibleAreaHeight - parseInt($(".wh_footer").css("margin-top")));
+                } else {
+                    $sideToc.css("max-height", visibleAreaHeight);
+                }
+            }
         }
-        scrollPosition = $(window).scrollTop();
+        
     }
 
 	return $(window).scrollTop();
@@ -225,12 +435,21 @@ function handleSideTocPosition(scrollPosition) {
  */
 function pageTocHighlightNode(scrollPosition) {
     var scrollPosition = scrollPosition !== undefined ? Math.round(scrollPosition) : 0;
-    var topOffset = 150;
+    
+    var searchHeight = $('.wh_search_input').outerHeight(true);
+
+    var scrollMarginTop = $(".wh_tools").parent().outerHeight() + $(".wh_header").outerHeight();
+    $('.wh_topic_content .title').parent().css("scroll-margin-top", scrollMarginTop);
+
+    var topOffset = 33;
+    scrollPosition += scrollMarginTop;
+
+
     var hash = location.hash != undefined ? location.hash : "";
     var hashOffTop = $(hash).offset() != undefined ? $(hash).offset().top : 0;
     var elemHashTop =  hash != "" ? Math.round(hashOffTop) : 0;
-    
     if( hash.substr(1) != '' && elemHashTop >= scrollPosition && (elemHashTop <= (scrollPosition + topOffset)) ){
+        
         $('#wh_topic_toc a').removeClass('current_node');
         $('#wh_topic_toc a[data-tocid = "'+ hash.substr(1) + '"]').addClass('current_node');
     } else {
@@ -239,6 +458,7 @@ function pageTocHighlightNode(scrollPosition) {
             var elemTop = Math.round($(this).offset().top);
     
             if( elemTop >= scrollPosition && (elemTop <= (scrollPosition + topOffset)) ){
+                
                 $('#wh_topic_toc a').removeClass('current_node');
                 $('#wh_topic_toc a[data-tocid = "'+ currentId + '"]').addClass('current_node');
             }  
@@ -258,15 +478,27 @@ function handlePageTocPosition(scrollPosition) {
     var $pageTOC = $(".wh_topic_toc");
     var $navSection = $(".wh_tools");
     var bottomNavOffset = 0;
-    var topOffset = 33;
+
+    var searchHeight = $('.wh_search_input').outerHeight(true);
+    var visibleSearchHeight;
+
+    if ($(window).scrollTop() > searchHeight) {
+      visibleSearchHeight = 0;
+    } else {
+      visibleSearchHeight = searchHeight - $(window).scrollTop();
+    }
+
+    var topOffset = $(".wh_tools").parent().outerHeight() + $(".wh_header").outerHeight() + visibleSearchHeight;
+    
     var $contentBody = $(".wh_topic_content");
 
     if ($pageTOC.length > 0) {
         pageTocHighlightNode(scrollPosition);
         
-        var visibleAreaHeight = parseInt($(window).height()) - parseInt($(".wh_footer").outerHeight());
-
+        var visibleAreaHeight = parseInt($(window).height()) - parseInt($(".wh_footer").outerHeight()) - topOffset;
+        
         var tocHeight = parseInt($pageTOC.height()) + parseInt($pageTOC.css("padding-top")) + parseInt($pageTOC.css("padding-bottom")) + parseInt($pageTOC.css("margin-top")) + parseInt($pageTOC.css("margin-bottom"));
+        
         var tocWidth =  parseInt($pageTOCID.outerWidth()) - parseInt($pageTOCID.css("padding-left")) - parseInt($pageTOCID.css("padding-right"));
 
         var minVisibleOffset = $(window).scrollTop();
@@ -277,14 +509,25 @@ function handlePageTocPosition(scrollPosition) {
             minVisibleOffset = bottomNavOffset;
         }
 
-        if ((tocHeight+topOffset) < visibleAreaHeight && (bottomNavOffset-topOffset) < $(window).scrollTop() && (tocHeight+topOffset) < $contentBody.height()) {
+        if (tocHeight < visibleAreaHeight && (bottomNavOffset-topOffset) <= $(window).scrollTop() && tocHeight < $contentBody.height()) {
             if (parseInt(minVisibleOffset - topOffset) <=  $(window).scrollTop() && parseInt($(window).width()) > 767) {
-                $pageTOC.css("top", "20px").css("position", "fixed").css("width", tocWidth + "px").css("height", tocHeight + "px");
+                $pageTOC.css("top", topOffset + "px").css("position", "fixed").css("width", tocWidth + "px");
+                $('#wh_close_topic_toc_button').css('right', Math.round($pageTOCID.outerWidth()) * (-1) + 5);
+                if($(window).scrollTop() > searchHeight) {
+                    var offset = $(window).scrollTop() - searchHeight;
+                    $('#wh_close_topic_toc_button').css('top', offset - 5);
+                } else {
+                    $('#wh_close_topic_toc_button').css('top', '-5px');
+                }
             } else {
                 $pageTOC.removeAttr('style');
+                $('#wh_close_topic_toc_button').css('right', Math.round($pageTOCID.outerWidth()) * (-1) + 5);
+                $('#wh_close_topic_toc_button').css('top', '-5px');
             }
         } else {
             $pageTOC.removeAttr('style');
+            $('#wh_close_topic_toc_button').css('right', Math.round($pageTOCID.outerWidth()) * (-1) + 5);
+            $('#wh_close_topic_toc_button').css('top', '-5px');
         }
     }
 }

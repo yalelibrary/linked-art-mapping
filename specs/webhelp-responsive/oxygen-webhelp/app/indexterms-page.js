@@ -7,6 +7,8 @@ define(["require", "config"], function() {
         'menu',
         'expand',
         'permalink',
-        'template-module-loader'
+        'template-module-loader',
+        'wh-sticky',
+        'top-menu'
     ]);
 });

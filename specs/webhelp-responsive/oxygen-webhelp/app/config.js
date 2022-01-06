@@ -8,6 +8,8 @@ define(function() {
         "expand": "core/expand",
         "permalink": "core/permalink",
         "polyfill": "core/polyfill",
+        "wh-sticky": "core/wh-sticky",
+        "dom-sanitizer": "core/wh-dom-sanitizer", 
         // context sensitive help
         "context-help" : "context-help/context-help",
         "context-help-map" : "context-help/context-help-map",
@@ -76,7 +78,10 @@ define(function() {
         // Popper
         "bootstrap" : "../lib/bootstrap/js/bootstrap.bundle.min",
 
-        "kuromoji" : "../lib/kuromoji/kuromoji"
+        "kuromoji" : "../lib/kuromoji/kuromoji",
+        
+        // DOM Purify
+        "dompurify" : "../lib/dom-purify/purify.min"
     };
 
     var shimConfig = {
@@ -101,11 +106,11 @@ define(function() {
         paths : modulePaths,
         shim : shimConfig,
         urlArgs: function(id, url) {
-            var args = '2021082101';
+            var args = '2021121513';
         	
             if(id === 'index-1' || id === 'index-2' || id === 'index-3' || id === 'stopwords' 
             ||id === 'htmlFileInfoList' || id === 'keywords') {
-                args = '20211209104023';
+                args = '20220105192635';
         	} 
 	
 	        return (url.indexOf('?') === -1 ? '?' : '&') + args;

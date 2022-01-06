@@ -9,6 +9,7 @@ define(["require", "config"], function() {
             'toc',
             'webhelp',
             'codeblock',
+            'wh-sticky',
             'top-menu',
             'search-init',
             'expand',

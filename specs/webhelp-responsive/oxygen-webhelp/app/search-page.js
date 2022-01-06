@@ -8,6 +8,7 @@ define(["require", "config"], function() {
             'menu',
             'webhelp',
             'codeblock',
+            'wh-sticky',
             'top-menu',
             'template-module-loader'
         ];

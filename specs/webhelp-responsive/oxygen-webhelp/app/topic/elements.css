@@ -229,9 +229,13 @@ a#star5 { width:100px; z-index:2; }
 div#rate_comment {clear:both; margin:14px 0 0 0;}
 div.rate_response {margin:-14px 0 0 0; }
 
-/* Conforms to the DITA spec. The HTML uses middle instead of top. */
-.simpletable td:not([valign]),
-.table td:not([valign]) {
+/* Conforms to the DITA specs we need to use top instead of browser's user agent (middle). */
+.simpletable thead,
+.simpletable tbody,
+.table > tbody:not([class*="valign"]) > tr:not([class*="valign"]) > td:not([class*="valign"]) {
   vertical-align: top;
 }
 
+caption.tablecap[data-caption-side="bottom"] {
+  caption-side: bottom;
+}

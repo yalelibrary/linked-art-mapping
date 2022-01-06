@@ -34,7 +34,10 @@ define(["jquery"], function ($) {
             e.preventDefault();
             history.replaceState({}, '', hash);
 
-            $('html, body').animate({scrollTop: $("[id='" + id + "']").offset().top}, 1000);
+            var toolsHeight = $(".wh_tools").parent().outerHeight(); 
+            var headerHeight = $(".wh_header").outerHeight();
+            
+            $('html, body').animate({scrollTop: $("[id='" + id + "']").offset().top - toolsHeight - headerHeight}, 1000);
         });
     });
 });

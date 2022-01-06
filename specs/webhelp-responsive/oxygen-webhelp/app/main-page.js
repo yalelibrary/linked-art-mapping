@@ -9,6 +9,7 @@ define(["require", "config"], function() {
             'searchAutocomplete',
             'webhelp',
             'codeblock',
+            'wh-sticky',
             'top-menu',
             'search-init',
             'context-help',

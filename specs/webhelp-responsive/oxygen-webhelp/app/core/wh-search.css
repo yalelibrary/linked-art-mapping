@@ -322,6 +322,7 @@
     overflow-y: auto;
     /* prevent horizontal scrollbar */
     overflow-x: hidden;
+    z-index: 998;
 }
 
 /* Don't add border or margin to active item in autocomplate widget */

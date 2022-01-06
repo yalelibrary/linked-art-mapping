@@ -1,4 +1,4 @@
-define(['util', 'options', 'nwSearchFnt', 'searchHistoryItems', 'localization', 'jquery', 'jquery.highlight', 'jquery.bootpag'], function(util, options, nwSearchFnt, searchHistory, i18n, $) {
+define(['util', 'dom-sanitizer', 'options', 'nwSearchFnt', 'searchHistoryItems', 'localization', 'jquery', 'jquery.highlight', 'jquery.bootpag'], function(util, domSanitizer, options, nwSearchFnt, searchHistory, i18n, $) {
 
     /*
     	Oxygen WebHelp Plugin
@@ -444,10 +444,9 @@ define(['util', 'options', 'nwSearchFnt', 'searchHistoryItems', 'localization', 
 
                 var $span = $('<span/>', {
                     class: 'wh_search_expression'
-                }).html(lastSearchResult.originalSearchExpression);
-
-                $whSearchResultsHeaderDocs.append($span);
-                $headerHTML.append($whSearchResultsHeaderDocs);
+                }).text(lastSearchResult.originalSearchExpression);
+                domSanitizer.appendHtmlNode($span, $whSearchResultsHeaderDocs);
+                domSanitizer.appendHtmlNode($whSearchResultsHeaderDocs, $headerHTML);
 
                 if (typeof pageNumber != "undefined" && typeof totalPageNumber != "undefined" && totalPageNumber > 1) {
                     var $wh_search_results_header_pages = $('<div/>', {
@@ -502,8 +501,7 @@ define(['util', 'options', 'nwSearchFnt', 'searchHistoryItems', 'localization', 
                     var $span = $('<span/>', {
                         class: 'wh_search_expression'
                     }).text(lastSearchResult.originalSearchExpression);
-
-                    $wh_search_results_items.append($span);
+                    domSanitizer.appendHtmlNode($span,  $wh_search_results_items);
                 }
             } else {
                 $wh_search_results_items = $('<div/>', {
@@ -512,7 +510,7 @@ define(['util', 'options', 'nwSearchFnt', 'searchHistoryItems', 'localization', 
                 var $span = $('<span/>', {
                     class: 'wh_search_expression'
                 }).text(lastSearchResult.originalSearchExpression);
-                $wh_search_results_items.append($span);
+                domSanitizer.appendHtmlNode($span,  $wh_search_results_items);
             }
         } else {
             // Search expression is empty. If there are stop words, display a message accordingly
@@ -590,13 +588,18 @@ define(['util', 'options', 'nwSearchFnt', 'searchHistoryItems', 'localization', 
         var indexerLanguage = options.getIndexerLanguage();
         var useCJKTokenizing = !!(typeof indexerLanguage != "undefined" && (indexerLanguage == "zh" || indexerLanguage == "ko"));
 
-        for (var x in finalArray) {
-            if (finalArray[x].length >= 2 || useCJKTokenizing || (indexerLanguage == "ja" && finalArray[x].length >= 1)) {
-                arrayStringAux.push(finalArray[x]);
-            }
-        }
-        arrayString = arrayStringAux.toString();
 
+		if(lastSearchResult.isPhraseSearch) {
+            arrayString = lastSearchResult.originalSearchExpression;
+        } else {
+	        for (var x in finalArray) {
+	            if (finalArray[x].length >= 2 || useCJKTokenizing || (indexerLanguage == "ja" && finalArray[x].length >= 1)) {
+	                arrayStringAux.push(finalArray[x]);
+	            }
+	        }
+	        arrayString = arrayStringAux.toString();
+        }
+        
         // Add highlight param
         if (!wh_Classic && !wh_mobile) {
             tempPath += '?hl=' + encodeURIComponent(arrayString);
@@ -667,9 +670,13 @@ define(['util', 'options', 'nwSearchFnt', 'searchHistoryItems', 'localization', 
             }).html(tempShortDesc);
 
             // Highlight the search words in short description
-            for (var si = 0; si < allSearchWords.length; si++) {
-                var sw = allSearchWords[si];
-                $shortDescriptionDIV.highlight(sw, 'search-shortdescription-highlight');
+            if(lastSearchResult.isPhraseSearch) {
+                $shortDescriptionDIV.highlight(lastSearchResult.originalSearchExpression, 'search-shortdescription-highlight');
+            } else {
+                for (var si = 0; si < allSearchWords.length; si++) {
+                    var sw = allSearchWords[si];
+                    $shortDescriptionDIV.highlight(sw, 'search-shortdescription-highlight');
+                }
             }
 
             htmlResult.append($shortDescriptionDIV);
@@ -712,8 +719,9 @@ define(['util', 'options', 'nwSearchFnt', 'searchHistoryItems', 'localization', 
             for (var widx = 0; widx < missingWords.length; widx++) {
                 var $span = $('<span/>', {
                     class: 'wh_missing_word'
-                }).html(missingWords[widx]);
-                missingHTML.append($span).append(' ');
+                }).text(missingWords[widx]);
+                domSanitizer.appendHtmlNode($span, missingHTML);
+                missingHTML.append(' ');
             }
 
             searchItemInfo.append(missingHTML);

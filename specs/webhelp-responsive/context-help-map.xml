@@ -85,8 +85,9 @@
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="classification_numbers"
                path="tasks/concepts/classification_numbers.html"/>
-   <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
+   <appContext helpID="languages" path="concepts/languages.html"/>
    <appContext helpID="roles" path="tasks/concepts/roles.html"/>
+   <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
    <appContext helpID="events" path="concepts/events.html"/>
    <appContext helpID="chronological_facets"
                path="tasks/events/chronological_facets.html"/>
@@ -95,7 +96,7 @@
    <appContext helpID="groups_as_subjects" path="concepts/groups_as_subjects.html"/>
    <appContext helpID="people" path="concepts/people.html"/>
    <appContext helpID="people_as_agents" path="concepts/people_as_agents.html"/>
-   <appContext helpID="places_as_subjects" path="concepts/places_as_subjects.html"/>
+   <appContext helpID="people_as_subjects" path="concepts/people_as_subjects.html"/>
    <appContext helpID="places" path="concepts/places.html"/>
    <appContext helpID="top_level_place_entities"
                path="concepts/top_level_place_entities.html"/>
@@ -115,18 +116,21 @@
                path="tasks/name-title/name-title-with-subdivisions.html"/>
    <appContext helpID="works_as_whole_part"
                path="tasks/name-title/works_as_whole_part.html"/>
-   <appContext helpID="provenance_activities"
-               path="concepts/provenance_activities.html"/>
-   <appContext helpID="related_digital_objects"
-               path="concepts/related_digital_objects.html"/>
    <appContext helpID="related_sets" path="concepts/related_sets.html"/>
+   <appContext helpID="library_collections" path="concepts/library_collections.html"/>
    <appContext helpID="descriptive_content" path="concepts/descriptive_content.html"/>
+   <appContext helpID="lux_embedded_entities"
+               path="concepts/lux_embedded_entities.html"/>
+   <appContext helpID="digital_objects" path="concepts/digital_objects.html"/>
+   <appContext helpID="digital_objects_asset_link"
+               path="concepts/digital_objects_asset_link.html"/>
    <appContext helpID="identifiers" path="concepts/identifiers.html"/>
    <appContext helpID="voyager_bib_id" path="tasks/identifiers/orbis_bib_id.html"/>
    <appContext helpID="library_of_congress_control_number_lccn"
                path="tasks/identifiers/library_of_congress_control_number_lccn.html"/>
    <appContext helpID="international_standard_book_number_isbn"
                path="tasks/identifiers/international_standard_book_number_isbn.html"/>
+   <appContext helpID="call_number" path="tasks/identifiers/call_number.html"/>
    <appContext helpID="international_standard_serial_number_issn"
                path="tasks/identifiers/international_standard_serial_number_issn.html"/>
    <appContext helpID="publisher_or_distributor_number"
@@ -136,6 +140,10 @@
    <appContext helpID="name" path="tasks/names-and-labels/names.html"/>
    <appContext helpID="primary_name" path="tasks/names-and-labels/primary_name.html"/>
    <appContext helpID="sorting_name" path="tasks/names-and-labels/sorting_name.html"/>
+   <appContext helpID="transcribed_series_title"
+               path="tasks/names-and-labels/transcribed_series_title.html"/>
+   <appContext helpID="transcribed_series_title"
+               path="tasks/names-and-labels/alternative_title.html"/>
    <appContext helpID="label" path="tasks/names-and-labels/labels.html"/>
    <appContext helpID="root_label" path="tasks/names-and-labels/root_label.html"/>
    <appContext helpID="notes" path="concepts/notes_and_statements.html"/>
@@ -163,6 +171,8 @@
    <appContext helpID="note" path="tasks/notes-and-statements/note.html"/>
    <appContext helpID="physical_statement"
                path="tasks/notes-and-statements/physical_statement.html"/>
+   <appContext helpID="access_statement"
+               path="tasks/notes-and-statements/access_statement.html"/>
    <appContext helpID="dimension_statement"
                path="tasks/notes-and-statements/dimension_statement.html"/>
    <appContext helpID="preferred_citation_note"
@@ -175,6 +185,11 @@
                path="tasks/notes-and-statements/reproduction_statement.html"/>
    <appContext helpID="production_statement"
                path="tasks/notes-and-statements/production_statement.html"/>
+   <appContext helpID="edition_statement"
+               path="tasks/notes-and-statements/edition_statement.html"/>
+   <appContext helpID="dates" path="tasks/dates/dates.html"/>
+   <appContext helpID="_008_date" path="tasks/dates/008_dates.html"/>
+   <appContext helpID="_26x_dates" path="tasks/dates/26X_dates.html"/>
    <appContext helpID="concept_entities" path="concepts/concepts.html"/>
    <appContext helpID="subject_headings" path="tasks/concepts/subject_headings.html"/>
    <appContext helpID="reference_600_table_bib" path="tables/600_bib_table.html"/>
