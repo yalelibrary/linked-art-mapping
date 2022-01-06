@@ -109,7 +109,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
           "referred_to_by": [
             {
               "type": "LinguisticObject",
-              "content": "in collection",
+              "content": "At the Library",
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300133046",
@@ -301,7 +301,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       "referred_to_by": [
         {
           "type": "LinguisticObject",
-          "content": "in collection",
+          "content": "At the Library",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300133046",
@@ -419,7 +419,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       "referred_to_by": [
         {
           "type": "LinguisticObject",
-          "content": "in collection",
+          "content": "At the Library",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300133046",
