@@ -34,7 +34,7 @@ scriptInclusion: NONE
 
     2.  Join subfields with a whitespace character.
 
-    **Note:** This example is meant to illustrate a physical statement and does not represent a complete JSON-LD document.
+    **Note:** This example is meant to illustrate a production statement and does not represent a complete JSON-LD document.
 
     `3643333`
 
