@@ -5,7 +5,7 @@ keyword:
 
 # Dates
 
-Date values from fixed field `008` and 26X fields.
+Date values from fixed field `008` and `26X` fields.
 
 Dates should be taken first from fixed field `008`. If no date value\(s\) have been recorded in the `008` field, attempt to extract a date from a `26X` field.
 
