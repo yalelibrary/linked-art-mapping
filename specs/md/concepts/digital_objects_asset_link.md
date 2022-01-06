@@ -1,6 +1,6 @@
 ---
 author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
-keyword: [Assigned, Completed]
+keyword: []
 ---
 
 # Digital object link to asset
