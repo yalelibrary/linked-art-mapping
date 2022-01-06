@@ -28,7 +28,7 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Process the production statement values.
+1.  For each `26X` field, process the production statement values and generate a `Production Statement` within the `referred_to_by` array.
 
     1.  Do not trim punctuation from subfields.
 
