@@ -53,5 +53,5 @@ These `part_of` relationships apply to the following source data fields:
         ```
 
 
-**Parent topic:**[Works \[draft\]](../../concepts/works.md)
+**Parent topic:**[Works](../../concepts/works.md)
 

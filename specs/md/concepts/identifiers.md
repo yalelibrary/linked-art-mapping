@@ -14,6 +14,8 @@ TheOrbis BIB IDis a serially based identifier assigned to MARC 21 Bibliographic 
 The Library of Congress Control Number is a serially based identifier assigned to resources that also appear in the catalog of the Library of Congress.
 -   **[International Standard Book Number \(ISBN\)](../tasks/identifiers/international_standard_book_number_isbn.md)**  
 The International Standard Book Number \(ISBN\) is a publisher-assigned commercial book identifier that is intended to be unique. May appear in 10- or 13-digit formats.
+-   **[Locations and call numbers](../tasks/identifiers/call_number.md)**  
+Locations and call numbers are derived from MARC holdings records \(MFHDs\).
 -   **[International Standard Serial Number \(ISSN\)](../tasks/identifiers/international_standard_serial_number_issn.md)**  
 The International Standard Serial Number is a unique identification number assigned to a continuing resource.
 -   **[Publisher or Distributor Number](../tasks/identifiers/publisher_or_distributor_number.md)**  
@@ -22,6 +24,8 @@ Formatted number used for sound recordings, printed music, other music-related m
 System number used by OCLC to manage records in the WorldCat system.
 
 **Parent topic:**[Descriptive content](../concepts/descriptive_content.md)
+
+**Previous topic:**[Embedded entities](../concepts/lux_embedded_entities.md)
 
 **Next topic:**[Names and labels](../concepts/names_and_labels.md)
 

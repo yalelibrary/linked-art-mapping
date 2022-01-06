@@ -41,27 +41,6 @@ scriptInclusion: BOTH
 
     2.  If applicable, join the string value of parallel MARC`880`subfields`abfghknps`\(excluding`$6`\) with a whitespace character.
 
-    |JSON structure|Description|Default|
-    |--------------|-----------|-------|
-    |`root → id`|IRI of the record-level entity| |
-    |`root → type`|Base class of the record-level entity| |
-    |`root → _label`|Label of the record-level entity. If the main title has a non-Latin script alternative in a MARC`880`field, that alternative value should be displayed as the label.| |
-    |`root → identified_by → [0]`|First item in`identified_by`array should correspond to MARC`245`| |
-    |`root → identified_by → [0] → type`| |`Name`|
-    |`root → identified_by → [0] → content`|String value of MARC`245`subfields| |
-    |`root → identified_by → [0] → classified_as → id`|IRI of the concept used to classify the main title|[http://vocab.getty.edu/aat/300404670](http://vocab.getty.edu/aat/300404670)|
-    |`root → identified_by → [0] → classified_as → type`| |`Type`|
-    |`root → identified_by → [0] → classified_as → _label`|Label of the concept used to classify the main title|`Primary Name`|
-    |`root → identified_by → [1]`|Second item in the`identified_by`array should correspond to MARC`880`, if applicable| |
-    |`root → identified_by → [1] → type`| |`Name`|
-    |`root → identified_by → [1] → content`|String value of MARC`880`subfields| |
-    |`root → identified_by → [1] → classified_as → id`|IRI of the concept used to classify the non-Latin main title|[http://vocab.getty.edu/aat/300404670](http://vocab.getty.edu/aat/300404670)|
-    |`root → identified_by → [1] → classified_as → type`| |`Type`|
-    |`root → identified_by → [1] → classified_as → _label`|Label of the concept used to classify the non-Latin main title|`Primary Name`|
-    |`root → identified_by → [1] → language → id`|IRI of the Language entity for the non-Latin main title|Currently, specific language values are not assigned. A single IRI representing an undefined \(`und`\) language should be assigned for all parallel non-Latin script values.|
-    |`root → identified_by → [1] → language → type`| |`Language`|
-    |`root → identified_by → [1] → language → _label`| |`und`|
-
     `9447`
 
     ```

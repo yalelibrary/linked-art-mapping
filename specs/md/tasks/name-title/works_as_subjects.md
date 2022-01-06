@@ -60,5 +60,5 @@ author: timothy.thompson@yale.edu
 -   **[Complex works as complex subjects](../../tasks/name-title/name-title-with-subdivisions.md)**  
 
 
-**Parent topic:**[Works \[draft\]](../../concepts/works.md)
+**Parent topic:**[Works](../../concepts/works.md)
 

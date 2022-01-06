@@ -38,6 +38,8 @@ Corresponds to the`382`field in MARC.
 
 -   **[Physical statement](../tasks/notes-and-statements/physical_statement.md)**  
 
+-   **[Access statement](../tasks/notes-and-statements/access_statement.md)**  
+Statement indicating whether a resource is available online or in the library.
 -   **[Dimension statement](../tasks/notes-and-statements/dimension_statement.md)**  
 
 -   **[Preferred citation note](../tasks/notes-and-statements/preferred_citation_note.md)**  
@@ -48,10 +50,14 @@ Corresponds to the`382`field in MARC.
 
 -   **[Reproduction statement](../tasks/notes-and-statements/reproduction_statement.md)**  
 
--   **[Production statement \[draft\]](../tasks/notes-and-statements/production_statement.md)**  
+-   **[Production statement](../tasks/notes-and-statements/production_statement.md)**  
+
+-   **[Edition statement](../tasks/notes-and-statements/edition_statement.md)**  
 
 
 **Parent topic:**[Descriptive content](../concepts/descriptive_content.md)
 
 **Previous topic:**[Names and labels](../concepts/names_and_labels.md)
+
+**Next topic:**[Dates](../tasks/dates/dates.md)
 

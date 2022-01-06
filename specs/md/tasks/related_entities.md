@@ -71,14 +71,10 @@ Entities that represent groups of people functioning collectively \(e.g., organi
 
 -   **[Places](../concepts/places.md)**  
 
--   **[Works \[draft\]](../concepts/works.md)**  
+-   **[Works](../concepts/works.md)**  
 
--   **[Provenance Activities \[draft\]](../concepts/provenance_activities.md)**  
-
--   **[Digital Objects \[draft\]](../concepts/related_digital_objects.md)**  
-
--   **[Sets \[draft\]](../concepts/related_sets.md)**  
-
+-   **[Sets](../concepts/related_sets.md)**  
+Membership in library collections.
 
 **Parent topic:**[LUX top-level entities](../concepts/lux_top-level_entities.md)
 

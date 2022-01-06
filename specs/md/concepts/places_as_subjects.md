@@ -1,5 +1,5 @@
 ---
-author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
+author: timothy.thompson@yale.edu
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Entity extraction
 ---
@@ -54,8 +54,6 @@ category: Entity extraction
         }
         ```
 
-
-**Parent topic:**[People](../concepts/people.md)
 
 **Parent topic:**[Top-level Place entities](../concepts/top_level_place_entities.md)
 

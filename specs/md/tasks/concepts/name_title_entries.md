@@ -218,5 +218,5 @@ scriptInclusion: BOTH
     ```
 
 
-**Parent topic:**[Works \[draft\]](../../concepts/works.md)
+**Parent topic:**[Works](../../concepts/works.md)
 

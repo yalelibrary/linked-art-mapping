@@ -2,7 +2,7 @@
 author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
 category: Descriptive content
-keyword: 
+keyword: [Assigned, Completed, ]
 ---
 
 # Locations and call numbers
@@ -56,9 +56,9 @@ scriptInclusion: NONE
 
 7.  Select and save the value of subfield `b`.
 
-    1.  Match the value of subfield `b` against the location code lookup table and save the value of the `location name`.
+    1.  Match the value of subfield `b` against the location code lookup table and save the value of the `location_name`.
 
-    2.  Surround the value of the `location name` with square brackets.
+    2.  Surround the value of the `location_name` with square brackets.
 
         `[Library Shelving Facility (LSF)]`
 
@@ -76,9 +76,9 @@ scriptInclusion: NONE
 
 10. Select and save the value of subfield `m`.
 
-11. Join the values of subfields `852him` with a whitespace character. This is the `call number`.
+11. Join the values of subfields `852him` with a whitespace character. This is the `call_number`.
 
-12. Concatenate the `call number` with the `location name`.
+12. Concatenate the `call_number` with the `location_name`.
 
 
 `12244893`

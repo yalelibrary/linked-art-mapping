@@ -74,10 +74,9 @@ The code represents a place of publication, production, execution, or sometimes 
 
     -   If the record-level supertype is one of the following:
 
+        -   Any `Objects` format
         -   Any `Visual Works` format
         -   `Dissertations and Theses`
-        -   `Models`
-        -   `Realia`
         then the type of place is `creation`.
 
     -   If the record-level supertype is equal to `Archival and Manuscript Materials`, then the type of place is `location`.

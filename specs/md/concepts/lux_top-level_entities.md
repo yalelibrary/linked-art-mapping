@@ -15,7 +15,7 @@ Entities that correspond to resources held by the library \(books, journals, dat
 2.  [Related entities](../tasks/related_entities.md)  
 Entities that represent the people, places, concepts, etc., that are connected to record-level resources.
 
-**Parent topic:**[Entity extraction](../concepts/entity_extraction.md)
+**Parent topic:**[Entity modeling](../concepts/entity_extraction.md)
 
 **Linked Art documentation**  
 

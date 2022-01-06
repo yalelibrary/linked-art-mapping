@@ -139,7 +139,7 @@ scriptInclusion: BOTH
         |694acdegnqu|Group|
         |695adfhklmnoprst|LinguisticObject|
 
-        **Note:** Top-level genre/form \(`655`\) resources should include a `Format` classification, as shown in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](simple_subject_headings.md).
+        **Note:** Top-level genre/form \(`655`\) resources should include a `Genre` classification, as shown in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](simple_subject_headings.md).
 
     `9564880`
 

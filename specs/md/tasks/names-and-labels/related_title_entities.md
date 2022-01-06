@@ -29,7 +29,7 @@ scriptInclusion: NONE
 
     3.  For each title entry, generate and store a top-level related title entity, each identified by an IRI.
 
-    4.  Within each top-level related title entity, include a`part_of`reference to the`LinguisticObject`representing the bibliographic record with the`505`contents note.
+    4.  Within each top-level related title entity, include a `part_of` reference to the `LinguisticObject` representing the bibliographic record with the `505` contents note.
 
     `3931`
 

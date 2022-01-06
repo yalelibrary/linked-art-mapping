@@ -77,10 +77,171 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
     -   If the base class derived from the supertype is `DigitalObject`, do not generate a separate carrier-level resource. Record both content- and carrier-level information in a single JSON-LD document, with `DigitalObject` as base class.
 3.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then `HumanMadeObject` carriers must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
 
+4.  If the supertype of the resource corresponding to the bibliographic record has a base class of `Set` \(for archival records or kits\), then the `HumanMadeObject` carrier is **not** modeled as a separate resource, but rather embedded within the `Set` resource using the property `members_exemplified_by`.
+
 
 **Note:** These examples are meant to illustrate the content/carrier distinction and do not necessarily represent complete JSON-LD documents.
 
-1.  `HumanMadeObject → carries → LinguisticObject` \[`7778409`\]
+1.  `Set → members_exemplified_by → HumanMadeObject` \[`3779671`\]
+
+    ```
+    {
+      "id": "https://lux.collections.yale.edu/data/set/00046754-f28f-4b56-a611-056341335226",
+      "type": "Set",
+      "_label": "شجون المسجون وفتون المفتون / 1863",
+      "members_exemplified_by": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "شجون المسجون وفتون المفتون / 1863",
+          "identified_by": [
+            {
+              "type": "Identifier",
+              "content": "Arabic MSS 480 (lsfbeir)",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300311706",
+                  "type": "Type",
+                  "_label": "Call Number"
+                }
+              ]
+            }
+          ],
+          "referred_to_by": [
+            {
+              "type": "LinguisticObject",
+              "content": "in collection",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300133046",
+                  "type": "Type",
+                  "_label": "Access Statement",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300418049",
+                      "type": "Type",
+                      "_label": "Brief Text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "LinguisticObject",
+              "content": "Purchased from Oskar Rescher in August 1959 on plain fund.",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435438",
+                  "type": "Type",
+                  "_label": "Provenance Statement",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300418049",
+                      "type": "Type",
+                      "_label": "Brief Text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "LinguisticObject",
+              "content": "leaves 119 verso-176 ; 24.5 x 18 cm",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435452",
+                  "type": "Type",
+                  "_label": "Physical Statement",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300418049",
+                      "type": "Type",
+                      "_label": "Brief Text"
+                    }
+                  ]
+                }
+              ],
+              "identified_by": [
+                {
+                  "type": "Name",
+                  "content": "Physical Description",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300404669",
+                      "type": "Type",
+                      "_label": "Display Title"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "LinguisticObject",
+              "content": "Purchased from Oskar Rescher in August 1959 on plain fund.",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435438",
+                  "type": "Type",
+                  "_label": "Provenance Statement"
+                }
+              ],
+              "identified_by": [
+                {
+                  "type": "Name",
+                  "content": "Ownership and Custodial History",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300404669",
+                      "type": "Type",
+                      "_label": "Display Title"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "subject_of": [
+            {
+              "type": "LinguisticObject",
+              "_label": "Text of Repository Page",
+              "digitally_carried_by": [
+                {
+                  "type": "DigitalObject",
+                  "_label": "Repository Page",
+                  "access_point": [
+                    {
+                      "id": "https://search.library.yale.edu/catalog/3779671",
+                      "type": "DigitalObject"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "member_of": [
+            {
+              "id": "https://lux.collections.yale.edu/data/set/e8647339-0041-4eeb-bd83-079f931e9e06",
+              "type": "Set",
+              "_label": "Special Collections (YUL)"
+            }
+          ],
+          "carries": [
+            {
+              "type": "LinguisticObject",
+              "language": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/concept/2b8c1ef3-fb14-4306-9d7c-d5b198acc3f8",
+                  "type": "Language",
+                  "_label": "Arabic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    ```
+
+2.  `HumanMadeObject → carries → LinguisticObject` \[`7778409`\]
 
     ```
     {
@@ -216,7 +377,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
     }
     ```
 
-2.  `HumanMadeObject → shows → VisualItem` \[`9777342`\]
+3.  `HumanMadeObject → shows → VisualItem` \[`9777342`\]
 
     ```
     {
@@ -349,7 +510,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
     }
     ```
 
-3.  `DigitalObject → digitally_carries → LinguisticObject` \[`6546882`\]
+4.  `DigitalObject → digitally_carries → LinguisticObject` \[`6546882`\]
 
     ```
     {
@@ -368,7 +529,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
     
     ```
 
-4.  `DigitalObject → digitally_shows → VisualItem` \[`12237283`\]
+5.  `DigitalObject → digitally_shows → VisualItem` \[`12237283`\]
 
     ```
     {
@@ -386,7 +547,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
     }
     ```
 
-5.  Standalone `DigitalObject` \[`12244893`\]
+6.  Standalone `DigitalObject` \[`12244893`\]
 
     ```
     {

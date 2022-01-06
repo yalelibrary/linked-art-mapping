@@ -1,5 +1,7 @@
 ---
-publisher: 
+author: timothy.thompson@yale.edu
+publisher: YUL Technical Services, Resource Discovery Services, Metadata Services Unit
+category: Entity extraction
 keyword: 
 ---
 
@@ -66,4 +68,6 @@ scriptInclusion: BOTH
         }
         ```
 
+
+**Parent topic:**[People](../concepts/people.md)
 

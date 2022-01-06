@@ -12,8 +12,8 @@ For person entities that are part of name/title entries in MARC, see [Complex wo
 
 -   **[People as agents](../concepts/people_as_agents.md)**  
 Entities extracted from MARC 100 and 700 fields.
--   **[Places as subjects](../concepts/places_as_subjects.md)**  
-
+-   **[People as subjects](../concepts/people_as_subjects.md)**  
+Entities extracted from MARC 600 fields.
 
 **Parent topic:**[Related entities](../tasks/related_entities.md)
 

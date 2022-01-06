@@ -3,7 +3,7 @@ author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 keyword: 
 ---
 
-# Dates \[draft\]
+# 008 dates
 
 Date values from `008` fixed field.
 
@@ -30,7 +30,7 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-`008[06]` is used to record the specific type of date or publication status. `008[07-14]` contains one or two four-character date values.
+`008[06]` is used to record the specific type of date or publication status. `008[07-14]` contains one or two date values.
 
 1.  Use the supertype value of the record-level resource to determine the default `generic_date_type` represented by the `008[07-14]` values.
 
@@ -53,32 +53,32 @@ scriptInclusion: NONE
 
 6.  Save the `specific_date_type` for subsequent processing.
 
-7.  Process the date values in `008[07-10]` and `008[11-14]` to test for nonnumeric characters \(e.g., `u`, `x`, `|`\).
+7.  Process the date values in `008[07-10]` and `008[11-14]` to test for non-numeric characters \(e.g., `\s` \[whitespace\], `u`, `x`, `\|` \[pipe\]\).
 
-8.  For each date value, replace the regular expression \[A-Za-z\\\|\] with `?`.
+8.  For each date value, replace the regular expression `[\sA-Za-z\|]` with `?`.
 
-9.  Save the values as `date_1_test` and `date_2_test`.
+9.  Save the values as `date_1_temp` and `date_2_temp`.
 
 10. Process the first date value and save as `date_1_val`.
 
-    -   If `date_1_test` only `?` characters, `date_1_val` is `false`.
-    -   Else, replace the regular expression `\?` with `0` in `date_1_test` as the value of `date_1_val`.
+    -   If `date_1_temp` contains only `?` characters, `date_1_val` is `false`.
+    -   Else, replace the regular expression `\?` with `0` in `date_1_temp` as the value of `date_1_val`.
 11. Process the second date value and save as `date_2_val`.
 
-    -   If `date_2_test` contains only `?` characters, `date_2_val` is `false`.
-    -   Else, if `date_2_test` is equal to `9999`, then set the value of `date_2_val` to `9999`.
-    -   Else, replace the regular expression `\?` in `date_2_test` with `9` as the value of `date_2_val`.
+    -   If `date_2_temp` contains only `?` characters, `date_2_val` is `false`.
+    -   Else, if `date_2_temp` is equal to `9999`, then set the value of `date_2_val` to `9999`.
+    -   Else, replace the regular expression `\?` in `date_2_temp` with `9` as the value of `date_2_val`.
 12. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
             -   **`date_1_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
             -   **`data_2_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
             -   **OR**
                 -   **`specific_date_type`**
@@ -96,7 +96,7 @@ scriptInclusion: NONE
 
     ```
     
-    if ($date_1_val castable as xs:integer and $date_2_val castable as xs:integer)
+    if ($date_1_val castable as integer and $date_2_val castable as integer)
     then
       if ($generic_date_type == "e" or ($generic_date_type == "d" and $journal_test == false))
         ...
@@ -113,7 +113,7 @@ scriptInclusion: NONE
 
     5.  Save the value as `content`.
 
-    6.  Construct an `xs:dateTime` value by concatenating `date_1_val` with `-01-01T00:00:00Z`.
+    6.  Construct a `dateTime` value by concatenating `date_1_val` with `-01-01T00:00:00Z`.
 
     7.  Save the result as `begin_of_the_begin`.
 
@@ -169,11 +169,11 @@ scriptInclusion: NONE
         -   **AND**
             -   **`date_1_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
             -   **`data_2_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
             -   **`specific_date_type`**
 
@@ -181,13 +181,13 @@ scriptInclusion: NONE
 
     1.  Save `date_1_val` as `content`.
 
-    2.  Construct an `xs:dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
+    2.  Construct a `dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
 
     3.  Save the result as `begin_of_the_begin`.
 
     4.  Increment the year value of `begin_of_the_begin` by one and save the value as `end_of_the_end`.
 
-    5.  For `date_1_val`, apply the default value of `generic_date_type` \(`publication)` and assign `date_1_val` to a publication activity.
+    5.  Assign `date_1_val` to a publication activity.
 
         -   **008\[06\] \(specific\_date\_type\)**
 
@@ -250,13 +250,13 @@ scriptInclusion: NONE
 
     6.  Save `date_2_val` as `content`.
 
-    7.  Construct an `xs:dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
+    7.  Construct a `dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
 
     8.  Save the result as `begin_of_the_begin`.
 
     9.  Increment the year value of `begin_of_the_begin` by one and save the value as `end_of_the_end`.
 
-    10. For `date_2_val`, override the default value of `generic_date_type` \(`publication)` and assign `date_2_val` to a `copyright` entity.
+    10. Assign `date_2_val` to a `copyright` entity.
 
         -   **008\[06\] \(specific\_date\_type\)**
 
@@ -264,7 +264,7 @@ scriptInclusion: NONE
 
         -   **generic\_date\_type**
 
-            publication/copyright
+            publication
 
         -   **008\[07-10\]**
 
@@ -320,11 +320,11 @@ scriptInclusion: NONE
         -   **AND**
             -   **`date_1_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
             -   **`data_2_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
             -   **`specific_date_type`**
 
@@ -332,13 +332,13 @@ scriptInclusion: NONE
 
     1.  Save `date_1_val` as `content`.
 
-    2.  Construct an `xs:dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
+    2.  Construct a `dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
 
     3.  Save the result as `begin_of_the_begin`.
 
     4.  Increment the year value of `begin_of_the_begin` by one and save the value as `end_of_the_end`.
 
-    5.  For `date_1_val`, apply the default value of `generic_date_type` and assign `date_1_val` to a `publishing` activity.
+    5.  Assign `date_1_val` to a `publishing` activity.
 
         -   **008\[06\] \(specific\_date\_type\)**
 
@@ -401,7 +401,7 @@ scriptInclusion: NONE
 
     6.  Save `date_2_val` as `content`.
 
-    7.  Construct an `xs:dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
+    7.  Construct an `dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
 
     8.  Save the result as `begin_of_the_begin`.
 
@@ -478,13 +478,13 @@ scriptInclusion: NONE
         -   **AND**
             -   **`date_1_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
             -   **`data_2_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
-                NOT `9999`
+                **NOT** `9999`
 
             -   **`generic_date_type`**
 
@@ -506,7 +506,7 @@ scriptInclusion: NONE
 
     6.  Save the resulting value as `content`.
 
-    7.  Construct an `xs:dateTime` value by concatenating `min_content` with `-01-01T00:00:00Z`.
+    7.  Construct an `dateTime` value by concatenating `min_content` with `-01-01T00:00:00Z`.
 
     8.  Save the result as `begin_of_the_begin`.
 
@@ -514,7 +514,7 @@ scriptInclusion: NONE
 
     10. Save the value as `end_of_the_end`.
 
-    11. Construct an `xs:dateTime` value by concatenating `end_of_the_end` with `-01-01T00:00:00Z`.
+    11. Construct an `dateTime` value by concatenating `end_of_the_end` with `-01-01T00:00:00Z`.
 
     12. If `generic_date_type` is `creation`, assign the dates to an `assembling` activity.
 
@@ -638,11 +638,11 @@ scriptInclusion: NONE
         -   **AND**
             -   **`date_1_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
             -   **`data_2_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
                 `9999`
 
@@ -658,7 +658,7 @@ scriptInclusion: NONE
 
     2.  Save the resulting value as `content`.
 
-    3.  Construct an `xs:dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
+    3.  Construct a `dateTime` value by concatenating `content` with `01-01T00:00:00Z`.
 
     4.  Save the result as `begin_of_the_begin`.
 
@@ -730,11 +730,11 @@ scriptInclusion: NONE
         -   **AND**
             -   **`date_1_val`**
 
-                castable as `xs:integer`
+                castable as `integer`
 
             -   **`data_2_val`**
 
-                NOT castable as `xs:integer`
+                **NOT** castable as `integer`
 
             -   **`generic_date_type`**
 
@@ -744,15 +744,13 @@ scriptInclusion: NONE
 
                 `any`
 
-    1.  Concatenate `date_1_val` with a hyphen \(`-`\).
+    1.  Save `date_1_val` as `content`.
 
-    2.  Save the resulting value as `content`.
+    2.  Construct a `dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
 
-    3.  Construct an `xs:dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
+    3.  Save the result as `begin_of_the_begin`.
 
-    4.  Save the result as `begin_of_the_begin`.
-
-    5.  Assign the date to a `publishing` activity.
+    4.  Assign the date to a `publishing` activity.
 
         -   **008\[06\] \(specific\_date\_type\)**
 
@@ -813,8 +811,187 @@ scriptInclusion: NONE
         }
         ```
 
+18. Construct a `TimeSpan` object to store the date values.
 
-**Parent topic:**[Descriptive content](../../concepts/descriptive_content.md)
+    -   **Conditions**
+        -   **AND**
+            -   **`date_1_val`**
 
-**Previous topic:**[Notes and statements](../../concepts/notes_and_statements.md)
+                **NOT** castable as `integer`
+
+            -   **`data_2_val`**
+
+                castable as `integer`
+
+            -   **`generic_date_type`**
+
+                `any`
+
+            -   **`specific_date_type`**
+
+                `any`
+
+    1.  Concatenate `date_1_val` with a hyphen \(`-`\).
+
+    2.  Save the resulting value as `content`.
+
+    3.  Construct a `dateTime` value by concatenating `content` with `01-01T00:00:00Z`.
+
+    4.  Save the result as `begin_of_the_begin`.
+
+    5.  Do not construct a value for `end_of_the_end`.
+
+    6.  Assign the date to a `creation` activity.
+
+        -   **008\[06\] \(specific\_date\_type\)**
+
+            r
+
+        -   **generic\_date\_type**
+
+            publication/creation
+
+        -   **008\[07-10\]**
+
+            `[none]`
+
+        -   **008\[11-14\]**
+
+            `1909`
+
+        `247158`
+
+        ```
+        {
+          "created_by": {
+            "type": "Creation",
+            "part": [
+              {
+                "type": "Creation",
+                "carried_out_by": [
+                  {
+                    "id": "https://lux.collections.yale.edu/data/person/6239d9cf-f4d5-4c93-9837-2243bca31a8a",
+                    "type": "Person",
+                    "_label": "Godart, Justin, 1871-"
+                  }
+                ],
+                "classified_as": [
+                  {
+                    "id": "https://lux.collections.yale.edu/data/concept/9d2c734e-afd3-44bd-972d-8cf441423edc",
+                    "type": "Type",
+                    "_label": "creator"
+                  }
+                ]
+              }
+            ],
+            "timespan": {
+              "type": "TimeSpan",
+              "begin_of_the_begin": "1909-01-01T00:00:00Z",
+              "identified_by": [
+                {
+                  "type": "Name",
+                  "content": "1909-",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300404669",
+                      "type": "Type",
+                      "_label": "Display Title"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+        ```
+
+19. Construct a `TimeSpan` object to store the date values.
+
+    -   **Conditions**
+        -   **AND**
+            -   **`date_1_val`**
+
+                **NOT** castable as `integer`
+
+            -   **`data_2_val`**
+
+                castable as `integer`
+
+            -   **`generic_date_type`**
+
+                `any`
+
+            -   **`specific_date_type`**
+
+                **NOT** `r`
+
+    1.  Save `date_2_val` as `content`.
+
+    2.  Construct a `dateTime` value by concatenating `content` with `-01-01T00:00:00Z`.
+
+    3.  Save the result as `begin_of_the_begin`.
+
+    4.  Assign the date to a `publishing` activity.
+
+        -   **008\[06\] \(specific\_date\_type\)**
+
+            q
+
+        -   **generic\_date\_type**
+
+            publication
+
+        -   **008\[07-10\]**
+
+            `[none]`
+
+        -   **008\[11-14\]**
+
+            `1960`
+
+        `128548`
+
+        ```
+        {
+          "used_for": [
+            {
+              "type": "Activity",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300054686",
+                  "type": "Type",
+                  "_label": "Publishing"
+                }
+              ],
+              "took_place_at": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/place/e7f47055-ea75-4e41-8c27-6bb4b075b4cc",
+                  "type": "Place"
+                }
+              ],
+              "timespan": {
+                "type": "TimeSpan",
+                "begin_of_the_begin": "1960-01-01T00:00:00Z",
+                "end_of_the_end": "1961-01-01T00:00:00Z",
+                "identified_by": [
+                  {
+                    "type": "Name",
+                    "content": "1960",
+                    "classified_as": [
+                      {
+                        "id": "http://vocab.getty.edu/aat/300404669",
+                        "type": "Type",
+                        "_label": "Display Title"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+        ```
+
+
+**Parent topic:**[Dates](../../tasks/dates/dates.md)
 

@@ -145,7 +145,7 @@ scriptInclusion: BOTH
 
     6.  Process top-level genre/form resources.
 
-        **Note:** Top-level resources representing genre/form headings should include an additional `classified_as` for `Format` to distinguish them from topical subject headings.
+        **Note:** Top-level resources representing genre/form headings should include an additional `classified_as` for `Genre` to distinguish them from topical subject headings.
 
         `4504`
 
@@ -157,9 +157,9 @@ scriptInclusion: BOTH
           "_label": "Photoplay editions",
           "classified_as": [
             {
-              "id": "http://vocab.getty.edu/aat/300226816",
+              "id": "http://www.wikidata.org/entity/Q483394",
               "type": "Type",
-              "_label": "Format"
+              "_label": "Genre"
             }
           ],
           "identified_by": [

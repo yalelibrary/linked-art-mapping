@@ -3,7 +3,7 @@ author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 keyword: [, ]
 ---
 
-# Production statement
+# Edition statement
 
 |Domains|Usage|
 |-------|-----|
@@ -20,8 +20,7 @@ name: ProductionStatement
 sampleBibs:
   - 3643333
 fieldSpec:
-  - 260abcefg
-  - 264abc
+  - 250ab
 trimPunctuation: false
 scriptInclusion: NONE
 ```
@@ -43,12 +42,12 @@ scriptInclusion: NONE
       "referred_to_by": [
         {
           "type": "LinguisticObject",
-          "content": "New York : Alfred A. Knopf, 1993, c1970",
+          "content": "1st Knopf ed.",
           "classified_as": [
             {
-              "id": "http://vocab.getty.edu/aat/300435436",
+              "id": "http://vocab.getty.edu/aat/300435435",
               "type": "Type",
-              "_label": "Production Statement",
+              "_label": "Edition Statement",
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300418049",

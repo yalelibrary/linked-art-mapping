@@ -11,11 +11,10 @@ Place entities derived from `MARC 034`.
 
 ```
 ---
-name: PlacesWithGeo
+name: PlacesWithGeographicCoordinatets
 sampleBibs:
   - 970151 # 008, 034
   - 3906934 # 008, 034
-  - 5123661 # 034 with duplicate values
 # Source data fields
 fieldSpec:
   - 034defg
@@ -28,9 +27,7 @@ scriptInclusion: NONE
 
 Geographic coordinates should be recorded as points or polygons using the [WKT syntax](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry). MARC 034 subfields representing latitude and longitude are not always clean or consistent, so care should be taken when processing the data. Sometimes, the data will be in decimal form \(e.g., `085.000000`\) and sometimes in *hdddmmss* \(hemisphere-degrees-minutes-seconds\) form.
 
-1.  Processing each `034` field separately and generate a separate top-level place resource for each.
-
-    Sometimes the latitude/longitude coordinates will be repeated in each pair of subfields. First check to see whether the information is repeated or whether there are four different values.
+1.  Sometimes the latitude/longitude coordinates will be repeated in each pair of subfields. First check to see whether the information is repeated or whether there are four different values.
 
     If `034d == 034e and 034f == 034g`, select the first nonempty occurrence of 034d and 034f.
 
@@ -65,11 +62,11 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
     "POINT(" + 034d + " " + 034f + ")"
     ```
 
-4.  Generate a top-level place resource, identified by an IRI, with the value of the WKT coordinates.
+4.  Generate a top-level Place resource, identified by an IRI, with the value of the WKT coordinates.
 
     1.  Use the value of the WKT string as a key for matching and merging Place entities with the same coordinates.
 
-    2.  As the `_label` and `Primary Name` of the Place entity, take the string value of the **first** `651a` subject heading in the MARC bibliographic record.
+    2.  As the `_label` and `Primary Name`of the Place entity, take the string value of the **first** `651a` subject heading in the MARC bibliographic record.
 
     3.  Include the string value of additional `651a` subject headings as `Name` objects in the `identified_by` array.
 
@@ -118,9 +115,9 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
     }
     ```
 
-5.  Add an embedded reference to the place entity within the record-level resource.
+5.  Add an embedded reference to the Place entity within the record-level resource.
 
-    1.  As the `_label` of the place entity, take the value of the top-level entity label.
+    1.  As the `_label` of the Place entity, take the value of the top-level entity `_label`.
 
     `970151`
 
