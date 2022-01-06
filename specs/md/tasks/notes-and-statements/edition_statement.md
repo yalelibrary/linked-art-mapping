@@ -1,6 +1,7 @@
 ---
 author: [timothy.thompson@yale.edu, timothy.thompson@yale.edu]
 keyword: []
+---
 
 # Edition statement
 
