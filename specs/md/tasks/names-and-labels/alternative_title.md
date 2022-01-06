@@ -20,13 +20,13 @@ Alternative title of a record-level entity. Taken from MARC `246`.
 
 ```
 ---
-        name: AlternativeTitle
-        sampleBibs:
-        - 242
-        fieldSpec:
-        - 246abfghinp
-        trimPunctuation: true
-        scriptInclusion: BOTH
+name: AlternativeTitle
+sampleBibs:
+  - 242
+fieldSpec:
+  - 246abfghinp
+trimPunctuation: true
+scriptInclusion: BOTH
 ```
 
 ## Processing steps and output
