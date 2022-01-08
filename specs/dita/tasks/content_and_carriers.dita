@@ -14,6 +14,8 @@
       <revised modified="2021-12-13"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-05"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-06"/>
     </critdates>
   </prolog>
   <taskbody>
@@ -147,7 +149,7 @@
       "referred_to_by": [
         {
           "type": "LinguisticObject",
-          "content": "in collection",
+          "content": "At the Library",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300133046",
@@ -336,7 +338,7 @@
   "referred_to_by": [
     {
       "type": "LinguisticObject",
-      "content": "in collection",
+      "content": "At the Library",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300133046",
@@ -451,7 +453,7 @@
   "referred_to_by": [
     {
       "type": "LinguisticObject",
-      "content": "in collection",
+      "content": "At the Library",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300133046",

@@ -33,19 +33,19 @@
               <entry>
                 <codeph>LinguisticObject</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>VisualItem</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>Set</codeph>
               </entry>
-              <entry>Do not repeat on nested<codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on nested <codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
@@ -66,10 +66,10 @@
     </section>
     <steps>
       <step>
-        <cmd>Skip<codeph>022</codeph>if<codeph>022y</codeph>(incorrect ISSN) or<codeph>022z</codeph>(cancelled ISSN).</cmd>
+        <cmd>Skip <codeph>022</codeph> if <codeph>022y</codeph> (incorrect ISSN) or <codeph>022z</codeph> (cancelled ISSN).</cmd>
       </step>
       <step>
-        <cmd>Get value of<codeph>022a</codeph>.</cmd>
+        <cmd>Get value of <codeph>022a</codeph>.</cmd>
       </step>
       <step>
         <cmd>

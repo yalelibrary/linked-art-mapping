@@ -34,13 +34,13 @@
               <entry>
                 <codeph>LinguisticObject</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>VisualItem</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
@@ -68,10 +68,10 @@ scriptInclusion: NONE</codeblock>
     </section>
     <steps id="steps_rzf_r13_krb">
       <step>
-        <cmd>Process the language statement values (MARC<codeph>546ab</codeph>).</cmd>
+        <cmd>Process the language statement values (MARC <codeph>546ab</codeph>).</cmd>
         <choices id="choices_szf_r13_krb">
           <choice>If both subfields (<codeph>546ab</codeph>) are present, join them with a whitespace character.</choice>
-          <choice>Else, output the string value of<codeph>546a</codeph>.</choice>
+          <choice>Else, output the string value of <codeph>546a</codeph>.</choice>
         </choices>
         <stepresult>
           <note id="note_tzf_r13_krb">This example is meant to illustrate a language statement and does not represent a complete JSON-LD document.</note>

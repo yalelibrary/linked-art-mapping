@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<subjectScheme collection-type="sequence" processing-role="normal" toc="yes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd">
+<subjectScheme collection-type="family" processing-role="normal" toc="yes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd">
   <title>MARC-to-Linked Art mapping</title>
   <topicmeta>
     <author>timothy.thompson@yale.edu </author>
@@ -56,11 +56,11 @@
     </critdates>
   </topicmeta>
   <hasPart>
-    <subjectdef collection-type="sequence" href="concepts/entity_extraction.dita" keys="Extraction" type="concept">
-      <subjectdef collection-type="sequence" href="concepts/lux_top-level_entities.dita" keys="TopLevel" type="concept">
-        <subjectdef collection-type="sequence" href="concepts/record_level_entities.dita" keys="RecordLevel" type="concept">
+    <subjectdef href="concepts/entity_extraction.dita" keys="Extraction" type="concept">
+      <subjectdef href="concepts/lux_top-level_entities.dita" keys="TopLevel" type="concept">
+        <subjectdef href="concepts/record_level_entities.dita" keys="RecordLevel" type="concept">
           <subjectdef href="tasks/content_and_carriers.dita" keys="ContentAndCarriers" type="task"/>
-          <subjectdef collection-type="sequence" href="tasks/supertypes/supertypes.dita" keys="Supertypes" type="concept">
+          <subjectdef href="tasks/supertypes/supertypes.dita" keys="Supertypes" type="concept">
             <!--<subjectdef href="concepts/supertypes/types.dita" keys="Types" processing-role="resource-only" toc="no"/>
             <subjectdef href="concepts/supertypes/formats.dita" keys="Formats" processing-role="resource-only" toc="no"/>
             <subjectdef href="concepts/supertypes/core_classes.dita" keys="CoreClasses" processing-role="resource-only" toc="no"/>-->
@@ -171,8 +171,8 @@
         </subjectdef>
       </subjectdef>
     </subjectdef>
-    <subjectdef collection-type="sequence" href="concepts/descriptive_content.dita" keys="Descriptive" type="concept">
-      <subjectdef collection-type="sequence" href="concepts/lux_embedded_entities.dita" type="concept" keys="EmbeddedEntities">
+    <subjectdef href="concepts/descriptive_content.dita" keys="Descriptive" type="concept">
+      <subjectdef href="concepts/lux_embedded_entities.dita" type="concept" keys="EmbeddedEntities">
         <subjectdef href="concepts/digital_objects.dita" type="task" keys="DigitalObjectsCatalog"/>
         <subjectdef href="concepts/digital_objects_asset_link.dita" keys="DigitalObjectsAssets" type="task"/>
       </subjectdef>

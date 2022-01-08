@@ -34,19 +34,19 @@
               <entry>
                 <codeph>LinguisticObject</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>VisualItem</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>Set</codeph>
               </entry>
-              <entry>Do not repeat on nested<codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on nested <codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
@@ -74,7 +74,7 @@ scriptInclusion: NONE</codeblock>
     </section>
     <steps>
       <step>
-        <cmd>Process the preferred citation note values (MARC<codeph>524a</codeph>).</cmd>
+        <cmd>Process the preferred citation note values (MARC <codeph>524a</codeph>).</cmd>
         <stepresult>
           <note>This example is meant to illustrate a preferred citation note and does not represent a complete JSON-LD document.</note>
           <yulbibid>72947</yulbibid>

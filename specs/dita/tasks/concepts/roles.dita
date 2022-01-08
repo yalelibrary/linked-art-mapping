@@ -13,6 +13,8 @@
       <revised modified="2021-10-04"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-04"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-07"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_entity"/>
     <metadata>
@@ -41,10 +43,7 @@ fieldSpec:
   - 611j4
   - 700e4
   - 710e4
-  - 711j4
-  - 800e4
-  - 810e4
-  - 811j4
+  - 711j4 
 trimPunctuation: true
 scriptInclusion: NONE]]></codeblock>
     </section>
@@ -52,7 +51,8 @@ scriptInclusion: NONE]]></codeblock>
       <title>Processing steps and output</title>
     </section>
     <context>
-      <p>The role of an agent within an activity is derived from <codeph>$e</codeph> (relator term for organizations and persons), <codeph>$j</codeph> (relator term for conferences/meetings), or <codeph>$4</codeph> (relationship code for any entity type). When those subfields are absent, a generic role of <codeph>creator</codeph> is assigned when <codeph>1XX</codeph> is the source or <codeph>contributor</codeph> when <codeph>7XX</codeph> is the source.</p>
+      <p>The role of an agent within an activity is derived from <codeph>$e</codeph> (relator term for organizations and persons), <codeph>$j</codeph> (relator term for conferences/meetings), or <codeph>$4</codeph> (relationship code for any entity type). When those subfields are absent, a generic role of <codeph>Creator</codeph> is assigned when <codeph>1XX</codeph> is the source or <codeph>Contributor</codeph> when <codeph>7XX</codeph> is the source.</p>
+      <p>Roles are typically used in the context of an activity. However, entities referenced as subjects may also have role terms assigned to them.</p>
       <p>The mapping table below should be used to generate unique concept entities for role terms. For entries in the table with a type of <codeph>translations</codeph>, the <codeph>Target</codeph> column represents a reference to an <q>authorized</q> version of the term that appears later in the table. For all other entries, the <codeph>Target</codeph> column represents an <codeph>equivalent</codeph> IRI that should be included in the top-level resource description for the role concept.</p>
       <p>
         <table id="table_h12_q3j_dsb">
@@ -1820,10 +1820,10 @@ scriptInclusion: NONE]]></codeblock>
         </stepresult>
       </step>
       <step>
-        <cmd>For each <codeph>1XX</codeph>, <codeph>6XX</codeph>, <codeph>7XX</codeph>, or <codeph>8XX</codeph> field, inspect subfields <codeph>e</codeph> (all but <codeph>111</codeph>, <codeph>611</codeph>, <codeph>711</codeph>, and <codeph>811</codeph>), <codeph>j</codeph> (only <codeph>X11)</codeph>, and <codeph>4</codeph> (all) for a role term or code.</cmd>
+        <cmd>For each <codeph>1XX</codeph> or <codeph>7XX</codeph> field, inspect each subfield <codeph>e</codeph> (all but <codeph>111</codeph> or <codeph>711</codeph>), <codeph>j</codeph> (only <codeph>X11)</codeph>, and <codeph>4</codeph> (all) for a role term or code.</cmd>
       </step>
       <step>
-        <cmd>Match role terms in <codeph>e</codeph> or <codeph>j</codeph> and role codes in <codeph>4</codeph> against the top-level entities corresponding to the terms and codes listed in the mapping table.</cmd>
+        <cmd><xref keyref="gloss-norm">Normalize</xref> and match role terms in <codeph>e</codeph> or <codeph>j</codeph> and role codes in <codeph>4</codeph> against the top-level entities corresponding to the terms and codes listed in the mapping table.</cmd>
       </step>
       <step>
         <cmd>For each <codeph>part</codeph> of an activity in a record-level resource, add a <codeph>classified_as</codeph> reference to the corresponding role concept.</cmd>
@@ -1847,7 +1847,7 @@ scriptInclusion: NONE]]></codeblock>
           {
             "id": "https://lux.collections.yale.edu/data/concept/81b7e2c2-b7bb-4bcb-a806-9bfc1838e317",
             "type": "Type",
-            "_label": "author"
+            "_label": "Author"
           }
         ]
       },
@@ -1864,7 +1864,7 @@ scriptInclusion: NONE]]></codeblock>
           {
             "id": "https://lux.collections.yale.edu/data/concept/271d291f-0d42-4abf-bf43-070b241edc98",
             "type": "Type",
-            "_label": "translator"
+            "_label": "Translator"
           }
         ]
       },
@@ -1881,7 +1881,7 @@ scriptInclusion: NONE]]></codeblock>
           {
             "id": "https://lux.collections.yale.edu/data/concept/e7e0a406-3b6c-4a89-b6c7-96536c08553c",
             "type": "Type",
-            "_label": "contributor"
+            "_label": "Contributor"
           }
         ]
       }
@@ -1890,7 +1890,49 @@ scriptInclusion: NONE]]></codeblock>
 }]]></codeblock>
         </stepresult>
       </step>
-      
+      <step>
+        <cmd>For each <codeph>6XX</codeph>, field, inspect each subfield <codeph>e</codeph> (all but <codeph>611</codeph>), <codeph>j</codeph> (only <codeph>611)</codeph>, and <codeph>4</codeph> (all) for a role term or code.</cmd>
+      </step>
+      <step>
+        <cmd><xref keyref="gloss-norm">Normalize</xref> and match role terms in <codeph>e</codeph> or <codeph>j</codeph> and role codes in <codeph>4</codeph> against the top-level entities corresponding to the terms and codes listed in the mapping table.</cmd>
+      </step>
+      <step>
+        <cmd>If the role term in <codeph>$e</codeph> is <codeph>depicted</codeph> or the code in <codeph>$4</codeph> is <codeph>dpc</codeph>, then generate a reference using the <codeph>represents</codeph> property rather than <codeph>about</codeph>.</cmd>
+        <stepresult>
+          <yulbibid>4887522</yulbibid>
+          <codeblock><![CDATA[{
+  "represents": [
+    {
+      "id": "https://lux.collections.yale.edu/data/person/fbb6aff5-5c18-4653-8db8-8cff23988ca4",
+      "type": "Person",
+      "_label": "Broughton, Jack, 1704-1789"
+    }
+  ]
+}]]></codeblock>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>Else, for all other <codeph>6XX</codeph> role terms or codes add a <codeph>classified_as</codeph> reference to the corresponding role concept with the referenced entity.</cmd>
+        <stepresult>
+          <yulbibid>6146780</yulbibid>
+          <codeblock><![CDATA[{
+  "about": [
+    {
+      "id": "https://lux.collections.yale.edu/data/person/6e2bc024-ad8b-4906-95ab-83f441a1d306",
+      "type": "Person",
+      "_label": "Schrade, Paul",
+      "classified_as": [
+          {
+            "id": "https://lux.collections.yale.edu/data/concept/e7e0a406-3b6c-4a89-b6c7-96536c08553c",
+            "type": "Type",
+            "_label": "Interviewee"
+          }
+        ]
+    }
+  ]
+}]]></codeblock>
+        </stepresult>
+      </step>      
     </steps>
   </taskbody>
 </task>

@@ -33,19 +33,19 @@
               <entry>
                 <codeph>LinguisticObject</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>VisualItem</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>Set</codeph>
               </entry>
-              <entry>Do not repeat on nested<codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on nested <codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
@@ -66,25 +66,25 @@
     </section>
     <steps>
       <step>
-        <cmd>Skip<codeph>020</codeph>if<codeph>020z</codeph>(canceled/invalid ISBN).</cmd>
+        <cmd>Skip <codeph>020</codeph> if <codeph>020z</codeph> (canceled/invalid ISBN).</cmd>
       </step>
       <step>
-        <cmd>Get value of<codeph>020a</codeph>.</cmd>
+        <cmd>Get value of <codeph>020a</codeph>.</cmd>
       </step>
       <step>
-        <cmd>Process any<codeph>020q</codeph>(qualifying information) values.</cmd>
+        <cmd>Process any <codeph>020q</codeph> (qualifying information) values.</cmd>
         <substeps>
           <substep>
-            <cmd>If 2 or more<codeph>020q</codeph>, join values with a whitespace character.</cmd>
+            <cmd>If 2 or more <codeph>020q</codeph>, join values with a whitespace character.</cmd>
           </substep>
           <substep>
-            <cmd>If value extracted from<codeph>020q</codeph>begins and ends with open/closing parentheses, return the value.</cmd>
+            <cmd>If value extracted from <codeph>020q</codeph> begins and ends with open/closing parentheses, return the value.</cmd>
           </substep>
           <substep>
             <cmd>Else, concatenate the value with open/closing parentheses.</cmd>
           </substep>
           <substep>
-            <cmd>Join the values extracted from<codeph>020a</codeph>and<codeph>020q</codeph>with a whitespace character.</cmd>
+            <cmd>Join the values extracted from <codeph>020a</codeph> and <codeph>020q</codeph> with a whitespace character.</cmd>
           </substep>
         </substeps>
       </step>

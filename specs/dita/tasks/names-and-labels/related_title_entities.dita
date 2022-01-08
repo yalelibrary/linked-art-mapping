@@ -40,10 +40,10 @@ scriptInclusion: NONE</codeblock>
     </section>
     <steps>
       <step>
-        <cmd>Process each entry in a<codeph>505</codeph>contents note as a top-level<codeph>LinguisticObject</codeph>.</cmd>
+        <cmd>Process each entry in a <codeph>505</codeph> contents note as a top-level <codeph>LinguisticObject</codeph>.</cmd>
         <substeps>
           <substep>
-            <cmd>If subfields<codeph>grt</codeph>are present, join the string values of MARC<codeph>505agrt</codeph>with a whitespace character.</cmd>
+            <cmd>If subfields <codeph>grt</codeph> are present, join the string values of MARC <codeph>505agrt</codeph>  with a whitespace character.</cmd>
           </substep>
           <substep>
             <cmd>Split the joined string on double hyphen characters (<codeph>--</codeph>).</cmd>

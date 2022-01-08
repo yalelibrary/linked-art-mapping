@@ -57,7 +57,7 @@
               <entry>
                 <codeph>Set</codeph>
               </entry>
-              <entry>Do not repeat on nested<codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on nested <codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
@@ -88,13 +88,13 @@ scriptInclusion: BOTH</codeblock>
     </section>
     <steps>
       <step>
-        <cmd>Process the main title values (MARC<codeph>245</codeph>and parallel<codeph>880</codeph>, if applicable).</cmd>
+        <cmd>Process the main title values (MARC <codeph>245</codeph> and parallel <codeph>880</codeph>, if applicable).</cmd>
         <substeps>
           <substep>
-            <cmd>Join the string value of MARC<codeph>245</codeph>subfields<codeph>abfghknps</codeph>(excluding<codeph>$6</codeph>) with a whitespace character.</cmd>
+            <cmd>Join the string value of MARC <codeph>245</codeph> subfields <codeph>abfghknps</codeph> (excluding <codeph>$6</codeph>) with a whitespace character.</cmd>
           </substep>
           <substep>
-            <cmd>If applicable, join the string value of parallel MARC<codeph>880</codeph>subfields<codeph>abfghknps</codeph>(excluding<codeph>$6</codeph>) with a whitespace character.</cmd>
+            <cmd>If applicable, join the string value of parallel MARC <codeph>880</codeph> subfields <codeph>abfghknps</codeph> (excluding <codeph>$6</codeph>) with a whitespace character.</cmd>
           </substep>
         </substeps>
         <stepresult>

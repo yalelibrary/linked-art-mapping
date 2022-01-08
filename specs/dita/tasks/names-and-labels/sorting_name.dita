@@ -43,19 +43,19 @@
               <entry>
                 <codeph>LinguisticObject</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>VisualItem</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>Set</codeph>
               </entry>
-              <entry>Do not repeat on nested<codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on nested <codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
@@ -84,82 +84,16 @@ scriptInclusion: NONE</codeblock>
     </section>
     <steps>
       <step>
-        <cmd>Determine the number of nonfiling characters from the MARC<codeph>245</codeph>second indicator value.</cmd>
+        <cmd>Determine the number of nonfiling characters from the MARC <codeph>245</codeph> second indicator value.</cmd>
         <choices>
-          <choice>If the second indicator is missing/corrupt or not castable as an integer, set the value to<codeph>0</codeph>.</choice>
-          <choice>Else, extract the value of<codeph>245</codeph>second indicator as an integer.</choice>
+          <choice>If the second indicator is missing/corrupt or not castable as an integer, set the value to <codeph>0</codeph>.</choice>
+          <choice>Else, extract the value of <codeph>245</codeph> second indicator as an integer.</choice>
         </choices>
         <substeps>
           <substep>
             <cmd>Using the string value of the main title, take the substring using the number of nonfiling characters extracted from<codeph>245</codeph>second indicator as offset.</cmd>
           </substep>
         </substeps>
-        <info>
-          <table>
-            <title>JSON values for sorting titles</title>
-            <tgroup cols="3">
-              <thead>
-                <row>
-                  <entry>JSON structure</entry>
-                  <entry>Description</entry>
-                  <entry>Default</entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry>
-                    <codeph>root → identified_by → [2]</codeph>
-                  </entry>
-                  <entry>When a parallel non-Latin script<codeph>Primary Name</codeph>is present, the<codeph>Sorting Name</codeph>is the third item in the<codeph>identified_by</codeph>array.</entry>
-                  <entry/>
-                </row>
-                <row>
-                  <entry>
-                    <codeph>root → identified_by → [2] → type</codeph>
-                  </entry>
-                  <entry/>
-                  <entry>
-                    <codeph>Name</codeph>
-                  </entry>
-                </row>
-                <row>
-                  <entry>
-                    <codeph>root → identified_by → [2] → content</codeph>
-                  </entry>
-                  <entry>String value of MARC<codeph>245</codeph>subfields with the number of nonfiling characters as offset</entry>
-                  <entry/>
-                </row>
-                <row>
-                  <entry>
-                    <codeph>root → identified_by → [2] → classified_as → id</codeph>
-                  </entry>
-                  <entry>IRI of the concept used to classify the sorting title</entry>
-                  <entry>
-                    <xref format="html" href="http://vocab.getty.edu/aat/300404672" scope="external"/>
-                  </entry>
-                </row>
-                <row>
-                  <entry>
-                    <codeph>root → identified_by → [2] → classified_as → type</codeph>
-                  </entry>
-                  <entry/>
-                  <entry>
-                    <codeph>Type</codeph>
-                  </entry>
-                </row>
-                <row>
-                  <entry>
-                    <codeph>root → identified_by → [2] → classified_as → _label</codeph>
-                  </entry>
-                  <entry>Label of the concept used to classify the main title</entry>
-                  <entry>
-                    <codeph>Sorting Name</codeph>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-        </info>
         <stepresult>
           <yulbibid>9447</yulbibid>
           <codeblock>{
