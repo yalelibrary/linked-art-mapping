@@ -27,7 +27,11 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  If `865|40|` or `865|41|` and the record-level resource is a `LinguisticObject`:
+1.  Output a `DigitalObject` link to a related digital asset using the URI recorded in `856u`.
+
+2.  If `856y` is present, add it to the embedded reference using `identified_by`.
+
+3.  If `865|40|` or `865|41|` and the record-level resource is a `LinguisticObject`:
 
     `358058`
 
@@ -54,10 +58,6 @@ scriptInclusion: NONE
       ]
     }
     ```
-
-2.  Output a `DigitalObject` link to a related digital asset using the URI recorded in `856u`.
-
-3.  If `856y` is present, add it to the embedded reference using `identified_by`.
 
 4.  If `865|40|` and the record-level resource is a `DigitalObject`:
 
