@@ -39,7 +39,7 @@ scriptInclusion: NONE
     {
       "digitally_carried_by": [
         {
-          "id": "http://hdl.handle.net/example2",
+          "id": "http://hdl.handle.net/example1",
           "type": "DigitalObject",
           "identified_by": [
             {
@@ -65,7 +65,7 @@ scriptInclusion: NONE
     {
       "access_point": [
         {
-          "id": "http://hdl.handle.net/example1",
+          "id": "http://hdl.handle.net/example2",
           "type": "DigitalObject"
         }
       ]
