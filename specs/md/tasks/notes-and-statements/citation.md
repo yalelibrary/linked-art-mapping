@@ -46,7 +46,7 @@ scriptInclusion: NONE
         {
           "id": "https://lux.collections.yale.edu/data/text/citation1",
           "type": "LinguisticObject",
-          "_label": "Edizioni italiane del XVI secolo
+          "_label": "Edizioni italiane del XVI secolo"
         }
       ]
     }

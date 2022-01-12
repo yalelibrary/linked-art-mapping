@@ -10,7 +10,7 @@ Complex works may appear as facets in complex subject headings.
 
 ## Processing steps and output
 
-1.  Apply the instructions in [Complex subject/genre headings and hierarchical associated places](../concepts/complex_subject_headings.md) and [Complex works](../concepts/name_title_entries.md) to produce the desired output.
+1.  Apply the instructions in [Complex subject/genre headings](../concepts/complex_subject_headings.md) and [Complex works](../concepts/name_title_entries.md) to produce the desired output.
 
     The `LinguisticObject` facet representing the work entity should be constructed according to [Complex works](../concepts/name_title_entries.md). However, the agent \(`Person` or `Group`\) facet should also be included as a separate facet under `influenced_by`.
 

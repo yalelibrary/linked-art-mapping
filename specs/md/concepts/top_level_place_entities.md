@@ -34,7 +34,7 @@ Processing of place entities depends on the data source in MARC:
 
 1.  `008[15-17]`: two- or three-letter code representing a country- or state-level place entity \(place of publication or production\)
 2.  `034`: latitude/longitude coordinates
-3.  `6XXz`, `651`, `691`, `751`, `752`: geographic subjects and subdivisions or other associated places are covered by [Creators, contributors, standalone works, simple subject/genre headings, and associated places](../tasks/concepts/simple_subject_headings.md) and [Complex subject/genre headings and hierarchical associated places](../tasks/concepts/complex_subject_headings.md)
+3.  `6XXz`, `651`, `691`, `751`, `752`: geographic subjects and subdivisions or other associated places are covered by [Creators, contributors, standalone works, simple subject/genre headings, and associated places](../tasks/concepts/simple_subject_headings.md) and [Complex subject/genre headings](../tasks/concepts/complex_subject_headings.md)
 4.  `26Xa`: place of publication.
 
     **Note:** `26Xa` is not currently modeled as a place entity, but as a string value in the [Production Statement](../tasks/notes-and-statements/production_statement.md).

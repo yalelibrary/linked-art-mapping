@@ -451,26 +451,46 @@ The mapping table below should be used to generate unique concept entities for r
     }
     ```
 
-8.  Else, for all other `6XX` role terms or codes add a `classified_as` reference to the corresponding role concept with the referenced entity.
+8.  Else, for all other `6XX` role terms or codes, construct a complex subject heading \(person/concept\) with the agent entity and role term as facets.
+
+    1.  For embedded reference instructions, see [People as subjects](../../concepts/people_as_subjects.md) or [Groups as subjects](../../concepts/groups_as_subjects.md).
 
     `6146780`
 
     ```
     {
-      "about": [
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://lux.collections.yale.edu/data/person/6e2bc024-ad8b-4906-95ab-83f441a1d306",
+      "type": "Type",
+      "_label": "Schrade, Paul -- Interviewee",
+      "identified_by": [
         {
-          "id": "https://lux.collections.yale.edu/data/person/6e2bc024-ad8b-4906-95ab-83f441a1d306",
-          "type": "Person",
-          "_label": "Schrade, Paul",
+          "type": "Name",
+          "content": "Schrade, Paul -- Interviewee",
           "classified_as": [
-              {
-                "id": "https://lux.collections.yale.edu/data/concept/e7e0a406-3b6c-4a89-b6c7-96536c08553c",
-                "type": "Type",
-                "_label": "Interviewee"
-              }
-            ]
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
         }
-      ]
+      ],
+      "created_by": {
+        "type": "Creation",
+        "influenced_by": [
+          {
+            "id": "https://lux.collections.yale.edu/data/person/6e2bc024-ad8b-4906-95ab-83f441a1d306",
+            "type": "Person",
+            "_label": "Schrade, Paul"
+          },
+          {
+            "id": "https://lux.collections.yale.edu/data/concept/e7e0a406-3b6c-4a89-b6c7-96536c08553c",
+            "type": "Type",
+            "_label": "Interviewee"
+          }
+        ]
+      }
     }
     ```
 

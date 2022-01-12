@@ -8,7 +8,7 @@ category: Entity extraction
 
 ## Processing steps and output
 
-1.  After applying the instructions in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](../tasks/concepts/simple_subject_headings.md) or [Complex subject/genre headings and hierarchical associated places](../tasks/concepts/complex_subject_headings.md), add an embedded reference to the associated place entity within the record-level resource.
+1.  After applying the instructions in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](../tasks/concepts/simple_subject_headings.md) or [Place hierarchies](../tasks/concepts/hierarchical_places.md), add an embedded reference to the associated place entity within the record-level resource.
 
     1.  The `_label` of the `attributed_by` structure should always be `associated place`.
 

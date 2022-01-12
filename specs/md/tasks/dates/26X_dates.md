@@ -76,10 +76,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 **\#1**
 
--   **ID**
-
-    1
-
 -   **Type**
 
     Publication or creation
@@ -98,10 +94,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 
 **\#2**
-
--   **ID**
-
-    2
 
 -   **Type**
 
@@ -122,10 +114,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 **\#3**
 
--   **ID**
-
-    3
-
 -   **Type**
 
     Publication and copyright
@@ -144,10 +132,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 
 **\#4**
-
--   **ID**
-
-    4
 
 -   **Type**
 
@@ -171,10 +155,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 **\#5**
 
--   **ID**
-
-    5
-
 -   **Type**
 
     Imprecise publication or creation
@@ -193,10 +173,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 
 **\#6**
-
--   **ID**
-
-    6
 
 -   **Type**
 
@@ -217,10 +193,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 **\#7**
 
--   **ID**
-
-    7
-
 -   **Type**
 
     Hyphenated publication or creation range \(open\)
@@ -240,10 +212,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 **\#8**
 
--   **ID**
-
-    8
-
 -   **Type**
 
     Imprecise hyphenated publication or creation range \(open\)
@@ -262,10 +230,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 
 **\#9**
-
--   **ID**
-
-    9
 
 -   **Type**
 
@@ -288,10 +252,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 **\#10**
 
--   **ID**
-
-    10
-
 -   **Type**
 
     Unhyphenated publication or creation range \(closed\)
@@ -310,10 +270,6 @@ Imprecise dates are typically represented by hyphens \(`-`\) to substitute unkno
 
 
 **\#11**
-
--   **ID**
-
-    11
 
 -   **Type**
 

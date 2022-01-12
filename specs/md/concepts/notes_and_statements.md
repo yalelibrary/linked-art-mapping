@@ -12,6 +12,8 @@ Nineteen note and statement types are currently mapped for LUX.
 
 -   **[Abstract](../tasks/notes-and-statements/abstract.md)**  
 Corresponds to the`520`note field in MARC.
+-   **[Table of contents](../tasks/notes-and-statements/table_of_contents.md)**  
+Corresponds to the`505`note field in MARC.
 -   **[Arrangement note](../tasks/notes-and-statements/arrangement_note.md)**  
 Corresponds to the `351` note field in MARC.
 -   **[Attribution statement](../tasks/notes-and-statements/attribution_statement.md)**  

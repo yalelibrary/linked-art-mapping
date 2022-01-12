@@ -79,6 +79,8 @@
                path="tasks/concepts/simple_subject_headings.html"/>
    <appContext helpID="complex_subject_headings"
                path="tasks/concepts/complex_subject_headings.html"/>
+   <appContext helpID="hierarchical_places"
+               path="tasks/concepts/hierarchical_places.html"/>
    <appContext helpID="citation_entities" path="tasks/citation_entities.html"/>
    <appContext helpID="related_title_entities"
                path="tasks/names-and-labels/related_title_entities.html"/>
@@ -148,6 +150,8 @@
    <appContext helpID="root_label" path="tasks/names-and-labels/root_label.html"/>
    <appContext helpID="notes" path="concepts/notes_and_statements.html"/>
    <appContext helpID="abstract" path="tasks/notes-and-statements/abstract.html"/>
+   <appContext helpID="table_of_contents"
+               path="tasks/notes-and-statements/table_of_contents.html"/>
    <appContext helpID="arrangement_note"
                path="tasks/notes-and-statements/arrangement_note.html"/>
    <appContext helpID="attribution_statement"

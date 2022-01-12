@@ -32,6 +32,10 @@ scriptInclusion: NONE
     -   Yale University Library
     -   Yale Center for British Art
     -   Yale University Art Gallery
+    1.  Within each top-level collection resource, include a reference to the group entity that is responsible for the collection.
+
+    2.  Generate a top-level group entity for each of the three campus divisions listed above.
+
     ```
     {
       "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -49,6 +53,7 @@ scriptInclusion: NONE
         "type": "Creation",
         "carried_out_by": [
           {
+            "id": "https://lux.collections.yale.edu/data/group/group-1",
             "type": "Group",
             "_label": "Yale University Library"
           }

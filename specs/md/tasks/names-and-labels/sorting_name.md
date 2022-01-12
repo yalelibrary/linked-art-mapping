@@ -38,6 +38,8 @@ scriptInclusion: NONE
     -   Else, extract the value of `245` second indicator as an integer.
     1.  Using the string value of the main title, take the substring using the number of nonfiling characters extracted from`245`second indicator as offset.
 
+    **Note:** The `Sorting Name` should only be added if it is **different from** the `Primary Name`.
+
     `9447`
 
     ```

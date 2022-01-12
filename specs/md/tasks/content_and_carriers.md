@@ -487,9 +487,9 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       ],
       "member_of": [
         {
-          "id": "https://lux.collections.yale.edu/data/set/e8647339-0041-4eeb-bd83-079f931e9e06",
+          "id": "https://lux.collections.yale.edu/data/set/collection1",
           "type": "Set",
-          "_label": "Special Collections (YUL)"
+          "_label": "Yale University Library"
         }
       ],
       "produced_by": {

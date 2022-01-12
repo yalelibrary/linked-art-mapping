@@ -55,8 +55,10 @@ Complex entries include a reference to two or more entity types. Complex entries
 
 -   **[Creators, contributors, standalone works, simple subject/genre headings, and associated places](../tasks/concepts/simple_subject_headings.md)**  
 Related resources that represent a single entity type.
--   **[Complex subject/genre headings and hierarchical associated places](../tasks/concepts/complex_subject_headings.md)**  
+-   **[Complex subject/genre headings](../tasks/concepts/complex_subject_headings.md)**  
 Subject headings representing two or more entity types.
+-   **[Place hierarchies](../tasks/concepts/hierarchical_places.md)**  
+Place entities represented as a hierarchy.
 -   **[Citation entities](../tasks/citation_entities.md)**  
 
 -   **[Related title entities](../tasks/names-and-labels/related_title_entities.md)**  

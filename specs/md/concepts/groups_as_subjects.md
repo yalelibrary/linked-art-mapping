@@ -10,7 +10,7 @@ Entities extracted from MARC 61X fields.
 
 ## Processing steps and output
 
-1.  After applying the instructions in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](../tasks/concepts/simple_subject_headings.md) or [Complex subject/genre headings and hierarchical associated places](../tasks/concepts/complex_subject_headings.md), add an embedded reference to the group entity within the record-level resource.
+1.  After applying the instructions in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](../tasks/concepts/simple_subject_headings.md) or [Complex subject/genre headings](../tasks/concepts/complex_subject_headings.md), add an embedded reference to the group entity within the record-level resource.
 
     1.  As the \_label of the group entity, take the value of the top-level entity label.
 

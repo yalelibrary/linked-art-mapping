@@ -5,11 +5,11 @@ category: Entity extraction
 keyword: Assigned
 ---
 
-# Complex subject/genre headings and hierarchical associated places
+# Complex subject/genre headings
 
 Subject headings representing two or more entity types.
 
-Apply these instructions for field `752` \(hierarchical place name\) and when a `6XX` field includes any of the subdivision subfields `vxyz`.
+Apply these instructions when a `6XX` field includes any of the subdivision subfields `vxyz`.
 
 **Note:** `600`, `610`, `611`, and `69X` entries--except for `695`--that include a subfield `t` should not be processed using this spec. See instead [Complex works](name_title_entries.md).
 
@@ -17,7 +17,7 @@ Apply these instructions for field `752` \(hierarchical place name\) and when a 
 
 ```
 ---
-name: ComplexSubjectHeadingsAndAsociatedPlaces
+name: ComplexSubjectHeadings
 sampleBibs:
   - 9564880
   - 3145537 # 630
@@ -37,7 +37,6 @@ fieldSpec:
   - 69304abcdeguvxyz
   - 69404acdegjnquvxyz
   - 695014adfghklmnoprstvxyz
-  - 752014abcdefgh
 trimPunctuation: true
 scriptInclusion: BOTH
 ```
@@ -73,7 +72,6 @@ scriptInclusion: BOTH
         |Group|693|abcdgvxyz|
         |Group|694|acdgnquvxyz|
         |LinguisticObject|695|adfhklmnoprst|
-        |Place|752|abcdfgh|
 
     3.  [Normalize](../../glossary/normalization.md) and match string values.
 
@@ -81,7 +79,7 @@ scriptInclusion: BOTH
 
         **Note:** The `Type` of the `equivalent` reference should match the `Type` of the top-level resource.
 
-2.  Within the top-level resource corresponding to the `752` or `6XX` field, model each subdivision in the heading as a facet.
+2.  Within the top-level resource corresponding to the `6XX` field, model each subdivision in the heading as a facet.
 
 3.  Generate a top-level resource for each unique facet.
 
@@ -110,13 +108,6 @@ scriptInclusion: BOTH
         |693|abcdg|
         |694|acdgnqu|
         |695|adfhklmnoprst|
-        |752|a|
-        |752|b|
-        |752|c|
-        |752|d|
-        |752|f|
-        |752|g|
-        |752|h|
 
     3.  Determine the `type` value for each facet from the tag and subfield values in MARC according to the facet type mapping table below.
 
@@ -141,18 +132,129 @@ scriptInclusion: BOTH
 
         **Note:** Top-level genre/form \(`655`\) resources should include a `Genre` classification, as shown in [Creators, contributors, standalone works, simple subject/genre headings, and associated places](simple_subject_headings.md).
 
-    `9564880`
+        `9564880`
+
+        ```
+        {
+          "@context": "https://linked.art/ns/v1/linked-art.json",
+          "id": "https://lux.collections.yale.edu/data/event/92a599a2-2117-43f9-be3e-6e07f36cb2a5",
+          "type": "Period",
+          "_label": "2nd century",
+          "identified_by": [
+            {
+              "type": "Name",
+              "content": "2nd century",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404670",
+                  "type": "Type",
+                  "_label": "Primary Name"
+                }
+              ]
+            }
+          ]
+        }
+        ```
+
+4.  When there are multiple geographic subdivisions \(`$z`\), apply the instructions in [Place hierarchies](hierarchical_places.md).
+
+5.  Join the string values of the facets with space-surrounded double hyphens \(`--`\) to output the `_label` and `content` values of the full precoordinated heading.
+
+6.  Add an embedded reference to the facet resources within the top-level resource for the full heading.
+
+7.  Process `6XX` entries for complex subject headings.
+
+    When two or more geographic subdivisions are present, only a single facet should be output to represent the last \(most specific\) place entity in the heading.
+
+    Include the value of all subdivisions in the `_label` and `Primary Name` for the concept, but do not generate a facet resource for intermediate geographic subdivisions.
+
+    `3802854`
+
+    ```
+    650 0 $a Folk songs, Romanian $z Romania $z Loviștea Region $v Texts.
+    ```
 
     ```
     {
       "@context": "https://linked.art/ns/v1/linked-art.json",
-      "id": "https://lux.collections.yale.edu/data/event/92a599a2-2117-43f9-be3e-6e07f36cb2a5",
-      "type": "Period",
-      "_label": "2nd century",
+      "id": "https://lux.collections.yale.edu/data/concept/70db3ab1-33fa-4123-8217-2d8c85576aa9",
+      "type": "Type",
+      "_label": "Folk songs, Romanian -- Romania -- Loviștea Region -- Texts",
       "identified_by": [
         {
           "type": "Name",
-          "content": "2nd century",
+          "content": "Folk songs, Romanian -- Romania -- Loviștea Region -- Texts",
+           "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        }
+      ],
+      "created_by": {
+        "type": "Creation",
+        "influenced_by": [
+          {
+            "id": "https://lux.collections.yale.edu/data/concept/75bb7d9f-2d42-4219-8790-62eacbf10f7a",
+            "type": "Type",
+            "_label": "Folk songs, Romanian"
+          },     
+          {
+            "id": "https://lux.collections.yale.edu/data/place/23e3171a-f151-4c54-aee3-afb13109da61",
+            "type": "Place",
+            "_label": "Loviștea Region"
+          },
+          {
+            "id": "https://lux.collections.yale.edu/data/concept/f27fdcfa-e945-4a86-a623-57c418c8780d",
+            "type": "Type",
+            "_label": "Texts"
+          }
+        ]
+      }
+    }
+    ```
+
+    ```
+    {
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://lux.collections.yale.edu/data/place/23e3171a-f151-4c54-aee3-afb13109da61",
+      "type": "Place",
+      "_label": "Loviștea Region",
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Loviștea Region",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        }
+      ],
+      "part_of": [
+        {
+          "id": "https://lux.collections.yale.edu/data/place/8659a573-f14f-4cc9-ab3d-41b56ddb9d78",
+          "type": "Place",
+          "_label": "Romania"
+        }
+      ]
+    }
+    ```
+
+    ```
+    {
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://lux.collections.yale.edu/data/place/8659a573-f14f-4cc9-ab3d-41b56ddb9d78",
+      "type": "Place",
+      "_label": "Romania",
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Romania",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300404670",
@@ -165,157 +267,98 @@ scriptInclusion: BOTH
     }
     ```
 
-4.  Join the string values of the facets with space-surrounded double hyphens \(`--`\) to output the `_label` and `content` values of the full precoordinated heading.
+    `9564880`
 
-5.  Add an embedded reference to the facet resources within the top-level resource for the full heading.
-
-    1.  Process `752` entries for associated places.
-
-        `35599`
-
-        **Note:** IRIs in the example below are for illustration only and should be replaced with system-generated UUIDs.
-
-        ```
+    ```
+    {
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://lux.collections.yale.edu/data/concept/24f1b754-9566-4f38-8c61-9ce4082606aa",
+      "type": "Type",
+      "_label": "Death -- Religious aspects -- Christianity -- History -- 2nd century",
+      "identified_by": [
         {
-          "@context": "https://linked.art/ns/v1/linked-art.json",
-          "id": "https://lux.collections.yale.edu/data/place/752-place",
-          "type": "Place",
-          "_label": "United States -- New York (State) -- New York -- Brooklyn",
-          "identified_by": [
+          "type": "Name",
+          "content": "Death -- Religious aspects -- Christianity -- History -- 2nd century",
+          "classified_as": [
             {
-              "type": "Name",
-              "content": "United States -- New York (State) -- New York -- Brooklyn",
-              "classified_as": [
-                {
-                  "id": "http://vocab.getty.edu/aat/300404670",
-                  "type": "Type",
-                  "_label": "Primary Name"
-                }
-              ]
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
             }
-          ],
-          "created_by": {
-            "type": "Creation",
-            "influenced_by": [
-              {
-                "id": "https://lux.collections.yale.edu/data/place/752-place-1",
-                "type": "Place",
-                "_label": "United States"
-              },
-              {
-                "id": "https://lux.collections.yale.edu/data/place/752-place-2",
-                "type": "Place",
-                "_label": "New York (State)"
-              },
-              {
-                "id": "https://lux.collections.yale.edu/data/place/752-place-3",
-                "type": "Place",
-                "_label": "New York"
-              },
-              {
-                "id": "https://lux.collections.yale.edu/data/place/752-place-4",
-                "type": "Place",
-                "_label": "Brooklyn"
-              }
-            ]
-          }
+          ]
         }
-        ```
+      ],
+      "created_by": {
+        "type": "Creation",
+        "influenced_by": [
+          {
+            "id": "https://lux.collections.yale.edu/data/concept/c54ba0ac-c106-4afe-8007-cb4a34cf0bd7",
+            "type": "Type",
+            "_label": "Death"
+          },
+          {
+            "id": "https://lux.collections.yale.edu/data/concept/b273c64d-a9bb-4c2e-bb3f-5c13a6825a55",
+            "type": "Type",
+            "_label": "Religious aspects"
+          },
+          {
+            "id": "https://lux.collections.yale.edu/data/concept/33a05e84-57bc-4f1d-a792-0de7758bd0d8",
+            "type": "Type",
+            "_label": "Christianity"
+          },
+          {
+            "id": "https://lux.collections.yale.edu/data/concept/d43ab750-6e8d-4f7c-b3e2-d5a8dc134a37",
+            "type": "Type",
+            "_label": "History"
+          },
+          {
+            "id": "https://lux.collections.yale.edu/data/event/92a599a2-2117-43f9-be3e-6e07f36cb2a5",
+            "type": "Period",
+            "_label": "2nd century"
+          }
+        ]
+      }
+    }
+    ```
 
-    2.  Process `6XX` entries for complex subject headings.
+    `3145537`
 
-        `9564880`
-
-        ```
+    ```
+    {
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://lux.collections.yale.edu/data/concept/06eddac8-f6b9-442c-a0e5-c7a5a2c55ba1",
+      "type": "Type",
+      "_label": "Qurʼan -- Hermeneutics -- History",
+      "identified_by": [
         {
-          "@context": "https://linked.art/ns/v1/linked-art.json",
-          "id": "https://lux.collections.yale.edu/data/concept/24f1b754-9566-4f38-8c61-9ce4082606aa",
-          "type": "Type",
-          "_label": "Death -- Religious aspects -- Christianity -- History -- 2nd century",
-          "identified_by": [
-            {
-              "type": "Name",
-              "content": "Death -- Religious aspects -- Christianity -- History -- 2nd century",
-              "classified_as": [
-                {
-                  "id": "http://vocab.getty.edu/aat/300404670",
-                  "type": "Type",
-                  "_label": "Primary Name"
-                }
-              ]
-            }
-          ],
-          "created_by": {
-            "type": "Creation",
-            "influenced_by": [
-              {
-                "id": "https://lux.collections.yale.edu/data/concept/c54ba0ac-c106-4afe-8007-cb4a34cf0bd7",
-                "type": "Type",
-                "_label": "Death"
-              },
-              {
-                "id": "https://lux.collections.yale.edu/data/concept/b273c64d-a9bb-4c2e-bb3f-5c13a6825a55",
-                "type": "Type",
-                "_label": "Religious aspects"
-              },
-              {
-                "id": "https://lux.collections.yale.edu/data/concept/33a05e84-57bc-4f1d-a792-0de7758bd0d8",
-                "type": "Type",
-                "_label": "Christianity"
-              },
-              {
-                "id": "https://lux.collections.yale.edu/data/concept/d43ab750-6e8d-4f7c-b3e2-d5a8dc134a37",
-                "type": "Type",
-                "_label": "History"
-              },
-              {
-                "id": "https://lux.collections.yale.edu/data/event/92a599a2-2117-43f9-be3e-6e07f36cb2a5",
-                "type": "Period",
-                "_label": "2nd century"
-              }
-            ]
-          }
+          "type": "Name",
+          "content": "Qurʼan -- Hermeneutics -- History"
         }
-        ```
-
-        `3145537`
-
-        ```
-        {
-          "@context": "https://linked.art/ns/v1/linked-art.json",
-          "id": "https://lux.collections.yale.edu/data/concept/06eddac8-f6b9-442c-a0e5-c7a5a2c55ba1",
-          "type": "Type",
-          "_label": "Qurʼan -- Hermeneutics -- History",
-          "identified_by": [
-            {
-              "type": "Name",
-              "content": "Qurʼan -- Hermeneutics -- History"
-            }
-          ],
-          "created_by": {
-            "type": "Creation",
-            "influenced_by": [
-              {
-                "id": "https://lux.collections.yale.edu/data/text/1a429a8f-b77c-4956-811c-c9fc5237eb8d",
-                "type": "LinguisticObject",
-                "_label": "Qurʼan"
-              },
-              {
-                "id": "https://lux.collections.yale.edu/data/concept/71abaf42-a479-41bf-bd6f-2cf6aeca2060",
-                "type": "Type",
-                "_label": "Hermeneutics"
-              },
-              {
-                "id": "https://lux.collections.yale.edu/data/concept/d43ab750-6e8d-4f7c-b3e2-d5a8dc134a37",
-                "type": "Type",
-                "_label": "History"
-              }
-            ]
+      ],
+      "created_by": {
+        "type": "Creation",
+        "influenced_by": [
+          {
+            "id": "https://lux.collections.yale.edu/data/text/1a429a8f-b77c-4956-811c-c9fc5237eb8d",
+            "type": "LinguisticObject",
+            "_label": "Qurʼan"
+          },
+          {
+            "id": "https://lux.collections.yale.edu/data/concept/71abaf42-a479-41bf-bd6f-2cf6aeca2060",
+            "type": "Type",
+            "_label": "Hermeneutics"
+          },
+          {
+            "id": "https://lux.collections.yale.edu/data/concept/d43ab750-6e8d-4f7c-b3e2-d5a8dc134a37",
+            "type": "Type",
+            "_label": "History"
           }
-        }
-        ```
+        ]
+      }
+    }
+    ```
 
-6.  If a `752` or `6XX` field in MARC includes a `$0` with an IRI, output an`equivalent`reference.
+8.  If a `752` or `6XX` field in MARC includes a `$0` with an IRI, output an `equivalent` reference.
 
     `13146411`
 
@@ -362,7 +405,7 @@ scriptInclusion: BOTH
     }
     ```
 
-7.  In each referring record-level resource \(`DigitalObject`, `HumanMadeObject`, `LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the concept entity.
+9.  In each referring record-level resource \(`DigitalObject`, `HumanMadeObject`, `LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the concept entity.
 
     1.  For concept \(`Type`\) entities, see [Subject and genre/form headings](subject_headings.md).
 

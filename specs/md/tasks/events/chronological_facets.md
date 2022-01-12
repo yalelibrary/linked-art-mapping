@@ -13,7 +13,7 @@ Event entities represented by chronological subdivisions appear only in complex 
 
 ## Processing steps and output
 
-1.  See the [Complex subject/genre headings and hierarchical associated places](../concepts/complex_subject_headings.md) specification for details.
+1.  See the [Complex subject/genre headings](../concepts/complex_subject_headings.md) specification for details.
 
 
 **Parent topic:**[Events](../../concepts/events.md)

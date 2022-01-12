@@ -44,6 +44,13 @@ scriptInclusion: NONE
             {
               "type": "DigitalObject",
               "_label": "Repository Page",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300264578",
+                  "type": "Type",
+                  "_label": "Web Page"
+                }
+              ],
               "access_point": [
                 {
                   "id": "https://search.library.yale.edu/catalog/358058",
