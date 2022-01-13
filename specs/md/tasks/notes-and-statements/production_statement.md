@@ -69,7 +69,7 @@ scriptInclusion: NONE
 
 `31500`
 
-**Note:** This example is derived from a record with multiple `260` fields that include subfield `3`_s_ to refer to separate parts of the resource.
+**Note:** This example is derived from a record with multiple `260` fields that include subfield `3` to refer to separate parts of the resource.
 
 ```
 {
