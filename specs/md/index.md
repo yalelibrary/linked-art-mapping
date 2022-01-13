@@ -130,7 +130,7 @@
         -   [Provenance statement](tasks/notes-and-statements/provenance_statement.md)
         -   [Acquisition statement](tasks/notes-and-statements/acquisition_statement.md)
         -   [Reproduction statement](tasks/notes-and-statements/reproduction_statement.md)
-        -   [Production statement](tasks/notes-and-statements/production_statement.md)
+        -   [Production statement - v1.2](tasks/notes-and-statements/production_statement.md)
         -   [Edition statement](tasks/notes-and-statements/edition_statement.md)
     -   [Dates](tasks/dates/dates.md)
         -   [008 dates](tasks/dates/008_dates.md)
