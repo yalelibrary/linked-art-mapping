@@ -4,7 +4,7 @@ publisher: YUL Technical Services, Resource Discovery Services, Metadata Service
 category: Entity extraction
 ---
 
-# Audio
+# Audio Works
 
 -   **[Music](../../tasks/supertypes/music.md)**  
 

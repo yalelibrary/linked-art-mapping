@@ -126,6 +126,9 @@
    <appContext helpID="digital_objects" path="concepts/digital_objects.html"/>
    <appContext helpID="digital_objects_asset_link"
                path="concepts/digital_objects_asset_link.html"/>
+   <appContext helpID="publication_activities"
+               path="concepts/publication_activities.html"/>
+   <appContext helpID="copyright_entity" path="concepts/copyright_entity.html"/>
    <appContext helpID="identifiers" path="concepts/identifiers.html"/>
    <appContext helpID="voyager_bib_id" path="tasks/identifiers/orbis_bib_id.html"/>
    <appContext helpID="library_of_congress_control_number_lccn"

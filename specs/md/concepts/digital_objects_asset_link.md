@@ -7,9 +7,9 @@ keyword:
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related`HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related`HumanMadeObject`.|
-|`Set`|Do not repeat on nested`members_exemplified_by → HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
 |`DigitalObject`| |
 
 ## Source data
@@ -21,7 +21,7 @@ sampleBibs:
   - 358058
 fieldSpec:  
   - 856|4*|uy
-trimPunctuation: false
+trimPunctuation: true
 scriptInclusion: NONE
 ```
 

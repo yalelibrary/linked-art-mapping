@@ -4,7 +4,7 @@ publisher: YUL Technical Services, Resource Discovery Services, Metadata Service
 category: Entity extraction
 ---
 
-# Cartography
+# Cartographic Works
 
 Any materials representing, in whole or part, the earth or any celestial body at any scale.
 

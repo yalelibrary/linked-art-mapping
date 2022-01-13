@@ -90,7 +90,7 @@ conditions:
 }
 ```
 
-**Parent topic:**[Cartography](../../tasks/supertypes/cartographicformats.md)
+**Parent topic:**[Cartographic Works](../../tasks/supertypes/cartographicformats.md)
 
 **Parent topic:**[Books](../../tasks/supertypes/books.md)
 

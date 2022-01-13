@@ -14,6 +14,10 @@ Embedded entities are linked within record-level resources, but do not have a to
 
 -   **[Digital object link to asset](../concepts/digital_objects_asset_link.md)**  
 
+-   **[Publication activities](../concepts/publication_activities.md)**  
+Activities with information from `26X` fields.
+-   **[Copyright entities](../concepts/copyright_entity.md)**  
+
 
 **Parent topic:**[Descriptive content](../concepts/descriptive_content.md)
 
