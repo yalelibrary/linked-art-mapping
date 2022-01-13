@@ -36,17 +36,17 @@ scriptInclusion: NONE
 
     -   If the second indicator is missing/corrupt or not castable as an integer, set the value to `0`.
     -   Else, extract the value of `245` second indicator as an integer.
-    1.  Using the string value of the main title, take the substring using the number of nonfiling characters extracted from`245`second indicator as offset.
+    1.  If the value of `245` second indicator is `0`, do not generate a `Sorting Name`.
 
-    **Note:** The `Sorting Name` should only be added if it is **different from** the `Primary Name`.
+    2.  Else, using the string value of the main title, take the substring using the number of nonfiling characters extracted from`245`second indicator as offset.
 
     `9447`
 
     ```
     {
-      "id": "https://lux.collections.yale.edu/data/text/c0fd4d84-4b50-496d-a56e-ebf952f8dcf2",
+      "id": "https://lux.collections.yale.edu/data/text/49a9dae9-0692-4957-9870-8c49fdf3f064",
       "type": "LinguisticObject",
-      "_label": "韓國 의 선비 文化.",
+      "_label": "A raisin in the sun",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300028051",
@@ -54,17 +54,22 @@ scriptInclusion: NONE
           "_label": "Books",
           "classified_as": [
             {
-              "id": "http://vocab.getty.edu/aat/300226816",
+              "id": "http://vocab.getty.edu/aat/300435443",
               "type": "Type",
-              "_label": "Format"
+              "_label": "Type of Work"
             }
           ]
+        },
+        {
+          "id": "https://lux.collections.yale.edu/data/concept/77f2f78b-f595-4e8a-8165-5d6cd114d202",
+          "type": "Type",
+          "_label": "PS3515.A515"
         }
       ],
       "identified_by": [
         {
           "type": "Name",
-          "content": "Hanʼguk ŭi sŏnbi munhwa",
+          "content": "A raisin in the sun",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300404670",
@@ -75,25 +80,7 @@ scriptInclusion: NONE
         },
         {
           "type": "Name",
-          "content": "韓國 의 선비 文化.",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300404670",
-              "type": "Type",
-              "_label": "Primary Name"
-            }
-          ],
-          "language": [
-            {
-              "id": "https://lux.collections.yale.edu/data/concept/70cb6397-2b2f-400c-b887-70fd80969c8b",
-              "type": "Language",
-              "_label": "und"
-            }
-          ]
-        },
-        {
-          "type": "Name",
-          "content": "Hanʼguk ŭi sŏnbi munhwa",
+          "content": "raisin in the sun",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300404672",

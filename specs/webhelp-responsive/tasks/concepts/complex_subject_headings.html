@@ -479,7 +479,7 @@ scriptInclusion: BOTH</code></pre>
       </li><li class="- topic/li task/step li step">
         <span class="- topic/ph task/cmd ph cmd">Process <code class="+ topic/ph pr-d/codeph ph codeph">6XX</code> entries for complex subject headings.</span>
         <div class="- topic/itemgroup task/info itemgroup info">
-          <p class="- topic/p p">When two or more geographic subdivisions are present, only a single facet should be output to represent the last (most specific) place entity in the heading.</p>
+          <p class="- topic/p p">When <code class="+ topic/ph pr-d/codeph ph codeph">651a</code> is immediately followed by subfield <code class="+ topic/ph pr-d/codeph ph codeph">$z</code> or when two or more geographic subdivisions (<code class="+ topic/ph pr-d/codeph ph codeph">$z</code>) are present, only a single facet should be output to represent the last (most specific) place entity in the heading.</p>
           <p class="- topic/p p">Include the value of all subdivisions in the <code class="+ topic/ph pr-d/codeph ph codeph">_label</code> and <code class="+ topic/ph pr-d/codeph ph codeph">Primary Name</code> for the concept, but do not generate a facet resource for intermediate geographic subdivisions.</p>
         </div>
         <div class="- topic/itemgroup task/stepxmp itemgroup stepxmp">
@@ -660,7 +660,7 @@ scriptInclusion: BOTH</code></pre>
           </div>
         </div>
       </li><li class="- topic/li task/step li step">
-        <span class="- topic/ph task/cmd ph cmd">If a <code class="+ topic/ph pr-d/codeph ph codeph">752</code> or <code class="+ topic/ph pr-d/codeph ph codeph">6XX</code> field in MARC includes a <code class="+ topic/ph pr-d/codeph ph codeph">$0</code> with an IRI, output an <code class="+ topic/ph pr-d/codeph ph codeph">equivalent</code> reference.</span>
+        <span class="- topic/ph task/cmd ph cmd">If a <code class="+ topic/ph pr-d/codeph ph codeph">6XX</code> field in MARC includes a <code class="+ topic/ph pr-d/codeph ph codeph">$0</code> with an IRI, output an <code class="+ topic/ph pr-d/codeph ph codeph">equivalent</code> reference.</span>
         <div class="- topic/itemgroup task/stepresult itemgroup stepresult">
           <code class="+ topic/ph pr-d/codeph yul-d/yulbibid ph codeph yulbibid">13146411</code>
           <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>{

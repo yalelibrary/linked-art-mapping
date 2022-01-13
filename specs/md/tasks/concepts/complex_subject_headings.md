@@ -164,7 +164,7 @@ scriptInclusion: BOTH
 
 7.  Process `6XX` entries for complex subject headings.
 
-    When two or more geographic subdivisions are present, only a single facet should be output to represent the last \(most specific\) place entity in the heading.
+    When `651a` is immediately followed by subfield `$z` or when two or more geographic subdivisions \(`$z`\) are present, only a single facet should be output to represent the last \(most specific\) place entity in the heading.
 
     Include the value of all subdivisions in the `_label` and `Primary Name` for the concept, but do not generate a facet resource for intermediate geographic subdivisions.
 

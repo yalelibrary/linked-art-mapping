@@ -22,6 +22,7 @@ The actual entity represented is the last \(i.e., most specific\) subdivision in
 name: HierarchicalPlaces
 sampleBibs:
   - 35599
+  - 3802854
 # Source data fields
 fieldSpec:
   - 6XXz
@@ -51,6 +52,10 @@ scriptInclusion: BOTH
 5.  Construct the chain of place entities for `752` entries.
 
     `35599`
+
+    ```
+    752  $a United States $b New York (State) $d New York $f Brooklyn.
+    ```
 
     ```
     {

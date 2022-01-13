@@ -182,18 +182,18 @@ scriptInclusion: NONE</code></pre>
         </ul>
         <ol type="a" class="- topic/ol task/substeps ol substeps">
           <li class="- topic/li task/substep li substep">
-            <span class="- topic/ph task/cmd ph cmd">Using the string value of the main title, take the substring using the number of nonfiling characters extracted from<code class="+ topic/ph pr-d/codeph ph codeph">245</code>second indicator as offset.</span>
+            <span class="- topic/ph task/cmd ph cmd">If the value of <code class="+ topic/ph pr-d/codeph ph codeph">245</code> second indicator is <code class="+ topic/ph pr-d/codeph ph codeph">0</code>, do not generate a <code class="+ topic/ph pr-d/codeph ph codeph">Sorting Name</code>.</span>
           </li>
-        </ol>
-        <div class="- topic/itemgroup task/info itemgroup info">
-          <div class="- topic/note note note note_note"><span class="note__title">Note:</span> The <code class="+ topic/ph pr-d/codeph ph codeph">Sorting Name</code> should only be added if it is <strong class="+ topic/ph hi-d/b ph b">different from</strong> the <code class="+ topic/ph pr-d/codeph ph codeph">Primary Name</code>.</div>
-        </div>
+          <li class="- topic/li task/substep li substep">
+            <span class="- topic/ph task/cmd ph cmd">Else, using the string value of the main title, take the substring using the number of nonfiling characters extracted from<code class="+ topic/ph pr-d/codeph ph codeph">245</code>second indicator as offset.</span>
+          </li>
+        </ol>        
         <div class="- topic/itemgroup task/stepresult itemgroup stepresult">
           <code class="+ topic/ph pr-d/codeph yul-d/yulbibid ph codeph yulbibid">9447</code>
           <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>{
-  "id": "https://lux.collections.yale.edu/data/text/c0fd4d84-4b50-496d-a56e-ebf952f8dcf2",
+  "id": "https://lux.collections.yale.edu/data/text/49a9dae9-0692-4957-9870-8c49fdf3f064",
   "type": "LinguisticObject",
-  "_label": "韓國 의 선비 文化.",
+  "_label": "A raisin in the sun",
   "classified_as": [
     {
       "id": "http://vocab.getty.edu/aat/300028051",
@@ -201,17 +201,22 @@ scriptInclusion: NONE</code></pre>
       "_label": "Books",
       "classified_as": [
         {
-          "id": "http://vocab.getty.edu/aat/300226816",
+          "id": "http://vocab.getty.edu/aat/300435443",
           "type": "Type",
-          "_label": "Format"
+          "_label": "Type of Work"
         }
       ]
+    },
+    {
+      "id": "https://lux.collections.yale.edu/data/concept/77f2f78b-f595-4e8a-8165-5d6cd114d202",
+      "type": "Type",
+      "_label": "PS3515.A515"
     }
   ],
   "identified_by": [
     {
       "type": "Name",
-      "content": "Hanʼguk ŭi sŏnbi munhwa",
+      "content": "A raisin in the sun",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
@@ -222,25 +227,7 @@ scriptInclusion: NONE</code></pre>
     },
     {
       "type": "Name",
-      "content": "韓國 의 선비 文化.",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300404670",
-          "type": "Type",
-          "_label": "Primary Name"
-        }
-      ],
-      "language": [
-        {
-          "id": "https://lux.collections.yale.edu/data/concept/70cb6397-2b2f-400c-b887-70fd80969c8b",
-          "type": "Language",
-          "_label": "und"
-        }
-      ]
-    },
-    {
-      "type": "Name",
-      "content": "Hanʼguk ŭi sŏnbi munhwa",
+      "content": "raisin in the sun",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404672",
