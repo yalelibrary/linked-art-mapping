@@ -31,7 +31,7 @@ scriptInclusion: NONE
 
 2.  If `856y` is present, add it to the embedded reference using `identified_by`.
 
-3.  If `865|40|` or `865|41|` and the record-level resource is a `LinguisticObject`:
+3.  If `856|40|` or `856|41|` and the record-level resource is a `LinguisticObject`:
 
     `358058`
 
@@ -59,7 +59,7 @@ scriptInclusion: NONE
     }
     ```
 
-4.  If `865|40|` and the record-level resource is a `DigitalObject`:
+4.  If `856|40|` and the record-level resource is a `DigitalObject`:
 
     ```
     {
@@ -72,7 +72,7 @@ scriptInclusion: NONE
     }
     ```
 
-5.  If `865|40|` or `865|41|` and the record-level resource is a `VisualItem`:
+5.  If `856|40|` or `856|41|` and the record-level resource is a `VisualItem`:
 
     ```
     {
@@ -85,7 +85,7 @@ scriptInclusion: NONE
     }
     ```
 
-6.  If `865|40|` or `865|41|` and the record-level resource is a `LinguisticObject`:
+6.  If `856|40|` or `856|41|` and the record-level resource is a `LinguisticObject`:
 
     ```
     {
@@ -98,7 +98,7 @@ scriptInclusion: NONE
     }
     ```
 
-7.  If `865|40|` or `865|41|` and the record-level resource is a `Set`:
+7.  If `856|40|` or `856|41|` and the record-level resource is a `Set`:
 
     ```
     {
@@ -116,7 +116,7 @@ scriptInclusion: NONE
     }
     ```
 
-8.  Else, if `865|42|`:
+8.  Else, if `856|42|`:
 
     ```
     {
