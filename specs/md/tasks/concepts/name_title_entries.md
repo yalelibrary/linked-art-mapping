@@ -12,7 +12,7 @@ This specification provides instructions for processing `1XX` entries followed b
 ## Source data
 
 ```
->---
+---
 name: ComplexWorks
 sampleBibs:
   - 4 # 100
