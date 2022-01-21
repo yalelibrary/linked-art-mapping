@@ -43,6 +43,8 @@ scriptInclusion: NONE
         then the default `generic_date_type` is `creation`.
 
     -   Else, the default `generic_date_type` is `publication`.
+    If the record-level resource contains more than one supertype, and one of the supertypes has a default `generic_date_type` of `creation`, then the default `generic_date_type` is `creation`.
+
 2.  Save the `generic_date_type` value for subsequent processing.
 
 3.  Perform an additional check \(`journal_test`\) to test whether the supertype is `Journals`.
@@ -53,22 +55,24 @@ scriptInclusion: NONE
 
 6.  Save the `specific_date_type` for subsequent processing.
 
-7.  Process the date values in `008[07-10]` and `008[11-14]` to test for non-numeric characters \(e.g., `\s` \[whitespace\], `u`, `x`, `\|` \[pipe\]\).
+7.  Trim the date values in `008[07-10]` and `008[11-14]` to remove any trailing whitespace.
 
-8.  For each date value, replace the regular expression `[\sA-Za-z\|]` with `?`.
+8.  Process the date values in `008[07-10]` and `008[11-14]` to test for other non-numeric characters \(e.g., internal whitespace, `u`, `x`, `\|` \[pipe\]\).
 
-9.  Save the values as `date_1_temp` and `date_2_temp`.
+9.  For each date value, replace the regular expression `[\sA-Za-z\|]` with `?`.
 
-10. Process the first date value and save as `date_1_val`.
+10. Save the values as `date_1_temp` and `date_2_temp`.
+
+11. Process the first date value and save as `date_1_val`.
 
     -   If `date_1_temp` contains only `?` characters, `date_1_val` is `false`.
     -   Else, replace the regular expression `\?` with `0` in `date_1_temp` as the value of `date_1_val`.
-11. Process the second date value and save as `date_2_val`.
+12. Process the second date value and save as `date_2_val`.
 
     -   If `date_2_temp` contains only `?` characters, `date_2_val` is `false`.
     -   Else, if `date_2_temp` is equal to `9999`, then set the value of `date_2_val` to `9999`.
     -   Else, replace the regular expression `\?` in `date_2_temp` with `9` as the value of `date_2_val`.
-12. Construct a `TimeSpan` object to store the date values.
+13. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -113,11 +117,11 @@ scriptInclusion: NONE
 
     5.  Save the value as `content`.
 
-    6.  Construct a `dateTime` value by concatenating `date_1_val` with `-01-01T00:00:00Z`.
+    6.  Construct a `dateTime` value by concatenating the value of `content` with `-01T00:00:00Z` if `content` contains a year-month value or `T00:00:00Z` if `content` contains a year-month-day value.
 
     7.  Save the result as `begin_of_the_begin`.
 
-    8.  Increment the year value of `begin_of_the_begin` by one and save the value as `end_of_the_end`.
+    8.  Increment the month or day value of `begin_of_the_begin` by one and save the value as `end_of_the_end`.
 
         -   **008\[06\] \(specific\_date\_type\)**
 
@@ -143,8 +147,8 @@ scriptInclusion: NONE
             "type": "Creation",    
             "timespan": {
               "type": "TimeSpan",
-              "begin_of_the_begin": "1794-01-01T00:00:00Z",
-              "end_of_the_end": "1795-01-01T00:00:00Z",
+              "begin_of_the_begin": "1794-06-01T00:00:00Z",
+              "end_of_the_end": "1794-07-01T00:00:00Z",
               "identified_by": [
                 {
                   "type": "Name",
@@ -163,7 +167,7 @@ scriptInclusion: NONE
         }
         ```
 
-13. Construct a `TimeSpan` object to store the date values.
+14. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -314,7 +318,7 @@ scriptInclusion: NONE
         }
         ```
 
-14. Construct a `TimeSpan` object to store the date values.
+15. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -472,7 +476,7 @@ scriptInclusion: NONE
         }
         ```
 
-15. Construct a `TimeSpan` object to store the date values.
+16. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -632,7 +636,7 @@ scriptInclusion: NONE
         }
         ```
 
-16. Construct a `TimeSpan` object to store the date values.
+17. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -724,7 +728,7 @@ scriptInclusion: NONE
         }
         ```
 
-17. Construct a `TimeSpan` object to store the date values.
+18. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -811,7 +815,7 @@ scriptInclusion: NONE
         }
         ```
 
-18. Construct a `TimeSpan` object to store the date values.
+19. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -905,7 +909,7 @@ scriptInclusion: NONE
         }
         ```
 
-19. Construct a `TimeSpan` object to store the date values.
+20. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**

@@ -94,11 +94,11 @@ scriptInclusion: BOTH
         |LinguisticObject|240|adfghklmnoprs|
         |LinguisticObject|600, 610, 611, 692, 693, 694, 700, 710, 711, 800, 810, 811|fhklmnoprst|
 
-    3.  Save the `agent value` and `work value`.
+    3.  Save the `agent_value` and `work_value`.
 
 2.  Create a key for matching and merging.
 
-    1.  Concatenate the `agent value` and `work value` with a whitespace character.
+    1.  Concatenate the `agent_value` and `work_value` with a whitespace character.
 
     2.  [Normalize](../../glossary/normalization.md) and match the concatenated value against the entity store.
 
@@ -108,9 +108,9 @@ scriptInclusion: BOTH
 
         **Note:** The `Type` of the `equivalent` reference should match the `Type` of the top-level resource \(i.e., `LinguisticObject`\).
 
-    2.  Output the `work value` as the value of the `_label` property and as the `Primary Name`.
+    2.  Output the `work_value` as the value of the `_label` property and as the `Primary Name`.
 
-    3.  Output the `agent value` using the `created_by → carried_out_by` pattern.
+    3.  Output the `agent_value` using the `created_by → carried_out_by` pattern.
 
     `67759`
 
@@ -216,6 +216,12 @@ scriptInclusion: BOTH
       }
     }
     ```
+
+4.  In each referring record-level resource \(`DigitalObject`, `HumanMadeObject`, `LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the related entity.
+
+    1.  For entities derived from the `240`, `7XX`, or `8XX` fields, add a reference using the `part_of` property: see [Works in whole/part relationships](../name-title/works_as_whole_part.md).
+
+    2.  For entities derived from `6XX` fields, see [Works as subjects](../name-title/works_as_subjects.md) and [Complex works as complex subjects](../name-title/name-title-with-subdivisions.md).
 
 
 **Parent topic:**[Works](../../concepts/works.md)

@@ -14,11 +14,11 @@ Complex works may appear as facets in complex subject headings.
 
     The `LinguisticObject` facet representing the work entity should be constructed according to [Complex works](../concepts/name_title_entries.md). However, the agent \(`Person` or `Group`\) facet should also be included as a separate facet under `influenced_by`.
 
-2.  Join the `agent value` and the `work value` as the `complex work reference`.
+2.  Join the `agent_value` and the `work_value` as the `complex_work_reference`.
 
     -   If the `agent value` ends with a hyphen \(`-`\) or period \(`.`\), join the two values with a whitespace character.
     -   Else, join the two values with a period and whitespace character.
-3.  Join the `complex work reference` with the subdivision subfields using space-surrounded double hyphens \(`--`\) to output the `_label` and `content` values of the full precoordinated heading.
+3.  Join the `complex_work_reference` with the subdivision subfields using space-surrounded double hyphens \(`--`\) to output the `_label` and `content` values of the full precoordinated heading.
 
     `908059`
 

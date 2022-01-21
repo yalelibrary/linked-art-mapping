@@ -84,12 +84,12 @@ Although information recorded in `26X` fields is uncontrolled, exposing it will 
           ],
           "timespan": {
             "type": "TimeSpan",
-            "begin_of_the_begin": "1979-01-01T00:00:00Z",
-            "end_of_the_end": "1980-01-01T00:00:00Z",
+            "begin_of_the_begin": "1878-01-01T00:00:00Z",
+            "end_of_the_end": "1879-01-01T00:00:00Z",
             "identified_by": [
               {
                 "type": "Name",
-                "content": "1979",
+                "content": "1878",
                 "classified_as": [
                   {
                     "id": "http://vocab.getty.edu/aat/300404669",
@@ -147,12 +147,12 @@ Although information recorded in `26X` fields is uncontrolled, exposing it will 
           ],
           "timespan": {
             "type": "TimeSpan",
-            "begin_of_the_begin": "1979-01-01T00:00:00Z",
-            "end_of_the_end": "1980-01-01T00:00:00Z",
+            "begin_of_the_begin": "1878-01-01T00:00:00Z",
+            "end_of_the_end": "1879-01-01T00:00:00Z",
             "identified_by": [
               {
                 "type": "Name",
-                "content": "1979",
+                "content": "1878",
                 "classified_as": [
                   {
                     "id": "http://vocab.getty.edu/aat/300404669",

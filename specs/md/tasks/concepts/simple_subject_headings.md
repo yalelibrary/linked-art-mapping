@@ -94,8 +94,8 @@ scriptInclusion: BOTH
         |Group|X10|abcdg|
         |Group|X11|acdegnqu|
         |LinguisticObject|X30|adfhklmnoprst|
-        |Concept|650|abcdg|
-        |Place|651\| 0\||a|
+        |Concept|650\|\*0\||abcdg|
+        |Place|651\|\*0\||a|
         |Type|655|a|
         |Concept|690|abcdg|
         |Place|691|a|
