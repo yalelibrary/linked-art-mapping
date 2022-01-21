@@ -9,6 +9,8 @@
       <revised modified="2021-10-28"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2021-12-06"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-12"/>
     </critdates>
     <metadata>
       <keywords>
@@ -94,7 +96,7 @@ scriptInclusion: NONE</codeblock>
     {
       "id": "https://lux.collections.yale.edu/data/text/citation1",
       "type": "LinguisticObject",
-      "_label": "Edizioni italiane del XVI secolo
+      "_label": "Edizioni italiane del XVI secolo"
     }
   ]
 }</codeblock>

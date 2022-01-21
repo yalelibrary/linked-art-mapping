@@ -6,6 +6,8 @@
     <author type="creator">timothy.thompson@yale.edu</author>
     <critdates>
       <created date="2022-01-05"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-12"/>
     </critdates>
     <metadata>
       <keywords>
@@ -34,19 +36,19 @@
               <entry>
                 <codeph>LinguisticObject</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>VisualItem</codeph>
               </entry>
-              <entry>Do not repeat on related<codeph>HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>Set</codeph>
               </entry>
-              <entry>Do not repeat on nested<codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
+              <entry>Do not repeat on nested <codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
             </row>
             <row>
               <entry>
@@ -65,27 +67,120 @@ name: DigitalObjectAsset
 sampleBibs:
   - 358058
 fieldSpec:  
-  - 856uy
-trimPunctuation: false
+  - 856|4*|uy
+trimPunctuation: true
 scriptInclusion: NONE</codeblock>
     </section>
     <section>
       <title>Processing steps and output</title>
     </section>
-    <steps>
+    <steps>      
       <step>
         <cmd>Output a <codeph>DigitalObject</codeph> link to a related digital asset using the URI recorded in <codeph>856u</codeph>.</cmd>
+      </step>
+      <step>
+        <cmd>If <codeph>856y</codeph> is present, add it to the embedded reference using <codeph>identified_by</codeph>.</cmd>
+      </step>
+      <step>
+        <cmd>If <codeph>856|40|</codeph> or <codeph>856|41|</codeph> and the record-level resource is a <codeph>LinguisticObject</codeph>:</cmd>
         <stepresult>
           <yulbibid>358058</yulbibid>
           <codeblock><![CDATA[{
-  "referred_to_by": [
+  "digitally_carried_by": [
     {
-      "id": "http://hdl.handle.net/10079/4qrfjh5",
+      "id": "http://hdl.handle.net/example1",
+      "type": "DigitalObject",
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Full text",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404669",
+              "type": "Type",
+              "_label": "Display Title"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}]]></codeblock>
+        </stepresult>  
+      </step>
+      <step>
+        <cmd>If <codeph>856|40|</codeph> and the record-level resource is a <codeph>DigitalObject</codeph>:</cmd>
+        <stepresult>          
+          <codeblock><![CDATA[{
+  "access_point": [
+    {
+      "id": "http://hdl.handle.net/example2",
       "type": "DigitalObject"
     }
   ]
 }]]></codeblock>
-        </stepresult>
+        </stepresult>  
+      </step>      
+      <step>
+        <cmd>If <codeph>856|40|</codeph> or <codeph>856|41|</codeph> and the record-level resource is a <codeph>VisualItem</codeph>:</cmd>
+        <stepresult>          
+          <codeblock><![CDATA[{
+  "digitally_shown_by": [
+    {
+      "id": "http://hdl.handle.net/example3",
+      "type": "DigitalObject"
+    }
+  ]
+}]]></codeblock>
+        </stepresult>  
+      </step>
+      <step>
+        <cmd>If <codeph>856|40|</codeph> or <codeph>856|41|</codeph> and the record-level resource is a <codeph>LinguisticObject</codeph>:</cmd>
+        <stepresult>
+          <codeblock><![CDATA[{
+  "digitally_carried_by": [
+    {
+      "id": "http://hdl.handle.net/example4",
+      "type": "DigitalObject"
+    }
+  ]
+}]]></codeblock>
+        </stepresult>  
+      </step>
+      <step>
+        <cmd>If <codeph>856|40|</codeph> or <codeph>856|41|</codeph> and the record-level resource is a <codeph>Set</codeph>:</cmd>
+        <stepresult>
+          <codeblock><![CDATA[{
+  "representation": [
+    {      
+      "type": "VisualItem",
+      "digitally_shown_by": [
+        {
+          "id": "http://hdl.handle.net/example5",
+          "type": "DigitalObject"
+        }
+      ]
+    }
+  ]
+}]]></codeblock>
+        </stepresult>  
+      </step>
+      <step>
+        <cmd>Else, if <codeph>856|42|</codeph>:</cmd>
+        <stepresult>
+          <codeblock><![CDATA[{
+  "attributed_by": [
+    {
+      "type": "AttributeAssignment",
+      "_label": "associated resource",
+      "assigned": {
+        "id": "http://hdl.handle.net/example6",
+        "type": "DigitalObject"
+      }
+    }
+  ]
+}]]></codeblock>
+        </stepresult>  
       </step>
     </steps>
   </taskbody>

@@ -9,6 +9,8 @@
       <revised modified="2021-12-07"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2021-12-13"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-13"/>
     </critdates>
     <metadata>
       <keywords/>
@@ -87,13 +89,13 @@
           </row>
           <row>
             <entry>LinguisticObject</entry>
-            <entry>Audio</entry>
+            <entry>Audio Works</entry>
             <entry><xref href="music.dita">Music</xref></entry>
             <entry/>
           </row>
           <row>
             <entry>LinguisticObject</entry>
-            <entry>Audio</entry>
+            <entry>Audio Works</entry>
             <entry><xref href="sound.dita">Sound</xref></entry>
             <entry/>
           </row>
@@ -159,25 +161,25 @@
           </row>
           <row>
             <entry>VisualItem <b>[primary]</b></entry>
-            <entry>Cartography</entry>
+            <entry>Cartographic Works</entry>
             <entry><xref href="atlases.dita">Atlases</xref></entry>
             <entry/>
           </row>
           <row>
             <entry>VisualItem</entry>
-            <entry>Cartography</entry>
+            <entry>Cartographic Works</entry>
             <entry><xref href="geospatialdata.dita">Geospatial Data</xref></entry>
             <entry/>
           </row>
           <row>
             <entry>VisualItem <b>[primary]</b></entry>
-            <entry>Cartography</entry>
+            <entry>Cartographic Works</entry>
             <entry><xref href="globes.dita">Globes</xref></entry>
             <entry/>
           </row>
           <row>
             <entry>VisualItem</entry>
-            <entry>Cartography</entry>
+            <entry>Cartographic Works</entry>
             <entry><xref href="maps.dita">Maps</xref></entry>
             <entry/>
           </row>
@@ -263,7 +265,7 @@
 **** [[realia.html{Realia format} Realia]]
 **** [[toysandgames.html{Toys and Games format} Toys and Games]]
 ** LinguisticObject
-*** Audio
+*** Audio Works
 **** [[music.html{Music format} Music]]
 **** [[sound.html{Sound format} Sound]]
 *** Moving Images
@@ -284,7 +286,7 @@
 **** [[archivalandmanuscriptmaterials.html{Archival and Manuscript Materials format} Archival and Manuscript Materials]]
 **** [[kits.html{Kits format} Kits]]
 ** VisualItem
-*** Cartography
+*** Cartographic Works
 **** [[atlases.html{Atlases format} Atlases]]
 **** [[geospatialdata.html{Geospatial Data format} Geospatial Data]]
 **** [[globes.html{Globes format} Globes]]

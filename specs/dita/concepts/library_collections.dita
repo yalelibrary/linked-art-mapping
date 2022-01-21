@@ -10,6 +10,8 @@
       <revised modified="2021-11-30"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2021-12-01"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-12"/>
     </critdates>
     <metadata>
       <keywords>
@@ -78,6 +80,14 @@ scriptInclusion: NONE]]></codeblock>
               <li>Yale University Art Gallery</li>
             </ul></p>
         </info>
+        <substeps>
+          <substep>
+            <cmd>Within each top-level collection resource, include a reference to the group entity that is responsible for the collection.</cmd>
+          </substep>
+          <substep>
+            <cmd>Generate a top-level group entity for each of the three campus divisions listed above.</cmd>
+          </substep>
+        </substeps>
         <stepresult>
           <codeblock><![CDATA[{
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -95,6 +105,7 @@ scriptInclusion: NONE]]></codeblock>
     "type": "Creation",
     "carried_out_by": [
       {
+        "id": "https://lux.collections.yale.edu/data/group/group-1",
         "type": "Group",
         "_label": "Yale University Library"
       }

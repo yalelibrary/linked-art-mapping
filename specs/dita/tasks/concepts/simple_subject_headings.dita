@@ -31,6 +31,8 @@
       <revised modified="2021-12-08"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-05"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-13"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_entity"/>
     <metadata>
@@ -178,12 +180,12 @@ scriptInclusion: BOTH</codeblock>
                     </row>
                     <row>
                       <entry>Concept</entry>
-                      <entry>650</entry>
+                      <entry>650|*0|</entry>
                       <entry>abcdg</entry>
                     </row>
                     <row>
                       <entry>Place</entry>
-                      <entry>651| 0|</entry>
+                      <entry>651|*0|</entry>
                       <entry>a</entry>
                     </row>
                     <row>

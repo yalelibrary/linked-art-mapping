@@ -53,6 +53,8 @@
       <revised modified="2022-12-31"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-05"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-12"/>
     </critdates>
   </topicmeta>
   <hasPart>
@@ -130,6 +132,7 @@
         <subjectdef href="tasks/related_entities.dita" keys="Related" type="task">
           <subjectdef href="tasks/concepts/simple_subject_headings.dita" keys="SimpleSubjects" type="task"/>
           <subjectdef href="tasks/concepts/complex_subject_headings.dita" type="task" keys="ComplexSubjects"/>
+          <subjectdef href="tasks/concepts/hierarchical_places.dita" type="task"/>
           <subjectdef href="tasks/citation_entities.dita" keys="CitationEntities" type="task"/>
           <subjectdef href="tasks/names-and-labels/related_title_entities.dita" keys="RelatedTitleEntities" type="task"/>
           <subjectdef href="concepts/concepts.dita" keys="Concepts" type="concept">
@@ -175,6 +178,8 @@
       <subjectdef href="concepts/lux_embedded_entities.dita" type="concept" keys="EmbeddedEntities">
         <subjectdef href="concepts/digital_objects.dita" type="task" keys="DigitalObjectsCatalog"/>
         <subjectdef href="concepts/digital_objects_asset_link.dita" keys="DigitalObjectsAssets" type="task"/>
+        <subjectdef href="concepts/publication_activities.dita" type="task"/>
+        <subjectdef href="concepts/copyright_entity.dita" type="task"/>
       </subjectdef>
       <subjectdef href="concepts/identifiers.dita" keys="Identifiers" type="concept">
         <subjectdef href="tasks/identifiers/orbis_bib_id.dita" keys="Orbis" type="task"/>
@@ -198,6 +203,7 @@
       </subjectdef>
       <subjectdef href="concepts/notes_and_statements.dita" keys="NotesAndStmts" type="concept">
         <subjectdef href="tasks/notes-and-statements/abstract.dita" keys="Abstract" type="task"/>
+        <subjectdef href="tasks/notes-and-statements/table_of_contents.dita" type="task" keys="Abstract"/>
         <subjectdef href="tasks/notes-and-statements/arrangement_note.dita" keys="ArrangementNote" type="task"/>
         <subjectdef href="tasks/notes-and-statements/attribution_statement.dita" keys="AttributionStmt" type="task"/>
         <subjectdef href="tasks/notes-and-statements/bibliography_statement.dita" keys="BibliographyStmt" type="task"/>

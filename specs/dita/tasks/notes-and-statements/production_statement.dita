@@ -8,6 +8,8 @@
       <created date="2021-11-23"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-05"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-12"/>
     </critdates>
     <metadata>
       <keywords>
@@ -64,10 +66,11 @@
       <codeblock><![CDATA[---
 name: ProductionStatement
 sampleBibs:
+  - 31500
   - 3643333
 fieldSpec:
-  - 260abcefg
-  - 264abc
+  - 2603abcefg
+  - 264|**|3abc
 trimPunctuation: false
 scriptInclusion: NONE]]></codeblock>
     </section>
@@ -84,11 +87,17 @@ scriptInclusion: NONE]]></codeblock>
           <substep>
             <cmd>Join subfields with a whitespace character.</cmd>
           </substep>
+          <substep>
+            <cmd>If the field is <codeph>264|*4|</codeph> with only <codeph>$c</codeph> (to record the copyright date), do not generate a <codeph>Production Statement</codeph>. Instead, apply the instructions in <xref href="../../concepts/copyright_entity.dita"/>.</cmd>
+          </substep>
         </substeps>
-        <stepresult>
-          <note>This example is meant to illustrate a production statement and does not represent a complete JSON-LD document.</note>
-          <yulbibid>3643333</yulbibid>
-          <codeblock><![CDATA[{
+      </step>
+    </steps>
+    <result>
+      <note>These examples are meant to illustrate production statements and do not represent complete JSON-LD documents.</note>
+      <div>
+        <yulbibid>3643333</yulbibid>
+        <codeblock><![CDATA[{
   "referred_to_by": [
     {
       "type": "LinguisticObject",
@@ -110,8 +119,86 @@ scriptInclusion: NONE]]></codeblock>
     }
   ]
 }]]></codeblock>
-        </stepresult>
-      </step>
-    </steps>
+      </div>
+      <div>
+        <yulbibid>31500</yulbibid>
+        <note id="note_jns_fyp_fsb">This example is derived from a record with multiple <codeph>260</codeph> fields that include subfield <codeph>3</codeph> to refer to separate parts of the resource. </note><codeblock><![CDATA[{
+  "referred_to_by": [
+    {
+      "type": "LinguisticObject",
+      "content": "v. 1: Paris : Impr. et libr. administratives P. Dupont, 1878-<1954>",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435436",
+          "type": "Type",
+          "_label": "Production Statement",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LinguisticObject",
+      "content": "v. 2:1: Avignon : Impr. et libr. administratives de Seguin frères.",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435436",
+          "type": "Type",
+          "_label": "Production Statement",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LinguisticObject",
+      "content": "v. 2:2-3:1: Avignon : F. Seguin.",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435436",
+          "type": "Type",
+          "_label": "Production Statement",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LinguisticObject",
+      "content": "v. 3:2-: Avignon : Archives départementales",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435436",
+          "type": "Type",
+          "_label": "Production Statement",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}]]></codeblock>
+      </div>
+    </result>
   </taskbody>
 </task>

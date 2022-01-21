@@ -185,8 +185,7 @@ scriptInclusion: NONE]]></codeblock>
             <cmd>If a WKT string matches an existing entry, but the labels extracted from <codeph>650z</codeph> are different, do not change the existing <codeph>_label</codeph> or <codeph>Primary Name</codeph>, but add a new <codeph>Name</codeph> object to the <codeph>identified_by</codeph> array for the top-level Place entity.</cmd>
             <stepxmp>
               <yulbibid>2644090</yulbibid>
-              <codeblock><![CDATA[034 0 $a a $d E1135000 $e E1143000 $f N0224000 $g N0221000
-]]></codeblock>
+              <codeblock><![CDATA[034 0 $a a $d E1135000 $e E1143000 $f N0224000 $g N0221000]]></codeblock>
               <codeblock><![CDATA[650 0 $a Atmospheric temperature $z China $z Hong Kong $x Observations $v Periodicals.]]></codeblock>
               <codeblock><![CDATA[650 0 $a Humidity $z China $z Hong Kong $x Observations $v Periodicals.]]></codeblock>
             </stepxmp>
