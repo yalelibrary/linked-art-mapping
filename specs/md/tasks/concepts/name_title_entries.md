@@ -82,8 +82,8 @@ scriptInclusion: BOTH
             1.  Join the `1XX` subfields with a whitespace character. This is the `agent value`.
             2.  Join the `240` subfields with a whitespace character. This is the `work value`.
         -   When a `600`, `610`, `611`, `692`, `693`, `694`, `700`, `710`, `711`, `800`, `810`, or `811` field contains subfield `t`:
-            1.  Join the `6XX`, `7XX`, or `8XX` subfields *before* subfield `t` with a whitespace character. This is the `agent value`.
-            2.  Join the `6XX`, `7XX`, or `8XX` subfields *beginning with and following* subfield `t` with a whitespace character. This is the `work value`
+            1.  Join the `6XX`, `7XX`, or `8XX` subfields *before* subfield `t` with a whitespace character. This is the `agent_value`.
+            2.  Join the `6XX`, `7XX`, or `8XX` subfields *beginning with and following* subfield `t` with a whitespace character. This is the `work_value`
         Apply the following mapping table:
 
         |Linked Art class|MARC tags|Subfields|
