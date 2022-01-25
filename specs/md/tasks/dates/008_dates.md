@@ -835,7 +835,7 @@ scriptInclusion: NONE
 
                 `any`
 
-    1.  Concatenate `date_1_val` with a hyphen \(`-`\).
+    1.  Concatenate `date_2_val` with a hyphen \(`-`\).
 
     2.  Save the resulting value as `content`.
 
