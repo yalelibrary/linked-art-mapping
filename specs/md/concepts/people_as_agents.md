@@ -17,7 +17,7 @@ As agents, people can contribute to creation activities or production activities
 |-------|-------------|-----|
 |`LinguisticObject` `VisualItem`|`created_by → part → carried_out_by`| |
 |`HumanMadeObject → shows → VisualItem`|`produced_by → part → carried_out_by`|Include `produced_by` reference if the `HumanMadeObject` points to a `VisualItem`, but not a `LinguisticObject`.|
-|`Set`|`created_by → part → carried_out_by`|Do not include agent references in nested`members_exemplified_by → HumanMadeObject`.|
+|`Set`|`created_by → part → carried_out_by`|Do not include agent references in nested `members_exemplified_by → HumanMadeObject`.|
 |`DigitalObject`|`created_by → part → carried_out_by`| |
 
 ## Source data

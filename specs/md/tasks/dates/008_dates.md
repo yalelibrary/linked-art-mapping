@@ -47,32 +47,28 @@ scriptInclusion: NONE
 
 2.  Save the `generic_date_type` value for subsequent processing.
 
-3.  Perform an additional check \(`journal_test`\) to test whether the supertype is `Journals`.
+3.  Select the `specific_date_type` from `008[06]`.
 
-4.  Save the `journal_test` as a boolean value for subsequent processing.
+4.  Save the `specific_date_type` for subsequent processing.
 
-5.  Select the `specific_date_type` from `008[06]`.
+5.  Trim the date values in `008[07-10]` and `008[11-14]` to remove any trailing whitespace.
 
-6.  Save the `specific_date_type` for subsequent processing.
+6.  Process the date values in `008[07-10]` and `008[11-14]` to test for other non-numeric characters \(e.g., internal whitespace, `u`, `x`, `\|` \[pipe\]\).
 
-7.  Trim the date values in `008[07-10]` and `008[11-14]` to remove any trailing whitespace.
+7.  For each date value, replace the regular expression `[\sA-Za-z\|]` with `?`.
 
-8.  Process the date values in `008[07-10]` and `008[11-14]` to test for other non-numeric characters \(e.g., internal whitespace, `u`, `x`, `\|` \[pipe\]\).
+8.  Save the values as `date_1_temp` and `date_2_temp`.
 
-9.  For each date value, replace the regular expression `[\sA-Za-z\|]` with `?`.
-
-10. Save the values as `date_1_temp` and `date_2_temp`.
-
-11. Process the first date value and save as `date_1_val`.
+9.  Process the first date value and save as `date_1_val`.
 
     -   If `date_1_temp` contains only `?` characters, `date_1_val` is `false`.
     -   Else, replace the regular expression `\?` with `0` in `date_1_temp` as the value of `date_1_val`.
-12. Process the second date value and save as `date_2_val`.
+10. Process the second date value and save as `date_2_val`.
 
     -   If `date_2_temp` contains only `?` characters, `date_2_val` is `false`.
     -   Else, if `date_2_temp` is equal to `9999`, then set the value of `date_2_val` to `9999`.
     -   Else, replace the regular expression `\?` in `date_2_temp` with `9` as the value of `date_2_val`.
-13. Construct a `TimeSpan` object to store the date values.
+11. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -88,15 +84,6 @@ scriptInclusion: NONE
                 -   **`specific_date_type`**
 
                     `e`
-
-                -   **AND**
-                    -   **`specific_date_type`**
-
-                        `d`
-
-                    -   **`journal_test`**
-
-                        `false`
 
     ```
     
@@ -121,7 +108,7 @@ scriptInclusion: NONE
 
     7.  Save the result as `begin_of_the_begin`.
 
-    8.  Increment the month or day value of `begin_of_the_begin` by one and save the value as `end_of_the_end`.
+    8.  Increment the month or day value of `begin_of_the_begin` to one second before the next full value and save the result as `end_of_the_end`.
 
         -   **008\[06\] \(specific\_date\_type\)**
 
@@ -148,7 +135,7 @@ scriptInclusion: NONE
             "timespan": {
               "type": "TimeSpan",
               "begin_of_the_begin": "1794-06-01T00:00:00Z",
-              "end_of_the_end": "1794-07-01T00:00:00Z",
+              "end_of_the_end": "1794-06-30T23:59:59",
               "identified_by": [
                 {
                   "type": "Name",
@@ -167,7 +154,7 @@ scriptInclusion: NONE
         }
         ```
 
-14. Construct a `TimeSpan` object to store the date values.
+12. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -189,7 +176,7 @@ scriptInclusion: NONE
 
     3.  Save the result as `begin_of_the_begin`.
 
-    4.  Increment the year value of `begin_of_the_begin` by one and save the value as `end_of_the_end`.
+    4.  Increment the year value of `begin_of_the_begin` to one second before the next full value and save the result as `end_of_the_end`.
 
     5.  Assign `date_1_val` to a publication activity.
 
@@ -232,7 +219,7 @@ scriptInclusion: NONE
               "timespan": {
                 "type": "TimeSpan",
                 "begin_of_the_begin": "2016-01-01T00:00:00Z",
-                "end_of_the_end": "2017-01-01T00:00:00Z",
+                "end_of_the_end": "2016-12-31T23:59:59",
                 "identified_by": [
                   {
                     "type": "Name",
@@ -258,7 +245,7 @@ scriptInclusion: NONE
 
     8.  Save the result as `begin_of_the_begin`.
 
-    9.  Increment the year value of `begin_of_the_begin` by one and save the value as `end_of_the_end`.
+    9.  Increment the year value of `begin_of_the_begin` to one second before the next full value and save the result as `end_of_the_end`.
 
     10. Assign `date_2_val` to a `copyright` entity.
 
@@ -297,7 +284,7 @@ scriptInclusion: NONE
                 "timespan": {
                   "type": "TimeSpan",
                   "begin_of_the_begin": "2011-01-01T00:00:00Z",
-                  "end_of_the_end": "2012-01-01T00:00:00Z",
+                  "end_of_the_end": "2011-12-31T23:59:59",
                   "identified_by": [
                     {
                       "type": "Name",
@@ -318,7 +305,7 @@ scriptInclusion: NONE
         }
         ```
 
-15. Construct a `TimeSpan` object to store the date values.
+13. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -340,7 +327,7 @@ scriptInclusion: NONE
 
     3.  Save the result as `begin_of_the_begin`.
 
-    4.  Increment the year value of `begin_of_the_begin` by one and save the value as `end_of_the_end`.
+    4.  Increment the year value of `begin_of_the_begin` to one second before the next full value and save the result as `end_of_the_end`.
 
     5.  Assign `date_1_val` to a `publishing` activity.
 
@@ -383,7 +370,7 @@ scriptInclusion: NONE
               "timespan": {
                 "type": "TimeSpan",
                 "begin_of_the_begin": "1995-01-01T00:00:00Z",
-                "end_of_the_end": "1996-01-01T00:00:00Z",
+                "end_of_the_end": "1995-12-31T23:59:59",
                 "identified_by": [
                   {
                     "type": "Name",
@@ -409,7 +396,7 @@ scriptInclusion: NONE
 
     8.  Save the result as `begin_of_the_begin`.
 
-    9.  Increment the year value of `begin_of_the_begin` by one and save the value as `end_of_the_end`.
+    9.  Increment the year value of `begin_of_the_begin` to one second before the next full value and save the result as `end_of_the_end`.
 
     10. For `date_2_val`, override the default value of generic\_date\_type and assign `date_2_val` to a `creation` activity.
 
@@ -457,7 +444,7 @@ scriptInclusion: NONE
             "timespan": {
               "type": "TimeSpan",
               "begin_of_the_begin": "1958-01-01T00:00:00Z",
-              "end_of_the_end": "1959-01-01T00:00:00Z",
+              "end_of_the_end": "1958-12-31T23:59:59",
               "identified_by": [
                 {
                   "type": "Name",
@@ -476,7 +463,7 @@ scriptInclusion: NONE
         }
         ```
 
-16. Construct a `TimeSpan` object to store the date values.
+14. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -514,11 +501,11 @@ scriptInclusion: NONE
 
     8.  Save the result as `begin_of_the_begin`.
 
-    9.  Increment the year value of `begin_of_the_begin` by one.
+    9.  Increment the year value of `begin_of_the_begin` to one second before the next full value.
 
     10. Save the value as `end_of_the_end`.
 
-    11. Construct an `dateTime` value by concatenating `end_of_the_end` with `-01-01T00:00:00Z`.
+    11. Construct a `dateTime` value by concatenating `end_of_the_end` with `-12-31T23:59:59`.
 
     12. If `generic_date_type` is `creation`, assign the dates to an `assembling` activity.
 
@@ -555,7 +542,7 @@ scriptInclusion: NONE
               "timespan": {
                 "type": "TimeSpan",
                 "begin_of_the_begin": "1401-01-01T00:00:00Z",
-                "end_of_the_end": "1600-01-01T00:00:00Z",
+                "end_of_the_end": "1599-12-31T23:59:59",
                 "identified_by": [
                   {
                     "type": "Name",
@@ -616,7 +603,7 @@ scriptInclusion: NONE
               "timespan": {
                 "type": "TimeSpan",
                 "begin_of_the_begin": "1820-01-01T00:00:00Z",
-                "end_of_the_end": "1830-01-01T00:00:00Z",
+                "end_of_the_end": "1829-12-31T23:59:59",
                 "identified_by": [
                   {
                     "type": "Name",
@@ -636,7 +623,7 @@ scriptInclusion: NONE
         }
         ```
 
-17. Construct a `TimeSpan` object to store the date values.
+15. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -676,7 +663,7 @@ scriptInclusion: NONE
 
         -   **generic\_date\_type**
 
-            creation
+            publication
 
         -   **008\[07-10\]**
 
@@ -728,7 +715,7 @@ scriptInclusion: NONE
         }
         ```
 
-18. Construct a `TimeSpan` object to store the date values.
+16. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -754,7 +741,9 @@ scriptInclusion: NONE
 
     3.  Save the result as `begin_of_the_begin`.
 
-    4.  Assign the date to a `publishing` activity.
+    4.  Increment the month or day value of `begin_of_the_begin` to one second before the next full value and save the result as `end_of_the_end`.
+
+    5.  Assign the date to a `publishing` activity.
 
         -   **008\[06\] \(specific\_date\_type\)**
 
@@ -795,7 +784,7 @@ scriptInclusion: NONE
               "timespan": {
                 "type": "TimeSpan",
                 "begin_of_the_begin": "1948-01-01T00:00:00Z",
-                "end_of_the_end": "1949-01-01T00:00:00Z",
+                "end_of_the_end": "1948-12-31T23:59:59",
                 "identified_by": [
                   {
                     "type": "Name",
@@ -815,7 +804,7 @@ scriptInclusion: NONE
         }
         ```
 
-19. Construct a `TimeSpan` object to store the date values.
+17. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -909,7 +898,7 @@ scriptInclusion: NONE
         }
         ```
 
-20. Construct a `TimeSpan` object to store the date values.
+18. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -935,7 +924,9 @@ scriptInclusion: NONE
 
     3.  Save the result as `begin_of_the_begin`.
 
-    4.  Assign the date to a `publishing` activity.
+    4.  Increment the month or day value of `begin_of_the_begin` to one second before the next full value and save the result as `end_of_the_end`.
+
+    5.  Assign the date to a `publishing` activity.
 
         -   **008\[06\] \(specific\_date\_type\)**
 
@@ -976,7 +967,7 @@ scriptInclusion: NONE
               "timespan": {
                 "type": "TimeSpan",
                 "begin_of_the_begin": "1960-01-01T00:00:00Z",
-                "end_of_the_end": "1961-01-01T00:00:00Z",
+                "end_of_the_end": "1960-12-31T23:59:59",
                 "identified_by": [
                   {
                     "type": "Name",

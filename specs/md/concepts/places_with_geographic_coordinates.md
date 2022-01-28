@@ -67,7 +67,9 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
 
 4.  Generate a top-level place resource, identified by an IRI, with the value of the WKT coordinates.
 
-    1.  Use the value of the WKT string as a key for matching and merging Place entities with the same coordinates.
+    1.  For matching and merging place entities with coordinates, take the [normalized](../glossary/normalization.md) value extracted from `651a` or `650z` and concatenate it with the WKT string.
+
+    2.  When there is more than one `650z`, apply the steps in [Place hierarchies](../tasks/concepts/hierarchical_places.md#substep_hierarchical_places_matching) to create the matching key.
 
 5.  The `_label` and `Primary Name` of the place entity should be taken from `650z` or `651a`.
 
@@ -120,11 +122,11 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
         }
         ```
 
-    4.  If `651` is not present, but `650z` is present, take the value of the **first** `650z`.
+    4.  If `651` is not present, but `650z` is present, take the **last** subdivision of the **first** `650z` occurrence as the value of `_label` and `Primary Name`.
 
-        **Note:** Because `650z` may be subdivided by additional `$z` subfields, all `$z` values should be joined with space-surrounded double hyphens \(`--`\).
+        **Note:** Because `650z` may be subdivided by additional `$z` subfields, the last \(most specific\) value should be used.
 
-    5.  Include additional `650z` values as `Name` objects in the `identified_by` array.
+    5.  Include other `650z` values as `Name` objects in the `identified_by` array.
 
         **Note:** Values should be deduplicated before inclusion.
 
@@ -151,11 +153,11 @@ Geographic coordinates should be recorded as points or polygons using the [WKT s
           "@context": "https://linked.art/ns/v1/linked-art.json",
           "id": "https://lux.collections.yale.edu/data/place/place1",
           "type": "Place",
-          "_label": "China -- Hong Kong",
+          "_label": "Hong Kong",
           "identified_by": [
             {
               "type": "Name",
-              "content": "China -- Hong Kong",
+              "content": "Hong Kong",
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300404670",

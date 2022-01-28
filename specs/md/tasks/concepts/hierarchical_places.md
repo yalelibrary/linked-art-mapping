@@ -37,9 +37,21 @@ scriptInclusion: BOTH
 
     1.  Ignore subfields `014e` when creating a key for matching and merging.
 
-    2.  [Normalize](../../glossary/normalization.md) and match string values.
+    2.  As the value of the matching key, use the current and preceding subdivision values.
 
-    3.  If a field includes a `$0` with an IRI, output an `equivalent` reference.
+    3.  Join subdivision values with space-separated double hyphens \(`--`\).
+
+        `35599`
+
+        ```
+        752  $a United States $b New York (State) $d New York $f Brooklyn.
+        ```
+
+        -   Matching key for last \(most specific\) subdivision: `united states -- new york state -- new york -- brooklyn`
+        -   Matching key for preceding \(third\) subdivision: `united states -- new york state -- new york`
+        -   Matching key for preceding \(second\) subdivision: `united states -- new york state`
+        -   Matching key for preceding \(first\) subdivision: `united states`
+    4.  If a field includes a `$0` with an IRI, output an `equivalent` reference.
 
         **Note:** The `Type` of the `equivalent` reference should match the `Type` of the top-level resource.
 
