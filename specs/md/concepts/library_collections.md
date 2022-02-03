@@ -34,7 +34,7 @@ scriptInclusion: NONE
     -   Yale University Art Gallery
     1.  Within each top-level collection resource, include a reference to the group entity that is responsible for the collection.
 
-    2.  Generate a top-level group entity for each of the three campus divisions listed above.
+        Apply the steps in [Entities for specific groups](individual_groups.md) to generate a top-level group entity for each of the three campus divisions listed above.
 
     ```
     {

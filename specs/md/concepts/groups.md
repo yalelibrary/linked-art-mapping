@@ -18,6 +18,8 @@ For group entities that are part of name/title entries in MARC, see [Complex wor
 Entities extracted from MARC 11X and 71X fields.
 -   **[Groups as subjects](../concepts/groups_as_subjects.md)**  
 Entities extracted from MARC 61X fields.
+-   **[Entities for specific groups](../concepts/individual_groups.md)**  
+
 
 **Parent topic:**[Related entities](../tasks/related_entities.md)
 

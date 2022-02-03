@@ -89,7 +89,7 @@ scriptInclusion: NONE
     
     if ($date_1_val castable as integer and $date_2_val castable as integer)
     then
-      if ($generic_date_type == "e" or ($generic_date_type == "d" and $journal_test == false))
+      if ($generic_date_type == "e")
         ...
     
     ```

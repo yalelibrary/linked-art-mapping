@@ -58,9 +58,9 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
           "_label": "Books",
           "classified_as": [
             {
-              "id": "http://vocab.getty.edu/aat/300226816",
+              "id": "http://vocab.getty.edu/aat/300435443",
               "type": "Type",
-              "_label": "Format"
+              "_label": "Type of Work"
             }
           ]
         }
@@ -68,16 +68,48 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
     }
     ```
 
-2.  For each MARC holdings record attached to a bibliographic record:
+2.  In addition, for each record-level bibliographic resource, add another `classified_as` object to mark the record as an "Information Artifact" \(IRI `http://vocab.getty.edu/aat/300230425`\).
+
+    **Note:** This example is meant to illustrate the record-level classification and does not represent a complete JSON-LD document.
+
+    ```
+    {
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://lux.collections.yale.edu/data/text/416165c2-1108-4acd-b7ab-008f773a2ba3",
+      "type": "LinguisticObject",
+      "_label": "麗澤論說集錄 : [十卷]",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300028051",
+          "type": "Type",
+          "_label": "Books",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435443",
+              "type": "Type",
+              "_label": "Type of Work"
+            }
+          ]
+        },
+        {
+          "id": "http://vocab.getty.edu/aat/300230425",
+          "type": "Type",
+          "_label": "Information Artifact"
+        }
+      ]
+    }
+    ```
+
+3.  For each MARC holdings record attached to a bibliographic record:
 
     -   If the base class derived from the supertype is `LinguisticObject` or `VisualItem`:
         -   If the MFHD `852b` is `yulint` or `yulintx`, generate a JSON-LD document with a base class of `DigitalObject`.
         -   Else, generate a JSON-LD document with a base class of `HumanMadeObject`.
     -   If the base class derived from the supertype is `Set`, generate an embedded `Set → members_exemplified_by → HumanMadeObject` resource to record carrier-level information.
     -   If the base class derived from the supertype is `DigitalObject`, do not generate a separate carrier-level resource. Record both content- and carrier-level information in a single JSON-LD document, with `DigitalObject` as base class.
-3.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then `HumanMadeObject` carriers must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
+4.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then `HumanMadeObject` carriers must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
 
-4.  If the supertype of the resource corresponding to the bibliographic record has a base class of `Set` \(for archival records or kits\), then the `HumanMadeObject` carrier is **not** modeled as a separate resource, but rather embedded within the `Set` resource using the property `members_exemplified_by`.
+5.  If the supertype of the resource corresponding to the bibliographic record has a base class of `Set` \(for archival records or kits\), then the `HumanMadeObject` carrier is **not** modeled as a separate resource, but rather embedded within the `Set` resource using the property `members_exemplified_by`.
 
 
 **Note:** These examples are meant to illustrate the content/carrier distinction and do not necessarily represent complete JSON-LD documents.

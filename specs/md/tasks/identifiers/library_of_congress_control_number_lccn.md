@@ -57,6 +57,7 @@ scriptInclusion: NONE
           "type": "AttributeAssignment",
           "carried_out_by": [
             {
+              "id": "https://lux.collections.yale.edu/data/group/lc-as-entity",
               "type": "Group",
               "_label": "Library of Congress"
             }

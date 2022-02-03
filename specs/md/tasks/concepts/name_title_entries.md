@@ -108,9 +108,11 @@ scriptInclusion: BOTH
 
         **Note:** The `Type` of the `equivalent` reference should match the `Type` of the top-level resource \(i.e., `LinguisticObject`\).
 
-    2.  Output the `work_value` as the value of the `_label` property and as the `Primary Name`.
+    2.  Trim punctuation from the `work_value`.
 
-    3.  Output the `agent_value` using the `created_by → carried_out_by` pattern.
+    3.  Output the `work_value` as the value of the `_label` property and as the `Primary Name`.
+
+    4.  Output the `agent_value` using the `created_by → carried_out_by` pattern.
 
     `67759`
 

@@ -40,6 +40,8 @@ Processing of place entities depends on the data source in MARC:
     **Note:** `26Xa` is not currently modeled as a place entity, but as a string value in the [Production Statement](../tasks/notes-and-statements/production_statement.md).
 
 
+-   **[Place hierarchies](../tasks/concepts/hierarchical_places.md)**  
+Place entities represented as a hierarchy.
 -   **[Places as agents](../concepts/places_as_agents.md)**  
 Places as jurisdictions \(for example, United States as a political entity\).
 -   **[Places as subjects](../concepts/places_as_subjects.md)**  

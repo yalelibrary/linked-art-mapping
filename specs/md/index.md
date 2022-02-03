@@ -68,6 +68,7 @@
             -   [Groups](concepts/groups.md)
                 -   [Groups as agents](concepts/groups_as_agents.md)
                 -   [Groups as subjects](concepts/groups_as_subjects.md)
+                -   [Entities for specific groups](concepts/individual_groups.md)
             -   [People](concepts/people.md)
                 -   [People as agents](concepts/people_as_agents.md)
                 -   [People as subjects](concepts/people_as_subjects.md)

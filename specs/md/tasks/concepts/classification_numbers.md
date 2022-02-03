@@ -41,22 +41,61 @@ scriptInclusion: NONE
 
     2.  [Normalize](../../glossary/normalization.md) and match/merge each unique string value.
 
-    `907498`
+    3.  After normalizing, use an appropriate regular expression to test the value of `050a` or `090a` to see whether it is an LC classification number.
 
-    ```
-    {
-      "@context": "https://linked.art/ns/v1/linked-art.json",
-      "id": "https://lux.collections.yale.edu/data/concept/f0c0c4d0-532d-4438-a26f-15c261fb4f6c",
-      "type": "Type",
-      "_label": "PT3818",
-      "identified_by": [
+        `[a-z]+[0-9]+([.][a-z]+[0-9]+)?`
+
+    4.  For values that match the test, add a `classified_as` for `Library of Congress classification`, as in the example below.
+
+    5.  For now, skip any values that do not match the regular expression.
+
+    1.  `907498`
+
+        ```
         {
-          "type": "Identifier",
-          "content": "PT3818"
+          "@context": "https://linked.art/ns/v1/linked-art.json",
+          "id": "https://lux.collections.yale.edu/data/concept/f0c0c4d0-532d-4438-a26f-15c261fb4f6c",
+          "type": "Type",
+          "_label": "PT3818",
+          "identified_by": [
+            {
+              "type": "Identifier",
+              "content": "PT3818"
+            }
+          ],
+          "classified_as": [
+            {
+              "id": "https://www.wikidata.org/wiki/Q621080",
+              "type": "Type",
+              "_label": "Library of Congress classification"
+            }
+          ]
         }
-      ]
-    }
-    ```
+        ```
+
+    2.  `907498`
+
+        ```
+        {
+          "@context": "https://linked.art/ns/v1/linked-art.json",
+          "id": "https://lux.collections.yale.edu/data/concept/f0c0c4d0-532d-4438-a26f-15c261fb4f6c",
+          "type": "Type",
+          "_label": "PT3818",
+          "identified_by": [
+            {
+              "type": "Identifier",
+              "content": "PT3818"
+            }
+          ],
+          "classified_as": [
+            {
+              "id": "https://www.wikidata.org/wiki/Q621080",
+              "type": "Type",
+              "_label": "Library of Congress classification"
+            }
+          ]
+        }
+        ```
 
 3.  In the referring record-level resource \(`LinguisticObject`, `VisualItem`, or `DigitalObject`\), add an embedded reference for each concept entity.
 
@@ -78,9 +117,9 @@ scriptInclusion: NONE
           "_label": "Books",
           "classified_as": [
             {
-              "id": "http://vocab.getty.edu/aat/300226816",
+              "id": "http://vocab.getty.edu/aat/300435443",
               "type": "Type",
-              "_label": "Form"
+              "_label": "Type of Work"
             }
           ]
         },

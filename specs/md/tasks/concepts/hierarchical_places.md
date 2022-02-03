@@ -286,5 +286,5 @@ scriptInclusion: BOTH
     ```
 
 
-**Parent topic:**[Related entities](../../tasks/related_entities.md)
+**Parent topic:**[Top-level Place entities](../../concepts/top_level_place_entities.md)
 

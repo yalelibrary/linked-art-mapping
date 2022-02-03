@@ -70,9 +70,9 @@ Resources extracted from MARC 6XX entries.
               "_label": "Books",
               "classified_as": [
                 {
-                  "id": "http://vocab.getty.edu/aat/300226816",
+                  "id": "http://vocab.getty.edu/aat/300435443",
                   "type": "Type",
-                  "_label": "Format"
+                  "_label": "Type of Work"
                 }
               ]
             },
@@ -113,9 +113,9 @@ Resources extracted from MARC 6XX entries.
               "_label": "Journals",
               "classified_as": [
                 {
-                  "id": "http://vocab.getty.edu/aat/300226816",
+                  "id": "http://vocab.getty.edu/aat/300435443",
                   "type": "Type",
-                  "_label": "Format"
+                  "_label": "Type of Work"
                 }
               ]
             },
