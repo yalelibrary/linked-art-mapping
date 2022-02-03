@@ -18,6 +18,8 @@
       <revised modified="2022-01-06"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-12"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-02-03"/>
     </critdates>
   </prolog>
   <taskbody>
@@ -95,11 +97,42 @@
       "_label": "Books",
       "classified_as": [
         {
-          "id": "http://vocab.getty.edu/aat/300226816",
+          "id": "http://vocab.getty.edu/aat/300435443",
           "type": "Type",
-          "_label": "Format"
+          "_label": "Type of Work"
         }
       ]
+    }
+  ]
+}]]></codeblock>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>In addition, for each record-level bibliographic resource, add another <codeph>classified_as</codeph> object to mark the record as an "Information Artifact" (IRI <codeph>http://vocab.getty.edu/aat/300230425</codeph>).</cmd>
+        <stepresult>
+          <note>This example is meant to illustrate the record-level classification and does not represent a complete JSON-LD document.</note>
+          <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/text/416165c2-1108-4acd-b7ab-008f773a2ba3",
+  "type": "LinguisticObject",
+  "_label": "麗澤論說集錄 : [十卷]",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300028051",
+      "type": "Type",
+      "_label": "Books",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300230425",
+      "type": "Type",
+      "_label": "Information Artifact"
     }
   ]
 }]]></codeblock>

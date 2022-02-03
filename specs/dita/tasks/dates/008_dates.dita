@@ -22,6 +22,10 @@
       <revised modified="2021-12-31"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-21"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-25"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-28"/>
     </critdates>
     <metadata>
       <keywords>
@@ -79,12 +83,6 @@ scriptInclusion: NONE</codeblock>
       </step>
       <step>
         <cmd>Save the <codeph>generic_date_type</codeph> value for subsequent processing.</cmd>
-      </step>
-      <step>
-        <cmd>Perform an additional check (<codeph>journal_test</codeph>) to test whether the supertype is <codeph>Journals</codeph>.</cmd>
-      </step>
-      <step>
-        <cmd>Save the <codeph>journal_test</codeph> as a boolean value for subsequent processing.</cmd>
       </step>
       <step>
         <cmd>Select the <codeph>specific_date_type</codeph> from <codeph>008[06]</codeph>.</cmd>
@@ -146,22 +144,7 @@ scriptInclusion: NONE</codeblock>
                               <dlentry>
                                 <dt><codeph>specific_date_type</codeph></dt>
                                 <dd><codeph>e</codeph></dd>
-                              </dlentry>
-                              <dlentry>
-                                <dt>AND</dt>
-                                <dd>
-                                  <dl>
-                                    <dlentry>
-                                      <dt><codeph>specific_date_type</codeph></dt>
-                                      <dd><codeph>d</codeph></dd>
-                                    </dlentry>
-                                    <dlentry>
-                                      <dt><codeph>journal_test</codeph></dt>
-                                      <dd><codeph>false</codeph></dd>
-                                    </dlentry>
-                                  </dl>
-                                </dd>
-                              </dlentry>
+                              </dlentry>                             
                             </dl>
                           </dd>
                         </dlentry>
@@ -177,7 +160,7 @@ scriptInclusion: NONE</codeblock>
           <codeblock>
 if ($date_1_val castable as integer and $date_2_val castable as integer)
 then
-  if ($generic_date_type == "e" or ($generic_date_type == "d" and $journal_test == false))
+  if ($generic_date_type == "e")
     ...
 </codeblock>
         </stepxmp>
@@ -204,7 +187,7 @@ then
             <cmd>Save the result as <codeph>begin_of_the_begin</codeph>.</cmd>
           </substep>
           <substep>
-            <cmd>Increment the month or day value of <codeph>begin_of_the_begin</codeph> by one and save the value as <codeph>end_of_the_end</codeph>.</cmd>
+            <cmd>Increment the month or day value of <codeph>begin_of_the_begin</codeph> to one second before the next full value and save the result as <codeph>end_of_the_end</codeph>.</cmd>
             <stepresult>
               <dl>
                 <dlentry>
@@ -231,7 +214,7 @@ then
     "timespan": {
       "type": "TimeSpan",
       "begin_of_the_begin": "1794-06-01T00:00:00Z",
-      "end_of_the_end": "1794-07-01T00:00:00Z",
+      "end_of_the_end": "1794-06-30T23:59:59",
       "identified_by": [
         {
           "type": "Name",
@@ -295,7 +278,7 @@ then
             <cmd>Save the result as <codeph>begin_of_the_begin</codeph>.</cmd>
           </substep>
           <substep>
-            <cmd>Increment the year value of <codeph>begin_of_the_begin</codeph> by one and save the value as <codeph>end_of_the_end</codeph>.</cmd>
+            <cmd>Increment the year value of <codeph>begin_of_the_begin</codeph> to one second before the next full value and save the result as <codeph>end_of_the_end</codeph>.</cmd>
           </substep>
           <substep>
             <cmd>Assign <codeph>date_1_val</codeph> to a publication activity.</cmd>
@@ -339,7 +322,7 @@ then
       "timespan": {
         "type": "TimeSpan",
         "begin_of_the_begin": "2016-01-01T00:00:00Z",
-        "end_of_the_end": "2017-01-01T00:00:00Z",
+        "end_of_the_end": "2016-12-31T23:59:59",
         "identified_by": [
           {
             "type": "Name",
@@ -369,7 +352,7 @@ then
             <cmd>Save the result as <codeph>begin_of_the_begin</codeph>.</cmd>
           </substep>
           <substep>
-            <cmd>Increment the year value of <codeph>begin_of_the_begin</codeph> by one and save the value as <codeph>end_of_the_end</codeph>.</cmd>
+            <cmd>Increment the year value of <codeph>begin_of_the_begin</codeph> to one second before the next full value and save the result as <codeph>end_of_the_end</codeph>.</cmd>
           </substep>
           <substep>
             <cmd>Assign <codeph>date_2_val</codeph> to a <codeph>copyright</codeph> entity.</cmd>
@@ -409,7 +392,7 @@ then
         "timespan": {
           "type": "TimeSpan",
           "begin_of_the_begin": "2011-01-01T00:00:00Z",
-          "end_of_the_end": "2012-01-01T00:00:00Z",
+          "end_of_the_end": "2011-12-31T23:59:59",
           "identified_by": [
             {
               "type": "Name",
@@ -475,7 +458,7 @@ then
             <cmd>Save the result as <codeph>begin_of_the_begin</codeph>.</cmd>
           </substep>
           <substep>
-            <cmd>Increment the year value of <codeph>begin_of_the_begin</codeph> by one and save the value as <codeph>end_of_the_end</codeph>.</cmd>
+            <cmd>Increment the year value of <codeph>begin_of_the_begin</codeph> to one second before the next full value and save the result as <codeph>end_of_the_end</codeph>.</cmd>
           </substep>
           <substep>
             <cmd>Assign <codeph>date_1_val</codeph> to a <codeph>publishing</codeph> activity.</cmd>
@@ -519,7 +502,7 @@ then
       "timespan": {
         "type": "TimeSpan",
         "begin_of_the_begin": "1995-01-01T00:00:00Z",
-        "end_of_the_end": "1996-01-01T00:00:00Z",
+        "end_of_the_end": "1995-12-31T23:59:59",
         "identified_by": [
           {
             "type": "Name",
@@ -549,7 +532,7 @@ then
             <cmd>Save the result as <codeph>begin_of_the_begin</codeph>.</cmd>
           </substep>
           <substep>
-            <cmd>Increment the year value of <codeph>begin_of_the_begin</codeph> by one and save the value as <codeph>end_of_the_end</codeph>.</cmd>
+            <cmd>Increment the year value of <codeph>begin_of_the_begin</codeph> to one second before the next full value and save the result as <codeph>end_of_the_end</codeph>.</cmd>
           </substep>
           <substep>
             <cmd>For <codeph>date_2_val</codeph>, override the default value of generic_date_type and assign <codeph>date_2_val</codeph> to a <codeph>creation</codeph> activity.</cmd>
@@ -598,7 +581,7 @@ then
     "timespan": {
       "type": "TimeSpan",
       "begin_of_the_begin": "1958-01-01T00:00:00Z",
-      "end_of_the_end": "1959-01-01T00:00:00Z",
+      "end_of_the_end": "1958-12-31T23:59:59",
       "identified_by": [
         {
           "type": "Name",
@@ -683,13 +666,13 @@ then
             <cmd>Save the result as <codeph>begin_of_the_begin</codeph>.</cmd>
           </substep>
           <substep>
-            <cmd>Increment the year value of <codeph>begin_of_the_begin</codeph> by one.</cmd>
+            <cmd>Increment the year value of <codeph>begin_of_the_begin</codeph> to one second before the next full value.</cmd>
           </substep>
           <substep>
             <cmd>Save the value as <codeph>end_of_the_end</codeph>.</cmd>
           </substep>
           <substep>
-            <cmd>Construct an <codeph>dateTime</codeph> value by concatenating <codeph>end_of_the_end</codeph> with <codeph>-01-01T00:00:00Z</codeph>.</cmd>
+            <cmd>Construct a <codeph>dateTime</codeph> value by concatenating <codeph>end_of_the_end</codeph> with <codeph>-12-31T23:59:59</codeph>.</cmd>
           </substep>
           <substep>
             <cmd>If <codeph>generic_date_type</codeph> is <codeph>creation</codeph>, assign the dates to an <codeph>assembling</codeph> activity.</cmd>
@@ -727,7 +710,7 @@ then
       "timespan": {
         "type": "TimeSpan",
         "begin_of_the_begin": "1401-01-01T00:00:00Z",
-        "end_of_the_end": "1600-01-01T00:00:00Z",
+        "end_of_the_end": "1599-12-31T23:59:59",
         "identified_by": [
           {
             "type": "Name",
@@ -789,7 +772,7 @@ then
       "timespan": {
         "type": "TimeSpan",
         "begin_of_the_begin": "1820-01-01T00:00:00Z",
-        "end_of_the_end": "1830-01-01T00:00:00Z",
+        "end_of_the_end": "1829-12-31T23:59:59",
         "identified_by": [
           {
             "type": "Name",
@@ -874,7 +857,7 @@ then
                 </dlentry>
                 <dlentry>
                   <dt>generic_date_type</dt>
-                  <dd>creation</dd>
+                  <dd>publication</dd>
                 </dlentry>
                 <dlentry>
                   <dt>008[07-10]</dt>
@@ -974,6 +957,9 @@ then
             <cmd>Save the result as <codeph>begin_of_the_begin</codeph>.</cmd>
           </substep>
           <substep>
+            <cmd>Increment the month or day value of <codeph>begin_of_the_begin</codeph> to one second before the next full value and save the result as <codeph>end_of_the_end</codeph>.</cmd>
+          </substep>
+          <substep>
             <cmd>Assign the date to a <codeph>publishing</codeph> activity.</cmd>
             <stepresult>
               <dl>
@@ -1015,7 +1001,7 @@ then
       "timespan": {
         "type": "TimeSpan",
         "begin_of_the_begin": "1948-01-01T00:00:00Z",
-        "end_of_the_end": "1949-01-01T00:00:00Z",
+        "end_of_the_end": "1948-12-31T23:59:59",
         "identified_by": [
           {
             "type": "Name",
@@ -1075,7 +1061,7 @@ then
         </info>
         <substeps>
           <substep>
-            <cmd>Concatenate <codeph>date_1_val</codeph> with a hyphen (<codeph>-</codeph>).</cmd>
+            <cmd>Concatenate <codeph>date_2_val</codeph> with a hyphen (<codeph>-</codeph>).</cmd>
           </substep>
           <substep>
             <cmd>Save the resulting value as <codeph>content</codeph>.</cmd>
@@ -1204,6 +1190,9 @@ then
             <cmd>Save the result as <codeph>begin_of_the_begin</codeph>.</cmd>
           </substep>
           <substep>
+            <cmd>Increment the month or day value of <codeph>begin_of_the_begin</codeph> to one second before the next full value and save the result as <codeph>end_of_the_end</codeph>.</cmd>
+          </substep>
+          <substep>
             <cmd>Assign the date to a <codeph>publishing</codeph> activity.</cmd>
             <stepresult>
               <dl>
@@ -1245,7 +1234,7 @@ then
       "timespan": {
         "type": "TimeSpan",
         "begin_of_the_begin": "1960-01-01T00:00:00Z",
-        "end_of_the_end": "1961-01-01T00:00:00Z",
+        "end_of_the_end": "1960-12-31T23:59:59",
         "identified_by": [
           {
             "type": "Name",

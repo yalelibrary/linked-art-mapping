@@ -10,6 +10,8 @@
       <revised modified="2021-11-29"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-07"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-28"/>
     </critdates>
     <metadata>
       <keywords>
@@ -118,7 +120,10 @@ scriptInclusion: NONE]]></codeblock>
         <cmd>Generate a top-level place resource, identified by an IRI, with the value of the WKT coordinates.</cmd>
         <substeps>
           <substep>
-            <cmd>Use the value of the WKT string as a key for matching and merging Place entities with the same coordinates.</cmd>
+            <cmd>For matching and merging place entities with coordinates, take the <xref keyref="gloss-norm">normalized</xref> value extracted from <codeph>651a</codeph> or <codeph>650z</codeph> and concatenate it with the WKT string.</cmd>
+          </substep>
+          <substep>
+            <cmd>When there is more than one <codeph>650z</codeph>, apply the steps in <xref href="../tasks/concepts/hierarchical_places.dita#hierarchical_places/substep_hierarchical_places_matching">Place hierarchies</xref> to create the matching key.</cmd>
           </substep>
         </substeps>
       </step>
@@ -169,14 +174,14 @@ scriptInclusion: NONE]]></codeblock>
             </stepresult>
           </substep>
           <substep>
-            <cmd>If <codeph>651</codeph> is not present, but <codeph>650z</codeph> is present, take the value of the <b>first</b>
-              <codeph>650z</codeph>.</cmd>
+            <cmd>If <codeph>651</codeph> is not present, but <codeph>650z</codeph> is present, take the <b>last</b> subdivision of the <b>first</b>
+              <codeph>650z</codeph> occurrence as the value of <codeph>_label</codeph> and <codeph>Primary Name</codeph>.</cmd>
             <info>
-              <note id="note_zrl_jdg_2sb">Because <codeph>650z</codeph> may be subdivided by additional <codeph>$z</codeph> subfields, all <codeph>$z</codeph> values should be joined with space-surrounded double hyphens (<codeph> -- </codeph>).</note>
+              <note id="note_zrl_jdg_2sb">Because <codeph>650z</codeph> may be subdivided by additional <codeph>$z</codeph> subfields, the last (most specific) value should be used.</note>
             </info>
           </substep>
           <substep>
-            <cmd>Include additional <codeph>650z</codeph> values as <codeph>Name</codeph> objects in the <codeph>identified_by</codeph> array.</cmd>
+            <cmd>Include other <codeph>650z</codeph> values as <codeph>Name</codeph> objects in the <codeph>identified_by</codeph> array.</cmd>
             <info>
               <note id="note_pdy_xdg_2sb">Values should be deduplicated before inclusion.</note>
             </info>
@@ -195,11 +200,11 @@ scriptInclusion: NONE]]></codeblock>
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "https://lux.collections.yale.edu/data/place/place1",
   "type": "Place",
-  "_label": "China -- Hong Kong",
+  "_label": "Hong Kong",
   "identified_by": [
     {
       "type": "Name",
-      "content": "China -- Hong Kong",
+      "content": "Hong Kong",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",

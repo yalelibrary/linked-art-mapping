@@ -83,10 +83,10 @@ scriptInclusion: NONE]]></codeblock>
         <substeps>
           <substep>
             <cmd>Within each top-level collection resource, include a reference to the group entity that is responsible for the collection.</cmd>
-          </substep>
-          <substep>
-            <cmd>Generate a top-level group entity for each of the three campus divisions listed above.</cmd>
-          </substep>
+            <info>
+              <p>Apply the steps in <xref href="individual_groups.dita"/> to generate a top-level group entity for each of the three campus divisions listed above.</p>
+            </info>
+          </substep>          
         </substeps>
         <stepresult>
           <codeblock><![CDATA[{

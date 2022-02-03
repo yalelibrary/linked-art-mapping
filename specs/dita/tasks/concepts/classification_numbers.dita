@@ -12,6 +12,8 @@
       <revised modified="2021-10-04"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2021-11-30"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-02-03"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_entity"/>
     <metadata>
@@ -61,10 +63,22 @@ scriptInclusion: NONE</codeblock>
           <substep>
             <cmd><xref keyref="gloss-norm">Normalize</xref> and match/merge each unique string value.</cmd>
           </substep>
+          <substep>
+            <cmd>After normalizing, use an appropriate regular expression to test the value of <codeph>050a</codeph> or <codeph>090a</codeph> to see whether it is an LC classification number.</cmd>
+            <stepxmp><codeph>[a-z]+[0-9]+([.][a-z]+[0-9]+)?</codeph></stepxmp>
+          </substep>
+          <substep>
+            <cmd>For values that match the test, add a <codeph>classified_as</codeph> for <codeph>Library of Congress classification</codeph>, as in the example below.</cmd>
+          </substep>
+          <substep>
+            <cmd>For now, skip any values that do not match the regular expression.</cmd>
+          </substep>
         </substeps>
         <stepresult>
-          <yulbibid>907498</yulbibid>
-          <codeblock>{
+          <ol>
+            <li>
+              <yulbibid>907498</yulbibid>
+              <codeblock><![CDATA[{
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "https://lux.collections.yale.edu/data/concept/f0c0c4d0-532d-4438-a26f-15c261fb4f6c",
   "type": "Type",
@@ -74,8 +88,40 @@ scriptInclusion: NONE</codeblock>
       "type": "Identifier",
       "content": "PT3818"
     }
+  ],
+  "classified_as": [
+    {
+      "id": "https://www.wikidata.org/wiki/Q621080",
+      "type": "Type",
+      "_label": "Library of Congress classification"
+    }
   ]
-}</codeblock>
+}]]></codeblock>
+            </li>
+            <li>
+              <yulbibid>907498</yulbibid>
+              <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/concept/f0c0c4d0-532d-4438-a26f-15c261fb4f6c",
+  "type": "Type",
+  "_label": "PT3818",
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "content": "PT3818"
+    }
+  ],
+  "classified_as": [
+    {
+      "id": "https://www.wikidata.org/wiki/Q621080",
+      "type": "Type",
+      "_label": "Library of Congress classification"
+    }
+  ]
+}]]></codeblock>
+            </li>
+          </ol>
+          
         </stepresult>
       </step>
       <step>
@@ -101,9 +147,9 @@ scriptInclusion: NONE</codeblock>
       "_label": "Books",
       "classified_as": [
         {
-          "id": "http://vocab.getty.edu/aat/300226816",
+          "id": "http://vocab.getty.edu/aat/300435443",
           "type": "Type",
-          "_label": "Form"
+          "_label": "Type of Work"
         }
       ]
     },

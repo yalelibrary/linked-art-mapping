@@ -77,8 +77,21 @@ scriptInclusion: BOTH</codeblock>
           <substep>
             <cmd>Ignore subfields <codeph>014e</codeph> when creating a key for matching and merging.</cmd>
           </substep>
+          <substep id="substep_hierarchical_places_matching">
+            <cmd>As the value of the matching key, use the current and preceding subdivision values.</cmd>
+          </substep>
           <substep>
-            <cmd><xref keyref="gloss-norm">Normalize</xref> and match string values.</cmd>
+            <cmd>Join subdivision values with space-separated double hyphens (<codeph> -- </codeph>).</cmd>
+            <stepxmp>
+              <yulbibid>35599</yulbibid>
+              <codeblock><![CDATA[752  $a United States $b New York (State) $d New York $f Brooklyn.]]></codeblock>
+              <ul>
+                <li>Matching key for last (most specific) subdivision: <codeph><![CDATA[united states -- new york state -- new york -- brooklyn]]></codeph></li>
+                <li>Matching key for preceding (third) subdivision: <codeph><![CDATA[united states -- new york state -- new york]]></codeph></li>
+                <li>Matching key for preceding (second) subdivision: <codeph><![CDATA[united states -- new york state]]></codeph></li>
+                <li>Matching key for preceding (first) subdivision: <codeph><![CDATA[united states]]></codeph></li>
+              </ul>
+            </stepxmp>
           </substep>
           <substep>
             <cmd>If a field includes a <codeph>$0</codeph> with an IRI, output an <codeph>equivalent</codeph> reference.</cmd>

@@ -55,6 +55,10 @@
       <revised modified="2022-01-05"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-12"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-28"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-02-03"/>
     </critdates>
   </topicmeta>
   <hasPart>
@@ -132,7 +136,6 @@
         <subjectdef href="tasks/related_entities.dita" keys="Related" type="task">
           <subjectdef href="tasks/concepts/simple_subject_headings.dita" keys="SimpleSubjects" type="task"/>
           <subjectdef href="tasks/concepts/complex_subject_headings.dita" type="task" keys="ComplexSubjects"/>
-          <subjectdef href="tasks/concepts/hierarchical_places.dita" type="task"/>
           <subjectdef href="tasks/citation_entities.dita" keys="CitationEntities" type="task"/>
           <subjectdef href="tasks/names-and-labels/related_title_entities.dita" keys="RelatedTitleEntities" type="task"/>
           <subjectdef href="concepts/concepts.dita" keys="Concepts" type="concept">
@@ -147,6 +150,7 @@
           <subjectdef href="concepts/groups.dita" keys="Groups" type="concept">
             <subjectdef href="concepts/groups_as_agents.dita" type="task" keys="GroupsAsAgents"/>
             <subjectdef href="concepts/groups_as_subjects.dita" type="task" keys="GroupsAsSubjects"/>
+            <topicref href="concepts/individual_groups.dita" type="task" keys="IndividualGroups"/>
           </subjectdef>
           <subjectdef href="concepts/people.dita" keys="People" type="concept">
             <subjectdef href="concepts/people_as_agents.dita" type="task" keys="PeopleAsAgents"/>
@@ -154,6 +158,7 @@
           </subjectdef>
           <subjectdef href="concepts/places.dita" keys="Places" type="concept">
             <subjectdef href="concepts/top_level_place_entities.dita" keys="TopLevelPlaceEntities" type="task">
+              <subjectdef href="tasks/concepts/hierarchical_places.dita" type="task"/>
               <subjectdef href="concepts/places_as_agents.dita" keys="PlacesAsAgents" type="task"/>
               <subjectdef href="concepts/places_as_subjects.dita" keys="PlacesAsSubjects" type="task"/>
               <subjectdef href="concepts/associated_places.dita" keys="AssociatedPlaces" type="task"/>

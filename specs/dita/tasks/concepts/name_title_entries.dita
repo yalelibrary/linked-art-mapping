@@ -26,6 +26,10 @@
       <revised modified="2021-12-07"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2021-12-08"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-01-28"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-02-03"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_entity"/>
     <metadata>
@@ -140,8 +144,8 @@ scriptInclusion: BOTH]]></codeblock>
               <p>
                 <ul>
                   <li>When a <codeph>100</codeph>, <codeph>110</codeph>, or <codeph>111</codeph> field is followed by a <codeph>240</codeph> field: <ol>
-                      <li>Join the <codeph>1XX</codeph> subfields with a whitespace character. This is the <codeph>agent value</codeph>.</li>
-                      <li>Join the <codeph>240</codeph> subfields with a whitespace character. This is the <codeph>work value</codeph>.</li>
+                      <li>Join the <codeph>1XX</codeph> subfields with a whitespace character. This is the <codeph>agent_value</codeph>.</li>
+                      <li>Join the <codeph>240</codeph> subfields with a whitespace character. This is the <codeph>work_value</codeph>.</li>
                     </ol></li>
                   <li>When a <codeph>600</codeph>, <codeph>610</codeph>, <codeph>611</codeph>, <codeph>692</codeph>, <codeph>693</codeph>, <codeph>694</codeph>, <codeph>700</codeph>, <codeph>710</codeph>, <codeph>711</codeph>, <codeph>800</codeph>, <codeph>810</codeph>, or <codeph>811</codeph> field contains subfield <codeph>t</codeph>: <ol>
                       <li>Join the <codeph>6XX</codeph>, <codeph>7XX</codeph>, or <codeph>8XX</codeph> subfields <i>before</i> subfield <codeph>t</codeph> with a whitespace character. This is the <codeph>agent value</codeph>.</li>
@@ -214,6 +218,9 @@ scriptInclusion: BOTH]]></codeblock>
             <info>
               <note id="note_wwz_rvj_5rb">The <codeph>Type</codeph> of the <codeph>equivalent</codeph> reference should match the <codeph>Type</codeph> of the top-level resource (i.e., <codeph>LinguisticObject</codeph>).</note>
             </info>
+          </substep>
+          <substep>
+            <cmd>Trim punctuation from the <codeph>work_value</codeph>.</cmd>
           </substep>
           <substep>
             <cmd>Output the <codeph>work_value</codeph> as the value of the <codeph>_label</codeph> property and as the <codeph>Primary Name</codeph>.</cmd>

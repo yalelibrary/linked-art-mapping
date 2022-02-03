@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task id="individual_groups" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd">
+  <title>Entities for specific groups</title>
+  <shortdesc/>
+  <prolog>
+    <author type="creator">timothy.thompson@yale.edu</author>
+    <critdates>
+      <created date="2022-02-03"/>
+    </critdates>
+    <metadata>
+      <keywords>
+        <keyword/>
+
+      </keywords>
+    </metadata>
+    <data name="assigned" value=""/>
+    <data name="completed" value=""/>
+    <data name="deployed" value=""/>
+  </prolog>
+  <taskbody>
+    <section>
+      <title>Processing steps and output</title>
+    </section>
+    <steps>
+      <step>
+        <cmd>Create a top-level resource for the following group entities:</cmd>
+        <substeps>
+          <substep>
+            <cmd>Yale University Library</cmd>
+          </substep>
+          <substep>
+            <cmd>Yale Center for British Art</cmd>
+          </substep>
+          <substep>
+            <cmd>Yale University Art Gallery</cmd>
+          </substep>
+          <substep>
+            <cmd>OCLC</cmd>
+          </substep>
+          <substep>
+            <cmd>Library of Congress</cmd>
+          </substep>
+        </substeps>
+        <stepresult>
+          <p>
+            <b>YUL</b>
+            <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/group/b96ea2c4-b196-4152-b696-d5b831bfaf07",
+  "type": "Group",
+  "_label": "Yale University Library",
+  "equivalent": [
+    {
+      "id": "http://id.loc.gov/authorities/names/n80008747",
+      "type": "Group",
+      "_label": "Yale University Library"
+    },
+    {
+      "id": "http://vocab.getty.edu/ulan/500303563",
+      "type": "Group",
+      "_label": "Yale University Library"
+    },
+    {
+      "id": "http://www.wikidata.org/entity/Q2583293",
+      "type": "Group",
+      "_label": "Yale University Library"
+    }
+  ]
+}]]></codeblock>
+          </p>
+          <p>
+            <b>YCBA</b>
+            <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/group/ycba-as-entity",
+  "type": "Group",
+  "_label": "Yale Center for British Art",
+  "equivalent": [
+    {
+      "id": "http://id.loc.gov/authorities/names/n77005277",
+      "type": "Group",
+      "_label": "Yale Center for British Art"
+    },
+    {
+      "id": "http://vocab.getty.edu/ulan/500303557",
+      "type": "Group",
+      "_label": "Yale Center for British Art"
+    },
+    {
+      "id": "http://www.wikidata.org/entity/Q6352575",
+      "type": "Group",
+      "_label": "Yale Center for British Art"
+    }
+    
+  ]
+}]]></codeblock>
+          </p>
+          <p>
+            <b>YUAG</b>
+            <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/group/yuag-as-entity",
+  "type": "Group",
+  "_label": "Yale University Art Gallery",
+  "equivalent": [
+    {
+      "id": "http://id.loc.gov/authorities/names/n79129213",
+      "type": "Group",
+      "_label": "Yale University Art Gallery"
+    },
+    {
+      "id": "http://vocab.getty.edu/ulan/500303559",
+      "type": "Group",
+      "_label": "Yale University Art Gallery"
+    },
+    {
+      "id": "http://www.wikidata.org/entity/Q1568434",
+      "type": "Group",
+      "_label": "Yale University Art Gallery"
+    }
+  ]
+}]]></codeblock>
+          </p>
+          <p>
+            <b>OCLC</b>
+            <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/group/oclc-as-entity",
+  "type": "Group",
+  "_label": "OCLC",
+  "equivalent": [
+    {
+      "id": "http://www.wikidata.org/entity/Q190593",
+      "type": "Group",
+      "_label": "OCLC"
+    }
+  ]
+}]]></codeblock>
+          </p>
+          <p>
+            <b>LC</b>
+            <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/group/lc-as-entity",
+  "type": "Group",
+  "_label": "OCLC",
+  "equivalent": [
+    {
+      "id": "https://www.wikidata.org/entity/Q131454",
+      "type": "Group",
+      "_label": "OCLC"
+    }
+  ]
+}]]></codeblock>
+          </p>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>Include an embedded reference to the group entity in the appropriate context.</cmd>
+        <substeps>
+          <substep>
+            <cmd>YUL, YCBA, and YUAG as defined in <xref href="library_collections.dita"/>.</cmd>
+          </substep>
+          <substep>
+            <cmd>OCLC and Library of Congress within <codeph>AttributeAssignment</codeph> entities for OCLC numbers and LCCNs, (<xref href="../tasks/identifiers/oclc_numbers.dita"/> and <xref href="../tasks/identifiers/library_of_congress_control_number_lccn.dita"/>), respectively.</cmd>
+          </substep>
+        </substeps>
+      </step>
+    </steps>
+  </taskbody>
+</task>
