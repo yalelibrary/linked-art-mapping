@@ -129,12 +129,12 @@ keyword:
       "@context": "https://linked.art/ns/v1/linked-art.json",
       "id": "https://lux.collections.yale.edu/data/group/lc-as-entity",
       "type": "Group",
-      "_label": "OCLC",
+      "_label": "Library of Congress",
       "equivalent": [
         {
           "id": "https://www.wikidata.org/entity/Q131454",
           "type": "Group",
-          "_label": "OCLC"
+          "_label": "Library of Congress"
         }
       ]
     }
