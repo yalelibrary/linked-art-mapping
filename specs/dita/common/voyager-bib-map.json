@@ -1,0 +1,363 @@
+[
+  {
+    "name": "AbstractNote",
+    "fieldSpec": "520",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "AccessCondition",
+    "fieldSpec": "50635abcde:540abcd3",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "AlternativeTitle",
+    "fieldSpec": "130:800:810:811:210ab:222ab:240afklmnoprs6:246abfgnp:247abfg",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "AlternativeTitleDisplay",
+    "fieldSpec": "246ai",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "LibraryOfCongressClassificationNumber",
+    "fieldSpec": "050ab",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "Contents",
+    "fieldSpec": "505",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "Contributor",
+    "fieldSpec": "700abcde:710abcde:711acde",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "ContributorUri",
+    "fieldSpec": "7000:7100:7110",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "Coordinate",
+    "fieldSpec": "034defg",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "CoordinateWest",
+    "fieldSpec": "034d",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "CoordinateEast",
+    "fieldSpec": "034e",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "CoordinateNorth",
+    "fieldSpec": "034f",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "CoordinateSouth",
+    "fieldSpec": "034g",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "CoordinateDisplay",
+    "fieldSpec": "255c",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "CopyrightDate",
+    "fieldSpec": "264| 4|c",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "Creator",
+    "fieldSpec": "100:110:111",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "Date",
+    "fieldSpec": "260cg:264|*0|c:264|*1|c:264|*2|c:264|*3|c",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "DateStructured",
+    "extractFunction": "dateExtractor"
+  },
+  {
+    "name": "Description",
+    "fieldSpec": "500a:501a:502a:504a:507ab:511a:522a:530acu:533abcdn:545a:546ab:555a3:588a:590a",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "Edition",
+    "fieldSpec": "250ab",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "Extent",
+    "fieldSpec": "300acef",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "Genre",
+    "fieldSpec": "655:600v:610v:611v:630v:650v:651v:690a",
+    "trimPunctuation": true,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "GeometryType",
+    "fieldSpec": "352a",
+    "trimPunctuation": true,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "IllustrativeMatter",
+    "fieldSpec": "008[18-21]",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "IndexedBy",
+    "fieldSpec": "510",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "ItemType",
+    "fieldSpec": "336a",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "LanguageCode",
+    "fieldSpec": "008[35-37]:041a",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "Language",
+    "fieldSpec":"008[35-37]:041a",
+    "trimPunctuation":false,
+    "scriptInclusion": "NONE",
+    "extractFunction": "languageMap"
+  },
+  {
+    "name": "Material",
+    "fieldSpec": "300b:340",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "OrbisBibId",
+    "fieldSpec": "001",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "PartOf",
+    "fieldSpec": "7105",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "Projection",
+    "fieldSpec": "255b",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "ProvenanceControlled",
+    "fieldSpec": "692:693",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "ProvenanceUncontrolled",
+    "fieldSpec": "561a3",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "CreationPlace",
+    "fieldSpec": "260ae:264a:752abcd",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "Publisher",
+    "fieldSpec": "260bf:264b",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "PreferredCitation",
+    "fieldSpec": "524",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "RelatedTitle",
+    "fieldSpec": "505t:700gklmnoprst:710fgklmnoprst:711fgklnpst:730adfgklmnoprst:740anp",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+   {
+    "name": "RelatedResourceOnline",
+    "fieldSpec": "856|42|3u",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE",
+    "delimiter": " | "
+  }, 
+  {
+    "name": "ResourceVersionOnline",
+    "fieldSpec": "856|41|3u",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE",
+    "delimiter": " | "
+  },
+  {
+    "name": "Rights",
+    "fieldSpec": "540",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "Scale",
+    "fieldSpec": "255a",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SeriesTitle",
+    "fieldSpec": "440av:490av:830av",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "SourceCreator",
+    "fieldSpec": "773a",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SourceDate",
+    "fieldSpec": "773d",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SourceEdition",
+    "fieldSpec": "773b",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SourceTitle",
+    "fieldSpec": "773gipt",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SubjectEra",
+    "fieldSpec": "600y:610y:611y:630y:648a:650y:651y:656y",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SubjectGeographic",
+    "fieldSpec": "600z:610z:611z:630z:650z:651a:651z:662abcd2",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SubjectGeographicCode",
+    "fieldSpec": "043a",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SubjectName",
+    "fieldSpec": "600abcdq:610ab:611ab",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SubjectOccupation",
+    "fieldSpec": "656a",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SubjectTitle",
+    "fieldSpec": "600t:610t:611t:630a",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name": "SubjectTopic",
+    "fieldSpec": "650a:650x:651x:600x:610x:611x:630x",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "Title",
+    "fieldSpec": "245abfghknp",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "TitleStatement",
+    "fieldSpec": "245",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "RelatedTitleDisplay",
+    "fieldSpec": "505t:700abcdefhijgklmnopqrstux:710abcdefhigklmnoprstux:711acdefhijgklnpqstx:730adfgklmnoprst:740anp",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "SubjectTitleDisplay",
+    "fieldSpec": "600abcdegjqufhklmnoprst:610abcdefghklmnoprstu:611acdefghjklmnopqstu:630adfklnps",
+    "trimPunctuation": false,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "CreatorDisplay",
+    "fieldSpec": "100abcdejqu:110abceu:111acejqu",
+    "trimPunctuation": true,
+    "scriptInclusion": "BOTH"
+  },
+  {
+    "name": "ContributorDisplay",
+    "fieldSpec": "700abcdjqu:710abcu:711abcq",
+    "trimPunctuation": false,
+    "scriptInclusion": "NONE"
+  }
+]

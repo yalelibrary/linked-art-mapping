@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="reference_metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Metadata</title>
+	<shortdesc/>
+	<prolog id="common_metadata">		
+		<metadata id="keyword_metadata_bib">
+			<category>MARC 21 reference</category>
+			<category>Tables</category>
+			<keywords>
+				<indexterm>MARC 21<indexterm>Bibliographic Format</indexterm>
+					<indexterm>Reference</indexterm>
+				</indexterm>
+				<keyword>MARC 21</keyword>
+				<keyword>Bibliographic</keyword>
+			</keywords>
+			<othermeta content="1.0" name="version"/>
+		</metadata>
+		<metadata id="keyword_metadata_mfhd">
+			<category>MARC 21 reference</category>
+			<category>Tables</category>
+			<keywords>
+				<indexterm>MARC 21<indexterm>Holdings Format</indexterm>
+					<indexterm>Reference</indexterm>
+				</indexterm>
+				<keyword>MARC 21</keyword>
+				<keyword>Holdings</keyword>
+			</keywords>
+			<othermeta content="1.0" name="version"/>
+		</metadata>		
+	</prolog>
+	<conbody>
+		<p/>
+	</conbody>
+</concept>

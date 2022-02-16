@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="common_metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Metadata</title>
+	<shortdesc/>
+	<prolog id="common_metadata">
+		<author id="author_metadata">timothy.thompson@yale.edu</author>
+		<source id="source_metadata"/>
+		<publisher id="publ_metadata">YUL Technical Services, Resource Discovery Services, Metadata Services Unit</publisher>
+		<critdates id="dates_metadata">
+			<created date="2021-09-13-04:00"/>
+			<revised modified="2021-09-14-04:00"/>
+		</critdates>
+		<metadata id="keyword_metadata_entity">
+			<category>MARC to Linked Art mapping</category>			
+			<othermeta content="1.0" name="version"/>
+		</metadata>		
+	</prolog>
+	<conbody>
+		<p/>
+	</conbody>
+</concept>

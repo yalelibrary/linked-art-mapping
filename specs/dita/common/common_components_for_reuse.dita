@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task id="common_components_for_reuse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd">
+	<title>Common components</title>
+	<shortdesc>Common task-related components for reuse.</shortdesc>
+	<taskbody>
+		<context> </context>
+
+	</taskbody>
+</task>

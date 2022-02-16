@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="topic_metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Metadata</title>
+	<shortdesc/>
+	<prolog id="common_metadata">		
+		<metadata id="keyword_metadata_entity">
+			<category>Entity extraction</category>
+			<keywords>
+				<indexterm>Entity extraction</indexterm>
+			</keywords>
+			<othermeta content="1.0" name="version"/>
+		</metadata>
+		<metadata id="keyword_metadata_desc">
+			<category>Descriptive content</category>
+			<keywords>
+				<indexterm>Descriptive content</indexterm>
+			</keywords>
+			<othermeta content="1.0" name="version"/>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p/>
+	</conbody>
+</concept>

@@ -1,0 +1,2593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task id="specs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd">
+  <title>Specs</title>
+  <shortdesc/>
+  <prolog>
+    <critdates>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-02-15"/>
+    </critdates>
+  </prolog>
+  <taskbody>
+    <context>
+      <codeblock id="tag001"><![CDATA[---
+name: OrbisBibId
+sampleBibs:
+  - 2
+  - 3
+  - 4
+fieldSpec: 001
+trimPunctuation: false
+scriptInclusion: NONE]]></codeblock>
+      <codeblock id="tag010"><![CDATA[---
+name: Lccn
+sampleBibs:
+  - 4
+  - 3802861
+  - 15589896
+fieldSpec: 010a
+trimPunctuation: false
+scriptInclusion: NONE]]></codeblock>
+      <codeblock id="tag020"><![CDATA[---
+name: Isbn
+sampleBibs:
+  - 693
+  - 8827
+  - 3802857
+  - 13101718
+fieldSpec: 020aqz
+trimPunctuation: false
+scriptInclusion: NONE]]></codeblock>
+      <codeblock id="tag022"><![CDATA[---
+name: Issn
+sampleBibs:
+  - 4
+  - 3802861
+  - 15589896
+fieldSpec: 022ayz
+trimPunctuation: false
+scriptInclusion: NONE]]></codeblock>
+      <codeblock id="tag028"><![CDATA[---
+name: PublisherOrDistributorNumber
+sampleBibs:
+  - 4
+  - 3802861
+  - 15589896
+fieldSpec: 028abq
+trimPunctuation: false
+scriptInclusion: NONE]]></codeblock>
+      <codeblock id="tags035-079"><![CDATA[---
+name: OclcNumber
+sampleBibs:
+  - 4
+  - 2395
+  - 3802861
+  - 907208
+  - 15589896
+fieldSpec: 
+  - 035az
+  - 079az
+trimPunctuation: false
+scriptInclusion: NONE]]></codeblock>
+      <div>
+        <table id="table_collections_mapping">
+          <title>Yale Library location code mapping</title>
+          <tgroup cols="3">
+            <colspec colname="c1" colnum="1"/>
+            <colspec colname="c2" colnum="2"/>
+            <colspec colname="c3" colnum="3"/>
+            <thead>
+              <row>
+                <entry>Campus division</entry>
+                <entry>Location</entry>
+                <entry>Location code</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>bassill</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>ccl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>ccl2wkr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>ccl3day</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclaud</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclaudio</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclbind</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclbmec</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclborr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclcd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclclicker</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclclos</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>ccldesk</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>ccldvd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclec</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>ccletextcd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclger</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclgraph</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclhr2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclhr24</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>ccllibn</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclmtn</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclnew</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclnogo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclop</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclpoor</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclpres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclra1</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclrefa</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclsoft</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>ccltran</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>ccltravel</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclvd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclvid</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclyccdvd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>cclzzz</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>lsfmtn</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>smllnbm</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Bass Library</entry>
+                <entry>smllnbt</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>beineliz</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>beingen</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>beinosb</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>beinref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>beinsref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>beinwa</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>beinycal</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>beinycgl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>lsfbeiar</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>lsfbeigr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>lsfbeior</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>lsfbeir</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Beinecke Library</entry>
+                <entry>lsfbeiwr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Classics Library</entry>
+                <entry>clanum</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Classics Library</entry>
+                <entry>clas</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Classics Library</entry>
+                <entry>clasclos</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Classics Library</entry>
+                <entry>clasdict</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Classics Library</entry>
+                <entry>clasref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Classics Library</entry>
+                <entry>clasres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Classics Library</entry>
+                <entry>lsfcla</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Classics Library</entry>
+                <entry>lsfnum</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Classics Library</entry>
+                <entry>lsfnumr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>eph</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>ephcens</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>ephcirc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>ephhist</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>ephhr24</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>ephnchs</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>ephper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>ephref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>ephres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>ephres3</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>ephsref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>lsfeph</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>lsfephr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>lsfmed</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>lsfmedr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>med</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>med3day</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medbiog</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medcat</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medcirc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medcird</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medcres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medhper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medhr24</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medhr4</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medhrf</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medhs</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medhsl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medhslmini</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medill</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medjres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medmic</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>mednref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>mednres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medrefchc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medrefec</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medrefeol</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medrefrc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medsref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medtcc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medthes</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medts</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medwk1</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>medzzz</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>mesjres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Cushing/Whitney Medical Library</entry>
+                <entry>rad</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>div</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>div3day</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divannx</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divborr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divbss</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divcd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divdmr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divdmrref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>diveast</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divhr24</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divlo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divmrc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divmrclc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divmrr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divmrv</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divrc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divrlo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divrr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divrrus</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divrsno</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divspc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divsr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divts</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>divwk1r</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>lsfdiv</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Divinity Library</entry>
+                <entry>lsfdivr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Film Archive</entry>
+                <entry>filmdvd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Film Archive</entry>
+                <entry>filmfidv</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Film Archive</entry>
+                <entry>filmlasr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Film Archive</entry>
+                <entry>filmref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Film Archive</entry>
+                <entry>filmvidb</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Film Archive</entry>
+                <entry>fsfilm</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Film Archive</entry>
+                <entry>lsffs</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Film Archive</entry>
+                <entry>lsffsfilm</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Film Archive</entry>
+                <entry>lsffsvideo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Film Archive</entry>
+                <entry>lsffsvidr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Government Documents</entry>
+                <entry>gdcsslr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Government Documents</entry>
+                <entry>lsfgdc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>art</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artbas3</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artbirr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artcr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artlck1</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artlck2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artlo1</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artlo2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artmicl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artnogo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artop</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artor</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artrefb</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artrefc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artrefi</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artspc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artspr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artsps</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artsty1</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artsty2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artts</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artunca</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artuncd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artunci</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>artzzz</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>dra</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>drabbx</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>dracr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>drafoll</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>drafolo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>dragpb</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>drahclc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>dranbs</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>draod</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>draor</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>draperc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>drar</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>drarefl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>drarefo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>drascrc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>draspc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>drathe</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>lsfaobr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>lsfart</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>lsfartr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>lsfartrr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>lsfclar</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>lsfdra</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>lsfdrar</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>lsfdrarr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>lsfvrcr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>smlaob</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Haas Arts Library</entry>
+                <entry>vrcspc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Law Library</entry>
+                <entry>law</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Lewis Walpole Library</entry>
+                <entry>lwl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Lewis Walpole Library</entry>
+                <entry>lwlint</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Lewis Walpole Library</entry>
+                <entry>lwlprsat</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Lewis Walpole Library</entry>
+                <entry>lwlref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry></entry>
+                <entry>lsf</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Manuscripts and Archives</entry>
+                <entry>lsffesr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Manuscripts and Archives</entry>
+                <entry>lsfhvt</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Manuscripts and Archives</entry>
+                <entry>lsfmssr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Manuscripts and Archives</entry>
+                <entry>lsfr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Manuscripts and Archives</entry>
+                <entry>smlmss</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Manuscripts and Archives</entry>
+                <entry>smlyal</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Manuscripts and Archives</entry>
+                <entry>smlyalc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Manuscripts and Archives</entry>
+                <entry>smlyalt</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>ast</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>astref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>chem</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>chemref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>chemwkst</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>csssi</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>csssi24hr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>csssi2hr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>csssi3day</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>csssiannex</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>csssifolio</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>csssiper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>csssiperm</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>csssiref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>csssirefst</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>engn</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>engnborr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>engnhr24</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>engnlo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>engnnonc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>engnper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>engnperm</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>engnref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>engnrep</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>engnres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>fes</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>fesfol</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>fesfsc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>feshr2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>feshr24</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>fesover</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>fesper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>fesref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>festhe</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geodsk</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geofol</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geogis</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geohr2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geomap</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geomic</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geonbs</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geonogo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geononc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geoper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geoperm</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>georbc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>georbr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>georef</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geores</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>georrr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geothe</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geots</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>geozzz</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>ksl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslabs</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslannex</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslant</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslantc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslanto</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslantp</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslantr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslcage</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslclb</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslclp</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslfolio</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslherb</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslkoff</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslloff</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslnew</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslop</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslopen</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslperm</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslpers</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslrec</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslrefa</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslrefd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslrefj</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslrefo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslroff</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslsngo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslstks</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>ksltoff</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslvid</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>kslzzz</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfche</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfchem</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfcher</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfcsssi</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfeng</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfengr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsffes</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsffor</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfforr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfgdcr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfgeo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfgeor</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfksl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfkslant</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfkslr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsflamc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfssl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfsslc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfsslr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>lsfstat</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>orn</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>ornref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>ssl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>ssl3day</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslP2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslcd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslclr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>ssldar</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslegc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslgdcr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslhr24</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslmic1</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslp24</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslpam1</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslpam2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslref5</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslref6</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>ssltec</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslvid</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Marx Library</entry>
+                <entry>sslzzz</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Math Library</entry>
+                <entry>lsfmath</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Math Library</entry>
+                <entry>math</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Math Library</entry>
+                <entry>mathannex</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Math Library</entry>
+                <entry>mathper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Math Library</entry>
+                <entry>mathref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>lsfhsrr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>lsfmus</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>lsfmusr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>mus</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>muscar</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>muscirc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>mushsr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musmic</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musoff1</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musoff2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musoff3</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musohm</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musrar1</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musrar2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musrec</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>musres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Music Library</entry>
+                <entry>muszzz</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Oral History of American Music</entry>
+                <entry>musohm</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>kslantm</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>kslmic</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfbaby</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfjud</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfmap</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfmapr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfnea</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfpresr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfsla</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfslar</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfsmlaris</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfsmlasi</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfsmlasir</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfsmlear</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfsmlmicr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>lsfsmlphi</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>sml</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlafr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlamst</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smland</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlaos</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlaris</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlasi</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlasi2</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlasi3</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlbab</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlbib</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlbind</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlbldg</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlcat</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlcatr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlcd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlchir</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlcoff</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlcon</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smldesk</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smldskn</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlear</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smleasc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smleaso</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlegypt</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smleng</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlfolio</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlfolior</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlfra</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlgen</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlhtxt</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlill</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smljpnr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smljud</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smljudr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlkorr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smllamc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smllnb</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlmap</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlmapa</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlmapb</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlmapg</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlmapl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlmapr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlmapu</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlmic</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlmicr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlmlc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlnea</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlneg</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlnegd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlnews</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlnogo</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlnonc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlnrc</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlnum</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlop</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlparl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlphi</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlpres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlref</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlrefa</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlrefd</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlrefh</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlrefi</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlrefl</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlres</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlrfof</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlrstr</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlsea</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlsem</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlser</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlsin</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlsla</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlslam</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlslanews</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlslar</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlsub</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlsyst</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smly</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlzeta</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>smlzzz</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>stat</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>statper</entry>
+              </row>
+              <row>
+                <entry>Yale University Library</entry>
+                <entry>Sterling Memorial Library</entry>
+                <entry>statref</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Institutional Archives</entry>
+                <entry>bacia</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Prints and Drawings</entry>
+                <entry>bacpd</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Prints and Drawings</entry>
+                <entry>bacpdref</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Rare Rare Books and Manuscripts</entry>
+                <entry>bacrb</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Rare Books and Manuscripts</entry>
+                <entry>bacrb1</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Rare Books and Manuscripts</entry>
+                <entry>bacrb2</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Rare Books and Manuscripts</entry>
+                <entry>bacrb3</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Rare Books and Manuscripts</entry>
+                <entry>bacrbb</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Rare Books and Manuscripts</entry>
+                <entry>bacrbca</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Rare Books and Manuscripts</entry>
+                <entry>bacrbcu</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Rare Books and Manuscripts</entry>
+                <entry>bacrbf</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Rare Books and Manuscripts</entry>
+                <entry>bacrbs</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Reference Library</entry>
+                <entry>bacref</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Reference Library</entry>
+                <entry>bacrefc</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Reference Library</entry>
+                <entry>bacrefd</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Reference Library</entry>
+                <entry>bacrefl</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Reference Library</entry>
+                <entry>bacrefp</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Reference Library</entry>
+                <entry>bacrefr</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Reference Library</entry>
+                <entry>bacrefv</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Rare Books and Manuscripts</entry>
+                <entry>lsfbacr</entry>
+              </row>
+              <row>
+                <entry>Yale Center for British Art</entry>
+                <entry>Yale Center for British Art Reference Library</entry>
+                <entry>lsfbarr</entry>
+              </row>
+              <row>
+                <entry>Yale University Art Gallery</entry>
+                <entry/>
+                <entry>artgal</entry>
+              </row>
+              <row>
+                <entry>Yale University Art Gallery</entry>
+                <entry>Yale University Art Gallery Numismatics</entry>
+                <entry>yuagcm</entry>
+              </row>
+              <row>
+                <entry>Yale University Art Gallery</entry>
+                <entry>Yale University Art Gallery Prints and Drawings</entry>
+                <entry>yuagpr</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </div>
+    </context>
+    <steps>
+      <step>
+        <cmd/>
+      </step>
+    </steps>
+  </taskbody>
+</task>

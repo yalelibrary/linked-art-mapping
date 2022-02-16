@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="metadata_linked_art" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>metadata_linked_art</title>
+	<shortdesc/>
+	<prolog id="common_metadata">
+		<metadata id="concept">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Concept entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+		<metadata id="digital">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Digital Object entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+		<metadata id="event">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Event entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+		<metadata id="group">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Group entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+		<metadata id="person">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Person entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+		<metadata id="physical">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Physical Object entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+		<metadata id="place">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Place entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+		<metadata id="provenance">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Provenance Activity entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+		<metadata id="set">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Set entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+		<metadata id="textual">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Textual Work entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+		<metadata id="visual">
+			<keywords>
+				<indexterm>Linked Art<indexterm>Visual Work entity</indexterm><indexterm>Documentation</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>	
+	<conbody>
+		<p/>
+	</conbody>
+</concept>

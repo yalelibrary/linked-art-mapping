@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concept id="glossary_metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+	<title>Metadata</title>
+	<shortdesc/>
+	<prolog id="common_metadata">
+		<metadata id="keyword_metadata_glossary">
+			<category>MARC to Linked Art mapping glossary</category>
+			<othermeta content="1.0" name="version"/>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p/>
+	</conbody>
+</concept>

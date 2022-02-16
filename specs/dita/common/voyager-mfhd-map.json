@@ -1,0 +1,40 @@
+[
+  {
+    "name":"Description",
+    "fieldSpec":"562abc",
+    "trimPunctuation":false,
+    "scriptInclusion": "NONE"
+  },
+
+ {
+    "name":"AccessCondition",
+    "fieldSpec":"5063a:845abcdu3568",
+    "trimPunctuation":false,
+    "scriptInclusion": "NONE"
+  },
+
+  {
+    "name":"CallNumber",
+    "fieldSpec":"852khimt",
+    "trimPunctuation":false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name":"CallNumber+PublicNote",
+    "fieldSpec":"852khimtz",
+    "trimPunctuation":false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name":"ProvenanceUncontrolled",
+    "fieldSpec":"561:541ad3",
+    "trimPunctuation":false,
+    "scriptInclusion": "NONE"
+  },
+  {
+    "name":"Repository",
+    "fieldSpec":"852b",
+    "trimPunctuation":false,
+    "scriptInclusion": "NONE"
+  }
+]

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<step>
+  <cmd>Output the string value of the main heading (preceding any subdivisions) according to the table below.</cmd>
+  <choicetable>
+    <chhead>
+      <choptionhd>MARC tag</choptionhd>
+      <chdeschd>Subfields</chdeschd>
+    </chhead>
+    <chrow>
+      <choption>600</choption>
+      <chdesc>abcdgjq</chdesc>
+    </chrow>
+    <chrow>
+      <choption>610</choption>
+      <chdesc>abcdg</chdesc>
+    </chrow>
+    <chrow>
+      <choption>611</choption>
+      <chdesc>acdegnqu</chdesc>
+    </chrow>
+    <chrow>
+      <choption>630</choption>
+      <chdesc>adfhklmnoprst</chdesc>
+    </chrow>
+    <chrow>
+      <choption>650</choption>
+      <chdesc>abcdg</chdesc>
+    </chrow>
+    <chrow>
+      <choption>651</choption>
+      <chdesc>abcdfgh</chdesc>
+    </chrow>
+    <chrow>
+      <choption>690</choption>
+      <chdesc>abcdg</chdesc>
+    </chrow>
+    <chrow>
+      <choption>691</choption>
+      <chdesc>abcdfgh</chdesc>
+    </chrow>
+    <chrow>
+      <choption>692</choption>
+      <chdesc>abcdgjq</chdesc>
+    </chrow>
+    <chrow>
+      <choption>693</choption>
+      <chdesc>abcdg</chdesc>
+    </chrow>
+    <chrow>
+      <choption>694</choption>
+      <chdesc>acdgnqu</chdesc>
+    </chrow>
+    <chrow>
+      <choption>695</choption>
+      <chdesc>adfhklmnoprst</chdesc>
+    </chrow>
+  </choicetable>
+</step>
