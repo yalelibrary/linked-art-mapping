@@ -537,6 +537,19 @@ keyword:
           "type": "Group",
           "_label": "Yale University Library"
         }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Yale University Library",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        }
       ]
     }
     ```
@@ -553,6 +566,19 @@ keyword:
         {
           "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
           "_label": "Yale University Library"
+        }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Bass Library",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
         }
       ]
     }
@@ -581,8 +607,20 @@ keyword:
           "id": "http://www.wikidata.org/entity/Q6352575",
           "type": "Group",
           "_label": "Yale Center for British Art"
+        }    
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Yale Center for British Art",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
         }
-        
       ]
     }
     ```
@@ -599,6 +637,19 @@ keyword:
         {
           "id": "https://lux.collections.yale.edu/data/group/ycba-as-entity",
           "_label": "Yale Center for British Art"
+        }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Reference Library",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
         }
       ]
     }
@@ -628,6 +679,19 @@ keyword:
           "type": "Group",
           "_label": "Yale University Art Gallery"
         }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Yale University Art Gallery",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        }
       ]
     }
     ```
@@ -639,11 +703,24 @@ keyword:
       "@context": "https://linked.art/ns/v1/linked-art.json",
       "id": "https://lux.collections.yale.edu/data/group/yuag-numismatics",
       "type": "Group",
-      "_label": "Reference Library",
+      "_label": "Numismatics",
       "member_of": [
         {
           "id": "https://lux.collections.yale.edu/data/group/yuag-as-entity",
           "_label": "Yale University Art Gallery"
+        }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Numismatics",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
         }
       ]
     }
@@ -667,6 +744,19 @@ keyword:
           "type": "Group",
           "_label": "Library of Congress"
         }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Library of Congress",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        }
       ]
     }
     ```
@@ -684,6 +774,19 @@ keyword:
           "id": "http://www.wikidata.org/entity/Q190593",
           "type": "Group",
           "_label": "OCLC"
+        }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "OCLC",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
         }
       ]
     }

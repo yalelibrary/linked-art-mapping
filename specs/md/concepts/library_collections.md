@@ -561,8 +561,15 @@ scriptInclusion: NONE
           "identified_by": [
             {
               "type": "Name",
-              "content": "Holdings of Yale University Library"
-            }
+              "content": "Holdings of Yale University Library",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404670",
+                  "type": "Type",
+                  "_label": "Primary Name"
+                }
+              ]
+            }                
           ]
         }
         ```
@@ -602,7 +609,14 @@ scriptInclusion: NONE
           "identified_by": [
             {
               "type": "Name",
-              "content": "Holdings of Bass Library"
+              "content": "Holdings of Bass Library",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404670",
+                  "type": "Type",
+                  "_label": "Primary Name"
+                }
+              ]
             }
           ]
         }
