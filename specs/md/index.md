@@ -86,7 +86,7 @@
                     -   [Complex works as complex subjects](tasks/name-title/name-title-with-subdivisions.md)
                 -   [Works in whole/part relationships](tasks/name-title/works_as_whole_part.md)
             -   [Sets](concepts/related_sets.md)
-                -   [Repository collections](concepts/library_collections.md)
+                -   [Library locations and collections](concepts/library_collections.md)
 -   [Descriptive content](concepts/descriptive_content.md)
     -   [Embedded entities](concepts/lux_embedded_entities.md)
         -   [Digital object link to catalog](concepts/digital_objects.md)
