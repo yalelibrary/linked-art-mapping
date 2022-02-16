@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <task id="library_collections" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd">
-  <title>Repository collections</title>
+  <title>Library locations and collections</title>
   <shortdesc/>
   <prolog>
     <author type="creator">timothy.thompson@yale.edu</author>
@@ -12,6 +12,10 @@
       <revised modified="2021-12-01"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-12"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-02-15"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-02-16"/>
     </critdates>
     <metadata>
       <keywords>
@@ -60,7 +64,7 @@
     <section>
       <title>Source data</title>
       <codeblock><![CDATA[---
-name: RepositoryCollections
+name: LocationsAndCollections
 sampleBibs:
   - 6546882
 fieldSpec: mfhd852b
@@ -72,24 +76,29 @@ scriptInclusion: NONE]]></codeblock>
     </section>
     <steps>
       <step>
-        <cmd>Create a top-level resource for each repository collection.</cmd>
+        <cmd>Create a top-level entity for each location and sublocation (a.k.a. <q>collection</q>).</cmd>
+      </step>
+      <step>
+        <cmd>Use the following table to match MFHD location codes against collection entities.</cmd>
         <info>
-          <p>At present, only three collections are defined:<ul id="ul_zfs_tdr_dsb">
-              <li>Yale University Library</li>
-              <li>Yale Center for British Art</li>
-              <li>Yale University Art Gallery</li>
-            </ul></p>
+          <table conkeyref="specs/table_collections_mapping">
+            <tgroup cols="1">
+              <tbody>
+                <row>
+                  <entry/>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
         </info>
-        <substeps>
+        <substeps id="substeps_qt4_cyc_psb">
           <substep>
             <cmd>Within each top-level collection resource, include a reference to the group entity that is responsible for the collection.</cmd>
             <info>
-              <p>Apply the steps in <xref href="individual_groups.dita"/> to generate a top-level group entity for each of the three campus divisions listed above.</p>
+              <p>Apply the steps in <xref href="individual_groups.dita"/> to generate a top-level group entity for each of the campus divisions and locations listed above.</p>
             </info>
-          </substep>          
-        </substeps>
-        <stepresult>
-          <codeblock><![CDATA[{
+            <stepresult>
+              <codeblock id="codeblock_rt4_cyc_psb"><![CDATA[{
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "https://lux.collections.yale.edu/data/set/collection1",
   "type": "Set",
@@ -105,7 +114,7 @@ scriptInclusion: NONE]]></codeblock>
     "type": "Creation",
     "carried_out_by": [
       {
-        "id": "https://lux.collections.yale.edu/data/group/group-1",
+        "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
         "type": "Group",
         "_label": "Yale University Library"
       }
@@ -118,45 +127,56 @@ scriptInclusion: NONE]]></codeblock>
     }
   ]
 }]]></codeblock>
-        </stepresult>
-      </step>
-      <step>
-        <cmd>Add an embedded reference to the <codeph>Set</codeph> within the corresponding object resource.</cmd>
-        <substeps>
+            </stepresult>
+          </substep>
           <substep>
-            <cmd>Use the Voyager location code lookup table to identify MFHD <codeph>852b</codeph> codes that match YCBA or YUAG locations.</cmd>
-            <info>
-              <p>This includes any location code that corresponds to the display label <q>Yale Center for British Art</q> or <q>Yale University Art Gallery</q>.</p>
-            </info>
-            <stepxmp>
-              <codeblock><![CDATA[[
-  {
-    "LOCATION_MAP_FACET": "Yale Center for British Art",
-    "ORBIS_LOCATION_CODE": "bacrb"
-  },
-  {
-    "LOCATION_MAP_FACET": "Yale University Art Gallery",
-    "ORBIS_LOCATION_CODE": "yuagcm"
-  }
-]]]></codeblock>
-            </stepxmp>
+            <cmd>For collections that correspond to <q>locations</q>, include a <codeph>member_of</codeph> relationship to the campus division collection.</cmd>
             <stepresult>
               <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/set/collection1a",
+  "type": "Set",
+  "_label": "Bass Library",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300025976",
+      "type": "Type",
+      "_label": "Collection"
+    }
+  ],
   "member_of": [
     {
-      "id": "https://lux.collections.yale.edu/data/set/collection2",
+      "id": "https://lux.collections.yale.edu/data/set/collection1",
       "type": "Set",
-      "_label": "Yale Center for British Art"
+      "_label": "Yale University Library"
+    }
+  ],
+  "created_by": {
+    "type": "Creation",
+    "carried_out_by": [
+      {
+        "id": "https://lux.collections.yale.edu/data/group/group1a",
+        "type": "Group",
+        "_label": "Bass Library"
+      }
+    ]
+  },
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "Holdings of Bass Library"
     }
   ]
 }]]></codeblock>
             </stepresult>
           </substep>
-          <substep>
-            <cmd>For all other locations, add a reference to the YUL collection.</cmd>
-            <stepresult>
-              <yulbibid>6546882</yulbibid>
-              <codeblock><![CDATA[{
+        </substeps>
+      </step>
+      <step>
+        <cmd>Add an embedded reference to the <codeph>Set</codeph> within the corresponding <codeph>HumanMadeObject</codeph> resource.</cmd>
+        <stepresult>
+          <div>
+            <codeblock><![CDATA[{
   "member_of": [
     {
       "id": "https://lux.collections.yale.edu/data/set/collection1",
@@ -165,9 +185,30 @@ scriptInclusion: NONE]]></codeblock>
     }
   ]
 }]]></codeblock>
-            </stepresult>
-          </substep>
-        </substeps>
+          </div>
+          <div>
+            <codeblock><![CDATA[{
+  "member_of": [
+    {
+      "id": "https://lux.collections.yale.edu/data/set/collection1a",
+      "type": "Set",
+      "_label": "Bass Library"
+    }
+  ]
+}]]></codeblock>
+          </div>
+          <div>
+            <codeblock><![CDATA[{
+  "member_of": [
+    {
+      "id": "https://lux.collections.yale.edu/data/set/collection2a",
+      "type": "Set",
+      "_label": "Yale Center for British Art Reference Library"
+    }
+  ]
+}]]></codeblock>
+          </div>
+        </stepresult>
       </step>
     </steps>
   </taskbody>
