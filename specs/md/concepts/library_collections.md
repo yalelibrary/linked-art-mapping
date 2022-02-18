@@ -535,6 +535,38 @@ scriptInclusion: NONE
 
         Apply the steps in [Entities for specific groups](individual_groups.md) to generate a top-level group entity for each of the campus divisions and locations listed above.
 
+        Generate a top-level concept for `curation` with an `equivalent` reference to `http://vocab.getty.edu/aat/300054277`.
+
+        ```
+        {
+          "@context": "https://linked.art/ns/v1/linked-art.json",
+          "id": "https://lux.collections.yale.edu/data/concept/0d0f1e67-8089-430c-bbaa-02596b2f8d25",
+          "type": "Type",
+          "_label": "Curating",
+          "identified_by": [
+            {
+              "type": "Name",
+              "content": "Curating",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404670",
+                  "type": "Type",
+                  "_label": "Primary Name"
+                }
+              ]
+            }
+          ],
+          "equivalent": [
+            {
+              "id": "http://vocab.getty.edu/aat/300054277",
+              "type": "Type"
+            }
+          ]
+        }
+        ```
+
+        Collection sets should be `classified_as` `http://vocab.getty.edu/aat/300025976` \(`Collection`\) and `used_for` a `Curation` activity \(`classified_as` `Curating`\).
+
         ```
         {
           "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -548,16 +580,26 @@ scriptInclusion: NONE
               "_label": "Collection"
             }
           ],
-          "created_by": {
-            "type": "Creation",
-            "carried_out_by": [
-              {
-                "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
-                "type": "Group",
-                "_label": "Yale University Library"
-              }
-            ]
-          },
+          "used_for": [
+            {
+              "type": "Activity",
+              "_label": "Curation",
+              "classified_as": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/concept/0d0f1e67-8089-430c-bbaa-02596b2f8d25",
+                  "type": "Type",
+                  "_label": "Curating"
+                }
+              ],
+              "carried_out_by": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+                  "type": "Group",
+                  "_label": "Yale University Library"
+                }
+              ]
+            }
+          ],  
           "identified_by": [
             {
               "type": "Name",
@@ -596,16 +638,26 @@ scriptInclusion: NONE
               "_label": "Yale University Library"
             }
           ],
-          "created_by": {
-            "type": "Creation",
-            "carried_out_by": [
-              {
-                "id": "https://lux.collections.yale.edu/data/group/group1a",
-                "type": "Group",
-                "_label": "Bass Library"
-              }
-            ]
-          },
+          "used_for": [
+            {
+              "type": "Activity",
+              "_label": "Curation",
+              "classified_as": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/concept/0d0f1e67-8089-430c-bbaa-02596b2f8d25",
+                  "type": "Type",
+                  "_label": "Curating"
+                }
+              ],
+              "carried_out_by": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/group/bass-library",
+                  "type": "Group",
+                  "_label": "Bass Library"
+                }
+              ]
+            }
+          ],
           "identified_by": [
             {
               "type": "Name",
