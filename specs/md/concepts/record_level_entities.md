@@ -16,7 +16,7 @@ The LUX supertype scheme is divided into two levels: *types* and *formats*. Type
 
 Only format concepts are assigned in LUX because type concepts can be inferred from the taxonomic hierarchy.
 
-**Supertype format classifications are always assigned to the `HumanMadeObject` resource.**
+**Supertype format classifications are always assigned to the `HumanMadeObject` or `DigitalObject` resource.**
 
 ## Multiple supertypes: order of precedence
 
