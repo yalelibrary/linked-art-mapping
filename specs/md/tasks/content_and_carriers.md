@@ -39,17 +39,17 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
 
 ## Processing steps and output
 
-1.  For each MARC bibliographic record, determine the supertype of the resource and generate a JSON-LD document with a `type` value corresponding to the base class of the supertype.
+1.  For each MARC holdings record, determine the supertype of the resource and generate a JSON-LD document with a `type` value of either `HumanMadeObject` or `DigitalObject`, as appropriate.
 
-    **Note:** For supertypes with two possible base classes \(such as [Globes](supertypes/globes.md)\), apply the [order of preference](../concepts/record_level_entities.md#) for base classes.
+    **Note:** For supertypes with two possible base classes \(such as [Globes](supertypes/globes.md)\), apply the [order of preference](../concepts/record_level_entities.md#) for base classes when generating the content-level resource.
 
-    **Note:** This example is meant to illustrate the base class/supertype association and does not represent a complete JSON-LD document.
+    **Note:** This example is meant to illustrate supertype assignment and does not represent a complete JSON-LD document.
 
     ```
     {
       "@context": "https://linked.art/ns/v1/linked-art.json",
-      "id": "https://lux.collections.yale.edu/data/text/416165c2-1108-4acd-b7ab-008f773a2ba3",
-      "type": "LinguisticObject",
+      "id": "https://lux.collections.yale.edu/data/object/abc",
+      "type": "HumanMadeObject",
       "_label": "麗澤論說集錄 : [十卷]",
       "classified_as": [
         {
@@ -60,7 +60,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
             {
               "id": "http://vocab.getty.edu/aat/300435443",
               "type": "Type",
-              "_label": "Type of Work"
+              "_label": "Type of Object"
             }
           ]
         }
@@ -68,9 +68,9 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
     }
     ```
 
-2.  In addition, for each record-level bibliographic resource, add another `classified_as` object to mark the record as an "Information Artifact" \(IRI `http://vocab.getty.edu/aat/300230425`\).
+2.  For each MARC bibliographic record, determine the supertype of the resource and generate a JSON-LD document with a `type` value corresponding to the base class of the supertype.
 
-    **Note:** This example is meant to illustrate the record-level classification and does not represent a complete JSON-LD document.
+3.  In addition, for each record-level bibliographic resource, add another `classified_as` object to mark the record as an "Information Artifact" \(IRI `http://vocab.getty.edu/aat/300230425`\).
 
     ```
     {
@@ -78,19 +78,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       "id": "https://lux.collections.yale.edu/data/text/416165c2-1108-4acd-b7ab-008f773a2ba3",
       "type": "LinguisticObject",
       "_label": "麗澤論說集錄 : [十卷]",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300028051",
-          "type": "Type",
-          "_label": "Books",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300435443",
-              "type": "Type",
-              "_label": "Type of Work"
-            }
-          ]
-        },
+      "classified_as": [    
         {
           "id": "http://vocab.getty.edu/aat/300230425",
           "type": "Type",
@@ -100,16 +88,16 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
     }
     ```
 
-3.  For each MARC holdings record attached to a bibliographic record:
+4.  For each MARC holdings record attached to a bibliographic record:
 
     -   If the base class derived from the supertype is `LinguisticObject` or `VisualItem`:
         -   If the MFHD `852b` is `yulint` or `yulintx`, generate a JSON-LD document with a base class of `DigitalObject`.
         -   Else, generate a JSON-LD document with a base class of `HumanMadeObject`.
     -   If the base class derived from the supertype is `Set`, generate an embedded `Set → members_exemplified_by → HumanMadeObject` resource to record carrier-level information.
     -   If the base class derived from the supertype is `DigitalObject`, do not generate a separate carrier-level resource. Record both content- and carrier-level information in a single JSON-LD document, with `DigitalObject` as base class.
-4.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then `HumanMadeObject` carriers must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
+5.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then `HumanMadeObject` carriers must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
 
-5.  If the supertype of the resource corresponding to the bibliographic record has a base class of `Set` \(for archival records or kits\), then the `HumanMadeObject` carrier is **not** modeled as a separate resource, but rather embedded within the `Set` resource using the property `members_exemplified_by`.
+6.  If the supertype of the resource corresponding to the bibliographic record has a base class of `Set` \(for archival records or kits\), then the `HumanMadeObject` carrier is **not** modeled as a separate resource, but rather embedded within the `Set` resource using the property `members_exemplified_by`.
 
 
 **Note:** These examples are meant to illustrate the content/carrier distinction and do not necessarily represent complete JSON-LD documents.
@@ -128,7 +116,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
           "identified_by": [
             {
               "type": "Identifier",
-              "content": "Arabic MSS 480 (lsfbeir)",
+              "content": "Arabic MSS 480 [Beinecke Library]",
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300311706",
@@ -251,9 +239,9 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
           ],
           "member_of": [
             {
-              "id": "https://lux.collections.yale.edu/data/set/e8647339-0041-4eeb-bd83-079f931e9e06",
+              "id": "https://lux.collections.yale.edu/data/set/xyz",
               "type": "Set",
-              "_label": "Special Collections (YUL)"
+              "_label": "Beinecke Library"
             }
           ],
           "carries": [
@@ -281,6 +269,20 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       "id": "https://lux.collections.yale.edu/data/object/8e0bdbff-ebb1-4f9b-b98b-e97d64a01ff9",
       "type": "HumanMadeObject",
       "_label": "麗澤論說集錄 : [十卷]",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300028051",
+          "type": "Type",
+          "_label": "Books",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435443",
+              "type": "Type",
+              "_label": "Type of Object"
+            }
+          ]
+        }
+      ],
       "carries": [
         {
           "id": "https://lux.collections.yale.edu/data/text/416165c2-1108-4acd-b7ab-008f773a2ba3",
@@ -401,9 +403,9 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       ],
       "member_of": [
         {
-          "id": "https://lux.collections.yale.edu/data/set/ef3a133a-f7b4-4548-bfa0-019d5da7b1c1",
+          "id": "https://lux.collections.yale.edu/data/set/def",
           "type": "Set",
-          "_label": "General Collection (YUL)"
+          "_label": "Yale University Library"
         }
       ]
     }
@@ -417,6 +419,20 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       "id": "https://lux.collections.yale.edu/data/object/000564c6-1615-47e6-b379-192e16a3e14a",
       "type": "HumanMadeObject",
       "_label": "Lessons for shaving!!! [graphic]",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300041273",
+          "type": "Type",
+          "_label": "Prints",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435443",
+              "type": "Type",
+              "_label": "Type of Object"
+            }
+          ]
+        }
+      ],
       "shows": [
         {
           "id": "https://lux.collections.yale.edu/data/visual/fd3d836b-1cd1-47d9-a38e-002ce325601b",
@@ -550,6 +566,20 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       "id": "https://lux.collections.yale.edu/data/object/e161c7e7-7a78-4976-8774-0de867c3222d",
       "type": "DigitalObject",
       "_label": "ZYX and his fairy, or, The soul in search of peace [electronic resource]",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300028051",
+          "type": "Type",
+          "_label": "Books",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435443",
+              "type": "Type",
+              "_label": "Type of Object"
+            }
+          ]
+        }
+      ],
       "digitally_carries": [
         {
           "id": "https://lux.collections.yale.edu/data/text/7210e343-ce9d-4853-8454-a7c4e88644db",
@@ -569,6 +599,20 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       "id": "https://lux.collections.yale.edu/data/object/ed9af261-e373-40fa-8248-48afb62eb3c2",
       "type": "DigitalObject",
       "_label": "Sarah Malcolm [graphic] : executed in Fleet Street, March the 7th 1733 for robbing [the] chambers of Mrs. Lydia Duncomb in [the] Temple, & murdering her, Eliz. Harrison, & Ann Price",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300041273",
+          "type": "Type",
+          "_label": "Prints",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435443",
+              "type": "Type",
+              "_label": "Type of Object"
+            }
+          ]
+        }
+      ],
       "digitally_shows": [
         {
           "id": "https://lux.collections.yale.edu/data/visual/8cf565ab-f2ad-4af2-9840-c18f36d6fe08",
@@ -586,6 +630,20 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       "id": "https://lux.collections.yale.edu/data/digital/0283cba8-169b-4950-bb88-5ba3cdd4ca1d",
       "type": "DigitalObject",
       "_label": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年)",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300028566",
+          "type": "Type",
+          "_label": "Software Applications",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435443",
+              "type": "Type",
+              "_label": "Type of Object"
+            }
+          ]
+        }
+      ],
       "identified_by": [
         {
           "type": "Identifier",

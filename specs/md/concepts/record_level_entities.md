@@ -14,9 +14,13 @@ The Linked Art profile of the [CIDOC Conceptual Reference Model \(CRM\)](http://
 
 The LUX supertype scheme is divided into two levels: *types* and *formats*. Types represent the mode of expression of a resource \(textual, visual, audible, etc.\), whereas formats can be thought of as specific instances of a type: for example, a *Book* is an instance or format of *Textual Works*. Some formats, such as *Geospatial Data* are instances of two different types: *Datasets* and *Cartography*.
 
+Only format concepts are assigned in LUX because type concepts can be inferred from the taxonomic hierarchy.
+
+**Supertype format classifications are always assigned to the `HumanMadeObject` resource.**
+
 ## Multiple supertypes: order of precedence
 
-The base class for record-level entities is determined by the supertype mapping. When a record-level entity is mapped to more than one supertype format, and the formats have different base classes, the following order of precedence is applied:
+The base class for record-level bibliographic entities is determined by the supertype mapping. When a record-level entity is mapped to more than one supertype format, and the formats have different base classes, the following order of precedence is applied:
 
 1.  `Set`
 2.  `LinguisticObject`

@@ -100,7 +100,7 @@ conditions:
         {
           "id": "http://vocab.getty.edu/aat/300435443",
           "type": "Type",
-          "_label": "Type of Work"
+          "_label": "Type of Object"
         }
       ]
     }

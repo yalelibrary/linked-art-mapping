@@ -8,7 +8,7 @@ Taxonomy of content types and related formats for classifying record-level resou
 
 MARC-to-Linked Art supertype mappings are done at the level of the most specific format, with type and broader format relations inferred from the hierarchy.
 
-The supertype of a resource is used to determine its base class or document type in the Linked Art model.
+The supertype of a resource is used to determine its base class or document type in the Linked Art model. **However, supertype classification should always be assigned to the corresponding `HumanMadeObject` or `DigitalObject` resource\(s\).**
 
 **Note:** For supertypes that map to more than one base class, the primary class is indicated as **\[primary\]** in the base class column.
 

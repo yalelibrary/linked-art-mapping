@@ -42,7 +42,7 @@ sampleBibs:
   - 36117 # 692t
   - 44029 # 692t
   - 39783 # 693t
-  - 496806 # 693t
+  -    # 693t
 fieldSpec:
   - 100014abcdegjqu
   - 110014abcdegu
