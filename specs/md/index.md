@@ -93,7 +93,7 @@
         -   [Publication activities](concepts/publication_activities.md)
         -   [Copyright entities](concepts/copyright_entity.md)
     -   [Identifiers](concepts/identifiers.md)
-        -   [Orbis BIB ID](tasks/identifiers/orbis_bib_id.md)
+        -   [Voyager BIB ID](tasks/identifiers/orbis_bib_id.md)
         -   [Voyager MFHD ID](tasks/identifiers/orbis_mfhd_id.md)
         -   [Voyager Item ID](tasks/identifiers/orbis_item_id.md)
         -   [Library of Congress Control Number \(LCCN\)](tasks/identifiers/library_of_congress_control_number_lccn.md)
