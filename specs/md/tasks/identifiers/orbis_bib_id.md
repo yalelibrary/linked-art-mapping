@@ -5,7 +5,7 @@ category: Descriptive content
 keyword: [Assigned, Completed, Deployed]
 ---
 
-# Orbis BIB ID
+# Voyager BIB ID
 
 The Voyager BIB ID is a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.
 
