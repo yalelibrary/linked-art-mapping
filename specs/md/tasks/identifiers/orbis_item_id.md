@@ -5,9 +5,9 @@ category: Descriptive content
 keyword: [, , ]
 ---
 
-# Voyager Item ID
+# Voyager item ID
 
-The Voyager MFHD ID is a serially based identifier assigned to MARC 21 Holdings records in the Voyager ILS.
+The Voyager item ID is a serially based identifier assigned to item records in the Voyager ILS.
 
 |Domains|Usage|
 |-------|-----|
@@ -28,7 +28,7 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Get value of MFHD ID and prepend with `ils:yul:item:`.
+1.  Get value of item ID and prepend with `ils:yul:item:`.
 
 2.  For each [Carrier-level record](../../glossary/carrier_level_record.md) that corresponds to an item record, output the item record identifier.
 
