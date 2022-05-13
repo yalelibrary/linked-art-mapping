@@ -35,7 +35,7 @@ Textual information on the language or notation system used to convey the conten
 -   **[Local note](../tasks/notes-and-statements/local_note.md)**  
 Corresponds to the`590`Local Note field at YUL.
 -   **[Medium of performance](../tasks/notes-and-statements/material_statement.md)**  
-Corresponds to the`382`field in MARC.
+Corresponds to the `382` field in MARC.
 -   **[Note](../tasks/notes-and-statements/note.md)**  
 
 -   **[Physical statement](../tasks/notes-and-statements/physical_statement.md)**  

@@ -83,7 +83,7 @@
           </substep>
         </substeps>
         <stepresult>
-          <yulbibid/>
+          <yulbibid>11167715</yulbibid>
           <codeblock><![CDATA[{
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "https://lux.collections.yale.edu/data/text/dcbc799e-b227-4551-bf84-3583cf16cdac",
@@ -135,6 +135,5 @@
         </stepresult>
       </step>
     </steps>
-
   </taskbody>
 </task>

@@ -7,8 +7,8 @@ keyword: [Assigned, Completed]
 
 |Domains|Usage|
 |-------|-----|
-|`HumanMadeObject`|Do not repeat on related `LinguisticObject`.|
-|`HumanMadeObject`|Do not repeat on related `VisualItem`.|
+|`HumanMadeObject` `DigitalObject`|Do not repeat on related `LinguisticObject`.|
+|`HumanMadeObject` `DigitalObject`|Do not repeat on related `VisualItem`.|
 |`members_exemplified_by → HumanMadeObject`|Do not repeat on containing `Set`.|
 
 ## Source data

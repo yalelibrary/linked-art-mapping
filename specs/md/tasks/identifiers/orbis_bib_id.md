@@ -7,20 +7,19 @@ keyword: [Assigned, Completed, Deployed]
 
 # Orbis BIB ID
 
-TheOrbis BIB IDis a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.
+The Voyager BIB ID is a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
 |`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
-|`DigitalObject`| |
 
 ## Source data
 
 ```
 ---
-name: OrbisBibId
+name: VoyagerBibId
 sampleBibs:
   - 2
   - 3
@@ -34,7 +33,7 @@ scriptInclusion: NONE
 
 1.  Get value of `001` and prepend with `ils:yul:`.
 
-2.  Output JSON-LD with the Orbis BIB ID:
+2.  Output JSON-LD with the Voyager BIB ID:
 
 
 `2`

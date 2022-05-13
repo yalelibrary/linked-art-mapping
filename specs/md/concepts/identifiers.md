@@ -9,7 +9,11 @@ Standard alphanumeric values used to uniquely identify a resource.
 Six identifier types are currently mapped forLUX.
 
 -   **[Orbis BIB ID](../tasks/identifiers/orbis_bib_id.md)**  
-TheOrbis BIB IDis a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.
+The Voyager BIB ID is a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.
+-   **[Voyager MFHD ID](../tasks/identifiers/orbis_mfhd_id.md)**  
+The Voyager MFHD ID is a serially based identifier assigned to MARC 21 Holdings records in the Voyager ILS.
+-   **[Voyager Item ID](../tasks/identifiers/orbis_item_id.md)**  
+The Voyager MFHD ID is a serially based identifier assigned to MARC 21 Holdings records in the Voyager ILS.
 -   **[Library of Congress Control Number \(LCCN\)](../tasks/identifiers/library_of_congress_control_number_lccn.md)**  
 The Library of Congress Control Number is a serially based identifier assigned to resources that also appear in the catalog of the Library of Congress.
 -   **[International Standard Book Number \(ISBN\)](../tasks/identifiers/international_standard_book_number_isbn.md)**  

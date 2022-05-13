@@ -59,8 +59,6 @@ Related resources that represent a single entity type.
 Subject headings representing two or more entity types.
 -   **[Citation entities](../tasks/citation_entities.md)**  
 
--   **[Related title entities](../tasks/names-and-labels/related_title_entities.md)**  
-
 -   **[Concepts](../concepts/concepts.md)**  
 Entities that represent what a resource is about.
 -   **[Events](../concepts/events.md)**  

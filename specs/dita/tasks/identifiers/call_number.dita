@@ -8,6 +8,10 @@
       <created date="2021-12-10"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2021-12-15"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-03"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-04"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_desc"/>
     <metadata>
@@ -36,14 +40,9 @@
           <tbody>
             <row>
               <entry>
-                <codeph>HumanMadeObject</codeph></entry>
+                <codeph>HumanMadeObject</codeph>
+                <codeph>DigitalObject</codeph></entry>
               <entry>Do not repeat on related <codeph>LinguisticObject</codeph> or <codeph>VisualItem</codeph>.</entry>
-            </row>
-            <row>
-              <entry>
-                <codeph>DigitalObject</codeph>
-              </entry>
-              <entry/>
             </row>
             <row>
               <entry>
@@ -62,8 +61,10 @@ name: LocationsAndCallNumbers
 sampleBibs:
   - 3
   - 9447
+  - 12237283
 fieldSpec:
-  - mfhd852bhim
+  - item
+  - mfhd852bhimk
 trimPunctuation: true
 scriptInclusion: NONE]]></codeblock>
     </section>
@@ -72,37 +73,53 @@ scriptInclusion: NONE]]></codeblock>
     </section>
     <steps>
       <step>
-        <cmd>Prepare the Voyager location code lookup table, which contains mappings between location codes and their corresponding names.</cmd>
-        <stepxmp>
-          <codeblock><![CDATA[{
-  "LOCATION_MAP_FACET": "Beinecke Rare Book and Manuscript Library",
-  "ORBIS_LOCATION_CODE": "beingen"
-}]]></codeblock>
-        </stepxmp>
+        <cmd>For each <xref keyref="gloss-carrier">carrier-level record</xref>, extract the call number from the corresponding MFHD.</cmd>
       </step>
       <step>
-        <cmd>For each <codeph>852</codeph> field that contains a subfield <codeph>b</codeph>, select the value of subfield <codeph>b</codeph>.</cmd>
-      </step>
-      <step>
-        <cmd>If field <codeph>852</codeph> does not contain a subfield <codeph>b</codeph>, skip the <codeph>852</codeph> field.</cmd>
+        <cmd>Use the Voyager location code lookup table, which contains mappings between location codes and their corresponding names.</cmd>
         <info>
-          <note>This instruction is temporary. At some point, other MFHD fields should also be processed.</note>
+          <table conkeyref="specs/table_collections_mapping">
+            <tgroup cols="1">
+              <tbody>
+                <row>
+                  <entry/>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
         </info>
+      </step>
+      <step>
+        <cmd>For each <codeph>852</codeph> field that contains a subfield <codeph>b</codeph>, select and save the value of subfield <codeph>b</codeph>.</cmd>
+      </step>
+      <step>
+        <cmd>If field <codeph>852</codeph> does not contain a subfield <codeph>b</codeph>, skip the <codeph>852</codeph> field.</cmd>      
       </step>
       <step>
         <cmd><xref keyref="gloss-norm">Normalize</xref> the value of subfield <codeph>b</codeph> and test whether it is equal to <codeph>withdrawn</codeph> or <codeph>suppressed</codeph>.</cmd>
       </step>
       <step>
-        <cmd>If the value is equal to either <codeph>withdrawn</codeph> or <codeph>suppressed</codeph>, skip the <codeph>852</codeph> field.</cmd>
+        <cmd>If the value of subfield <codeph>b</codeph> is equal to either <codeph>withdrawn</codeph> or <codeph>suppressed</codeph>, skip the <codeph>852</codeph> field.</cmd>
       </step>
       <step>
-        <cmd>If the normalized value of subfield <codeph>b</codeph> starts with <codeph>yulint</codeph>, there is no call number.</cmd>
+        <cmd>If the value of subfield <codeph>b</codeph> is equal to <codeph>yulint</codeph> or <codeph>yulintx</codeph>, generate a <codeph>DigitalObject</codeph> carrier resource.</cmd>
         <info>
-          <note id="note_s1l_1dg_xrb">MFHDs with an <codeph>852b</codeph> value of <codeph>yulint</codeph> or <codeph>yulintx</codeph> should be converted to <codeph>DigitalObject</codeph> carrier resources. See <xref href="../content_and_carriers.dita"/>.</note>
+          <p>See <xref href="../content_and_carriers.dita"/> for more information.</p>
+          <p>MFHDs with a subfield <codeph>b</codeph> value of <codeph>yulint</codeph> or <codeph>yulintx</codeph> will not have an associated item record.</p>
+          <p>Subfield <codeph>b</codeph> with a value of <codeph>yulint</codeph> should not have a call number (i.e., a value of <codeph>None</codeph> in subfield <codeph>h</codeph>).</p>
+          <p>However, subfield <codeph>b</codeph> with a value of <codeph>yulintx</codeph> may include call number information (e.g., when the MFHD represents a digital copy of a digitized resource).</p>
+          <note>MFHDs for digitized copies may be suppressed.</note>
         </info>
-      </step>
+        <substeps>
+          <substep>
+            <cmd>Extract the call number for (suppressed) MFHDs with a subfield <codeph>b</codeph> value of <codeph>yulintx</codeph>.</cmd>
+            <stepxmp>
+              <codeph><![CDATA[852 80 $b yulintx $k SUPPRESSED $k Folio $h 49 $i 3582 $m (Oversize)]]></codeph></stepxmp>
+          </substep>
+        </substeps>
+      </step>      
       <step>
-        <cmd>Select and save the value of subfield <codeph>b</codeph>.</cmd>
+        <cmd>Process all other location values.</cmd>
         <substeps id="substeps_nf2_v53_wrb">
           <substep>
             <cmd>Match the value of subfield <codeph>b</codeph> against the location code lookup table and save the value of the <codeph>location_name</codeph>.</cmd>
@@ -136,21 +153,31 @@ scriptInclusion: NONE]]></codeblock>
         </substeps>
       </step>
       <step>
+        <cmd>Select and save the value of subfield <codeph>k</codeph>.</cmd>
+        <info>
+          <p>Ignore any subfield <codeph>k</codeph> with a value of <codeph>SUPPRESSED</codeph>.</p>
+        </info>
+      </step>
+      <step>
         <cmd>Select and save the value of subfield <codeph>m</codeph>.</cmd>
       </step>
       <step>
-        <cmd>Join the values of subfields <codeph>852him</codeph> with a whitespace character. This is the <codeph>call_number</codeph>.</cmd>
+        <cmd>Join the values of subfields <codeph>852hikm</codeph> with a whitespace character. This is the <codeph>call_number</codeph>.</cmd>
       </step>
       <step>
-        <cmd>Concatenate the <codeph>call_number</codeph> with the <codeph>location_name</codeph>.</cmd>
+        <cmd>Concatenate the <codeph>call_number</codeph> with item-specific information.</cmd>        
+      </step>      
+      <step conkeyref="call_number_scope.object_level_cn/carrier_step_first" conrefend="default.dita#default/carrier_step_last">
+        <cmd></cmd>
       </step>
     </steps>
+    <!--
     <result>
       <yulbibid>12244893</yulbibid>
       <codeblock><![CDATA[{
   "id": "https://lux.collections.yale.edu/data/digital/0283cba8-169b-4950-bb88-5ba3cdd4ca1d",
   "type": "DigitalObject",
-  "_label": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年)",
+  "_label": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年) [CD]",
   "identified_by": [
     {
       "type": "Identifier",
@@ -165,7 +192,7 @@ scriptInclusion: NONE]]></codeblock>
     },
     {
       "type": "Name",
-      "content": "Hirosaki hanchō nikki hiroiyomi : kishō saigai nado no kijutsu o chūshin ni. Vol.2, (1741-nen-1868-nen)",
+      "content": "Hirosaki hanchō nikki hiroiyomi : kishō saigai nado no kijutsu o chūshin ni. Vol.2, (1741-nen-1868-nen) [CD]",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
@@ -176,7 +203,7 @@ scriptInclusion: NONE]]></codeblock>
     },
     {
       "type": "Name",
-      "content": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年)",
+      "content": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年) [CD]",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
@@ -191,20 +218,17 @@ scriptInclusion: NONE]]></codeblock>
           "_label": "und"
         }
       ]
-    },
+    }
+  ],
+  "digitally_carries": [
     {
-      "type": "Name",
-      "content": "Hirosaki hanchō nikki hiroiyomi : kishō saigai nado no kijutsu o chūshin ni. Vol.2, (1741-nen-1868-nen)",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300404672",
-          "type": "Type",
-          "_label": "Sorting Name"
-        }
-      ]
+      "id": "https://lux.collections.yale.edu/data/text/example-content1",
+      "type": "LinguisticObject",
+      "_label": "Hirosaki hanchō nikki hiroiyomi : kishō saigai nado no kijutsu o chūshin ni. Vol.2, (1741-nen-1868-nen)"
     }
   ]
 }]]></codeblock>
     </result>
+    -->
   </taskbody>
 </task>

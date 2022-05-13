@@ -11,6 +11,10 @@
       <revised modified="2021-12-13"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-13"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-02-23"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-03"/>
     </critdates>
     <metadata>
       <keywords/>
@@ -21,7 +25,7 @@
   </prolog>
   <conbody>
     <p>MARC-to-Linked Art supertype mappings are done at the level of the most specific format, with type and broader format relations inferred from the hierarchy.</p>
-    <p>The supertype of a resource is used to determine its base class or document type in the Linked Art model.</p>
+    <p>The supertype of a resource is used to determine its base class or document type in the Linked Art model. <b>However, supertype classification should always be assigned to the corresponding <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph> resource(s).</b></p>
     <note>For supertypes that map to more than one base class, the primary class is indicated as <b>[primary]</b> in the base class column.</note>
     <table id="table_wmw_tjc_5rb">
       <title>Linked Art base class to supertype mapping</title>
@@ -39,30 +43,6 @@
           </row>
         </thead>
         <tbody>
-          <row>
-            <entry>DigitalObject <b>[primary]</b></entry>
-            <entry>Datasets</entry>
-            <entry><xref href="dataandfiles.dita">Data and Files</xref></entry>
-            <entry><xref href="geospatialdata.dita">Geospatial Data</xref></entry>
-          </row>
-          <row>
-            <entry>DigitalObject <b>[primary]</b></entry>
-            <entry>Datasets</entry>
-            <entry><xref href="dataandfiles.dita">Data and Files</xref></entry>
-            <entry><xref href="imagedata.dita">Image Data</xref></entry>
-          </row>
-          <row>
-            <entry>DigitalObject <b>[primary]</b></entry>
-            <entry>Datasets</entry>
-            <entry><xref href="dataandfiles.dita">Data and Files</xref></entry>
-            <entry><xref href="textualdata.dita">Textual Data</xref></entry>
-          </row>
-          <row>
-            <entry>DigitalObject</entry>
-            <entry>Software and Electronic Media</entry>
-            <entry><xref href="softwareapplications.dita">Software Applications</xref></entry>
-            <entry><xref href="databases.dita">Databases</xref></entry>
-          </row>
           <row>
             <entry>LinguisticObject</entry>
             <entry>Objects</entry>
@@ -116,6 +96,12 @@
             <entry>Scores and Notation</entry>
             <entry><xref href="notatedmusic.dita">Notated Music</xref></entry>
             <entry/>
+          </row>
+          <row>
+            <entry>LinguisticObject</entry>
+            <entry>Software and Electronic Media</entry>
+            <entry><xref href="softwareapplications.dita">Software Applications</xref></entry>
+            <entry><xref href="databases.dita">Databases</xref></entry>
           </row>
           <row>
             <entry>LinguisticObject</entry>

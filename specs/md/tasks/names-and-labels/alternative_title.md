@@ -11,10 +11,9 @@ Alternative title of a record-level entity. Taken from MARC `246`.
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
 |`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
-|`DigitalObject`| |
 
 ## Source data
 

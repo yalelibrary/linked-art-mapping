@@ -11,6 +11,8 @@
       <revised modified="2021-12-06"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-05"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-13"/>
     </critdates>
     <metadata>
       <keywords>
@@ -37,19 +39,13 @@
             <row>
               <entry>
                 <codeph>LinguisticObject</codeph></entry>
-              <entry/>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph>.</entry>
             </row>
             <row>
               <entry>
                 <codeph>VisualItem</codeph>
               </entry>
-              <entry/>
-            </row>
-            <row>
-              <entry>
-                <codeph>DigitalObject</codeph>
-              </entry>
-              <entry/>
+              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph>.</entry>
             </row>
           </tbody>
         </tgroup>
@@ -94,7 +90,7 @@ scriptInclusion: NONE</codeblock>
         {
           "id": "http://vocab.getty.edu/aat/300435443",
           "type": "Type",
-          "_label": "Type of Work"
+          "_label": "Type of Object"
         }
       ]
     },

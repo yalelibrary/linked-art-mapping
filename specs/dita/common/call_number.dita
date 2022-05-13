@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task id="call_nubmer_variables" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd">
+  <title>Variables</title>
+  <shortdesc/>
+  <prolog>
+    <critdates>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-09"/>
+    </critdates>
+  </prolog>
+  <taskbody>
+    <context>
+      <ul>
+        <li id="cn"></li>
+      </ul>
+    </context>
+  </taskbody>
+</task>

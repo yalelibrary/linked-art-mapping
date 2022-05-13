@@ -26,6 +26,8 @@
       <revised modified="2022-01-25"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-28"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-13"/>
     </critdates>
     <metadata>
       <keywords>
@@ -97,25 +99,39 @@ scriptInclusion: NONE</codeblock>
         <cmd>Process the date values in <codeph>008[07-10]</codeph> and <codeph>008[11-14]</codeph> to test for other non-numeric characters (e.g., internal whitespace, <codeph>u</codeph>, <codeph>x</codeph>, <codeph>\|</codeph> [pipe]).</cmd>
       </step>
       <step>
-        <cmd>For each date value, replace the regular expression <codeph>[\sA-Za-z\|]</codeph> with <codeph>?</codeph>.</cmd>
+        <cmd>For each date value, replace the regular expression <codeph>[\sA-Za-tvwxyz\|]</codeph> with <codeph>?</codeph>.</cmd>
       </step>
       <step>
-        <cmd>Save the values as <codeph>date_1_temp</codeph> and <codeph>date_2_temp</codeph>.</cmd>
+        <cmd>Save the values as <codeph>date_1_val</codeph> and <codeph>date_2_val</codeph>.</cmd>
       </step>
       <step>
-        <cmd>Process the first date value and save as <codeph>date_1_val</codeph>.</cmd>
-        <choices id="choices_nnx_jss_xrb">
-          <choice>If <codeph>date_1_temp</codeph> contains only <codeph>?</codeph> characters, <codeph>date_1_val</codeph> is <codeph>false</codeph>.</choice>
-          <choice>Else, replace the regular expression <codeph>\?</codeph> with <codeph>0</codeph> in <codeph>date_1_temp</codeph> as the value of <codeph>date_1_val</codeph>.</choice>
-        </choices>
+        <cmd>If <codeph>date_1_val</codeph> contains only <codeph>?</codeph> characters, <codeph>date_1_val</codeph> is <codeph>false</codeph>.</cmd>
       </step>
       <step>
-        <cmd>Process the second date value and save as <codeph>date_2_val</codeph>.</cmd>
-        <choices id="choices_if1_fts_xrb">
-          <choice>If <codeph>date_2_temp</codeph> contains only <codeph>?</codeph> characters, <codeph>date_2_val</codeph> is <codeph>false</codeph>.</choice>
-          <choice>Else, if <codeph>date_2_temp</codeph> is equal to <codeph>9999</codeph>, then set the value of <codeph>date_2_val</codeph> to <codeph>9999</codeph>.</choice>
-          <choice>Else, replace the regular expression <codeph>\?</codeph> in <codeph>date_2_temp</codeph> with <codeph>9</codeph> as the value of <codeph>date_2_val</codeph>.</choice>
-        </choices>
+        <cmd>If <codeph>date_2_val</codeph> contains only <codeph>?</codeph> characters, <codeph>date_2_val</codeph> is <codeph>false</codeph>.</cmd>
+      </step>
+      <step>
+        <cmd>If <codeph>date_2_val</codeph> is <codeph>false</codeph>, but <codeph>date_1_val</codeph> contains <codeph>u</codeph>, process <codeph>date_1_val</codeph> as a date range.</cmd>
+        <substeps>
+          <substep>
+            <cmd>Copy the value of <codeph>date_1_val</codeph> to <codeph>date_2_val</codeph>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Replace the regular expression <codeph>[u\?]</codeph> in <codeph>date_1_val</codeph>with <codeph>0</codeph>.</cmd>
+          </substep>
+          <substep>
+            <cmd>Replace the regular expression <codeph>[u\?]</codeph> in <codeph>date_2_val</codeph> with <codeph>9</codeph>.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Else, replace the regular expression <codeph>\?</codeph> with <codeph>0</codeph> in <codeph>date_1_val</codeph>.</cmd>
+      </step>
+      <step>
+        <cmd>If <codeph>date_2_val</codeph> is equal to <codeph>9999</codeph>, continue.</cmd>
+      </step>
+      <step>
+        <cmd>Else, replace the regular expression <codeph>\?</codeph> in <codeph>date_2_val</codeph> with <codeph>9</codeph>.</cmd>
       </step>
       <step>
         <cmd>Construct a <codeph>TimeSpan</codeph> object to store the date values.</cmd>
@@ -138,15 +154,8 @@ scriptInclusion: NONE</codeblock>
                           <dd>castable as <codeph>integer</codeph></dd>
                         </dlentry>
                         <dlentry>
-                          <dt>OR</dt>
-                          <dd>
-                            <dl>
-                              <dlentry>
-                                <dt><codeph>specific_date_type</codeph></dt>
-                                <dd><codeph>e</codeph></dd>
-                              </dlentry>                             
-                            </dl>
-                          </dd>
+                          <dt><codeph>specific_date_type</codeph></dt>
+                          <dd><codeph>e</codeph></dd>
                         </dlentry>
                       </dl>
                     </dd>
@@ -156,14 +165,6 @@ scriptInclusion: NONE</codeblock>
             </dlentry>
           </dl>
         </info>
-        <stepxmp>
-          <codeblock>
-if ($date_1_val castable as integer and $date_2_val castable as integer)
-then
-  if ($generic_date_type == "e")
-    ...
-</codeblock>
-        </stepxmp>
         <substeps id="substeps_bpl_gdb_yrb">
           <substep>
             <cmd>Analyze <codeph>date_2_val</codeph> using the regular expression <codeph>.{2}</codeph>.</cmd>
@@ -235,6 +236,7 @@ then
           </substep>
         </substeps>
       </step>
+
       <step>
         <cmd>Construct a <codeph>TimeSpan</codeph> object to store the date values.</cmd>
         <info>
@@ -302,7 +304,7 @@ then
                 </dlentry>
               </dl>
               <yulbibid>12989258</yulbibid>
-              <codeblock>{
+              <codeblock><![CDATA[{
   "used_for": [
     {
       "type": "Activity",
@@ -339,7 +341,7 @@ then
       }
     }
   ]
-}</codeblock>
+}]]></codeblock>
             </stepresult>
           </substep>
           <substep>
@@ -733,26 +735,87 @@ then
           <substep>
             <cmd>If <codeph>generic_date_type</codeph> is <codeph>publication</codeph>, assign the dates to a <codeph>publishing</codeph> activity.</cmd>
             <stepresult>
-              <dl>
-                <dlentry>
-                  <dt>008[06] (specific_date_type)</dt>
-                  <dd>q</dd>
-                </dlentry>
-                <dlentry>
-                  <dt>generic_date_type</dt>
-                  <dd>publication</dd>
-                </dlentry>
-                <dlentry>
-                  <dt>008[07-10]</dt>
-                  <dd><codeph>1820</codeph></dd>
-                </dlentry>
-                <dlentry>
-                  <dt>008[11-14]</dt>
-                  <dd><codeph>1829</codeph></dd>
-                </dlentry>
-              </dl>
-              <yulbibid>1260604</yulbibid>
-              <codeblock>{
+              <div>
+                <b>Example 1</b>
+                <dl>
+                  <dlentry>
+                    <dt>008[06] (specific_date_type)</dt>
+                    <dd>s</dd>
+                  </dlentry>
+                  <dlentry>
+                    <dt>generic_date_type</dt>
+                    <dd>publication</dd>
+                  </dlentry>
+                  <dlentry>
+                    <dt>008[07-10]</dt>
+                    <dd><codeph>19uu</codeph></dd>
+                  </dlentry>
+                  <dlentry>
+                    <dt>008[11-14]</dt>
+                    <dd><codeph>[none]</codeph></dd>
+                  </dlentry>
+                </dl>
+                <codeblock><![CDATA[{
+  "used_for": [
+    {
+      "type": "Activity",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300054686",
+          "type": "Type",
+          "_label": "Publishing"
+        }
+      ],
+      "took_place_at": [
+        {
+          "id": "https://lux.collections.yale.edu/data/place/9ebe78d5-0a21-427b-a9f1-b170e453d513",
+          "type": "Place"
+        }
+      ],
+      "timespan": {
+        "type": "TimeSpan",
+        "begin_of_the_begin": "1900-01-01T00:00:00Z",
+        "end_of_the_end": "1999-12-31T23:59:59",
+        "identified_by": [
+          {
+            "type": "Name",
+            "content": "1900-1999",
+            "classified_as": [
+              {
+                "id": "http://vocab.getty.edu/aat/300404669",
+                "type": "Type",
+                "_label": "Display Title"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}]]></codeblock>
+              </div>
+              <div>
+                <b>Example 2</b>
+                <dl>
+                  <dlentry>
+                    <dt>008[06] (specific_date_type)</dt>
+                    <dd>q</dd>
+                  </dlentry>
+                  <dlentry>
+                    <dt>generic_date_type</dt>
+                    <dd>publication</dd>
+                  </dlentry>
+                  <dlentry>
+                    <dt>008[07-10]</dt>
+                    <dd><codeph>1820</codeph></dd>
+                  </dlentry>
+                  <dlentry>
+                    <dt>008[11-14]</dt>
+                    <dd><codeph>1829</codeph></dd>
+                  </dlentry>
+                </dl>
+                <yulbibid>1260604</yulbibid>
+                <codeblock><![CDATA[{
   "used_for": [
     {
       "type": "Activity",
@@ -789,7 +852,8 @@ then
       }
     }
   ]
-}</codeblock>
+}]]></codeblock>
+              </div>
             </stepresult>
           </substep>
         </substeps>
@@ -907,7 +971,7 @@ then
   ]
 }</codeblock>
             </stepresult>
-          </substep>        
+          </substep>
         </substeps>
       </step>
       <step>
@@ -928,7 +992,7 @@ then
                         </dlentry>
                         <dlentry>
                           <dt><codeph>data_2_val</codeph></dt>
-                          <dd><b>NOT</b> castable as <codeph>integer</codeph></dd>                          
+                          <dd><b>NOT</b> castable as <codeph>integer</codeph></dd>
                         </dlentry>
                         <dlentry>
                           <dt><codeph>generic_date_type</codeph></dt>
@@ -1020,7 +1084,7 @@ then
   ]
 }</codeblock>
             </stepresult>
-          </substep>                              
+          </substep>
         </substeps>
       </step>
       <step>
@@ -1041,7 +1105,7 @@ then
                         </dlentry>
                         <dlentry>
                           <dt><codeph>data_2_val</codeph></dt>
-                          <dd>castable as <codeph>integer</codeph></dd>                          
+                          <dd>castable as <codeph>integer</codeph></dd>
                         </dlentry>
                         <dlentry>
                           <dt><codeph>generic_date_type</codeph></dt>
@@ -1139,7 +1203,7 @@ then
   }
 }</codeblock>
             </stepresult>
-          </substep>                              
+          </substep>
         </substeps>
       </step>
       <step>
@@ -1160,7 +1224,7 @@ then
                         </dlentry>
                         <dlentry>
                           <dt><codeph>data_2_val</codeph></dt>
-                          <dd>castable as <codeph>integer</codeph></dd>                          
+                          <dd>castable as <codeph>integer</codeph></dd>
                         </dlentry>
                         <dlentry>
                           <dt><codeph>generic_date_type</codeph></dt>
@@ -1253,7 +1317,7 @@ then
   ]
 }</codeblock>
             </stepresult>
-          </substep>                              
+          </substep>
         </substeps>
       </step>
     </steps>

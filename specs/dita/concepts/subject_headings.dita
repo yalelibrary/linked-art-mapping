@@ -120,7 +120,7 @@ scriptInclusion: NONE</codeblock>
                   <entry>
                     <codeph>root → created_by → influenced_by → type</codeph>
                   </entry>
-                  <entry>Semantic type of concept facet. See the<xref keyref="facet-types/facet_types_table">facet type mapping</xref>below.</entry>
+                  <entry>Semantic type of concept facet. See the <xref keyref="facet-types/facet_types_table">facet type mapping</xref> below.</entry>
                 </row>
                 <row>
                   <entry>

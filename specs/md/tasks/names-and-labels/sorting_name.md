@@ -11,10 +11,9 @@ Sorting title of a record-level entity. Taken from MARC`245`with initial article
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`LinguisticObject` `HumanMadeObject` `DigitalObject`|Repeat on both JSON-LD documents.|
+|`VisualItem` `HumanMadeObject` `DigitalObject`|Repeat on both JSON-LD documents.|
 |`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
-|`DigitalObject`| |
 
 ## Source data
 
@@ -36,9 +35,11 @@ scriptInclusion: NONE
 
     -   If the second indicator is missing/corrupt or not castable as an integer, set the value to `0`.
     -   Else, extract the value of `245` second indicator as an integer.
-    1.  If the value of `245` second indicator is `0`, do not generate a `Sorting Name`.
+    1.  If the value of `245` second indicator is `0`, do not generate a sorting name.
 
-    2.  Else, using the string value of the main title, take the substring using the number of nonfiling characters extracted from`245`second indicator as offset.
+    2.  Else, using the string value of the main title, take the substring using the number of nonfiling characters extracted from `245` second indicator as offset and save the value as `sorting_name`.
+
+2.  Assign the `sorting_name` value to the [content-level record](../../glossary/content_level_record.md).
 
     `9447`
 
@@ -88,6 +89,131 @@ scriptInclusion: NONE
               "_label": "Sorting Name"
             }
           ]
+        },
+        {
+          "type": "Identifier",
+          "content": "ils:yul:9447",
+          "attributed_by": [
+            {
+              "type": "AttributeAssignment",
+              "carried_out_by": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+                  "type": "Group",
+                  "_label": "Yale University Library"
+                }
+              ]
+            }
+          ],
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435704",
+              "type": "Type",
+              "_label": "System-Assigned Number"
+            }
+          ]
+      ]
+    }
+    ```
+
+3.  Assign the `sorting_name` value to each [carrier-level record](../../glossary/carrier_level_record.md).
+
+    `14358 [item]`
+
+    ```
+    {
+      "id": "https://lux.collections.yale.edu/data/text/49a9dae9-0692-4957-9870-8c49fdf3f064-object",
+      "type": "HumanMadeObject",
+      "_label": "A raisin in the sun",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300028051",
+          "type": "Type",
+          "_label": "Books",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435443",
+              "type": "Type",
+              "_label": "Type of Object"
+            }
+          ]
+        }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "A raisin in the sun",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        },
+        {
+          "type": "Name",
+          "content": "raisin in the sun",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404672",
+              "type": "Type",
+              "_label": "Sorting Name"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "content": "ils:yul:mfhd:16729",
+          "attributed_by": [
+            {
+              "type": "AttributeAssignment",
+              "carried_out_by": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+                  "type": "Group",
+                  "_label": "Yale University Library"
+                }
+              ]
+            }
+          ],
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435704",
+              "type": "Type",
+              "_label": "System-Assigned Number"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "content": "ils:yul:item:14358",
+          "attributed_by": [
+            {
+              "type": "AttributeAssignment",
+              "carried_out_by": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+                  "type": "Group",
+                  "_label": "Yale University Library"
+                }
+              ]
+            }
+          ],
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435704",
+              "type": "Type",
+              "_label": "System-Assigned Number"
+            }
+          ]
+        }
+      ],
+      "carries": [
+        {
+          "id": "https://lux.collections.yale.edu/data/text/49a9dae9-0692-4957-9870-8c49fdf3f064",
+          "type": "LinguisticObject",
+          "_label": "A raisin in the sun"
         }
       ]
     }

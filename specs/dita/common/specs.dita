@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<task id="specs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:task.xsd">
+<task id="specs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd">
   <title>Specs</title>
   <shortdesc/>
   <prolog>
     <critdates>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-02-15"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-11"/>
     </critdates>
   </prolog>
   <taskbody>
     <context>
       <codeblock id="tag001"><![CDATA[---
-name: OrbisBibId
+name: VoyagerBibId
 sampleBibs:
   - 2
   - 3
   - 4
 fieldSpec: 001
+trimPunctuation: false
+scriptInclusion: NONE]]></codeblock>
+      <codeblock id="mfhd_id"><![CDATA[---
+name: VoyagerMfhdId
+sampleMfhds:
+  - 4082244
+fieldSpec: NA
+trimPunctuation: false
+scriptInclusion: NONE]]></codeblock>
+      <codeblock id="item_id"><![CDATA[---
+name: VoyagerItemId
+sampleMfhds:
+  - 12104059
+fieldSpec: NA
 trimPunctuation: false
 scriptInclusion: NONE]]></codeblock>
       <codeblock id="tag010"><![CDATA[---
@@ -1136,7 +1152,7 @@ scriptInclusion: NONE]]></codeblock>
               </row>
               <row>
                 <entry>Yale University Library</entry>
-                <entry></entry>
+                <entry/>
                 <entry>lsf</entry>
               </row>
               <row>
@@ -2584,10 +2600,5 @@ scriptInclusion: NONE]]></codeblock>
         </table>
       </div>
     </context>
-    <steps>
-      <step>
-        <cmd/>
-      </step>
-    </steps>
   </taskbody>
 </task>

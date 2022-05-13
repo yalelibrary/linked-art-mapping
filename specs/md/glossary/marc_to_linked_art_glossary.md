@@ -4,11 +4,17 @@ author: timothy.thompson@yale.edu
 
 # MARC to Linked Art glossary
 
--   **[Entification](../glossary/entification.md)**  
+1.  [Entification](../glossary/entification.md)  
 
--   **[Normalization](../glossary/normalization.md)**  
+2.  [Normalization](../glossary/normalization.md)  
 
--   **[Functional Requirements for Bibliographic Records \(FRBR\)](../glossary/frbr.md)**  
+3.  [Functional Requirements for Bibliographic Records \(FRBR\)](../glossary/frbr.md)  
+
+4.  [Carrier-level record](../glossary/carrier_level_record.md)  
+
+5.  [Content-level record](../glossary/content_level_record.md)  
+
+6.  [Bound-with resource](../glossary/bound-with_resource.md)  
 
 
 **Related information**  

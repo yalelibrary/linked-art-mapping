@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<task id="call_number_variables" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd">
+  <title>Variables</title>
+  <shortdesc/>
+  <prolog>
+    <critdates>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-09"/>
+    </critdates>
+  </prolog>
+  <taskbody>
+    <context>
+      <ul id="one">
+        <li>Concatenate <codeph>enum_val</codeph> and <codeph>chron_val</codeph> with a comma and whitespace character.</li>
+        <li>Surround the concatenated value with square brackets.</li>
+        <li>Save the value as <codeph>enum_chron_val</codeph>.</li>
+        <li product="call_number">Concatenate <codeph>call_number</codeph> and <codeph>enum_chron_val</codeph> with a whitespace character and save the value as <codeph>call_number_2</codeph>.</li>
+        <li product="call_number">Concatenate <codeph>call_number_2</codeph> with the <codeph>location_name</codeph> with a whitespace character.</li>
+      </ul>
+      <ul id="two">
+        <li>Surround the extracted value with square brackets.</li>
+        <li>Save the value as <codeph>enum_val</codeph> or <codeph>chron_val</codeph>.</li>                  
+        <li product="call_number">Concatenate <codeph>call_number</codeph> and <codeph>enum_val</codeph> or <codeph>chron_val</codeph> with a whitespace character and save the value as <codeph>call_number_2</codeph>.</li>        
+      </ul>
+      <ul id="three">
+        <li>If the <codeph>holdings_val</codeph> each with a comma, trim the comma from the end of <codeph>holdings_val</codeph>.</li>
+        <li>Surround <codeph>holdings_val</codeph> with square brackets.</li>
+        <li product="call_number">Concatenate <codeph>call_number</codeph> and <codeph>holdings_val</codeph> with a whitespace character and save the value as <codeph>call_number_2</codeph>.</li>        
+      </ul>
+    </context>
+  </taskbody>
+</task>

@@ -15,3 +15,7 @@ Conceptual model for library metadata, which has since been superseded by the Li
 
 **Parent topic:**[MARC to Linked Art glossary](../glossary/marc_to_linked_art_glossary.md)
 
+**Previous topic:**[Normalization](../glossary/normalization.md)
+
+**Next topic:**[Carrier-level record](../glossary/carrier_level_record.md)
+

@@ -19,3 +19,7 @@ String normalization includes the following steps:
 
 **Parent topic:**[MARC to Linked Art glossary](../glossary/marc_to_linked_art_glossary.md)
 
+**Previous topic:**[Entification](../glossary/entification.md)
+
+**Next topic:**[Functional Requirements for Bibliographic Records \(FRBR\)](../glossary/frbr.md)
+

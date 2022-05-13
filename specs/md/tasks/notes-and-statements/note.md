@@ -7,9 +7,8 @@ keyword: Assigned
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`| |
-|`VisualItem`| |
-|`DigitalObject`| |
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
 
 ## Source data
 

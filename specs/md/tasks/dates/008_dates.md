@@ -55,20 +55,29 @@ scriptInclusion: NONE
 
 6.  Process the date values in `008[07-10]` and `008[11-14]` to test for other non-numeric characters \(e.g., internal whitespace, `u`, `x`, `\|` \[pipe\]\).
 
-7.  For each date value, replace the regular expression `[\sA-Za-z\|]` with `?`.
+7.  For each date value, replace the regular expression `[\sA-Za-tvwxyz\|]` with `?`.
 
-8.  Save the values as `date_1_temp` and `date_2_temp`.
+8.  Save the values as `date_1_val` and `date_2_val`.
 
-9.  Process the first date value and save as `date_1_val`.
+9.  If `date_1_val` contains only `?` characters, `date_1_val` is `false`.
 
-    -   If `date_1_temp` contains only `?` characters, `date_1_val` is `false`.
-    -   Else, replace the regular expression `\?` with `0` in `date_1_temp` as the value of `date_1_val`.
-10. Process the second date value and save as `date_2_val`.
+10. If `date_2_val` contains only `?` characters, `date_2_val` is `false`.
 
-    -   If `date_2_temp` contains only `?` characters, `date_2_val` is `false`.
-    -   Else, if `date_2_temp` is equal to `9999`, then set the value of `date_2_val` to `9999`.
-    -   Else, replace the regular expression `\?` in `date_2_temp` with `9` as the value of `date_2_val`.
-11. Construct a `TimeSpan` object to store the date values.
+11. If `date_2_val` is `false`, but `date_1_val` contains `u`, process `date_1_val` as a date range.
+
+    1.  Copy the value of `date_1_val` to `date_2_val`.
+
+    2.  Replace the regular expression `[u\?]` in `date_1_val`with `0`.
+
+    3.  Replace the regular expression `[u\?]` in `date_2_val` with `9`.
+
+12. Else, replace the regular expression `\?` with `0` in `date_1_val`.
+
+13. If `date_2_val` is equal to `9999`, continue.
+
+14. Else, replace the regular expression `\?` in `date_2_val` with `9`.
+
+15. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -80,19 +89,9 @@ scriptInclusion: NONE
 
                 castable as `integer`
 
-            -   **OR**
-                -   **`specific_date_type`**
+            -   **`specific_date_type`**
 
-                    `e`
-
-    ```
-    
-    if ($date_1_val castable as integer and $date_2_val castable as integer)
-    then
-      if ($generic_date_type == "e")
-        ...
-    
-    ```
+                `e`
 
     1.  Analyze `date_2_val` using the regular expression `.{2}`.
 
@@ -154,7 +153,7 @@ scriptInclusion: NONE
         }
         ```
 
-12. Construct a `TimeSpan` object to store the date values.
+16. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -305,7 +304,7 @@ scriptInclusion: NONE
         }
         ```
 
-13. Construct a `TimeSpan` object to store the date values.
+17. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -463,7 +462,7 @@ scriptInclusion: NONE
         }
         ```
 
-14. Construct a `TimeSpan` object to store the date values.
+18. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -564,6 +563,67 @@ scriptInclusion: NONE
 
     13. If `generic_date_type` is `publication`, assign the dates to a `publishing` activity.
 
+        **Example 1**
+
+        -   **008\[06\] \(specific\_date\_type\)**
+
+            s
+
+        -   **generic\_date\_type**
+
+            publication
+
+        -   **008\[07-10\]**
+
+            `19uu`
+
+        -   **008\[11-14\]**
+
+            `[none]`
+
+        ```
+        {
+          "used_for": [
+            {
+              "type": "Activity",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300054686",
+                  "type": "Type",
+                  "_label": "Publishing"
+                }
+              ],
+              "took_place_at": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/place/9ebe78d5-0a21-427b-a9f1-b170e453d513",
+                  "type": "Place"
+                }
+              ],
+              "timespan": {
+                "type": "TimeSpan",
+                "begin_of_the_begin": "1900-01-01T00:00:00Z",
+                "end_of_the_end": "1999-12-31T23:59:59",
+                "identified_by": [
+                  {
+                    "type": "Name",
+                    "content": "1900-1999",
+                    "classified_as": [
+                      {
+                        "id": "http://vocab.getty.edu/aat/300404669",
+                        "type": "Type",
+                        "_label": "Display Title"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+        ```
+
+        **Example 2**
+
         -   **008\[06\] \(specific\_date\_type\)**
 
             q
@@ -623,7 +683,7 @@ scriptInclusion: NONE
         }
         ```
 
-15. Construct a `TimeSpan` object to store the date values.
+19. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -715,7 +775,7 @@ scriptInclusion: NONE
         }
         ```
 
-16. Construct a `TimeSpan` object to store the date values.
+20. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -804,7 +864,7 @@ scriptInclusion: NONE
         }
         ```
 
-17. Construct a `TimeSpan` object to store the date values.
+21. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**
@@ -898,7 +958,7 @@ scriptInclusion: NONE
         }
         ```
 
-18. Construct a `TimeSpan` object to store the date values.
+22. Construct a `TimeSpan` object to store the date values.
 
     -   **Conditions**
         -   **AND**

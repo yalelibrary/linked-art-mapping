@@ -9,8 +9,7 @@ Statement indicating whether a resource is available online or in the library.
 
 |Domains|Usage|
 |-------|-----|
-|`HumanMadeObject`|Do not repeat on related `LinguisticObject` or `VisualItem`.|
-|`DigitalObject`| |
+|`HumanMadeObject` `DigitalObject`|Do not repeat on related `LinguisticObject` or `VisualItem`.|
 |`Set → members_exemplified_by → HumanMadeObject`|Do not repeat on containing `Set`.|
 
 ## Source data

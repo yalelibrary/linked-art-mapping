@@ -14,10 +14,6 @@ The supertype of a resource is used to determine its base class or document type
 
 |Base class|Content type|Format level one|Format level two|
 |----------|------------|----------------|----------------|
-|DigitalObject **\[primary\]**|Datasets|[Data and Files](dataandfiles.md)|[Geospatial Data](geospatialdata.md)|
-|DigitalObject **\[primary\]**|Datasets|[Data and Files](dataandfiles.md)|[Image Data](imagedata.md)|
-|DigitalObject **\[primary\]**|Datasets|[Data and Files](dataandfiles.md)|[Textual Data](textualdata.md)|
-|DigitalObject|Software and Electronic Media|[Software Applications](softwareapplications.md)|[Databases](databases.md)|
 |LinguisticObject|Objects|[Globes](globes.md)| |
 |LinguisticObject|Objects|[Models](models.md)| |
 |LinguisticObject|Objects|[Realia](realia.md)| |
@@ -27,6 +23,7 @@ The supertype of a resource is used to determine its base class or document type
 |LinguisticObject|Moving Images|[Motion Pictures](motionpictures.md)| |
 |LinguisticObject|Scores and Notation|[Notated Movement](notatedmovement.md)| |
 |LinguisticObject|Scores and Notation|[Notated Music](notatedmusic.md)| |
+|LinguisticObject|Software and Electronic Media|[Software Applications](softwareapplications.md)|[Databases](databases.md)|
 |LinguisticObject|Textual Works|[Books](books.md)|[Atlases](atlases.md)|
 |LinguisticObject|Textual Works|[Broadsides](broadsides.md)| |
 |LinguisticObject|Textual Works|[Dissertations and Theses](dissertationsandtheses.md)| |

@@ -16,7 +16,7 @@ The LUX supertype scheme is divided into two levels: *types* and *formats*. Type
 
 Only format concepts are assigned in LUX because type concepts can be inferred from the taxonomic hierarchy.
 
-**Supertype format classifications are always assigned to the `HumanMadeObject` or `DigitalObject` resource.**
+**Supertype format classifications are always assigned to the corresponding `DigitalObject` or `HumanMadeObject` resource.**
 
 ## Multiple supertypes: order of precedence
 
@@ -25,8 +25,6 @@ The base class for record-level bibliographic entities is determined by the supe
 1.  `Set`
 2.  `LinguisticObject`
 3.  `VisualItem`
-4.  `DigitalObject`
-5.  `HumanMadeObject`
 
 For formats that are instances of two different types, one base class has been marked as **primary**. For these supertypes, only the primary base class should be used as the `Type` of the record-level resources.
 
@@ -34,10 +32,11 @@ For formats that are instances of two different types, one base class has been m
 
 Apply the following rules to the processing of bibliographic \(bib\) and holdings \(mfhd\) records:
 
--   Ignore all suppressed bibs and mfhds.
--   Ignore bibs with no related mfhds \(orphan bibs\).
--   Ignore bibs that are unsuppressed, but whose related mfhds are all suppressed.
--   Ignore mfhds that are unsuppressed, but whose related bib is suppressed.
+-   Ignore all suppressed bibs.
+-   Ignore all suppressed MFHDs, **unless the suppressed MFHD has a location of `yulintx`.**
+-   Ignore bibs with no related MFHDs \(orphan bibs\).
+-   Ignore bibs that are unsuppressed, but whose related MFHDs are all suppressed.
+-   Ignore MFHDs that are unsuppressed, but whose related bib is suppressed.
 
 -   **[Content and carriers](../tasks/content_and_carriers.md)**  
 

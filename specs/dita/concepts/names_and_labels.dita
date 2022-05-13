@@ -14,7 +14,5 @@
     <data name="completed" value=""/>
     <data name="deployed" value=""/>
   </prolog>
-  <conbody>
-    <p>Titles extracted from MARC <codeph>505</codeph> (Formatted Contents Note) are handled separately, as their own record-level entities: see<xref href="../tasks/names-and-labels/related_title_entities.dita"/>.</p>
-  </conbody>
+  <conbody/>
 </concept>

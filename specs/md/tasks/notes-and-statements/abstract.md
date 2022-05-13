@@ -9,10 +9,9 @@ Corresponds to the`520`note field in MARC.
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
 |`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
-|`DigitalObject`| |
 
 ## Source data
 

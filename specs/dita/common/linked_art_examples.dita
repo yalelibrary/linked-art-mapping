@@ -30,6 +30,42 @@
   ]
 }]]></codeblock>
 			</div>
+		  <div id="ex-identifier-mfhd">
+		    <yulmfhdid>4082244</yulmfhdid>
+		    <codeblock><![CDATA[{
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "content": "ils:yul:mfhd:4082244",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435704",
+          "type": "Type",
+          "_label": "System-Assigned Number"
+        }
+      ]
+    }
+  ]
+}]]></codeblock>
+		  </div>
+		  <div id="ex-identifier-item">
+		    <yulitemid>12104059</yulitemid>
+		    <codeblock><![CDATA[{
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "content": "ils:yul:item:12104059",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435704",
+          "type": "Type",
+          "_label": "System-Assigned Number"
+        }
+      ]
+    }
+  ]
+}]]></codeblock>
+		  </div>
 			<div id="ex-identifier-010">
 				<yulbibid>4</yulbibid>
 				<codeblock><![CDATA[{
@@ -244,7 +280,7 @@
         {
           "id": "http://vocab.getty.edu/aat/300435443",
           "type": "Type",
-          "_label": "Type of Work"
+          "_label": "Type of Object"
         }
       ]
     },
@@ -283,7 +319,7 @@
         {
           "id": "http://vocab.getty.edu/aat/300435443",
           "type": "Type",
-          "_label": "Type of Work"
+          "_label": "Type of Object"
         }
       ]
     },

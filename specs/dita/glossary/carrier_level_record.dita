@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<glossentry id="carrier_level_record" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:glossary.xsd">
+  <glossterm>Carrier-level record</glossterm>
+  <glossdef>
+    <p>In MARC-based systems, the content/carrier model corresponds roughly to the distinction between bibliographic records and holdings plus item records.</p>
+    <p>If the resource to be processed includes one or more item records, then process each item plus holdings record as a carrier-level record.</p>
+    <p>However, not all resources are linked to an item record in Voyager. If there is no item record, then process each holdings record as a carrier-level record. If the holdings record (e.g., for a journal) includes one or more <codeph>866</codeph>, <codeph>867</codeph>, or <codeph>868</codeph> (<q>textual holdings</q>) fields, then each of those fields should be broken out into a <i>separate</i> carrier-level resource.</p>
+  </glossdef>
+  <prolog>
+    <author conkeyref="metadata_common/author_metadata"/>
+    <author type="creator">timothy.thompson@yale.edu</author>
+    <source format="dita" href="../tasks/content_and_carriers.dita" scope="local"/>
+    <publisher conkeyref="metadata_common/publ_metadata"/>
+    <critdates conkeyref="metadata_common/dates_metadata">
+      <created date="2022-05-03"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-09"/>
+    </critdates>
+    <metadata conkeyref="metadata_glossary/keyword_metadata_glossary"/>
+  </prolog>
+  <glossBody>
+    <glossUsage>See <xref format="dita" href="../tasks/content_and_carriers.dita" scope="local"></xref> for more information.</glossUsage>
+  </glossBody>
+</glossentry>

@@ -8,7 +8,7 @@ keyword:
 |Domains|Usage|
 |-------|-----|
 |`HumanMadeObject`|Do not repeat on related `LinguisticObject` or `VisualItem`.|
-|`DigitalObject`| |
+|`DigitalObject`|Do not repeat on related `LinguisticObject` or `VisualItem`.|
 |`Set → members_exemplified_by → HumanMadeObject`|Do not repeat on containing `Set`.|
 
 ## Source data
@@ -535,37 +535,7 @@ scriptInclusion: NONE
 
         Apply the steps in [Entities for specific groups](individual_groups.md) to generate a top-level group entity for each of the campus divisions and locations listed above.
 
-        Generate a top-level concept for `curation` with an `equivalent` reference to `http://vocab.getty.edu/aat/300054277`.
-
-        ```
-        {
-          "@context": "https://linked.art/ns/v1/linked-art.json",
-          "id": "https://lux.collections.yale.edu/data/concept/0d0f1e67-8089-430c-bbaa-02596b2f8d25",
-          "type": "Type",
-          "_label": "Curating",
-          "identified_by": [
-            {
-              "type": "Name",
-              "content": "Curating",
-              "classified_as": [
-                {
-                  "id": "http://vocab.getty.edu/aat/300404670",
-                  "type": "Type",
-                  "_label": "Primary Name"
-                }
-              ]
-            }
-          ],
-          "equivalent": [
-            {
-              "id": "http://vocab.getty.edu/aat/300054277",
-              "type": "Type"
-            }
-          ]
-        }
-        ```
-
-        Collection sets should be `classified_as` `http://vocab.getty.edu/aat/300025976` \(`Collection`\) and `used_for` a `Curation` activity \(`classified_as` `Curating`\).
+        Collection sets should be `classified_as` `http://vocab.getty.edu/aat/300025976` \(`Collection`\) and `used_for` a `Curation` activity \(`classified_as` `http://vocab.getty.edu/aat/300054277`, `Curating`\).
 
         ```
         {
@@ -586,7 +556,7 @@ scriptInclusion: NONE
               "_label": "Curation",
               "classified_as": [
                 {
-                  "id": "https://lux.collections.yale.edu/data/concept/0d0f1e67-8089-430c-bbaa-02596b2f8d25",
+                  "id": "http://vocab.getty.edu/aat/300054277",
                   "type": "Type",
                   "_label": "Curating"
                 }
@@ -603,7 +573,7 @@ scriptInclusion: NONE
           "identified_by": [
             {
               "type": "Name",
-              "content": "Holdings of Yale University Library",
+              "content": "Yale University Library",
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300404670",
@@ -661,7 +631,7 @@ scriptInclusion: NONE
           "identified_by": [
             {
               "type": "Name",
-              "content": "Holdings of Bass Library",
+              "content": "Bass Library",
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300404670",

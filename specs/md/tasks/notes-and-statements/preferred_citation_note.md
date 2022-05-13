@@ -7,16 +7,15 @@ keyword: [Assigned, Completed]
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
 |`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
-|`DigitalObject`| |
 
 ## Source data
 
 ```
 ---
-name: Abstract
+name: PreferredCitation
 sampleBibs:
   - 72947
 fieldSpec:

@@ -49,6 +49,7 @@
           "type": "AttributeAssignment",
           "carried_out_by": [
             {
+              "id": "https://lux.collections.yale.edu/data/group/lc-as-entity",
               "type": "Group",
               "_label": "Library of Congress"
             }
@@ -132,6 +133,7 @@
           "type": "AttributeAssignment",
           "carried_out_by": [
             {
+              "id": "https://lux.collections.yale.edu/data/group/oclc-as-entity",
               "type": "Group",
               "_label": "OCLC"
             }
@@ -242,7 +244,7 @@
         {
           "id": "http://vocab.getty.edu/aat/300435443",
           "type": "Type",
-          "_label": "Form"
+          "_label": "Type of Work"
         }
       ]
     },
@@ -281,7 +283,7 @@
         {
           "id": "http://vocab.getty.edu/aat/300435443",
           "type": "Type",
-          "_label": "Form"
+          "_label": "Type of Work"
         }
       ]
     },

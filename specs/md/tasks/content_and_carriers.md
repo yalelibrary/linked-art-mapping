@@ -8,11 +8,9 @@ In Linked Art, record-level entities are divided into two categories:
 
 -   Conceptual entities, which represent the intellectual content of a resource:
 
-    -   `DigitalObject`
+    -   `Set`
 
     -   `LinguisticObject`
-
-    -   `Set`
 
     -   `VisualItem`
 
@@ -23,23 +21,31 @@ In Linked Art, record-level entities are divided into two categories:
     -   `HumanMadeObject`
 
 
-**Note:** For supertypes under the `Datasets` and `Software and Electronic Media` content types, a single `DigitalObject` resource should be generated, representing both content and carrier in a single resource.
+**Note:** Previously, supertypes under the `Datasets` and `Software and Electronic Media` content types were mapped to a single `DigitalObject` resource. This mapping has been changed in `v2.0`. Now, these content types should be assigned a base class of `LinguisticObject`, with the same content/carrier split as all other resources.
 
-Resources with a base class of `LinguisticObject` or `VisualItem` must follow the content/carrier model. In MARC-based systems, this model corresponds roughly to the distinction between bibliographic records and holdings records.
+In MARC-based systems, this content/carrier model corresponds roughly to the distinction between bibliographic records and holdings plus item records.
 
-For each record-level resource with a base class of `LinguisticObject` or `VisualItem` \(the *content* level\), one or more resources with a base class of `HumanMadeObject` or `DigitalObject` \(the *carrier* level\) must be generated.
+For each record-level resource with a base class of `LinguisticObject` or `VisualItem` \(the *content* level\), one or more resources with a base class of `HumanMadeObject` or `DigitalObject` \(the *carrier* level\) must be generated. For each record-level resource with a base class of `Set` \(the *content* level\), a nested `members_exemplified_by → HumanMadeObject` resource must be generated.
 
 **Note:** `DigitalObject` carriers should be generated when the MFHD `852b` has a value of `yulint` or `yulintx`.
 
-These `HumanMadeObject` or `DigitalObject` resources must point to the `LinguisticObject` or `VisualItem` resource that they instantiate and where the supertype and any subjects, etc., are assigned.
+These `HumanMadeObject` or `DigitalObject` resources must be related to the `Set`, `LinguisticObject`, or `VisualItem` resource that they exemplify or instantiate and where any subjects, etc., are assigned.
 
-The following diagram \(by Rob Sanderson\) provides a high-level overview of the Linked Art model.
+The following diagram provides a high-level overview of the Linked Art model.
 
-![](../resources/img/base-model-classes.png)
+![High-level diagram of the Linked Art model, by Rob Sanderson.](../resources/img/base-model-classes.png)
 
 ## Processing steps and output
 
-1.  For each MARC holdings record, determine the supertype of the resource and generate a JSON-LD document with a `type` value of either `HumanMadeObject` or `DigitalObject`, as appropriate.
+1.  If the resource to be processed includes one or more item records, then process each item plus holdings record as a carrier-level record.
+
+2.  However, not all resources are linked to an item record in Voyager. If there is no item record, then process each holdings record as a carrier-level record.
+
+    1.  If the holdings record \(e.g., for a journal\) includes one or more `866`, `867`, or `868` \(“textual holdings”\) fields, then each of those fields should be broken out into a *separate* carrier-level resource.
+
+3.  For each carrier-level record, determine the supertype of the resource and generate a JSON-LD document with a `type` value of either `HumanMadeObject` or `DigitalObject`, as appropriate.
+
+    **Note:** Each `HumanMadeObject` or `DigitalObject` must also have a `Name` classified as its `Primary Name`, derived from the primary name of the content-level resource.
 
     **Note:** For supertypes with two possible base classes \(such as [Globes](supertypes/globes.md)\), apply the [order of preference](../concepts/record_level_entities.md#) for base classes when generating the content-level resource.
 
@@ -64,13 +70,44 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
             }
           ]
         }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Li ze lun shuo ji lu : [shi juan]",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        },
+        {
+          "type": "Name",
+          "content": "麗澤論說集錄 : [十卷]",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ],
+          "language": [
+            {
+              "id": "https://lux.collections.yale.edu/data/concept/70cb6397-2b2f-400c-b887-70fd80969c8b",
+              "type": "Language",
+              "_label": "und"
+            }
+          ]
+        }
       ]
     }
     ```
 
-2.  For each MARC bibliographic record, determine the supertype of the resource and generate a JSON-LD document with a `type` value corresponding to the base class of the supertype.
+4.  For each MARC bibliographic record, determine the supertype of the resource and generate a JSON-LD document with a `type` value corresponding to the base class of the supertype.
 
-3.  In addition, for each record-level bibliographic resource, add another `classified_as` object to mark the record as an "Information Artifact" \(IRI `http://vocab.getty.edu/aat/300230425`\).
+5.  In addition, for each record-level bibliographic resource, add another `classified_as` object to mark the record as an "Information Artifact" \(IRI `http://vocab.getty.edu/aat/300230425`\).
 
     ```
     {
@@ -84,20 +121,50 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
           "type": "Type",
           "_label": "Information Artifact"
         }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Li ze lun shuo ji lu : [shi juan]",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        },
+        {
+          "type": "Name",
+          "content": "麗澤論說集錄 : [十卷]",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ],
+          "language": [
+            {
+              "id": "https://lux.collections.yale.edu/data/concept/70cb6397-2b2f-400c-b887-70fd80969c8b",
+              "type": "Language",
+              "_label": "und"
+            }
+          ]
+        }
       ]
     }
     ```
 
-4.  For each MARC holdings record attached to a bibliographic record:
+6.  For each carrier-level record attached to a bibliographic record:
 
     -   If the base class derived from the supertype is `LinguisticObject` or `VisualItem`:
         -   If the MFHD `852b` is `yulint` or `yulintx`, generate a JSON-LD document with a base class of `DigitalObject`.
         -   Else, generate a JSON-LD document with a base class of `HumanMadeObject`.
     -   If the base class derived from the supertype is `Set`, generate an embedded `Set → members_exemplified_by → HumanMadeObject` resource to record carrier-level information.
-    -   If the base class derived from the supertype is `DigitalObject`, do not generate a separate carrier-level resource. Record both content- and carrier-level information in a single JSON-LD document, with `DigitalObject` as base class.
-5.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then `HumanMadeObject` carriers must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
+7.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then `HumanMadeObject` carriers must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
 
-6.  If the supertype of the resource corresponding to the bibliographic record has a base class of `Set` \(for archival records or kits\), then the `HumanMadeObject` carrier is **not** modeled as a separate resource, but rather embedded within the `Set` resource using the property `members_exemplified_by`.
+8.  If the supertype of the resource corresponding to the bibliographic record has a base class of `Set` \(for archival records or kits\), then the `HumanMadeObject` carrier is **not** modeled as a separate resource, but rather embedded within the `Set` resource using the property `members_exemplified_by`.
 
 
 **Note:** These examples are meant to illustrate the content/carrier distinction and do not necessarily represent complete JSON-LD documents.
@@ -268,7 +335,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
       "@context": "https://linked.art/ns/v1/linked-art.json",
       "id": "https://lux.collections.yale.edu/data/object/8e0bdbff-ebb1-4f9b-b98b-e97d64a01ff9",
       "type": "HumanMadeObject",
-      "_label": "麗澤論說集錄 : [十卷]",
+      "_label": "麗澤論說集錄 : [十卷] [1-5]",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300028051",
@@ -282,18 +349,57 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
             }
           ]
         }
-      ],
-      "carries": [
-        {
-          "id": "https://lux.collections.yale.edu/data/text/416165c2-1108-4acd-b7ab-008f773a2ba3",
-          "type": "LinguisticObject",
-          "_label": "麗澤論說集錄 : [十卷]"
-        }
-      ],
+      ],  
       "identified_by": [
         {
           "type": "Identifier",
-          "content": "BL1840 .L84 2003 [Library Shelving Facility (LSF)]",
+          "content": "ils:yul:mfhd:8240722",
+          "attributed_by": [
+            {
+              "type": "AttributeAssignment",
+              "carried_out_by": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+                  "type": "Group",
+                  "_label": "Yale University Library"
+                }
+              ]
+            }
+          ],
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435704",
+              "type": "Type",
+              "_label": "System-Assigned Number"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "content": "ils:yul:item:7118098",
+          "attributed_by": [
+            {
+              "type": "AttributeAssignment",
+              "carried_out_by": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+                  "type": "Group",
+                  "_label": "Yale University Library"
+                }
+              ]
+            }
+          ],
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435704",
+              "type": "Type",
+              "_label": "System-Assigned Number"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "content": "BL1840 .L84 2003 [1-5] [Library Shelving Facility (LSF)]",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300311706",
@@ -304,7 +410,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
         },
         {
           "type": "Name",
-          "content": "Li ze lun shuo ji lu : [shi juan]",
+          "content": "Li ze lun shuo ji lu : [shi juan] [1-5]",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300404670",
@@ -315,7 +421,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
         },
         {
           "type": "Name",
-          "content": "\u9e97\u6fa4\u8ad6\u8aaa\u96c6\u9304 : [\u5341\u5377]",
+          "content": "麗澤論說集錄 : [十卷] [1-5]",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300404670",
@@ -407,6 +513,13 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
           "type": "Set",
           "_label": "Yale University Library"
         }
+      ],
+      "carries": [
+        {
+          "id": "https://lux.collections.yale.edu/data/text/416165c2-1108-4acd-b7ab-008f773a2ba3",
+          "type": "LinguisticObject",
+          "_label": "麗澤論說集錄 : [十卷]"
+        }
       ]
     }
     ```
@@ -432,15 +545,54 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
             }
           ]
         }
-      ],
-      "shows": [
-        {
-          "id": "https://lux.collections.yale.edu/data/visual/fd3d836b-1cd1-47d9-a38e-002ce325601b",
-          "type": "VisualItem",
-          "_label": "Lessons for shaving!!! [graphic]"
-        }
-      ],
+      ], 
       "identified_by": [
+        {
+          "type": "Identifier",
+          "content": "ils:yul:mfhd:10086516",
+          "attributed_by": [
+            {
+              "type": "AttributeAssignment",
+              "carried_out_by": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+                  "type": "Group",
+                  "_label": "Yale University Library"
+                }
+              ]
+            }
+          ],
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435704",
+              "type": "Type",
+              "_label": "System-Assigned Number"
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "content": "ils:yul:item:11689622",
+          "attributed_by": [
+            {
+              "type": "AttributeAssignment",
+              "carried_out_by": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+                  "type": "Group",
+                  "_label": "Yale University Library"
+                }
+              ]
+            }
+          ],
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435704",
+              "type": "Type",
+              "_label": "System-Assigned Number"
+            }
+          ]
+        },
         {
           "type": "Identifier",
           "content": "796.04.16.02++ [Lewis Walpole Library]",
@@ -507,7 +659,7 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300404669",
-                  "type": "Type",
+                  "type": "Type",[
                   "_label": "Display Title"
                 }
               ]
@@ -554,7 +706,14 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
             ]
           }
         ]
-      }
+      },
+      "shows": [
+        {
+          "id": "https://lux.collections.yale.edu/data/visual/fd3d836b-1cd1-47d9-a38e-002ce325601b",
+          "type": "VisualItem",
+          "_label": "Lessons for shaving!!! [graphic]"
+        }
+      ]
     }
     ```
 
@@ -580,6 +739,19 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
           ]
         }
       ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "ZYX and his fairy, or, The soul in search of peace [electronic resource]",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        }
+      ],
       "digitally_carries": [
         {
           "id": "https://lux.collections.yale.edu/data/text/7210e343-ce9d-4853-8454-a7c4e88644db",
@@ -588,7 +760,6 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
         }
       ]
     }
-    
     ```
 
 5.  `DigitalObject → digitally_shows → VisualItem` \[`12237283`\]
@@ -613,88 +784,24 @@ The following diagram \(by Rob Sanderson\) provides a high-level overview of the
           ]
         }
       ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Sarah Malcolm [graphic] : executed in Fleet Street, March the 7th 1733 for robbing [the] chambers of Mrs. Lydia Duncomb in [the] Temple, & murdering her, Eliz. Harrison, & Ann Price",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        }
+      ],
       "digitally_shows": [
         {
           "id": "https://lux.collections.yale.edu/data/visual/8cf565ab-f2ad-4af2-9840-c18f36d6fe08",
           "type": "VisualItem",
           "_label": "Sarah Malcolm [graphic] : executed in Fleet Street, March the 7th 1733 for robbing [the] chambers of Mrs. Lydia Duncomb in [the] Temple, & murdering her, Eliz. Harrison, & Ann Price"
-        }
-      ]
-    }
-    ```
-
-6.  Standalone `DigitalObject` \[`12244893`\]
-
-    ```
-    {
-      "id": "https://lux.collections.yale.edu/data/digital/0283cba8-169b-4950-bb88-5ba3cdd4ca1d",
-      "type": "DigitalObject",
-      "_label": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年)",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300028566",
-          "type": "Type",
-          "_label": "Software Applications",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300435443",
-              "type": "Type",
-              "_label": "Type of Object"
-            }
-          ]
-        }
-      ],
-      "identified_by": [
-        {
-          "type": "Identifier",
-          "content": "QC990.J32 H576 2014 CD [Library Shelving Facility (LSF)]",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300311706",
-              "type": "Type",
-              "_label": "Call Number"
-            }
-          ]
-        },
-        {
-          "type": "Name",
-          "content": "Hirosaki hanchō nikki hiroiyomi : kishō saigai nado no kijutsu o chūshin ni. Vol.2, (1741-nen-1868-nen)",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300404670",
-              "type": "Type",
-              "_label": "Primary Name"
-            }
-          ]
-        },
-        {
-          "type": "Name",
-          "content": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年)",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300404670",
-              "type": "Type",
-              "_label": "Primary Name"
-            }
-          ],
-          "language": [
-            {
-              "id": "https://lux.collections.yale.edu/data/concept/70cb6397-2b2f-400c-b887-70fd80969c8b",
-              "type": "Language",
-              "_label": "und"
-            }
-          ]
-        },
-        {
-          "type": "Name",
-          "content": "Hirosaki hanchō nikki hiroiyomi : kishō saigai nado no kijutsu o chūshin ni. Vol.2, (1741-nen-1868-nen)",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300404672",
-              "type": "Type",
-              "_label": "Sorting Name"
-            }
-          ]
         }
       ]
     }

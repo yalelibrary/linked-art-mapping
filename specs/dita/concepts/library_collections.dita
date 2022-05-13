@@ -18,6 +18,10 @@
       <revised modified="2022-02-16"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-02-18"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-03"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-06"/>
     </critdates>
     <metadata>
       <keywords>
@@ -51,7 +55,7 @@
               <entry>
                 <codeph>DigitalObject</codeph>
               </entry>
-              <entry/>
+              <entry>Do not repeat on related <codeph>LinguisticObject</codeph> or <codeph>VisualItem</codeph>.</entry>
             </row>
             <row>
               <entry>
@@ -97,34 +101,10 @@ scriptInclusion: NONE]]></codeblock>
           <substep>
             <cmd>Within each top-level collection resource, include a reference to the group entity that is responsible for the collection.</cmd>
             <info>
-              <p>Apply the steps in <xref href="individual_groups.dita"/> to generate a top-level group entity for each of the campus divisions and locations listed above.</p>
-              <p>Generate a top-level concept for <codeph>curation</codeph> with an <codeph>equivalent</codeph> reference to <codeph>http://vocab.getty.edu/aat/300054277</codeph>. <codeblock><![CDATA[{
-  "@context": "https://linked.art/ns/v1/linked-art.json",
-  "id": "https://lux.collections.yale.edu/data/concept/0d0f1e67-8089-430c-bbaa-02596b2f8d25",
-  "type": "Type",
-  "_label": "Curating",
-  "identified_by": [
-    {
-      "type": "Name",
-      "content": "Curating",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300404670",
-          "type": "Type",
-          "_label": "Primary Name"
-        }
-      ]
-    }
-  ],
-  "equivalent": [
-    {
-      "id": "http://vocab.getty.edu/aat/300054277",
-      "type": "Type"
-    }
-  ]
-}]]></codeblock>
-              </p>
-              <p>Collection sets should be <codeph>classified_as</codeph> <codeph>http://vocab.getty.edu/aat/300025976</codeph> (<codeph>Collection</codeph>) and <codeph>used_for</codeph> a <codeph>Curation</codeph> activity (<codeph>classified_as</codeph> <codeph>Curating</codeph>).</p>
+              <p>Apply the steps in <xref href="individual_groups.dita"/> to generate a top-level group entity for each of the campus divisions and locations listed above.</p>             
+              <p>Collection sets should be <codeph>classified_as</codeph>
+                <codeph>http://vocab.getty.edu/aat/300025976</codeph> (<codeph>Collection</codeph>) and <codeph>used_for</codeph> a <codeph>Curation</codeph> activity (<codeph>classified_as</codeph>
+                <codeph>http://vocab.getty.edu/aat/300054277</codeph>, <codeph>Curating</codeph>).</p>
             </info>
             <stepresult>
               <codeblock id="codeblock_rt4_cyc_psb"><![CDATA[{
@@ -145,7 +125,7 @@ scriptInclusion: NONE]]></codeblock>
       "_label": "Curation",
       "classified_as": [
         {
-          "id": "https://lux.collections.yale.edu/data/concept/0d0f1e67-8089-430c-bbaa-02596b2f8d25",
+          "id": "http://vocab.getty.edu/aat/300054277",
           "type": "Type",
           "_label": "Curating"
         }
@@ -162,7 +142,7 @@ scriptInclusion: NONE]]></codeblock>
   "identified_by": [
     {
       "type": "Name",
-      "content": "Holdings of Yale University Library",
+      "content": "Yale University Library",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
@@ -220,7 +200,7 @@ scriptInclusion: NONE]]></codeblock>
   "identified_by": [
     {
       "type": "Name",
-      "content": "Holdings of Bass Library",
+      "content": "Bass Library",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
