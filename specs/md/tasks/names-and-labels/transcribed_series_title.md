@@ -14,7 +14,6 @@ Transcribed series title of a record-level entity. Taken from MARC `440` or `490
 |`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
 |`VisualItem`|Do not repeat on related `HumanMadeObject`.|
 |`Set`|Do not repeat on nested `members_exemplified_by → HumanMadeObject`.|
-|`DigitalObject`| |
 
 ## Source data
 

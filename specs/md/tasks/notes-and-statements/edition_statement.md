@@ -15,7 +15,7 @@ keyword:
 
 ```
 ---
-name: ProductionStatement
+name: EditionStatement
 sampleBibs:
   - 3643333
 fieldSpec:
@@ -26,7 +26,7 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Process the production statement values.
+1.  Process the edition statement values.
 
     1.  Do not trim punctuation from subfields.
 

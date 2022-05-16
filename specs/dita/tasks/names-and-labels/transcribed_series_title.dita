@@ -6,6 +6,8 @@
     <publisher conkeyref="metadata_common/publ_metadata"/>
     <critdates conkeyref="metadata_common/dates_metadata">
       <created date="2022-01-05"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-16"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_desc"/>
     <metadata>
@@ -47,12 +49,6 @@
                 <codeph>Set</codeph>
               </entry>
               <entry>Do not repeat on nested <codeph>members_exemplified_by → HumanMadeObject</codeph>.</entry>
-            </row>
-            <row>
-              <entry>
-                <codeph>DigitalObject</codeph>
-              </entry>
-              <entry/>
             </row>
           </tbody>
         </tgroup>

@@ -8,6 +8,8 @@
       <created date="2022-01-05"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-05-13"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-16"/>
     </critdates>
     <metadata>
       <keywords>
@@ -56,7 +58,7 @@
     <section>
       <title>Source data</title>
       <codeblock><![CDATA[---
-name: ProductionStatement
+name: EditionStatement
 sampleBibs:
   - 3643333
 fieldSpec:
@@ -69,7 +71,7 @@ scriptInclusion: NONE]]></codeblock>
     </section>
     <steps>
       <step>
-        <cmd>Process the production statement values.</cmd>
+        <cmd>Process the edition statement values.</cmd>
         <substeps>
           <substep>
             <cmd>Do not trim punctuation from subfields.</cmd>
