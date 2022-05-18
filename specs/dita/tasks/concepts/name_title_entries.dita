@@ -32,6 +32,8 @@
       <revised modified="2022-02-03"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-02-04"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-18"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_entity"/>
     <metadata>
@@ -332,7 +334,7 @@ scriptInclusion: BOTH]]></codeblock>
         </stepresult>
       </step>
       <step>
-        <cmd>In each referring record-level resource (<codeph>DigitalObject</codeph>, <codeph>HumanMadeObject</codeph>, <codeph>LinguisticObject</codeph>, <codeph>Set</codeph>, <codeph>VisualItem</codeph>), add an embedded reference to the related entity.</cmd>
+        <cmd>In each referring record-level resource (<codeph>LinguisticObject</codeph>, <codeph>Set</codeph>, <codeph>VisualItem</codeph>), add an embedded reference to the related entity.</cmd>
         <substeps>
           <substep>
             <cmd>For entities derived from the <codeph>240</codeph>, <codeph>7XX</codeph>, or <codeph>8XX</codeph> fields, add a reference using the <codeph>part_of</codeph> property: see <xref href="../name-title/works_as_whole_part.dita"/>.</cmd>

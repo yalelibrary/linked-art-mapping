@@ -219,7 +219,7 @@ scriptInclusion: BOTH
     }
     ```
 
-4.  In each referring record-level resource \(`DigitalObject`, `HumanMadeObject`, `LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the related entity.
+4.  In each referring record-level resource \(`LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the related entity.
 
     1.  For entities derived from the `240`, `7XX`, or `8XX` fields, add a reference using the `part_of` property: see [Works in whole/part relationships](../name-title/works_as_whole_part.md).
 

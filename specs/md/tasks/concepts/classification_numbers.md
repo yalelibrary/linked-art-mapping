@@ -97,7 +97,7 @@ scriptInclusion: NONE
         }
         ```
 
-3.  In the referring record-level resource \(`LinguisticObject`, `VisualItem`, or `DigitalObject`\), add an embedded reference for each concept entity.
+3.  In the referring record-level resource \(`LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference for each concept entity.
 
     1.  If there is more than concept entity, sort them by their string values in alphanumeric order.
 

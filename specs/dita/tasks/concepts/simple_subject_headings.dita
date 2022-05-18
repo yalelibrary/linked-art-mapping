@@ -33,6 +33,8 @@
       <revised modified="2022-01-05"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-01-13"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-18"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_entity"/>
     <metadata>
@@ -488,7 +490,7 @@ scriptInclusion: BOTH</codeblock>
         </substeps>
       </step>
       <step>
-        <cmd>In each referring record-level resource (<codeph>DigitalObject</codeph>, <codeph>HumanMadeObject</codeph>, <codeph>LinguisticObject</codeph>, <codeph>Set</codeph>, <codeph>VisualItem</codeph>), add an embedded reference to the related entity.</cmd>
+        <cmd>In each referring record-level resource (<codeph>LinguisticObject</codeph>, <codeph>Set</codeph>, <codeph>VisualItem</codeph>), add an embedded reference to the related entity.</cmd>
         <substeps>
           <substep>
             <cmd>For concept (<codeph>Type</codeph>) entities, see <xref href="subject_headings.dita"/>.</cmd>

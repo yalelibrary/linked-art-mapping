@@ -405,7 +405,7 @@ scriptInclusion: BOTH
     }
     ```
 
-9.  In each referring record-level resource \(`DigitalObject`, `HumanMadeObject`, `LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the concept entity.
+9.  In each referring record-level resource \(`LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the concept entity.
 
     1.  For concept \(`Type`\) entities, see [Subject and genre/form headings](subject_headings.md).
 
