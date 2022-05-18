@@ -1,4 +1,4 @@
-<task xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="language_statement" xsi:noNamespaceSchemaLocation="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd">
+<task id="language_statement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd">
   <title>Language statement</title>
   <shortdesc>Textual information on the language or notation system used to convey the content of the described materials.</shortdesc>
   <prolog>
@@ -12,7 +12,7 @@
       <keywords>
         <keyword>Assigned</keyword>
         <keyword>Completed</keyword>
-        
+
       </keywords>
     </metadata>
     <data name="assigned" value="Yue"/>
@@ -37,12 +37,12 @@
                 <codeph>LinguisticObject</codeph>
               </entry>
               <entry>Do not repeat on related <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph>.</entry>
-            </row>
+            </row>          
             <row>
               <entry>
-                <codeph>VisualItem</codeph>
+                <codeph>members_exemplified_by → HumanMadeObject</codeph>
               </entry>
-              <entry>Do not repeat on related <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph>.</entry>
+              <entry>Do not repeat on containing <codeph>Set</codeph>.</entry>
             </row>
           </tbody>
         </tgroup>
@@ -65,6 +65,9 @@ scriptInclusion: NONE</codeblock>
     <steps id="steps_rzf_r13_krb">
       <step>
         <cmd>Process the language statement values (MARC <codeph>546ab</codeph>).</cmd>
+      </step>
+      <step>
+        <cmd>For top-level resources with a base class of <codeph>LinguisticObject</codeph>:</cmd>
         <choices id="choices_szf_r13_krb">
           <choice>If both subfields (<codeph>546ab</codeph>) are present, join them with a whitespace character.</choice>
           <choice>Else, output the string value of <codeph>546a</codeph>.</choice>
@@ -72,7 +75,7 @@ scriptInclusion: NONE</codeblock>
         <stepresult>
           <note id="note_tzf_r13_krb">This example is meant to illustrate a language statement and does not represent a complete JSON-LD document.</note>
           <yulbibid>1001852</yulbibid>
-          <codeblock id="codeblock_uzf_r13_krb">{
+          <codeblock id="codeblock_uzf_r13_krb"><![CDATA[{
   "referred_to_by": [
     {
       "type": "LinguisticObject",
@@ -106,7 +109,63 @@ scriptInclusion: NONE</codeblock>
       ]
     }
   ]
-}</codeblock>
+}]]></codeblock>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>For top-level resources with a base class of <codeph>Set</codeph> (archival records or kits), language information should be attached to the embedded <codeph>HumanMadeObject</codeph> resource using the <codeph>carries</codeph> property.</cmd>
+        <choices id="choices_szf_r13_krb2">
+          <choice>If both subfields (<codeph>546ab</codeph>) are present, join them with a whitespace character.</choice>
+          <choice>Else, output the string value of <codeph>546a</codeph>.</choice>
+        </choices>
+        <stepresult>
+          <yulbibid>11167038</yulbibid>
+          <codeblock><![CDATA[{
+  "members_exemplified_by": [
+    {
+      "type": "HumanMadeObject",
+      "_label": "Cipher manuscript",
+      "carries": [
+        {
+          "type": "LinguisticObject",
+          "referred_to_by": [
+            {
+              "type": "LinguisticObject",
+              "content": "Syriac; Hebrew alphabet.",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435433",
+                  "type": "Type",
+                  "_label": "Language Statement",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300418049",
+                      "type": "Type",
+                      "_label": "Brief Text"
+                    }
+                  ]
+                }
+              ],
+              "identified_by": [
+                {
+                  "type": "Name",
+                  "content": "Language Note",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300404669",
+                      "type": "Type",
+                      "_label": "Display Title"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}]]></codeblock>
         </stepresult>
       </step>
     </steps>
