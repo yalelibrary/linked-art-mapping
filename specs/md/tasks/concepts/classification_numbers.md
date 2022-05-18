@@ -65,7 +65,7 @@ scriptInclusion: NONE
           ],
           "classified_as": [
             {
-              "id": "https://www.wikidata.org/wiki/Q621080",
+              "id": "http://www.wikidata.org/entity/Q621080",
               "type": "Type",
               "_label": "Library of Congress classification"
             }
@@ -89,7 +89,7 @@ scriptInclusion: NONE
           ],
           "classified_as": [
             {
-              "id": "https://www.wikidata.org/wiki/Q621080",
+              "id": "http://www.wikidata.org/entity/Q621080",
               "type": "Type",
               "_label": "Library of Congress classification"
             }
