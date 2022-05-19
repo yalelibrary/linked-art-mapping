@@ -93,7 +93,7 @@ scriptInclusion: NONE
               "referred_to_by": [
                 {
                   "type": "LinguisticObject",
-                  "content": "Syriac; Hebrew alphabet.",
+                  "content": "In unidentified cipher.",
                   "classified_as": [
                     {
                       "id": "http://vocab.getty.edu/aat/300435433",
