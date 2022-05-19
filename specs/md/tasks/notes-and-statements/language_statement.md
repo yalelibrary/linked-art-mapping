@@ -87,7 +87,6 @@ scriptInclusion: NONE
       "members_exemplified_by": [
         {
           "type": "HumanMadeObject",
-          "_label": "Cipher manuscript",
           "carries": [
             {
               "type": "LinguisticObject",
