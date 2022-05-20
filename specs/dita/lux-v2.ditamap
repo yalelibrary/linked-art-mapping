@@ -63,6 +63,8 @@
       <revised modified="2022-05-03"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-05-13"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-20"/>
     </critdates>
   </topicmeta>
   <hasPart>
@@ -93,7 +95,6 @@
                 <subjectdef keyref="GeospatialData" type="task"/>
                 <subjectdef href="tasks/supertypes/imagedata.dita" keys="ImageData" type="task"/>
                 <subjectdef href="tasks/supertypes/textualdata.dita" keys="TextualData" type="task"/>
-
               </subjectdef>
             </subjectdef>
             <subjectdef href="tasks/supertypes/imageformats.dita" keys="ImageFormats" type="concept">
@@ -191,19 +192,14 @@
         <subjectdef href="concepts/copyright_entity.dita" type="task"/>
       </subjectdef>
       <topicref href="concepts/identifiers.dita" keys="Identifiers" type="concept">
-
         <topicref href="tasks/identifiers/orbis_bib_id.dita" keys="OrbisBib" type="task"/>
-        <topicref href="tasks/identifiers/orbis_mfhd_id.dita" type="task" keys="OrbisMfhd"/>
-        <topicref href="tasks/identifiers/orbis_item_id.dita" type="task" keys="OrbisItem"/>
+        <topicref href="tasks/identifiers/orbis_mfhd_id.dita" keys="OrbisMfhd" type="task"/>
         <topicref href="tasks/identifiers/library_of_congress_control_number_lccn.dita" keys="LCCN" type="task"/>
         <topicref href="tasks/identifiers/international_standard_book_number_isbn.dita" keys="ISBN" type="task"/>
-
         <mapref href="submaps/call_number.ditamap" keyscope="call_number_scope"/>
-
         <topicref href="tasks/identifiers/international_standard_serial_number_issn.dita" keys="ISSN" type="task"/>
         <topicref href="tasks/identifiers/publisher_or_distributor_number.dita" keys="PublisherDistributor" type="task"/>
         <topicref href="tasks/identifiers/oclc_numbers.dita" keys="OCLCNumbers" type="task"/>
-
       </topicref>
       <subjectdef href="concepts/names_and_labels.dita" keys="NamesAndLabels" type="concept">
         <subjectdef href="tasks/names-and-labels/names.dita" keys="Names" type="task">
@@ -232,11 +228,16 @@
         <subjectdef href="tasks/notes-and-statements/material_statement.dita" keys="MaterialStmt" type="task"/>
         <subjectdef href="tasks/notes-and-statements/note.dita" keys="Note" type="task"/>
         <subjectdef href="tasks/notes-and-statements/physical_statement.dita" keys="PhysicalStmt" type="task"/>
+        <subjectdef href="tasks/notes-and-statements/summary_holdings.dita" type="task" keys="SummaryHoldingsNote"/>
+        <subjectdef href="tasks/notes-and-statements/summary_holdings_supplements.dita" type="task" keys="SupplMaterialHoldingsNote"/>
+        <subjectdef href="tasks/notes-and-statements/summary_holdings_indexes.dita" type="task" keys="IndexHoldingsNote"/>
+        <subjectdef href="tasks/notes-and-statements/number_of_parts.dita" type="task" keys="NumberOfParts"/>
         <subjectdef href="tasks/notes-and-statements/access_statement.dita" keys="AccessStmt" type="task"/>
         <subjectdef href="tasks/notes-and-statements/dimension_statement.dita" keys="DimensionStmt" type="task"/>
         <subjectdef href="tasks/notes-and-statements/preferred_citation_note.dita" keys="PreferredCitationNote" type="task"/>
         <subjectdef href="tasks/notes-and-statements/provenance_statement.dita" keys="ProvenanceStmt" type="task"/>
         <subjectdef href="tasks/notes-and-statements/acquisition_statement.dita" keys="AcquisitionStmt" type="task"/>
+        <subjectdef href="tasks/notes-and-statements/copy_and_version_note.dita" type="task"/>
         <subjectdef href="tasks/notes-and-statements/reproduction_statement.dita" keys="ReproductionStmt" type="task"/>
         <subjectdef href="tasks/notes-and-statements/production_statement.dita" keys="ProductionStmt" type="task"/>
         <subjectdef href="tasks/notes-and-statements/edition_statement.dita" keys="EditionStmt" type="task"/>
@@ -247,8 +248,6 @@
       </subjectdef>
     </subjectdef>
   </hasPart>
-
-  
   <reltable title="Linked Art documentation">
     <relheader>
       <relcolspec type="concept"/>

@@ -37,18 +37,6 @@ scriptInclusion: NONE
       "_label": "Die Streitkräfte der NATO auf dem Territorium der BRD",
       "classified_as": [
         {
-          "id": "http://vocab.getty.edu/aat/300028051",
-          "type": "Type",
-          "_label": "Books",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300435443",
-              "type": "Type",
-              "_label": "Type of Object"
-            }
-          ]
-        },
-        {
           "id": "https://lux.collections.yale.edu/data/concept/61d2655b-095d-4864-9d62-e04e55042baf",
           "type": "Type",
           "_label": "UA646.5.G4"

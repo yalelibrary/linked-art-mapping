@@ -15,6 +15,8 @@
       <revised modified="2022-02-23"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-05-03"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-19"/>
     </critdates>
     <metadata>
       <keywords/>
@@ -26,7 +28,7 @@
   <conbody>
     <p>MARC-to-Linked Art supertype mappings are done at the level of the most specific format, with type and broader format relations inferred from the hierarchy.</p>
     <p>The supertype of a resource is used to determine its base class or document type in the Linked Art model. <b>However, supertype classification should always be assigned to the corresponding <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph> resource(s).</b></p>
-    <note>For supertypes that map to more than one base class, the primary class is indicated as <b>[primary]</b> in the base class column.</note>
+    <note>For supertypes that map to more than one base class, the primary class is indicated as <b>primary</b> in the base class column.</note>
     <table id="table_wmw_tjc_5rb">
       <title>Linked Art base class to supertype mapping</title>
       <tgroup cols="4">
@@ -44,7 +46,7 @@
         </thead>
         <tbody>
           <row>
-            <entry>LinguisticObject</entry>
+            <entry>LinguisticObject <b>[primary]</b></entry>
             <entry>Objects</entry>
             <entry><xref href="globes.dita">Globes</xref></entry>
             <entry/>
@@ -104,7 +106,7 @@
             <entry><xref href="databases.dita">Databases</xref></entry>
           </row>
           <row>
-            <entry>LinguisticObject</entry>
+            <entry>LinguisticObject <b>[primary for Atlases]</b></entry>
             <entry>Textual Works</entry>
             <entry><xref href="books.dita">Books</xref></entry>
             <entry><xref href="atlases.dita">Atlases</xref></entry>
@@ -146,7 +148,7 @@
             <entry/>
           </row>
           <row>
-            <entry>VisualItem <b>[primary]</b></entry>
+            <entry>VisualItem</entry>
             <entry>Cartographic Works</entry>
             <entry><xref href="atlases.dita">Atlases</xref></entry>
             <entry/>
@@ -158,7 +160,7 @@
             <entry/>
           </row>
           <row>
-            <entry>VisualItem <b>[primary]</b></entry>
+            <entry>VisualItem </entry>
             <entry>Cartographic Works</entry>
             <entry><xref href="globes.dita">Globes</xref></entry>
             <entry/>

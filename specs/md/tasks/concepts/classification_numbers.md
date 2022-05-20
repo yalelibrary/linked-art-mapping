@@ -110,19 +110,7 @@ scriptInclusion: NONE
       "id": "https://lux.collections.yale.edu/data/text/8697aefe-8ffa-4f73-bf3d-f4883a5c26dd",
       "type": "LinguisticObject",
       "_label": "Governmental accounting, auditing, and financial reporting",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300028051",
-          "type": "Type",
-          "_label": "Books",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300435443",
-              "type": "Type",
-              "_label": "Type of Object"
-            }
-          ]
-        },
+      "classified_as": [    
         {
           "id": "https://lux.collections.yale.edu/data/concept/090-1",
           "type": "Type",

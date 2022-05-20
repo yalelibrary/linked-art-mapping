@@ -54,7 +54,7 @@
     </context>
     <section>
       <title>Source data</title>
-      <codeblock><![CDATA[>---
+      <codeblock><![CDATA[---
 name: ComplexWorks
 sampleBibs:
   - 4 # 100
@@ -84,7 +84,6 @@ sampleBibs:
   - 36117 # 692t
   - 44029 # 692t
   - 39783 # 693t
-  -    # 693t
 fieldSpec:
   - 100014abcdegjqu
   - 110014abcdegu
@@ -152,8 +151,8 @@ scriptInclusion: BOTH]]></codeblock>
                       <li>Join the <codeph>240</codeph> subfields with a whitespace character. This is the <codeph>work_value</codeph>.</li>
                     </ol></li>
                   <li>When a <codeph>600</codeph>, <codeph>610</codeph>, <codeph>611</codeph>, <codeph>692</codeph>, <codeph>693</codeph>, <codeph>694</codeph>, <codeph>700</codeph>, <codeph>710</codeph>, <codeph>711</codeph>, <codeph>800</codeph>, <codeph>810</codeph>, or <codeph>811</codeph> field contains subfield <codeph>t</codeph>: <ol>
-                      <li>Join the <codeph>6XX</codeph>, <codeph>7XX</codeph>, or <codeph>8XX</codeph> subfields <i>before</i> subfield <codeph>t</codeph> with a whitespace character. This is the <codeph>agent value</codeph>.</li>
-                      <li>Join the <codeph>6XX</codeph>, <codeph>7XX</codeph>, or <codeph>8XX</codeph> subfields <i>beginning with and following</i> subfield <codeph>t</codeph> with a whitespace character. This is the <codeph>work value</codeph></li>
+                      <li>Join the <codeph>6XX</codeph>, <codeph>7XX</codeph>, or <codeph>8XX</codeph> subfields <i>before</i> subfield <codeph>t</codeph> with a whitespace character. This is the <codeph>agent_value</codeph>.</li>
+                      <li>Join the <codeph>6XX</codeph>, <codeph>7XX</codeph>, or <codeph>8XX</codeph> subfields <i>beginning with and following</i> subfield <codeph>t</codeph> with a whitespace character. This is the <codeph>work_value</codeph></li>
                     </ol></li>
                 </ul>
               </p>

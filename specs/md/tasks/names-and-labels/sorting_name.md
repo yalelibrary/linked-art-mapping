@@ -41,26 +41,14 @@ scriptInclusion: NONE
 
 2.  Assign the `sorting_name` value to the [content-level record](../../glossary/content_level_record.md).
 
-    `9447`
+    `1219943`
 
     ```
     {
       "id": "https://lux.collections.yale.edu/data/text/49a9dae9-0692-4957-9870-8c49fdf3f064",
       "type": "LinguisticObject",
       "_label": "A raisin in the sun",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300028051",
-          "type": "Type",
-          "_label": "Books",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300435443",
-              "type": "Type",
-              "_label": "Type of Object"
-            }
-          ]
-        },
+      "classified_as": [    
         {
           "id": "https://lux.collections.yale.edu/data/concept/77f2f78b-f595-4e8a-8165-5d6cd114d202",
           "type": "Type",
@@ -92,7 +80,7 @@ scriptInclusion: NONE
         },
         {
           "type": "Identifier",
-          "content": "ils:yul:9447",
+          "content": "ils:yul:1219943",
           "attributed_by": [
             {
               "type": "AttributeAssignment",
@@ -184,29 +172,14 @@ scriptInclusion: NONE
               "_label": "System-Assigned Number"
             }
           ]
-        },
+        }
+      ],
+      "number_of_parts": 1,
+      "member_of": [
         {
-          "type": "Identifier",
-          "content": "ils:yul:item:14358",
-          "attributed_by": [
-            {
-              "type": "AttributeAssignment",
-              "carried_out_by": [
-                {
-                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
-                  "type": "Group",
-                  "_label": "Yale University Library"
-                }
-              ]
-            }
-          ],
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300435704",
-              "type": "Type",
-              "_label": "System-Assigned Number"
-            }
-          ]
+          "id": "https://lux.collections.yale.edu/data/set/collection1b",
+          "type": "Set",
+          "_label": "Beinecke Library"
         }
       ],
       "carries": [

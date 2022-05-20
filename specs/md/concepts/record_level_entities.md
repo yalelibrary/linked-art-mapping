@@ -16,8 +16,6 @@ The LUX supertype scheme is divided into two levels: *types* and *formats*. Type
 
 Only format concepts are assigned in LUX because type concepts can be inferred from the taxonomic hierarchy.
 
-**Supertype format classifications are always assigned to the corresponding `DigitalObject` or `HumanMadeObject` resource.**
-
 ## Multiple supertypes: order of precedence
 
 The base class for record-level bibliographic entities is determined by the supertype mapping. When a record-level entity is mapped to more than one supertype format, and the formats have different base classes, the following order of precedence is applied:

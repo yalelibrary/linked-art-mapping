@@ -117,21 +117,20 @@ scriptInclusion: NONE</codeblock>
         <choices id="choices_szf_r13_krb2">
           <choice>If both subfields (<codeph>546ab</codeph>) are present, join them with a whitespace character.</choice>
           <choice>Else, output the string value of <codeph>546a</codeph>.</choice>
-        </choices>
+        </choices>          
         <stepresult>
           <yulbibid>11167038</yulbibid>
           <codeblock><![CDATA[{
   "members_exemplified_by": [
     {
       "type": "HumanMadeObject",
-      "_label": "Cipher manuscript",
       "carries": [
         {
           "type": "LinguisticObject",
           "referred_to_by": [
             {
               "type": "LinguisticObject",
-              "content": "Syriac; Hebrew alphabet.",
+              "content": "In unidentified cipher.",
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300435433",

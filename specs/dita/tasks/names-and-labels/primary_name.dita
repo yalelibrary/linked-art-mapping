@@ -109,7 +109,7 @@ scriptInclusion: BOTH</codeblock>
         <cmd>Assign the <codeph>primary_name</codeph> and <codeph>parallel_primary_name</codeph> values to the <xref keyref="gloss-content">content-level record</xref>.</cmd>
         <stepresult>
           <yulbibid>9447</yulbibid>
-          <codeblock><![CDATA[
+          <codeblock><![CDATA[{
   "id": "https://lux.collections.yale.edu/data/text/c0fd4d84-4b50-496d-a56e-ebf952f8dcf2",
   "type": "LinguisticObject",
   "_label": "韓國 의 선비 文化",
@@ -149,6 +149,93 @@ scriptInclusion: BOTH</codeblock>
       </step>
       <step>
         <cmd>Assign the <codeph>primary_name</codeph> and <codeph>parallel_primary_name</codeph> values to each <xref keyref="gloss-carrier">carrier-level record</xref>.</cmd>   
+        <stepresult>
+          <yulmfhdid>16729 [MFHD]</yulmfhdid>
+          <codeblock><![CDATA[{
+  "id": "https://lux.collections.yale.edu/data/text/c0fd4d84-4b50-496d-a56e-ebf952f8dcf2",
+  "type": "HumanMadeObject",
+  "_label": "韓國 의 선비 文化",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300028051",
+      "type": "Type",
+      "_label": "Books",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Object"
+        }
+      ]
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "content": "ils:yul:mfhd:16729",
+      "attributed_by": [
+        {
+          "type": "AttributeAssignment",
+          "carried_out_by": [
+            {
+              "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+              "type": "Group",
+              "_label": "Yale University Library"
+            }
+          ]
+        }
+      ],
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435704",
+          "type": "Type",
+          "_label": "System-Assigned Number"
+        }
+      ]
+    },
+    {
+      "type": "Identifier",
+      "content": "DS904.U66",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300311706",
+          "type": "Type",
+          "_label": "Call Number"
+        }
+      ]
+    },
+    {
+      "type": "Name",
+      "content": "Hanʼguk ŭi sŏnbi munhwa",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ]
+    },
+    {
+      "type": "Name",
+      "content": "韓國 의 선비 文化",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ],
+      "language": [
+        {
+          "id": "https://lux.collections.yale.edu/data/concept/70cb6397-2b2f-400c-b887-70fd80969c8b",
+          "type": "Language",
+          "_label": "und"
+        }
+      ]
+    }
+  ]
+}]]></codeblock>
+        </stepresult>
       </step>
       <step>
         <cmd>If the carrier-level record represents a <xref keyref="gloss-bound-with">bound-with resource</xref>, use the call number as the <codeph>primary_name</codeph> of the carrier-level record.</cmd>
@@ -161,7 +248,7 @@ scriptInclusion: BOTH</codeblock>
   "identified_by": [
     {
       "type": "Name",
-      "content": "Ip Si578 1 [Sterling Memorial Library] [multiple objects bound in a single volume]",
+      "content": "Ip Si578 1 [multiple objects bound in a single volume]",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
@@ -174,9 +261,11 @@ scriptInclusion: BOTH</codeblock>
 }]]></codeblock>
         </stepxmp>
       </step>
+      <!--
       <step conkeyref="primary_name_scope.object_level_pn/carrier_step_first" conrefend="default.dita#default/carrier_step_last">
         <cmd></cmd>
       </step>
+      -->
     </steps>
   </taskbody>
 </task>

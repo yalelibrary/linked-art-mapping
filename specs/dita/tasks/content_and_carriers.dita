@@ -28,6 +28,8 @@
       <revised modified="2022-05-09"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-05-13"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-19"/>
     </critdates>
   </prolog>
   <taskbody>
@@ -69,6 +71,7 @@
             </p>
           </li>
         </ul>
+        <note><b>Supertype format classifications are always assigned to the corresponding <codeph>DigitalObject</codeph> or <codeph>HumanMadeObject</codeph> resource.</b></note>
         <note rev="2.0">Previously, supertypes under the <codeph>Datasets</codeph> and <codeph>Software and Electronic Media</codeph> content types were mapped to a single <codeph>DigitalObject</codeph> resource. This mapping has been changed in <codeph>v2.0</codeph>. Now, these content types should be assigned a base class of <codeph>LinguisticObject</codeph>, with the same content/carrier split as all other resources.</note>
       </p>
       <p>In MARC-based systems, this content/carrier model corresponds roughly to the distinction between bibliographic records and holdings plus item records.</p>
@@ -82,17 +85,9 @@
     <section id="section_zby_m4d_2rb">
       <title>Processing steps and output</title>
     </section>
-    <steps>
+    <steps>      
       <step>
-        <cmd>If the resource to be processed includes one or more item records, then process each item plus holdings record as a carrier-level record.</cmd>
-      </step>
-      <step>
-        <cmd>However, not all resources are linked to an item record in Voyager. If there is no item record, then process each holdings record as a carrier-level record.</cmd>
-        <substeps>
-          <substep>
-            <cmd>If the holdings record (e.g., for a journal) includes one or more <codeph>866</codeph>, <codeph>867</codeph>, or <codeph>868</codeph> (<q>textual holdings</q>) fields, then each of those fields should be broken out into a <i>separate</i> carrier-level resource.</cmd>
-          </substep>
-        </substeps>
+        <cmd>Process each holdings record as a carrier-level record.</cmd>        
       </step>
       <step>
         <cmd>For each carrier-level record, determine the supertype of the resource and generate a JSON-LD document with a <codeph>type</codeph> value of either <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph>, as appropriate.</cmd>
@@ -158,10 +153,10 @@
         </stepresult>
       </step>
       <step>
-        <cmd>For each MARC bibliographic record, determine the supertype of the resource and generate a JSON-LD document with a <codeph>type</codeph> value corresponding to the base class of the supertype.</cmd>
+        <cmd>For each MARC bibliographic (content-level) record, generate a JSON-LD document with a <codeph>type</codeph> value corresponding to the base class of the supertype.</cmd>
       </step>
       <step>
-        <cmd>In addition, for each record-level bibliographic resource, add another <codeph>classified_as</codeph> object to mark the record as an "Information Artifact" (IRI <codeph>http://vocab.getty.edu/aat/300230425</codeph>).</cmd>
+        <cmd>Add another <codeph>classified_as</codeph> object to mark the content-level record as an "Information Artifact" (IRI <codeph>http://vocab.getty.edu/aat/300230425</codeph>).</cmd>
         <stepresult>
           <codeblock><![CDATA[{
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -210,7 +205,7 @@
         </stepresult>
       </step>
       <step>
-        <cmd>For each carrier-level record attached to a bibliographic record:</cmd>
+        <cmd>For each holdings (carrier-level) record attached to a bibliographic record:</cmd>
         <choices>
           <choice>If the base class derived from the supertype is <codeph>LinguisticObject</codeph> or <codeph>VisualItem</codeph>: <ul>
               <li>If the MFHD <codeph>852b</codeph> is <codeph>yulint</codeph> or <codeph>yulintx</codeph>, generate a JSON-LD document with a base class of <codeph>DigitalObject</codeph>.</li>
@@ -241,7 +236,7 @@
       "identified_by": [
         {
           "type": "Identifier",
-          "content": "Arabic MSS 480 [Beinecke Library]",
+          "content": "Arabic MSS 480",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300311706",
@@ -254,7 +249,7 @@
       "referred_to_by": [
         {
           "type": "LinguisticObject",
-          "content": "At the Library",
+          "content": "In the Library",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300133046",
@@ -431,30 +426,7 @@
     },
     {
       "type": "Identifier",
-      "content": "ils:yul:item:7118098",
-      "attributed_by": [
-        {
-          "type": "AttributeAssignment",
-          "carried_out_by": [
-            {
-              "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
-              "type": "Group",
-              "_label": "Yale University Library"
-            }
-          ]
-        }
-      ],
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300435704",
-          "type": "Type",
-          "_label": "System-Assigned Number"
-        }
-      ]
-    },
-    {
-      "type": "Identifier",
-      "content": "BL1840 .L84 2003 [1-5] [Library Shelving Facility (LSF)]",
+      "content": "BL1840.L84 2003",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300311706",
@@ -465,7 +437,7 @@
     },
     {
       "type": "Name",
-      "content": "Li ze lun shuo ji lu : [shi juan] [1-5]",
+      "content": "Li ze lun shuo ji lu : [shi juan]",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
@@ -476,7 +448,7 @@
     },
     {
       "type": "Name",
-      "content": "麗澤論說集錄 : [十卷] [1-5]",
+      "content": "麗澤論說集錄 : [十卷]",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
@@ -496,7 +468,7 @@
   "referred_to_by": [
     {
       "type": "LinguisticObject",
-      "content": "At the Library",
+      "content": "In the Library",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300133046",
@@ -564,7 +536,7 @@
   ],
   "member_of": [
     {
-      "id": "https://lux.collections.yale.edu/data/set/def",
+      "id": "https://lux.collections.yale.edu/data/set/collection1",
       "type": "Set",
       "_label": "Yale University Library"
     }
@@ -624,30 +596,7 @@
     },
     {
       "type": "Identifier",
-      "content": "ils:yul:item:11689622",
-      "attributed_by": [
-        {
-          "type": "AttributeAssignment",
-          "carried_out_by": [
-            {
-              "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
-              "type": "Group",
-              "_label": "Yale University Library"
-            }
-          ]
-        }
-      ],
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300435704",
-          "type": "Type",
-          "_label": "System-Assigned Number"
-        }
-      ]
-    },
-    {
-      "type": "Identifier",
-      "content": "796.04.16.02++ [Lewis Walpole Library]",
+      "content": "796.04.16.02++",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300311706",
@@ -671,7 +620,7 @@
   "referred_to_by": [
     {
       "type": "LinguisticObject",
-      "content": "At the Library",
+      "content": "In the Library",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300133046",
@@ -739,9 +688,9 @@
   ],
   "member_of": [
     {
-      "id": "https://lux.collections.yale.edu/data/set/collection1",
+      "id": "https://lux.collections.yale.edu/data/set/collection-lwl",
       "type": "Set",
-      "_label": "Yale University Library"
+      "_label": "Lewis Walpole Library"
     }
   ],
   "produced_by": {

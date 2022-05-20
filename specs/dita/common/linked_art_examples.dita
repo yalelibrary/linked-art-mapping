@@ -271,19 +271,7 @@
 			<div id="ex-type-050-b">
 				<yulbibid>907498</yulbibid>
 				<codeblock><![CDATA[{
-  "classified_as": [
-    {
-      "id": "http://vocab.getty.edu/aat/300028051",
-      "type": "Type",
-      "_label": "Books",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300435443",
-          "type": "Type",
-          "_label": "Type of Object"
-        }
-      ]
-    },
+  "classified_as": [    
     {
       "id": "https://lux.collections.yale.edu/data/concept/f0c0c4d0-532d-4438-a26f-15c261fb4f6c",
       "type": "Type",
@@ -310,19 +298,7 @@
 			<div id="ex-type-090-b">
 				<yulbibid>907498</yulbibid>
 				<codeblock><![CDATA[{
-  "classified_as": [
-    {
-      "id": "http://vocab.getty.edu/aat/300028051",
-      "type": "Type",
-      "_label": "Books",
-      "classified_as": [
-        {
-          "id": "http://vocab.getty.edu/aat/300435443",
-          "type": "Type",
-          "_label": "Type of Object"
-        }
-      ]
-    },
+  "classified_as": [  
     {
       "id": "https://lux.collections.yale.edu/data/concept/f0c0c4d0-532d-4438-a26f-15c261fb4f6c",
       "type": "Type",

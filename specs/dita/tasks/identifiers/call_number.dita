@@ -12,6 +12,8 @@
       <revised modified="2022-05-03"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-05-04"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-19"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_desc"/>
     <metadata>
@@ -58,12 +60,9 @@
       <title>Source data</title>
       <codeblock><![CDATA[---
 name: LocationsAndCallNumbers
-sampleBibs:
-  - 3
-  - 9447
-  - 12237283
+sampleMfhds:
+  - 
 fieldSpec:
-  - item
   - mfhd852bhimk
 trimPunctuation: true
 scriptInclusion: NONE]]></codeblock>
@@ -73,8 +72,9 @@ scriptInclusion: NONE]]></codeblock>
     </section>
     <steps>
       <step>
-        <cmd>For each <xref keyref="gloss-carrier">carrier-level record</xref>, extract the call number from the corresponding MFHD.</cmd>
+        <cmd>For each <xref keyref="gloss-carrier">carrier-level record</xref>, extract the call number.</cmd>
       </step>
+      <!--
       <step>
         <cmd>Use the Voyager location code lookup table, which contains mappings between location codes and their corresponding names.</cmd>
         <info>
@@ -89,6 +89,7 @@ scriptInclusion: NONE]]></codeblock>
           </table>
         </info>
       </step>
+      -->
       <step>
         <cmd>For each <codeph>852</codeph> field that contains a subfield <codeph>b</codeph>, select and save the value of subfield <codeph>b</codeph>.</cmd>
       </step>
@@ -118,6 +119,7 @@ scriptInclusion: NONE]]></codeblock>
           </substep>
         </substeps>
       </step>      
+      <!--
       <step>
         <cmd>Process all other location values.</cmd>
         <substeps id="substeps_nf2_v53_wrb">
@@ -130,6 +132,7 @@ scriptInclusion: NONE]]></codeblock>
           </substep>
         </substeps>
       </step>
+      -->
       <step>
         <cmd>Select and save the value of subfield <codeph>h</codeph>.</cmd>
         <substeps id="substeps_x2x_1t3_wrb">
@@ -162,26 +165,121 @@ scriptInclusion: NONE]]></codeblock>
         <cmd>Select and save the value of subfield <codeph>m</codeph>.</cmd>
       </step>
       <step>
-        <cmd>Join the values of subfields <codeph>852hikm</codeph> with a whitespace character. This is the <codeph>call_number</codeph>.</cmd>
+        <cmd>If <codeph>852i</codeph> starts with a period (<codeph>.</codeph>), join the values of subfields <codeph>852hi</codeph> <b>without</b> a whitespace character.</cmd>
+        <stepxmp>
+          <codeph>852 01 $b lsf $h BL1840 $i .L84 2003 (LC)</codeph>
+        </stepxmp>
+        <stepresult>
+          <codeblock><![CDATA[{
+  "type": "Identifier",
+  "content": "BL1840.L84 2003",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300311706",
+      "type": "Type",
+      "_label": "Call Number"
+    }
+  ]
+}]]></codeblock>
+        </stepresult>
       </step>
       <step>
-        <cmd>Concatenate the <codeph>call_number</codeph> with item-specific information.</cmd>        
-      </step>      
+        <cmd>Else, join the values of subfields <codeph>852hi</codeph> with a whitespace character.</cmd>
+        <stepxmp>
+          <codeph>852 00 $b lsf $h DS904 $i U66</codeph>
+        </stepxmp>
+        <stepresult>
+          <codeblock><![CDATA[{
+  "type": "Identifier",
+  "content": "DS904 U66",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300311706",
+      "type": "Type",
+      "_label": "Call Number"
+    }
+  ]
+}]]></codeblock>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>Join <codeph>852hi</codeph> with <codeph>852km</codeph> (if present) with a whitespace character.</cmd>
+        <info>
+          <p>Join <codeph>852km</codeph> in the order in which they appear.</p>
+        </info>
+        <stepxmp>
+          <codeph>852 80 $b lwl $k Folio $h 49 $i 3582 ‡m (Oversize)</codeph>
+        </stepxmp>
+        <stepresult>
+          <codeblock><![CDATA[{
+  "type": "Identifier",
+  "content": "Folio 49 3582 (Oversize)",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300311706",
+      "type": "Type",
+      "_label": "Call Number"
+    }
+  ]
+}]]></codeblock>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>The resulting value is the <codeph>call_number</codeph>.</cmd>
+      </step>
+      <!--
       <step conkeyref="call_number_scope.object_level_cn/carrier_step_first" conrefend="default.dita#default/carrier_step_last">
         <cmd></cmd>
       </step>
+      -->
     </steps>
-    <!--
     <result>
-      <yulbibid>12244893</yulbibid>
+      <yulmfhdid>12416627 [MFHD]</yulmfhdid>
       <codeblock><![CDATA[{
   "id": "https://lux.collections.yale.edu/data/digital/0283cba8-169b-4950-bb88-5ba3cdd4ca1d",
   "type": "DigitalObject",
-  "_label": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年) [CD]",
+  "_label": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年)",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300028566",
+      "type": "Type",
+      "_label": "Software Applications",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Object"
+        }
+      ]
+    }
+  ],
   "identified_by": [
     {
       "type": "Identifier",
-      "content": "QC990.J32 H576 2014 CD [Library Shelving Facility (LSF)]",
+      "content": "ils:yul:mfhd:12416627",
+      "attributed_by": [
+        {
+          "type": "AttributeAssignment",
+          "carried_out_by": [
+            {
+              "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+              "type": "Group",
+              "_label": "Yale University Library"
+            }
+          ]
+        }
+      ],
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435704",
+          "type": "Type",
+          "_label": "System-Assigned Number"
+        }
+      ]
+    },
+    {
+      "type": "Identifier",
+      "content": "QC990.J32 H576 2014 CD",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300311706",
@@ -192,7 +290,7 @@ scriptInclusion: NONE]]></codeblock>
     },
     {
       "type": "Name",
-      "content": "Hirosaki hanchō nikki hiroiyomi : kishō saigai nado no kijutsu o chūshin ni. Vol.2, (1741-nen-1868-nen) [CD]",
+      "content": "Hirosaki hanchō nikki hiroiyomi : kishō saigai nado no kijutsu o chūshin ni. Vol.2, (1741-nen-1868-nen)",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
@@ -203,7 +301,7 @@ scriptInclusion: NONE]]></codeblock>
     },
     {
       "type": "Name",
-      "content": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年) [CD]",
+      "content": "弘前藩庁日記ひろひよみ : 気象・災害等の記述を中心に. Vol.2, (1741年-1868年)",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
@@ -220,6 +318,14 @@ scriptInclusion: NONE]]></codeblock>
       ]
     }
   ],
+  "number_of_parts": 1,
+  "member_of": [
+    {
+      "id": "https://lux.collections.yale.edu/data/set/collection1",
+      "type": "Set",
+      "_label": "Yale University Library"
+    }
+  ],
   "digitally_carries": [
     {
       "id": "https://lux.collections.yale.edu/data/text/example-content1",
@@ -229,6 +335,5 @@ scriptInclusion: NONE]]></codeblock>
   ]
 }]]></codeblock>
     </result>
-    -->
   </taskbody>
 </task>

@@ -1,5 +1,5 @@
 <task xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="voyager_bib_id" xsi:noNamespaceSchemaLocation="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd">
-  <title>Orbis BIB ID</title>
+  <title>Voyager BIB ID</title>
   <shortdesc>The <ph keyref="orbis"/> is a serially based identifier assigned to MARC 21 Bibliographic records in the Voyager ILS.</shortdesc>
   <prolog>
     <publisher conkeyref="metadata_common/publ_metadata"/>
@@ -8,6 +8,8 @@
       <revised modified="2021-10-12"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-05-04"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-13"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_desc"/>
     <metadata>

@@ -10,11 +10,11 @@ MARC-to-Linked Art supertype mappings are done at the level of the most specific
 
 The supertype of a resource is used to determine its base class or document type in the Linked Art model. **However, supertype classification should always be assigned to the corresponding `HumanMadeObject` or `DigitalObject` resource\(s\).**
 
-**Note:** For supertypes that map to more than one base class, the primary class is indicated as **\[primary\]** in the base class column.
+**Note:** For supertypes that map to more than one base class, the primary class is indicated as **primary** in the base class column.
 
 |Base class|Content type|Format level one|Format level two|
 |----------|------------|----------------|----------------|
-|LinguisticObject|Objects|[Globes](globes.md)| |
+|LinguisticObject **\[primary\]**|Objects|[Globes](globes.md)| |
 |LinguisticObject|Objects|[Models](models.md)| |
 |LinguisticObject|Objects|[Realia](realia.md)| |
 |LinguisticObject|Objects|[Toys and Games](toysandgames.md)| |
@@ -24,16 +24,16 @@ The supertype of a resource is used to determine its base class or document type
 |LinguisticObject|Scores and Notation|[Notated Movement](notatedmovement.md)| |
 |LinguisticObject|Scores and Notation|[Notated Music](notatedmusic.md)| |
 |LinguisticObject|Software and Electronic Media|[Software Applications](softwareapplications.md)|[Databases](databases.md)|
-|LinguisticObject|Textual Works|[Books](books.md)|[Atlases](atlases.md)|
+|LinguisticObject **\[primary for Atlases\]**|Textual Works|[Books](books.md)|[Atlases](atlases.md)|
 |LinguisticObject|Textual Works|[Broadsides](broadsides.md)| |
 |LinguisticObject|Textual Works|[Dissertations and Theses](dissertationsandtheses.md)| |
 |LinguisticObject|Textual Works|[Journals and Periodicals](journalsandperiodicals.md)|[Newspapers](newspapers.md)|
 |LinguisticObject|Textual Works|[Textual Data](textualdata.md)| |
 |Set|Collections|[Archival and Manuscript Materials](archivalandmanuscriptmaterials.md)| |
 |Set|Collections|[Kits](kits.md)| |
-|VisualItem **\[primary\]**|Cartographic Works|[Atlases](atlases.md)| |
+|VisualItem|Cartographic Works|[Atlases](atlases.md)| |
 |VisualItem|Cartographic Works|[Geospatial Data](geospatialdata.md)| |
-|VisualItem **\[primary\]**|Cartographic Works|[Globes](globes.md)| |
+|VisualItem|Cartographic Works|[Globes](globes.md)| |
 |VisualItem|Cartographic Works|[Maps](maps.md)| |
 |VisualItem|Visual Works|[Collages](collages.md)| |
 |VisualItem|Visual Works|[Drawings](drawings.md)| |

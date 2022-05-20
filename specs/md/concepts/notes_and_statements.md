@@ -40,6 +40,14 @@ Corresponds to the `382` field in MARC.
 
 -   **[Physical statement](../tasks/notes-and-statements/physical_statement.md)**  
 
+-   **[Summary holdings note](../tasks/notes-and-statements/summary_holdings.md)**  
+
+-   **[Supplementary material holdings note](../tasks/notes-and-statements/summary_holdings_supplements.md)**  
+
+-   **[Index holdings note](../tasks/notes-and-statements/summary_holdings_indexes.md)**  
+
+-   **[Number of parts](../tasks/notes-and-statements/number_of_parts.md)**  
+
 -   **[Access statement](../tasks/notes-and-statements/access_statement.md)**  
 Statement indicating whether a resource is available online or in the library.
 -   **[Dimension statement](../tasks/notes-and-statements/dimension_statement.md)**  
@@ -49,6 +57,8 @@ Statement indicating whether a resource is available online or in the library.
 -   **[Provenance statement](../tasks/notes-and-statements/provenance_statement.md)**  
 
 -   **[Acquisition statement](../tasks/notes-and-statements/acquisition_statement.md)**  
+
+-   **[Copy and version identification note](../tasks/notes-and-statements/copy_and_version_note.md)**  
 
 -   **[Reproduction statement](../tasks/notes-and-statements/reproduction_statement.md)**  
 

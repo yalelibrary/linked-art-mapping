@@ -21,6 +21,8 @@ In Linked Art, record-level entities are divided into two categories:
     -   `HumanMadeObject`
 
 
+**Note:** **Supertype format classifications are always assigned to the corresponding `DigitalObject` or `HumanMadeObject` resource.**
+
 **Note:** Previously, supertypes under the `Datasets` and `Software and Electronic Media` content types were mapped to a single `DigitalObject` resource. This mapping has been changed in `v2.0`. Now, these content types should be assigned a base class of `LinguisticObject`, with the same content/carrier split as all other resources.
 
 In MARC-based systems, this content/carrier model corresponds roughly to the distinction between bibliographic records and holdings plus item records.
@@ -37,13 +39,9 @@ The following diagram provides a high-level overview of the Linked Art model.
 
 ## Processing steps and output
 
-1.  If the resource to be processed includes one or more item records, then process each item plus holdings record as a carrier-level record.
+1.  Process each holdings record as a carrier-level record.
 
-2.  However, not all resources are linked to an item record in Voyager. If there is no item record, then process each holdings record as a carrier-level record.
-
-    1.  If the holdings record \(e.g., for a journal\) includes one or more `866`, `867`, or `868` \(“textual holdings”\) fields, then each of those fields should be broken out into a *separate* carrier-level resource.
-
-3.  For each carrier-level record, determine the supertype of the resource and generate a JSON-LD document with a `type` value of either `HumanMadeObject` or `DigitalObject`, as appropriate.
+2.  For each carrier-level record, determine the supertype of the resource and generate a JSON-LD document with a `type` value of either `HumanMadeObject` or `DigitalObject`, as appropriate.
 
     **Note:** Each `HumanMadeObject` or `DigitalObject` must also have a `Name` classified as its `Primary Name`, derived from the primary name of the content-level resource.
 
@@ -105,9 +103,9 @@ The following diagram provides a high-level overview of the Linked Art model.
     }
     ```
 
-4.  For each MARC bibliographic record, determine the supertype of the resource and generate a JSON-LD document with a `type` value corresponding to the base class of the supertype.
+3.  For each MARC bibliographic \(content-level\) record, generate a JSON-LD document with a `type` value corresponding to the base class of the supertype.
 
-5.  In addition, for each record-level bibliographic resource, add another `classified_as` object to mark the record as an "Information Artifact" \(IRI `http://vocab.getty.edu/aat/300230425`\).
+4.  Add another `classified_as` object to mark the content-level record as an "Information Artifact" \(IRI `http://vocab.getty.edu/aat/300230425`\).
 
     ```
     {
@@ -156,15 +154,15 @@ The following diagram provides a high-level overview of the Linked Art model.
     }
     ```
 
-6.  For each carrier-level record attached to a bibliographic record:
+5.  For each holdings \(carrier-level\) record attached to a bibliographic record:
 
     -   If the base class derived from the supertype is `LinguisticObject` or `VisualItem`:
         -   If the MFHD `852b` is `yulint` or `yulintx`, generate a JSON-LD document with a base class of `DigitalObject`.
         -   Else, generate a JSON-LD document with a base class of `HumanMadeObject`.
     -   If the base class derived from the supertype is `Set`, generate an embedded `Set → members_exemplified_by → HumanMadeObject` resource to record carrier-level information.
-7.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then `HumanMadeObject` carriers must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
+6.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then `HumanMadeObject` carriers must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
 
-8.  If the supertype of the resource corresponding to the bibliographic record has a base class of `Set` \(for archival records or kits\), then the `HumanMadeObject` carrier is **not** modeled as a separate resource, but rather embedded within the `Set` resource using the property `members_exemplified_by`.
+7.  If the supertype of the resource corresponding to the bibliographic record has a base class of `Set` \(for archival records or kits\), then the `HumanMadeObject` carrier is **not** modeled as a separate resource, but rather embedded within the `Set` resource using the property `members_exemplified_by`.
 
 
 **Note:** These examples are meant to illustrate the content/carrier distinction and do not necessarily represent complete JSON-LD documents.
@@ -183,7 +181,7 @@ The following diagram provides a high-level overview of the Linked Art model.
           "identified_by": [
             {
               "type": "Identifier",
-              "content": "Arabic MSS 480 [Beinecke Library]",
+              "content": "Arabic MSS 480",
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300311706",
@@ -196,7 +194,7 @@ The following diagram provides a high-level overview of the Linked Art model.
           "referred_to_by": [
             {
               "type": "LinguisticObject",
-              "content": "At the Library",
+              "content": "In the Library",
               "classified_as": [
                 {
                   "id": "http://vocab.getty.edu/aat/300133046",
@@ -376,30 +374,7 @@ The following diagram provides a high-level overview of the Linked Art model.
         },
         {
           "type": "Identifier",
-          "content": "ils:yul:item:7118098",
-          "attributed_by": [
-            {
-              "type": "AttributeAssignment",
-              "carried_out_by": [
-                {
-                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
-                  "type": "Group",
-                  "_label": "Yale University Library"
-                }
-              ]
-            }
-          ],
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300435704",
-              "type": "Type",
-              "_label": "System-Assigned Number"
-            }
-          ]
-        },
-        {
-          "type": "Identifier",
-          "content": "BL1840 .L84 2003 [1-5] [Library Shelving Facility (LSF)]",
+          "content": "BL1840.L84 2003",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300311706",
@@ -410,7 +385,7 @@ The following diagram provides a high-level overview of the Linked Art model.
         },
         {
           "type": "Name",
-          "content": "Li ze lun shuo ji lu : [shi juan] [1-5]",
+          "content": "Li ze lun shuo ji lu : [shi juan]",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300404670",
@@ -421,7 +396,7 @@ The following diagram provides a high-level overview of the Linked Art model.
         },
         {
           "type": "Name",
-          "content": "麗澤論說集錄 : [十卷] [1-5]",
+          "content": "麗澤論說集錄 : [十卷]",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300404670",
@@ -441,7 +416,7 @@ The following diagram provides a high-level overview of the Linked Art model.
       "referred_to_by": [
         {
           "type": "LinguisticObject",
-          "content": "At the Library",
+          "content": "In the Library",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300133046",
@@ -509,7 +484,7 @@ The following diagram provides a high-level overview of the Linked Art model.
       ],
       "member_of": [
         {
-          "id": "https://lux.collections.yale.edu/data/set/def",
+          "id": "https://lux.collections.yale.edu/data/set/collection1",
           "type": "Set",
           "_label": "Yale University Library"
         }
@@ -572,30 +547,7 @@ The following diagram provides a high-level overview of the Linked Art model.
         },
         {
           "type": "Identifier",
-          "content": "ils:yul:item:11689622",
-          "attributed_by": [
-            {
-              "type": "AttributeAssignment",
-              "carried_out_by": [
-                {
-                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
-                  "type": "Group",
-                  "_label": "Yale University Library"
-                }
-              ]
-            }
-          ],
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300435704",
-              "type": "Type",
-              "_label": "System-Assigned Number"
-            }
-          ]
-        },
-        {
-          "type": "Identifier",
-          "content": "796.04.16.02++ [Lewis Walpole Library]",
+          "content": "796.04.16.02++",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300311706",
@@ -619,7 +571,7 @@ The following diagram provides a high-level overview of the Linked Art model.
       "referred_to_by": [
         {
           "type": "LinguisticObject",
-          "content": "At the Library",
+          "content": "In the Library",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300133046",
@@ -687,9 +639,9 @@ The following diagram provides a high-level overview of the Linked Art model.
       ],
       "member_of": [
         {
-          "id": "https://lux.collections.yale.edu/data/set/collection1",
+          "id": "https://lux.collections.yale.edu/data/set/collection-lwl",
           "type": "Set",
-          "_label": "Yale University Library"
+          "_label": "Lewis Walpole Library"
         }
       ],
       "produced_by": {

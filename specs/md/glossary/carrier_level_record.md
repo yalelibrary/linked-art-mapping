@@ -9,9 +9,7 @@ category: MARC to Linked Art mapping glossary
 
 In MARC-based systems, the content/carrier model corresponds roughly to the distinction between bibliographic records and holdings plus item records.
 
-If the resource to be processed includes one or more item records, then process each item plus holdings record as a carrier-level record.
-
-However, not all resources are linked to an item record in Voyager. If there is no item record, then process each holdings record as a carrier-level record. If the holdings record \(e.g., for a journal\) includes one or more `866`, `867`, or `868` \(“textual holdings”\) fields, then each of those fields should be broken out into a *separate* carrier-level resource.
+The MARC holdings record should be treated as an aggregate `HumanMadeObject` that implicitly contains its associated items.
 
 **Note:** See [Content and carriers](../tasks/content_and_carriers.md) for more information.
 

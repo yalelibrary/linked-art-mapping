@@ -63,19 +63,7 @@ Resources extracted from MARC 6XX entries.
           "id": "https://lux.collections.yale.edu/data/text/c3b75623-7203-4a73-8c5b-f7d442d11dc2",
           "type": "LinguisticObject",
           "_label": "Tšhukudu",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300028051",
-              "type": "Type",
-              "_label": "Books",
-              "classified_as": [
-                {
-                  "id": "http://vocab.getty.edu/aat/300435443",
-                  "type": "Type",
-                  "_label": "Type of Object"
-                }
-              ]
-            },
+          "classified_as": [    
             {
               "id": "https://lux.collections.yale.edu/data/concept/d3ce7f25-0650-4c92-be9e-01a17a4827ca",
               "type": "Type",
@@ -106,19 +94,7 @@ Resources extracted from MARC 6XX entries.
           "id": "https://lux.collections.yale.edu/data/text/810e7bed-875e-4a9b-baf3-5e8d8e5aabac",
           "type": "LinguisticObject",
           "_label": "Blue moon",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300215390",
-              "type": "Type",
-              "_label": "Journals",
-              "classified_as": [
-                {
-                  "id": "http://vocab.getty.edu/aat/300435443",
-                  "type": "Type",
-                  "_label": "Type of Object"
-                }
-              ]
-            },
+          "classified_as": [    
             {
               "id": "https://lux.collections.yale.edu/data/concept/c29adf17-ad5c-4925-8201-3f4c119ebeb7",
               "type": "Type",

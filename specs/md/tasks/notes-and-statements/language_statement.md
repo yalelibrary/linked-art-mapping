@@ -79,7 +79,6 @@ scriptInclusion: NONE
 
     -   If both subfields \(`546ab`\) are present, join them with a whitespace character.
     -   Else, output the string value of `546a`.
-    
     `11167038`
 
     ```
@@ -87,14 +86,13 @@ scriptInclusion: NONE
       "members_exemplified_by": [
         {
           "type": "HumanMadeObject",
-          "_label": "Cipher manuscript",
           "carries": [
             {
               "type": "LinguisticObject",
               "referred_to_by": [
                 {
                   "type": "LinguisticObject",
-                  "content": "Syriac; Hebrew alphabet.",
+                  "content": "In unidentified cipher.",
                   "classified_as": [
                     {
                       "id": "http://vocab.getty.edu/aat/300435433",
