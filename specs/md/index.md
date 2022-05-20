@@ -97,7 +97,7 @@
         -   [Voyager MFHD ID](tasks/identifiers/orbis_mfhd_id.md)
         -   [Library of Congress Control Number \(LCCN\)](tasks/identifiers/library_of_congress_control_number_lccn.md)
         -   [International Standard Book Number \(ISBN\)](tasks/identifiers/international_standard_book_number_isbn.md)
-        -   [Locations and call numbers](tasks/identifiers/call_number.md)
+        -   [Call numbers](tasks/identifiers/call_number.md)
         -   [International Standard Serial Number \(ISSN\)](tasks/identifiers/international_standard_serial_number_issn.md)
         -   [Publisher or Distributor Number](tasks/identifiers/publisher_or_distributor_number.md)
         -   [System Control Numbers \(OCLC Numbers\)](tasks/identifiers/oclc_numbers.md)
