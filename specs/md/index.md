@@ -134,7 +134,7 @@
         -   [Preferred citation note](tasks/notes-and-statements/preferred_citation_note.md)
         -   [Provenance statement](tasks/notes-and-statements/provenance_statement.md)
         -   [Acquisition statement](tasks/notes-and-statements/acquisition_statement.md)
-        -   [Copy and version identification note](tasks/notes-and-statements/copy_and_version_note.md)
+        -   [Copy and version identification note](tasks/notes-and-statements/copy_and_version_note.md) [draft]
         -   [Reproduction statement](tasks/notes-and-statements/reproduction_statement.md)
         -   [Production statement](tasks/notes-and-statements/production_statement.md)
         -   [Edition statement](tasks/notes-and-statements/edition_statement.md)
