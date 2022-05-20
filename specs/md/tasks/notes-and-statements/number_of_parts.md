@@ -26,7 +26,7 @@ scriptInclusion: NONE
 
 ## Processing steps and output
 
-1.  Count the total number of item records attached each holdings record.
+1.  Count the total number of item records attached to each holdings record.
 
 2.  Output the value as an integer using the `number_of_parts` property.
 
