@@ -18,7 +18,7 @@ Locations and call numbers are derived from MARC holdings records \(MFHDs\).
 
 ```
 ---
-name: LocationsAndCallNumbers
+name: CallNumbers
 sampleMfhds:
   - 
 fieldSpec:
