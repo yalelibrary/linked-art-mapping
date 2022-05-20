@@ -5,7 +5,7 @@ category: Descriptive content
 keyword: [Assigned, Completed, ]
 ---
 
-# Locations and call numbers
+# Call numbers
 
 Locations and call numbers are derived from MARC holdings records \(MFHDs\).
 
