@@ -657,7 +657,7 @@ keyword:
       "@context": "https://linked.art/ns/v1/linked-art.json",
       "id": "https://lux.collections.yale.edu/data/group/ycba-reference-library",
       "type": "Group",
-      "_label": "Reference Library",
+      "_label": "Yale Center for British Art Reference Library",
       "classified_as": [
         {
           "id": "Department",
@@ -674,7 +674,7 @@ keyword:
       "identified_by": [
         {
           "type": "Name",
-          "content": "Reference Library",
+          "content": "Yale Center for British Art Reference Library",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300404670",
@@ -742,7 +742,7 @@ keyword:
       "@context": "https://linked.art/ns/v1/linked-art.json",
       "id": "https://lux.collections.yale.edu/data/group/yuag-numismatics",
       "type": "Group",
-      "_label": "Numismatics (YUAG)",
+      "_label": "Yale University Art Gallery Numismatics",
       "classified_as": [
         {
           "id": "Department",
@@ -759,7 +759,7 @@ keyword:
       "identified_by": [
         {
           "type": "Name",
-          "content": "Numismatics (YUAG)",
+          "content": "Yale University Art Gallery Numismatics",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300404670",
@@ -776,6 +776,7 @@ keyword:
 
     -   Library of Congress
     -   OCLC
+    
     **Library of Congress**
 
     ```
