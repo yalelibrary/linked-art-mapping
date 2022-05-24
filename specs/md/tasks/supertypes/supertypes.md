@@ -14,16 +14,20 @@ The supertype of a resource is used to determine its base class or document type
 
 |Base class|Content type|Format level one|Format level two|
 |----------|------------|----------------|----------------|
-|LinguisticObject|Datasets|[Data and Files](dataandfiles.md)|[Geospatial Data](geospatialdata.md)|
+|LinguisticObject|Audio Works|[Music](music.md)| |
+|LinguisticObject|Audio Works|[Sound](sound.md)| |
+|LinguisticObject|Cartographic Works|[Atlases](atlases.md)| |
+|LinguisticObject|Cartographic Works|[Geospatial Data](geospatialdata.md)| |
+|LinguisticObject|Cartographic Works|[Globes](globes.md)| |
+|LinguisticObject **\[primary\]**|Cartographic Works|[Maps](maps.md)| |
+|LinguisticObject **\[primary\]**|Datasets|[Data and Files](dataandfiles.md)|[Geospatial Data](geospatialdata.md)|
 |LinguisticObject **\[primary\]**|Datasets|[Data and Files](dataandfiles.md)|[Image Data](imagedata.md)|
 |LinguisticObject|Datasets|[Data and Files](dataandfiles.md)|[Textual Data](textualdata.md)|
+|LinguisticObject|Moving Images|[Motion Pictures](motionpictures.md)| |
 |LinguisticObject|Objects|[Globes](globes.md)| |
 |LinguisticObject|Objects|[Models](models.md)| |
 |LinguisticObject|Objects|[Realia](realia.md)| |
 |LinguisticObject|Objects|[Toys and Games](toysandgames.md)| |
-|LinguisticObject|Audio Works|[Music](music.md)| |
-|LinguisticObject|Audio Works|[Sound](sound.md)| |
-|LinguisticObject|Moving Images|[Motion Pictures](motionpictures.md)| |
 |LinguisticObject|Scores and Notation|[Notated Movement](notatedmovement.md)| |
 |LinguisticObject|Scores and Notation|[Notated Music](notatedmusic.md)| |
 |LinguisticObject|Software and Electronic Media|[Software Applications](softwareapplications.md)|[Databases](databases.md)|
@@ -34,10 +38,6 @@ The supertype of a resource is used to determine its base class or document type
 |LinguisticObject|Textual Works|[Textual Data](textualdata.md)| |
 |Set|Collections|[Archival and Manuscript Materials](archivalandmanuscriptmaterials.md)| |
 |Set|Collections|[Kits](kits.md)| |
-|LinguisticObject|Cartographic Works|[Atlases](atlases.md)| |
-|LinguisticObject|Cartographic Works|[Geospatial Data](geospatialdata.md)| |
-|LinguisticObject|Cartographic Works|[Globes](globes.md)| |
-|LinguisticObject **\[primary\]**|Cartographic Works|[Maps](maps.md)| |
 |VisualItem|Visual Works|[Collages](collages.md)| |
 |VisualItem|Visual Works|[Drawings](drawings.md)| |
 |VisualItem|Visual Works|[Image Data](imagedata.md)| |
