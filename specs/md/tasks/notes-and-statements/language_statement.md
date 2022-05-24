@@ -10,6 +10,7 @@ Textual information on the language or notation system used to convey the conten
 |Domains|Usage|
 |-------|-----|
 |`LinguisticObject`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
+|`VisualItem`|Include language information on related `HumanMadeObject` or `DigitalObject`.|
 |`members_exemplified_by → HumanMadeObject`|Do not repeat on containing `Set`.|
 
 ## Source data
