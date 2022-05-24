@@ -14,7 +14,7 @@ The supertype of a resource is used to determine its base class or document type
 
 |Base class|Content type|Format level one|Format level two|
 |----------|------------|----------------|----------------|
-|LinguisticObject **\[primary\]**|Datasets|[Data and Files](dataandfiles.md)|[Geospatial Data](geospatialdata.md)|
+|LinguisticObject|Datasets|[Data and Files](dataandfiles.md)|[Geospatial Data](geospatialdata.md)|
 |LinguisticObject **\[primary\]**|Datasets|[Data and Files](dataandfiles.md)|[Image Data](imagedata.md)|
 |LinguisticObject|Datasets|[Data and Files](dataandfiles.md)|[Textual Data](textualdata.md)|
 |LinguisticObject|Objects|[Globes](globes.md)| |
