@@ -107,7 +107,7 @@ The `008[35-37]` code represents the primary language of the resource. Additiona
 
 3.  Add an embedded reference to the language entity or entities within the record-level `LinguisticObject` resource.
 
-4.  If the language code extracted from `008[35-37]` is the same as a code extracted from `041`, deduplicate the language references in the record-level `LinguisticObject`.
+4.  If the language code extracted from `008[35-37]` is the same as a code extracted from `041`, deduplicate the language references in the record-level resource.
 
     `97`
 
@@ -128,7 +128,104 @@ The `008[35-37]` code represents the primary language of the resource. Additiona
     }
     ```
 
-5.  For top-level resources with a base class of `Set` \(archival records or kits\), language information should be attached to the embedded `HumanMadeObject` resource using the `carries` property.
+5.  For record-level resources with a base class of `LinguisticObject`, language information should be attached directly to the `LinguisticObject` resource.
+
+6.  For record-level resources with a base class of `VisualItem` \(e.g., [Posters](../tasks/supertypes/posters.md) or [Prints](../tasks/supertypes/prints.md)\) that have associated language information, that information should be attached to the related `HumanMadeObject` or `DigitalObject` using the `carries` \(`HumanMadeObject`\) or `digitally_carries` \(`DigitalObject`\) property.
+
+    `11221175`
+
+    ```
+    {
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://linked-art.library.yale.edu/node/7bcc5231-a43f-46b4-9529-0044b5235b7b",
+      "type": "HumanMadeObject",
+      "_label": "Jim Brown goes over the wall to flash with a million $ stash [graphic]. : the Slams",
+      "identified_by": [
+        {
+          "type": "Identifier",
+          "content": "ils:yul:mfhd:11380011",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435704",
+              "type": "Type",
+              "_label": "System-Assigned Number"
+            }
+          ],
+          "attributed_by": [
+            {
+              "type": "AttributeAssignment",
+              "carried_out_by": [
+                {
+                  "id": "https://linked-art.library.yale.edu/node/0ed3ecaa-4483-4e4e-a015-a6d5ca448106",
+                  "type": "Group",
+                  "_label": "Yale University Library"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Identifier",
+          "content": "BrSides Double Folio 2013 17",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300311706",
+              "type": "Type",
+              "_label": "Call Number"
+            }
+          ]
+        }
+      ],
+      "member_of": [
+        {
+          "id": "https://linked-art.library.yale.edu/node/beinecke-library",
+          "type": "Set",
+          "_label": "Beinecke Library"
+        }
+      ],
+      "referred_to_by": [
+        {
+          "type": "LinguisticObject",
+          "content": "In the Library",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300133046",
+              "type": "Type",
+              "_label": "Access Statement",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300418049",
+                  "type": "Type",
+                  "_label": "Brief Text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "shows": [
+        {
+          "id": "https://linked-art.library.yale.edu/node/70cab091-3bea-4a06-b9d6-273d3cf03aba",
+          "type": "VisualItem",
+          "_label": "Jim Brown goes over the wall to flash with a million $ stash [graphic]. : the Slams"
+        }
+      ],
+      "carries": [
+        {
+          "type": "LinguisticObject",
+          "language": [
+            {
+              "id": "https://lux.collections.yale.edu/data/concept/33d2e19a-72bc-4042-8d06-04dbbf3907b3",
+              "type": "Language",
+              "_label": "English"
+            }
+          ]
+        }
+      ]
+    }
+    ```
+
+7.  For top-level resources with a base class of `Set` \(archival records or kits\), language information should be attached to the embedded `HumanMadeObject` resource using the `carries` property.
 
     `3779671`
 
