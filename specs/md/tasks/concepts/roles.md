@@ -360,7 +360,7 @@ The mapping table below should be used to generate unique concept entities for r
     }
     ```
 
-2.  For each `1XX` or `7XX` field, inspect each subfield `e` \(all but `111` or `711`\), `j` \(only `X11)`, and `4` \(all\) for a role term or code.
+2.  For each `1XX` or `7XX` field, inspect each subfield `e` \(all but `111` or `711`\), `j` \(only `X11`), and `4` \(all\) for a role term or code.
 
 3.  [Normalize](../../glossary/normalization.md) and match role terms in `e` or `j` and role codes in `4` against the top-level entities corresponding to the terms and codes listed in the mapping table.
 
