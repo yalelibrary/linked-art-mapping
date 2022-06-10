@@ -364,7 +364,270 @@ The mapping table below should be used to generate unique concept entities for r
 
 3.  [Normalize](../../glossary/normalization.md) and match role terms in `e` or `j` and role codes in `4` against the top-level entities corresponding to the terms and codes listed in the mapping table.
 
-4.  For each `part` of an activity in a record-level resource, add a `classified_as` reference to the corresponding role concept.
+4.  For each `part` of an activity in a record-level resource, add a `classified_as` reference for the corresponding role concept.
+
+5.  Inspect the `Type` column in the mapping table to determine the type of activity to be generated.
+
+    **Note:** Roles with a type of `other` need further consideration and may be used to generate different mappings in a future version of the specification.
+
+6.  If the role type is `production`, `encounter`, `provenance`, or `exhibition`, then generate a `Production` activity on the carrier-level resource \(`HumanMadeObject` or `DigitalObject`\).
+
+    **Exception**: do not apply this instruction to the following roles:
+
+    |Type|Source|Code|Target|
+    |----|------|----|------|
+    |provenance|copyright holder|cph|[http://id.loc.gov/vocabulary/relators/cph](http://id.loc.gov/vocabulary/relators/cph)|
+    |provenance|licensee|lse|[http://id.loc.gov/vocabulary/relators/lse](http://id.loc.gov/vocabulary/relators/lse)|
+    |provenance|licensor|lso|[http://id.loc.gov/vocabulary/relators/lso](http://id.loc.gov/vocabulary/relators/lso)|
+
+    `7647390`
+
+    Domain: `HumanMadeObject`
+
+    ```
+    {
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://lux.collections.yale.edu/data/object/54f1fcae-4898-413f-91cd-806d9f4f9cb3",
+      "type": "HumanMadeObject",
+      "_label": "Illustrations of Shakespeare",            
+      "produced_by": {
+        "type": "Production",
+        "part": [
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/28a98ded-4a66-4c12-a175-20a3733428fa",
+                "type": "Person",
+                "_label": "Bunbury, Henry William, 1750-1811"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/a18e0571-0842-4f9c-86de-3229e64dc64d",
+                "type": "Person",
+                "_label": "Bartolozzi, Francesco, 1727-1815"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/ec100aa5-11c4-47af-8c42-f21af2cbea27",
+                "type": "Person",
+                "_label": "Benedetti, Michele, 1745-1810"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/644c3ba3-0320-4b41-b59b-d1fc902f5abb",
+                "type": "Person",
+                "_label": "Chapman, J. (John), active 1792-1823"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/514f84c1-8861-48b1-b3e9-5d5f00647c0b",
+                "type": "Person",
+                "_label": "Cheesman, Thomas, 1760-"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/61c133b7-ee19-45ad-a7c6-57216f7f349b",
+                "type": "Person",
+                "_label": "Coles, J."
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/e01c532d-8281-4be2-9911-7896a7c01065",
+                "type": "Person",
+                "_label": "Duterrau, Benjamin, 1767-1851"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/3082e61d-2a84-4cd8-9a85-58091df39bd5",
+                "type": "Person",
+                "_label": "Gardiner, W. N. (William Nelson), 1766-1814"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/8b303da9-5350-43be-9587-df56cd45b75f",
+                "type": "Person",
+                "_label": "Leney, William Satchwell, 1769-1831"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },    
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/61128e1b-2b5a-42ef-800d-8777052b3c5a",
+                "type": "Person",
+                "_label": "Meadows, Robert Mitchell"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/5ce84446-6e6a-433b-8364-f1ddfbf75ea1",
+                "type": "Person",
+                "_label": "Shenner"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/12b1555a-9e61-45d3-9a4d-200f15f908e9",
+                "type": "Person",
+                "_label": "Tomkins, Peltro William, 1759-1840"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          },
+          {
+            "type": "Production",
+            "carried_out_by": [
+              {
+                "id": "https://lux.collections.yale.edu/data/person/82efbe04-d078-43a7-8351-b0ef3b8b7bea",
+                "type": "Person",
+                "_label": "Vandenbergh, Ignatius Joseph, 1752-1824"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://lux.collections.yale.edu/data/concept/printmaker-role",
+                "type": "Type",
+                "_label": "Printmaker"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    ```
+
+7.  If the role type is **not** `production`, `encounter`, `provenance`, or `exhibition`, then generate a `Creation` activity on the content-level resource \(`LinguisticObject`, `VisualItem`, or `Set`\).
+
+    The following `provenance` roles should be processed as `Creation` activities:
+
+    |Type|Source|Code|Target|
+    |----|------|----|------|
+    |provenance|copyright holder|cph|[http://id.loc.gov/vocabulary/relators/cph](http://id.loc.gov/vocabulary/relators/cph)|
+    |provenance|licensee|lse|[http://id.loc.gov/vocabulary/relators/lse](http://id.loc.gov/vocabulary/relators/lse)|
+    |provenance|licensor|lso|[http://id.loc.gov/vocabulary/relators/lso](http://id.loc.gov/vocabulary/relators/lso)|
 
     `693`
 
@@ -431,11 +694,11 @@ The mapping table below should be used to generate unique concept entities for r
     }
     ```
 
-5.  For each `6XX`, field, inspect each subfield `e` \(all but `611`\), `j` \(only `611)`, and `4` \(all\) for a role term or code.
+8.  For each `6XX`, field, inspect each subfield `e` \(all but `611`\), `j` \(only `611)`, and `4` \(all\) for a role term or code.
 
-6.  [Normalize](../../glossary/normalization.md) and match role terms in `e` or `j` and role codes in `4` against the top-level entities corresponding to the terms and codes listed in the mapping table.
+9.  [Normalize](../../glossary/normalization.md) and match role terms in `e` or `j` and role codes in `4` against the top-level entities corresponding to the terms and codes listed in the mapping table.
 
-7.  If the role term in `$e` is `depicted` or the code in `$4` is `dpc`, then generate a reference using the `represents` property rather than `about`.
+10. If the role term in `$e` is `depicted` or the code in `$4` is `dpc`, then generate a reference using the `represents` property rather than `about`.
 
     `4887522`
 
@@ -451,7 +714,7 @@ The mapping table below should be used to generate unique concept entities for r
     }
     ```
 
-8.  Else, for all other `6XX` role terms or codes, construct a complex subject heading \(person/concept\) with the agent entity and role term as facets.
+11. Else, for all other `6XX` role terms or codes, construct a complex subject heading \(person/concept\) with the agent entity and role term as facets.
 
     1.  For embedded reference instructions, see [People as subjects](../../concepts/people_as_subjects.md) or [Groups as subjects](../../concepts/groups_as_subjects.md).
 

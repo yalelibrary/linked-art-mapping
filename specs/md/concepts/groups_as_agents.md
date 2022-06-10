@@ -17,7 +17,7 @@ As agents, groups can contribute to creation activities or production activities
 |-------|-------------|-----|
 |`LinguisticObject` `VisualItem`|`created_by → part → carried_out_by`| |
 |`HumanMadeObject`|`produced_by → part → carried_out_by`| |
-|`Set`|`created_by → part → carried_out_by`|Do not include agent references in nested`members_exemplified_by → HumanMadeObject`.|
+|`Set`|`created_by → part → carried_out_by`|Do not include agent references in nested `members_exemplified_by → HumanMadeObject`.|
 |`DigitalObject`|`created_by → part → carried_out_by`| |
 
 ## Source data
@@ -80,7 +80,7 @@ scriptInclusion: BOTH
         }
         ```
 
-    2.  Process production activities \(domain: `HumanMadeObject → shows → VisualItem`\).
+    2.  Process production activities.
 
         `5132502`
 
