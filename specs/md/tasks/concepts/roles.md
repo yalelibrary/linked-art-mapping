@@ -360,7 +360,7 @@ The mapping table below should be used to generate unique concept entities for r
     }
     ```
 
-2.  For each `1XX` or `7XX` field, inspect each subfield `e` \(all but `111` or `711`\), `j` \(only `X11`), and `4` \(all\) for a role term or code.
+2.  For each `1XX` or `7XX` field, inspect each subfield `e` \(all but `111` or `711`\), `j` \(only `X11`\), and `4` \(all\) for a role term or code.
 
 3.  [Normalize](../../glossary/normalization.md) and match role terms in `e` or `j` and role codes in `4` against the top-level entities corresponding to the terms and codes listed in the mapping table.
 
@@ -368,17 +368,9 @@ The mapping table below should be used to generate unique concept entities for r
 
 5.  Inspect the `Type` column in the mapping table to determine the type of activity to be generated.
 
-    **Note:** Roles with a type of `other` need further consideration and may be used to generate different mappings in a future version of the specification.
+    **Note:** Roles types still need further consideration and may be used to generate different mappings in a future version of the specification.
 
-6.  If the role type is `production`, `encounter`, `provenance`, or `exhibition`, then generate a `Production` activity on the carrier-level resource \(`HumanMadeObject` or `DigitalObject`\).
-
-    **Exception**: do not apply this instruction to the following roles:
-
-    |Type|Source|Code|Target|
-    |----|------|----|------|
-    |provenance|copyright holder|cph|[http://id.loc.gov/vocabulary/relators/cph](http://id.loc.gov/vocabulary/relators/cph)|
-    |provenance|licensee|lse|[http://id.loc.gov/vocabulary/relators/lse](http://id.loc.gov/vocabulary/relators/lse)|
-    |provenance|licensor|lso|[http://id.loc.gov/vocabulary/relators/lso](http://id.loc.gov/vocabulary/relators/lso)|
+6.  If the role type is `production`, then generate a `Production` activity on the carrier-level resource \(`HumanMadeObject` or `DigitalObject`\).
 
     `7647390`
 
@@ -619,15 +611,7 @@ The mapping table below should be used to generate unique concept entities for r
     }
     ```
 
-7.  If the role type is **not** `production`, `encounter`, `provenance`, or `exhibition`, then generate a `Creation` activity on the content-level resource \(`LinguisticObject`, `VisualItem`, or `Set`\).
-
-    The following `provenance` roles should be processed as `Creation` activities:
-
-    |Type|Source|Code|Target|
-    |----|------|----|------|
-    |provenance|copyright holder|cph|[http://id.loc.gov/vocabulary/relators/cph](http://id.loc.gov/vocabulary/relators/cph)|
-    |provenance|licensee|lse|[http://id.loc.gov/vocabulary/relators/lse](http://id.loc.gov/vocabulary/relators/lse)|
-    |provenance|licensor|lso|[http://id.loc.gov/vocabulary/relators/lso](http://id.loc.gov/vocabulary/relators/lso)|
+7.  If the role type is **not** `production`, then generate a `Creation` activity on the content-level resource \(`LinguisticObject`, `VisualItem`, or `Set`\).
 
     `693`
 
@@ -694,7 +678,7 @@ The mapping table below should be used to generate unique concept entities for r
     }
     ```
 
-8.  For each `6XX`, field, inspect each subfield `e` \(all but `611`\), `j` \(only `611`), and `4` \(all\) for a role term or code.
+8.  For each `6XX`, field, inspect each subfield `e` \(all but `611`\), `j` \(only `611`\), and `4` \(all\) for a role term or code.
 
 9.  [Normalize](../../glossary/normalization.md) and match role terms in `e` or `j` and role codes in `4` against the top-level entities corresponding to the terms and codes listed in the mapping table.
 
