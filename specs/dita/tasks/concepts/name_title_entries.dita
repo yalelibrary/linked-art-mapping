@@ -34,6 +34,8 @@
       <revised modified="2022-02-04"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-05-18"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-06-14"/>
     </critdates>
     <metadata conkeyref="metadata_topic/keyword_metadata_entity"/>
     <metadata>
@@ -150,11 +152,17 @@ scriptInclusion: BOTH]]></codeblock>
                       <li>Join the <codeph>1XX</codeph> subfields with a whitespace character. This is the <codeph>agent_value</codeph>.</li>
                       <li>Join the <codeph>240</codeph> subfields with a whitespace character. This is the <codeph>work_value</codeph>.</li>
                     </ol></li>
+                </ul>
+                <note><codeph>1XX</codeph> fields followed by a <codeph>240</codeph> should be processed twice: once in an activity on the record-level resource (bib) and once in an activity on the complex work resource.</note>
+              </p>
+              <p>
+                <ul>
                   <li>When a <codeph>600</codeph>, <codeph>610</codeph>, <codeph>611</codeph>, <codeph>692</codeph>, <codeph>693</codeph>, <codeph>694</codeph>, <codeph>700</codeph>, <codeph>710</codeph>, <codeph>711</codeph>, <codeph>800</codeph>, <codeph>810</codeph>, or <codeph>811</codeph> field contains subfield <codeph>t</codeph>: <ol>
                       <li>Join the <codeph>6XX</codeph>, <codeph>7XX</codeph>, or <codeph>8XX</codeph> subfields <i>before</i> subfield <codeph>t</codeph> with a whitespace character. This is the <codeph>agent_value</codeph>.</li>
                       <li>Join the <codeph>6XX</codeph>, <codeph>7XX</codeph>, or <codeph>8XX</codeph> subfields <i>beginning with and following</i> subfield <codeph>t</codeph> with a whitespace character. This is the <codeph>work_value</codeph></li>
                     </ol></li>
                 </ul>
+                <note>Agents in fields with subfield <codeph>t</codeph> should be processed only in an activity on the complex work resource.</note>
               </p>
               <p>Apply the following mapping table: <table id="table_xdd_kn5_vrb">
                   <title>Subfield mapping table</title>
@@ -331,6 +339,72 @@ scriptInclusion: BOTH]]></codeblock>
 }]]></codeblock>
           </div>
         </stepresult>
+      </step>
+      <step>
+        <cmd>If role information is present in subfield <codeph>e</codeph> of <codeph>4</codeph>, add the role classifications to the top-level work entities, as specified in <xref href="roles.dita"/>.</cmd>
+        <info>
+          <p>
+            <note>For <codeph>1XX</codeph> fields, role classifications should be added to activities in the both the record-level resource (bib) and the top-level work resource. For fields with subfield <codeph>t</codeph>, role classifications should be added only to activities in the top-level work resource.</note>
+          </p>
+        </info>
+        <stepxmp>
+          <yulbibid>522895</yulbibid>
+          <codeph><![CDATA[700 0  $a Porphyry, $d approximately 234-approximately 305. $4 aut $t De abstinentia. $l Latin and Greek.]]></codeph>
+        </stepxmp>
+        <stepresult>
+          <yulbibid>522895</yulbibid>
+          <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked-art-test.library.yale.edu/node/9a9022e5-8b80-4fee-b0af-5bbafbaecafa",
+  "type": "LinguisticObject",
+  "_label": "Pythagorou bios. Latin and Greek",
+  "part_of": [
+    {
+      "id": "https://linked-art-test.library.yale.edu/node/67a69a9f-a11c-4a37-a888-fccc68387231",
+      "type": "LinguisticObject",
+      "_label": "Epicteti Stoici philosophi Enchiridion, unà cum Cebetis Thebani Tabula. Accessêre Arriani commentariorum de Epicteti disputationibus lib. IV. Omnia Hieron. Wolfio interprete, cum ejusdem annotationibus. Item Porphyrii philosophi Pythagorici De abstinentia ab animalibus necandis libri quatuor, ex nova versione; cui sujiciuntur notæ breviusculæ. Ejusdem liber De vita Pythagoræ: & Sententiæ ad intelligibilia ducentes: De antro nympharum quod in Odyssea describitur. Lucas Holstenius Hamburgens. Latinè vertit. Dissertationem de vita & scriptis Porphyrii, & ad vitam Pythagoræ observationes adjecit. Cum indicibus in Arrianum & Porphyrium locupletissimis"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "Pythagorou bios. Latin and Greek",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ]
+    }
+  ],
+  "created_by": {
+    "type": "Creation",
+    "part": [
+      {
+        "type": "Creation",
+        "carried_out_by": [
+          {
+            "id": "https://linked-art-test.library.yale.edu/node/f5ef7668-7acf-47ef-9f24-92e9eb4c922e",
+            "type": "Person",
+            "_label": "Porphyry, approximately 234-approximately 305"
+          }
+        ],
+        "classified_as": [
+          {
+            "id": "https://linked-art-test.library.yale.edu/node/author-role-entity",
+            "type": "Type",
+            "_label": "Author"
+          }
+        ]
+      }
+    ]
+  }
+}]]></codeblock>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>If not role information (subfield <codeph>e</codeph> or <codeph>4</codeph>) is present, then use a default role of <codeph>Creator</codeph>, as shown in the examples.</cmd>
       </step>
       <step>
         <cmd>In each referring record-level resource (<codeph>LinguisticObject</codeph>, <codeph>Set</codeph>, <codeph>VisualItem</codeph>), add an embedded reference to the related entity.</cmd>
