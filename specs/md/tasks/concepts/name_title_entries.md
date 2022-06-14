@@ -222,7 +222,7 @@ scriptInclusion: BOTH
     }
     ```
 
-4.  If role information is present in subfield `e` of `4`, add the role classifications to the top-level work entities, as specified in [Roles](roles.md).
+4.  If role information is present in subfield `e` or `4`, add the role classifications to the top-level work entities, as specified in [Roles](roles.md).
 
     **Note:** For `1XX` fields, role classifications should be added to activities in the both the record-level resource \(bib\) and the top-level work resource. For fields with subfield `t`, role classifications should be added only to activities in the top-level work resource.
 
@@ -281,7 +281,7 @@ scriptInclusion: BOTH
     }
     ```
 
-5.  If not role information \(subfield `e` or `4`\) is present, then use a default role of `Creator`, as shown in the examples.
+5.  If no role information \(subfield `e` or `4`\) is present, then use a default role of `Creator`, as shown in the examples.
 
 6.  In each referring record-level resource \(`LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the related entity.
 
