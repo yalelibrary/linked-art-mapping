@@ -80,9 +80,13 @@ scriptInclusion: BOTH
         -   When a `100`, `110`, or `111` field is followed by a `240` field:
             1.  Join the `1XX` subfields with a whitespace character. This is the `agent_value`.
             2.  Join the `240` subfields with a whitespace character. This is the `work_value`.
+        **Note:** `1XX` fields followed by a `240` should be processed twice: once in an activity on the record-level resource \(bib\) and once in an activity on the complex work resource.
+
         -   When a `600`, `610`, `611`, `692`, `693`, `694`, `700`, `710`, `711`, `800`, `810`, or `811` field contains subfield `t`:
             1.  Join the `6XX`, `7XX`, or `8XX` subfields *before* subfield `t` with a whitespace character. This is the `agent_value`.
             2.  Join the `6XX`, `7XX`, or `8XX` subfields *beginning with and following* subfield `t` with a whitespace character. This is the `work_value`
+        **Note:** Agents in fields with subfield `t` should be processed only in an activity on the complex work resource.
+
         Apply the following mapping table:
 
         |Linked Art class|MARC tags|Subfields|
@@ -218,7 +222,68 @@ scriptInclusion: BOTH
     }
     ```
 
-4.  In each referring record-level resource \(`LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the related entity.
+4.  If role information is present in subfield `e` of `4`, add the role classifications to the top-level work entities, as specified in [Roles](roles.md).
+
+    **Note:** For `1XX` fields, role classifications should be added to activities in the both the record-level resource \(bib\) and the top-level work resource. For fields with subfield `t`, role classifications should be added only to activities in the top-level work resource.
+
+    `522895` `700 0 $a Porphyry, $d approximately 234-approximately 305. $4 aut $t De abstinentia. $l Latin and Greek.`
+
+    `522895`
+
+    ```
+    {
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://linked-art-test.library.yale.edu/node/9a9022e5-8b80-4fee-b0af-5bbafbaecafa",
+      "type": "LinguisticObject",
+      "_label": "Pythagorou bios. Latin and Greek.",
+      "part_of": [
+        {
+          "id": "https://linked-art-test.library.yale.edu/node/67a69a9f-a11c-4a37-a888-fccc68387231",
+          "type": "LinguisticObject",
+          "_label": "Epicteti Stoici philosophi Enchiridion, unà cum Cebetis Thebani Tabula. Accessêre Arriani commentariorum de Epicteti disputationibus lib. IV. Omnia Hieron. Wolfio interprete, cum ejusdem annotationibus. Item Porphyrii philosophi Pythagorici De abstinentia ab animalibus necandis libri quatuor, ex nova versione; cui sujiciuntur notæ breviusculæ. Ejusdem liber De vita Pythagoræ: & Sententiæ ad intelligibilia ducentes: De antro nympharum quod in Odyssea describitur. Lucas Holstenius Hamburgens. Latinè vertit. Dissertationem de vita & scriptis Porphyrii, & ad vitam Pythagoræ observationes adjecit. Cum indicibus in Arrianum & Porphyrium locupletissimis"
+        }
+      ],
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Pythagorou bios. Latin and Greek.",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        }
+      ],
+      "created_by": {
+        "type": "Creation",
+        "part": [
+          {
+            "type": "Creation",
+            "carried_out_by": [
+              {
+                "id": "https://linked-art-test.library.yale.edu/node/f5ef7668-7acf-47ef-9f24-92e9eb4c922e",
+                "type": "Person",
+                "_label": "Porphyry, approximately 234-approximately 305"
+              }
+            ],
+            "classified_as": [
+              {
+                "id": "https://linked-art-test.library.yale.edu/node/author-role-entity",
+                "type": "Type",
+                "_label": "Author"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    ```
+
+5.  If not role information \(subfield `e` or `4`\) is present, then use a default role of `Creator`, as shown in the examples.
+
+6.  In each referring record-level resource \(`LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the related entity.
 
     1.  For entities derived from the `240`, `7XX`, or `8XX` fields, add a reference using the `part_of` property: see [Works in whole/part relationships](../name-title/works_as_whole_part.md).
 
