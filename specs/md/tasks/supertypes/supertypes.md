@@ -25,6 +25,7 @@ The supertype of a resource is used to determine its base class or document type
 |LinguisticObject|Datasets|[Data and Files](dataandfiles.md)|[Textual Data](textualdata.md)|
 |LinguisticObject|Moving Images|[Motion Pictures](motionpictures.md)| |
 |LinguisticObject|Objects|[Globes](globes.md)| |
+|LinguisticObject **\[primary\]**|Objects|[Kits](kits.md)| |
 |LinguisticObject|Objects|[Models](models.md)| |
 |LinguisticObject|Objects|[Realia](realia.md)| |
 |LinguisticObject|Objects|[Toys and Games](toysandgames.md)| |
@@ -49,7 +50,7 @@ The supertype of a resource is used to determine its base class or document type
 |VisualItem|Visual Works|[Prints](prints.md)| |
 |VisualItem|Visual Works|[Slides](slides.md)| |
 
-
+![Mental map illustrating the hierarchical structure of the LUX Supertype Taxonomy.](supertypes.svg "LUX Supertype Taxonomy")
 
 -   **[Collections](../../tasks/supertypes/collectionformats.md)**  
  “Accumulated groups of objects or materials having a focal characteristic and that have been brought together by an individual or organization. A collection comprises multiple items that are conceptually or physically arranged together for the purpose of cataloging or retrieval” \([AAT](http://www.getty.edu/vow/AATFullDisplay?find=&logic=AND&note=&subjectid=300025976)\).
@@ -73,4 +74,3 @@ Any materials representing, in whole or part, the earth or any celestial body at
 Content represented as words in a particular language, and/or the objects carrying that content.
 
 **Parent topic:**[Record-level entities](../../concepts/record_level_entities.md)
-
