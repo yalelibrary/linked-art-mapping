@@ -103,17 +103,24 @@ scriptInclusion: NONE]]></codeblock>
         <cmd>If the value of subfield <codeph>b</codeph> is equal to either <codeph>withdrawn</codeph> or <codeph>suppressed</codeph>, skip the <codeph>852</codeph> field.</cmd>
       </step>
       <step>
-        <cmd>If the value of subfield <codeph>b</codeph> is equal to <codeph>yulint</codeph> or <codeph>yulintx</codeph>, generate a <codeph>DigitalObject</codeph> carrier resource.</cmd>
+        <cmd>If the value of subfield <codeph>b</codeph>
+          <b>starts with</b>
+          <codeph>yulint</codeph>, generate a <codeph>DigitalObject</codeph> carrier resource.</cmd>
         <info>
           <p>See <xref href="../content_and_carriers.dita"/> for more information.</p>
-          <p>MFHDs with a subfield <codeph>b</codeph> value of <codeph>yulint</codeph> or <codeph>yulintx</codeph> will not have an associated item record.</p>
-          <p>Subfield <codeph>b</codeph> with a value of <codeph>yulint</codeph> should not have a call number (i.e., a value of <codeph>None</codeph> in subfield <codeph>h</codeph>).</p>
-          <p>However, subfield <codeph>b</codeph> with a value of <codeph>yulintx</codeph> may include call number information (e.g., when the MFHD represents a digital copy of a digitized resource).</p>
+          <p>MFHDs with a subfield <codeph>b</codeph> value of that <b>starts with</b>
+            <codeph>yulint</codeph> will not have an associated item record.</p>
+          <p>Subfield <codeph>b</codeph> with a value of <codeph>yulint</codeph> should not have a
+            call number (i.e., a value of <codeph>None</codeph> in subfield <codeph>h</codeph>).</p>
+          <p>However, subfield <codeph>b</codeph> with a value of <codeph>yulintx</codeph> may
+            include call number information (e.g., when the MFHD represents a digital copy of a
+            digitized resource).</p>
           <note>MFHDs for digitized copies may be suppressed.</note>
         </info>
         <substeps>
           <substep>
-            <cmd>Extract the call number for (suppressed) MFHDs with a subfield <codeph>b</codeph> value of <codeph>yulintx</codeph>.</cmd>
+            <cmd>Extract the call number for (suppressed) MFHDs with a subfield <codeph>b</codeph>
+              value of <codeph>yulintx</codeph>.</cmd>
             <stepxmp>
               <codeph><![CDATA[852 80 $b yulintx $k SUPPRESSED $k Folio $h 49 $i 3582 $m (Oversize)]]></codeph></stepxmp>
           </substep>
