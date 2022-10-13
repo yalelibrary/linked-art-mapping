@@ -1,6 +1,8 @@
-<concept id="supertypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
+<concept id="supertypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:concept.xsd">
   <title>LUX supertype taxonomy</title>
-  <shortdesc>Taxonomy of content types and related formats for classifying record-level resources in LUX.</shortdesc>
+  <shortdesc>Taxonomy of content types and related formats for classifying record-level resources in
+    LUX.</shortdesc>
   <prolog>
     <critdates>
       <!--timothy.thompson@yale.edu-->
@@ -17,6 +19,8 @@
       <revised modified="2022-05-03"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-05-19"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-24"/>
     </critdates>
     <metadata>
       <keywords/>
@@ -26,9 +30,18 @@
     <data name="deployed" value=""/>
   </prolog>
   <conbody>
-    <p>MARC-to-Linked Art supertype mappings are done at the level of the most specific format, with type and broader format relations inferred from the hierarchy.</p>
-    <p>The supertype of a resource is used to determine its base class or document type in the Linked Art model. <b>However, supertype classification should always be assigned to the corresponding <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph> resource(s).</b></p>
-    <note>For supertypes that map to more than one base class, the primary class is indicated as <b>primary</b> in the base class column.</note>
+    <p>Format mappings (level one and level two) are applied to carrier-level records
+        (<codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph>). Content type mappings
+      are inferred from format mappings and are applied to content-level records
+        (<codeph>LinguisticObject</codeph>, <codeph>VisualItem</codeph>, or <codeph>Set</codeph>). </p>
+    <p>The supertype of a resource is used to determine its base class or document type in the
+      Linked Art model. </p>
+    <note>For supertypes that map to more than one base class, the primary class is indicated as
+        <b>primary</b> in the base class column. However, a single base class document may have more
+      than one content type assigned. For example, a <codeph>LinguisticObject</codeph> that is
+      carried by a <codeph>HumanMadeObject</codeph> classified as <codeph>Maps</codeph> would be
+      classified as both <codeph>Cartographic Works</codeph> and <codeph>Visual
+      Works</codeph>.</note>
     <table id="table_wmw_tjc_5rb">
       <title>Linked Art base class to supertype mapping</title>
       <tgroup cols="4">
@@ -46,9 +59,75 @@
         </thead>
         <tbody>
           <row>
+            <entry>LinguisticObject</entry>
+            <entry>Audio Works</entry>
+            <entry><xref href="music.dita">Music</xref></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>LinguisticObject</entry>
+            <entry>Audio Works</entry>
+            <entry><xref href="sound.dita">Sound</xref></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>LinguisticObject</entry>
+            <entry>Cartographic Works</entry>
+            <entry><xref href="atlases.dita">Atlases</xref></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>LinguisticObject</entry>
+            <entry>Cartographic Works</entry>
+            <entry><xref href="geospatialdata.dita">Geospatial Data</xref></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>LinguisticObject </entry>
+            <entry>Cartographic Works</entry>
+            <entry><xref href="globes.dita">Globes</xref></entry>
+            <entry/>
+          </row>
+          <row>
             <entry>LinguisticObject <b>[primary]</b></entry>
+            <entry>Cartographic Works</entry>
+            <entry><xref href="maps.dita">Maps</xref></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>LinguisticObject <b>[primary]</b></entry>
+            <entry>Datasets</entry>
+            <entry><xref href="dataandfiles.dita">Data and Files</xref></entry>
+            <entry><xref href="geospatialdata.dita">Geospatial Data</xref></entry>
+          </row>
+          <row>
+            <entry>LinguisticObject <b>[primary]</b></entry>
+            <entry>Datasets</entry>
+            <entry><xref href="dataandfiles.dita">Data and Files</xref></entry>
+            <entry><xref href="imagedata.dita">Image Data</xref></entry>
+          </row>
+          <row>
+            <entry>LinguisticObject</entry>
+            <entry>Datasets</entry>
+            <entry><xref href="dataandfiles.dita">Data and Files</xref></entry>
+            <entry><xref href="textualdata.dita">Textual Data</xref></entry>
+          </row>
+          <row>
+            <entry>LinguisticObject</entry>
+            <entry>Moving Images</entry>
+            <entry><xref href="motionpictures.dita">Motion Pictures</xref></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>LinguisticObject</entry>
             <entry>Objects</entry>
             <entry><xref href="globes.dita">Globes</xref></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>LinguisticObject <b>[primary]</b></entry>
+            <entry>Objects</entry>
+            <entry><xref href="kits.dita">Kits</xref></entry>
             <entry/>
           </row>
           <row>
@@ -71,24 +150,6 @@
           </row>
           <row>
             <entry>LinguisticObject</entry>
-            <entry>Audio Works</entry>
-            <entry><xref href="music.dita">Music</xref></entry>
-            <entry/>
-          </row>
-          <row>
-            <entry>LinguisticObject</entry>
-            <entry>Audio Works</entry>
-            <entry><xref href="sound.dita">Sound</xref></entry>
-            <entry/>
-          </row>
-          <row>
-            <entry>LinguisticObject</entry>
-            <entry>Moving Images</entry>
-            <entry><xref href="motionpictures.dita">Motion Pictures</xref></entry>
-            <entry/>
-          </row>
-          <row>
-            <entry>LinguisticObject</entry>
             <entry>Scores and Notation</entry>
             <entry><xref href="notatedmovement.dita">Notated Movement</xref></entry>
             <entry/>
@@ -106,7 +167,7 @@
             <entry><xref href="databases.dita">Databases</xref></entry>
           </row>
           <row>
-            <entry>LinguisticObject <b>[primary for Atlases]</b></entry>
+            <entry>LinguisticObject</entry>
             <entry>Textual Works</entry>
             <entry><xref href="books.dita">Books</xref></entry>
             <entry><xref href="atlases.dita">Atlases</xref></entry>
@@ -138,37 +199,14 @@
           <row>
             <entry>Set</entry>
             <entry>Collections</entry>
-            <entry><xref href="archivalandmanuscriptmaterials.dita">Archival and Manuscript Materials</xref></entry>
+            <entry><xref href="archivalandmanuscriptmaterials.dita">Archival and Manuscript
+                Materials</xref></entry>
             <entry/>
           </row>
           <row>
             <entry>Set</entry>
             <entry>Collections</entry>
             <entry><xref href="kits.dita">Kits</xref></entry>
-            <entry/>
-          </row>
-          <row>
-            <entry>VisualItem</entry>
-            <entry>Cartographic Works</entry>
-            <entry><xref href="atlases.dita">Atlases</xref></entry>
-            <entry/>
-          </row>
-          <row>
-            <entry>VisualItem</entry>
-            <entry>Cartographic Works</entry>
-            <entry><xref href="geospatialdata.dita">Geospatial Data</xref></entry>
-            <entry/>
-          </row>
-          <row>
-            <entry>VisualItem </entry>
-            <entry>Cartographic Works</entry>
-            <entry><xref href="globes.dita">Globes</xref></entry>
-            <entry/>
-          </row>
-          <row>
-            <entry>VisualItem</entry>
-            <entry>Cartographic Works</entry>
-            <entry><xref href="maps.dita">Maps</xref></entry>
             <entry/>
           </row>
           <row>
@@ -234,63 +272,198 @@
         </tbody>
       </tgroup>
     </table>
-    <p>
-      <foreign outputclass="embed-plant-uml">@startmindmap
-* LUX
-** DigitalObject
-*** Datasets
-**** [[dataandfiles.html{Data and Files format} Data and Files]]
-***** [[geospatialdata.html{Geospatial Data format} Geospatial Data]]
-***** [[imagedata.html{Image Data format} Image Data]]
-***** [[textualdata.html{Textual Data format} Textual Data]]
-*** Software and Electronic Media
-**** [[softwareapplications.html{Software Applications format} Software Applications]]
-***** [[databases.html{Databases format} Databases]]
-** HumanMadeObject
-*** Objects
-**** [[globes.html{Globes format} Globes]]
-**** [[models.html{Models format} Models]]
-**** [[realia.html{Realia format} Realia]]
-**** [[toysandgames.html{Toys and Games format} Toys and Games]]
-** LinguisticObject
-*** Audio Works
-**** [[music.html{Music format} Music]]
-**** [[sound.html{Sound format} Sound]]
-*** Moving Images
-**** [[motionpictures.html{Motion Pictures format} Motion Pictures]]
-*** Scores and Notation
-**** [[notatedmovement.html{Notated Movement format} Notated Movement]]
-**** [[notatedmusic.html{Notated Music format} Notated Music]]
-*** Textual Works
-**** [[books.html{Books format} Books]]
-***** [[atlases.html{Atlases format} Atlases]]
-**** [[broadsides.html{Broadsides format} Broadsides]]
-**** [[dissertationsandtheses.html{Dissertations and Theses format} Dissertations and Theses]]
-**** [[journalsandperiodicals.html{Journals and Periodicals format} Journals and Periodicals]]
-***** [[newspapers.html{Newspapers format} Newspapers]]
-**** [[textualdata.html{Textual Data format} Textual Data]]
-** Set
-*** Collections
-**** [[archivalandmanuscriptmaterials.html{Archival and Manuscript Materials format} Archival and Manuscript Materials]]
-**** [[kits.html{Kits format} Kits]]
-** VisualItem
-*** Cartographic Works
-**** [[atlases.html{Atlases format} Atlases]]
-**** [[geospatialdata.html{Geospatial Data format} Geospatial Data]]
-**** [[globes.html{Globes format} Globes]]
-**** [[maps.html{Maps format} Maps]]
-*** Visual Works
-**** [[collages.html{Collages format} Collages]]
-**** [[drawings.html{Drawings format} Drawings]]
-**** [[imagedata.html{Image Data format} Image Data]]
-**** [[maps.html{Maps format} Maps]]
-**** [[paintings.html{Paintings format} Paintings]]
-**** [[photographs.html{Photographs format} Photographs]]
-**** [[pictures.html{Pictures format} Pictures]]
-**** [[posters.html{Posters format} Posters]]
-**** [[prints.html{Prints format} Prints]]
-**** [[slides.html{Slides format} Slides]]
-@endmindmap</foreign>
-    </p>
+    <section>
+      <title>Content-type mappings</title>
+      <p>Map the content-type classifications to the Getty URIs listed below.</p>
+      <table frame="all" rowsep="1" colsep="1" id="table_krf_drf_2vb">
+        <title>Content type Getty URI mapping</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>Content type</entry>
+              <entry>Getty URI</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Audio Works</entry>
+              <entry><xref href="http://vocab.getty.edu/aat/300054562" format="html"
+                  scope="external"/></entry>
+            </row>
+            <row>
+              <entry>Cartographic Works</entry>
+              <entry><xref href="http://vocab.getty.edu/aat/300028052" format="html"
+                  scope="external"/></entry>
+            </row>
+            <row>
+              <entry>Collections</entry>
+              <entry><xref href="http://vocab.getty.edu/aat/300025976" format="html"
+                  scope="external"/></entry>
+            </row>
+            <row>
+              <entry>Datasets</entry>
+              <entry><xref href="http://vocab.getty.edu/aat/300266679" format="html"
+                  scope="external"/></entry>
+            </row>
+            <row>
+              <entry>Moving Images</entry>
+              <entry><xref href="http://vocab.getty.edu/aat/300263857" format="html"
+                  scope="external"/></entry>
+            </row>
+            <row>
+              <entry>Objects</entry>
+              <entry><xref href="http://vocab.getty.edu/aat/300010331" format="html"
+                  scope="external"/></entry>
+            </row>
+            <row>
+              <entry>Scores and Notation</entry>
+              <entry><xref href="http://vocab.getty.edu/aat/300417622" format="html"
+                  scope="external"/></entry>
+            </row>
+            <row>
+              <entry>Software and Electronic Media</entry>
+              <entry><xref href="http://vocab.getty.edu/aat/300028566" format="html"
+                  scope="external"/></entry>
+            </row>
+            <row>
+              <entry>Textual Works</entry>
+              <entry><xref href="http://vocab.getty.edu/aat/300263751" format="html"
+                  scope="external"/></entry>
+            </row>
+            <row>
+              <entry>Visual Works</entry>
+              <entry><xref href="http://vocab.getty.edu/aat/300191086" format="html"
+                  scope="external"/></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p>The content-type classification(s) for each content-level record (for example,
+          <codeph>LinguisticObject</codeph>) should be included as the first object(s) in its
+          <codeph>classified_by</codeph> array.</p>
+      <p>
+        <b>Content-level record (<codeph>LinguisticObject</codeph>):</b>
+        <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux-front-tst.collections.yale.edu/data/text/f237aed2-5c63-4493-b54c-ca209bc0370b",
+  "type": "LinguisticObject",
+  "_label": "麗澤論說集錄 : [十卷]",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300263751",
+      "type": "Type",
+      "_label": "Textual Works",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300230425",
+      "type": "Type",
+      "_label": "Information Artifact"
+    }
+  ]
+}]]></codeblock>       
+        <b>Carrier-level record (<codeph>HumanMadeObject</codeph>):</b>
+        <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux-front-tst.collections.yale.edu/data/object/841ea256-c9c3-4557-8429-f3fa754bdab2",
+  "type": "HumanMadeObject",
+  "_label": "麗澤論說集錄 : [十卷]",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300028051",
+      "type": "Type",
+      "_label": "Books",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Object"
+        }
+      ]
+    }
+  ]
+}]]></codeblock>
+      </p>
+    </section>
+    <section>
+      <title>Supertypes diagram</title>
+      <p>
+        <fig>
+          <title>LUX Supertype Taxonomy</title>
+          <image href="supertypes.svg" scope="external" format="svg">
+            <alt>Mental map illustrating the hierarchical structure of the LUX Supertype Taxonomy.</alt>
+          </image>
+        </fig>
+        <!--
+      <foreign outputclass="embed-plant-uml"><![CDATA[
+@startmindmap
+* LUX  
+** HumanMadeObject 
+*** Objects 
+**** [[globes.md{Globes format} Globes]]
+**** [[kits.md{Kits format} Kits]]
+**** [[models.md{Models format} Models]] 
+**** [[realia.md{Realia format} Realia]] 
+**** [[toysandgames.md{Toys and Games format} Toys and Games]] 
+** LinguisticObject 
+*** Audio Works 
+**** [[music.md{Music format} Music]] 
+**** [[sound.md{Sound format} Sound]] 
+*** Datasets 
+**** [[dataandfiles.md{Data and Files format} Data and Files]] 
+***** [[geospatialdata.md{Geospatial Data format} Geospatial Data]] 
+***** [[imagedata.md{Image Data format} Image Data]] 
+***** [[textualdata.md{Textual Data format} Textual Data]]
+*** Moving Images 
+**** [[motionpictures.md{Motion Pictures format} Motion Pictures]] 
+*** Scores and Notation 
+**** [[notatedmovement.md{Notated Movement format} Notated Movement]]
+**** [[notatedmusic.md{Notated Music format} Notated Music]] 
+*** Software and Electronic Media 
+**** [[softwareapplications.md{Software Applications format} Software Applications]] 
+***** [[databases.md{Databases format} Databases]]
+*** Textual Works 
+**** [[books.md{Books format} Books]] 
+***** [[atlases.md{Atlases format} Atlases]] 
+**** [[broadsides.md{Broadsides format} Broadsides]] 
+**** [[dissertationsandtheses.md{Dissertations and Theses format} Dissertations and Theses]]
+**** [[journalsandperiodicals.md{Journals and Periodicals format} Journals and Periodicals]] 
+***** [[newspapers.md{Newspapers format} Newspapers]] 
+**** [[textualdata.md{Textual Data format} Textual Data]] 
+** Set 
+*** Collections 
+**** [[archivalandmanuscriptmaterials.md{Archival and Manuscript Materials format} Archival and Manuscript Materials]] 
+**** [[kits.md{Kits format} Kits]] 
+** VisualItem 
+*** Cartographic Works 
+**** [[atlases.md{Atlases format} Atlases]] 
+**** [[geospatialdata.md{Geospatial Data format} Geospatial Data]] 
+**** [[globes.md{Globes format} Globes]] 
+**** [[maps.md{Maps format} Maps]] 
+*** Visual Works 
+**** [[collages.md{Collages format} Collages]] 
+**** [[drawings.md{Drawings format} Drawings]] 
+**** [[imagedata.md{Image Data format} Image Data]] 
+**** [[maps.md{Maps format} Maps]] 
+**** [[paintings.md{Paintings format} Paintings]] 
+**** [[photographs.md{Photographs format} Photographs]] 
+**** [[pictures.md{Pictures format} Pictures]] 
+**** [[posters.md{Posters format} Posters]]
+**** [[prints.md{Prints format} Prints]]
+**** [[slides.md{Slides format} Slides]]
+@endmindmap]]></foreign>
+    -->
+      </p>
+      
+    </section>
   </conbody>
+  
 </concept>
