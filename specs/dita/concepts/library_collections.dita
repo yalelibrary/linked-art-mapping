@@ -85,6 +85,11 @@ scriptInclusion: NONE]]></codeblock>
         <cmd>Create a top-level entity for each location and sublocation (a.k.a. <q>collection</q>).</cmd>
       </step>
       <step>
+        <cmd>For MFHD 852b values that <b>start with</b>
+          <codeph>yulint</codeph>, create a top-level collection entity for <codeph>Yale Library Internet
+            Resource</codeph>.</cmd>
+      </step>
+      <step>
         <cmd>Use the following table to match MFHD location codes against collection entities.</cmd>
         <info>
           <table conkeyref="specs/table_collections_mapping">
@@ -156,13 +161,67 @@ scriptInclusion: NONE]]></codeblock>
             </stepresult>
           </substep>
           <substep>
+            <cmd>For electronic resources (where the value of <codeph>852b</codeph>
+              <b>starts with</b>
+              <codeph>yulint</codeph>), include a reference to Yale University Library, as
+              above.</cmd>
+            <stepresult>
+              <codeblock id="codeblock_rt4_cyc_psb-yulint"><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://lux.collections.yale.edu/data/set/collection-yulint",
+  "type": "Set",
+  "_label": "Yale University Library",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300025976",
+      "type": "Type",
+      "_label": "Collection"
+    }
+  ],
+  "used_for": [
+    {
+      "type": "Activity",
+      "_label": "Curation",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300054277",
+          "type": "Type",
+          "_label": "Curating"
+        }
+      ],
+      "carried_out_by": [
+        {
+          "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+          "type": "Group",
+          "_label": "Yale University Library"
+        }
+      ]
+    }
+  ],  
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "Yale Library Internet Resource",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ]
+    }                
+  ]
+}]]></codeblock>
+            </stepresult>
+          </substep>
+          <substep>
             <cmd>For collections that correspond to <q>locations</q>, include a <codeph>member_of</codeph> relationship to the campus division collection.</cmd>
             <stepresult>
               <codeblock><![CDATA[{
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "https://lux.collections.yale.edu/data/set/collection1a",
   "type": "Set",
-  "_label": "Bass Library",
+  "_label": "Bass Library",  
   "classified_as": [
     {
       "id": "http://vocab.getty.edu/aat/300025976",
@@ -212,7 +271,7 @@ scriptInclusion: NONE]]></codeblock>
   ]
 }]]></codeblock>
             </stepresult>
-          </substep>
+          </substep>          
         </substeps>
       </step>
       <step>
