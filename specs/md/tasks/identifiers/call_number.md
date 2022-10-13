@@ -5,7 +5,7 @@ category: Descriptive content
 keyword: [Assigned, Completed, ]
 ---
 
-# Call numbers
+# Locations and call numbers
 
 Locations and call numbers are derived from MARC holdings records \(MFHDs\).
 
@@ -18,7 +18,7 @@ Locations and call numbers are derived from MARC holdings records \(MFHDs\).
 
 ```
 ---
-name: CallNumbers
+name: LocationsAndCallNumbers
 sampleMfhds:
   - 
 fieldSpec:
@@ -39,11 +39,11 @@ scriptInclusion: NONE
 
 5.  If the value of subfield `b` is equal to either `withdrawn` or `suppressed`, skip the `852` field.
 
-6.  If the value of subfield `b` is equal to `yulint` or `yulintx`, generate a `DigitalObject` carrier resource.
+6.  If the value of subfield `b` **starts with** `yulint`, generate a `DigitalObject` carrier resource.
 
     See [Content and carriers](../content_and_carriers.md) for more information.
 
-    MFHDs with a subfield `b` value of `yulint` or `yulintx` will not have an associated item record.
+    MFHDs with a subfield `b` value of that **starts with** `yulint` will not have an associated item record.
 
     Subfield `b` with a value of `yulint` should not have a call number \(i.e., a value of `None` in subfield `h`\).
 
