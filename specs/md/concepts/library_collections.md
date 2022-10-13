@@ -27,7 +27,9 @@ scriptInclusion: NONE
 
 1.  Create a top-level entity for each location and sublocation \(a.k.a. “collection”\).
 
-2.  Use the following table to match MFHD location codes against collection entities.
+2.  For MFHD 852b values that **start with** `yulint`, create a top-level collection entity for `Yale Library Internet Resource`.
+
+3.  Use the following table to match MFHD location codes against collection entities.
 
     |Campus division|Location|Location code|
     |---------------|--------|-------------|
@@ -586,14 +588,65 @@ scriptInclusion: NONE
         }
         ```
 
-    2.  For collections that correspond to “locations”, include a `member_of` relationship to the campus division collection.
+    2.  For electronic resources \(where the value of `852b` **starts with** `yulint`\), include a reference to Yale University Library, as above.
+
+        ```
+        {
+          "@context": "https://linked.art/ns/v1/linked-art.json",
+          "id": "https://lux.collections.yale.edu/data/set/collection-yulint",
+          "type": "Set",
+          "_label": "Yale University Library",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300025976",
+              "type": "Type",
+              "_label": "Collection"
+            }
+          ],
+          "used_for": [
+            {
+              "type": "Activity",
+              "_label": "Curation",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300054277",
+                  "type": "Type",
+                  "_label": "Curating"
+                }
+              ],
+              "carried_out_by": [
+                {
+                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+                  "type": "Group",
+                  "_label": "Yale University Library"
+                }
+              ]
+            }
+          ],  
+          "identified_by": [
+            {
+              "type": "Name",
+              "content": "Yale Library Internet Resource",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404670",
+                  "type": "Type",
+                  "_label": "Primary Name"
+                }
+              ]
+            }                
+          ]
+        }
+        ```
+
+    3.  For collections that correspond to “locations”, include a `member_of` relationship to the campus division collection.
 
         ```
         {
           "@context": "https://linked.art/ns/v1/linked-art.json",
           "id": "https://lux.collections.yale.edu/data/set/collection1a",
           "type": "Set",
-          "_label": "Bass Library",
+          "_label": "Bass Library",  
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300025976",
@@ -644,7 +697,7 @@ scriptInclusion: NONE
         }
         ```
 
-3.  Add an embedded reference to the `Set` within the corresponding `HumanMadeObject` resource.
+4.  Add an embedded reference to the `Set` within the corresponding `HumanMadeObject` resource.
 
     ```
     {
