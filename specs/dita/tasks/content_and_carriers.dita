@@ -75,7 +75,15 @@
         <note rev="2.0">Previously, supertypes under the <codeph>Datasets</codeph> and <codeph>Software and Electronic Media</codeph> content types were mapped to a single <codeph>DigitalObject</codeph> resource. This mapping has been changed in <codeph>v2.0</codeph>. Now, these content types should be assigned a base class of <codeph>LinguisticObject</codeph>, with the same content/carrier split as all other resources.</note>
       </p>
       <p>In MARC-based systems, this content/carrier model corresponds roughly to the distinction between bibliographic records and holdings plus item records.</p>
-      <p>For each record-level resource with a base class of <codeph>LinguisticObject</codeph> or <codeph>VisualItem</codeph> (the <i>content</i> level), one or more resources with a base class of <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph> (the <i>carrier</i> level) must be generated. For each record-level resource with a base class of <codeph>Set</codeph> (the <i>content</i> level), a nested <codeph>members_exemplified_by → HumanMadeObject</codeph> resource must be generated.<note id="note_zyb_zjf_xrb"><codeph>DigitalObject</codeph> carriers should be generated when the MFHD <codeph>852b</codeph> has a value of <codeph>yulint</codeph> or <codeph>yulintx</codeph>.</note></p>
+      <p>For each record-level resource with a base class of <codeph>LinguisticObject</codeph> or
+          <codeph>VisualItem</codeph> (the <i>content</i> level), one or more resources with a base
+        class of <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph> (the
+          <i>carrier</i> level) must be generated. For each record-level resource with a base class
+        of <codeph>Set</codeph> (the <i>content</i> level), a nested <codeph>members_exemplified_by
+          → HumanMadeObject</codeph> resource must be generated.<note id="note_zyb_zjf_xrb"
+            ><codeph>DigitalObject</codeph> carriers should be generated when the MFHD
+            <codeph>852b</codeph> has a value that <b>starts with</b>
+          <codeph>yulint</codeph>.</note></p>
       <p>These <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph> resources must be related to the <codeph>Set</codeph>, <codeph>LinguisticObject</codeph>, or <codeph>VisualItem</codeph> resource that they exemplify or instantiate and where any subjects, etc., are assigned.</p>
       <p>The following diagram provides a high-level overview of the Linked Art model.</p>
       <image href="../resources/img/base-model-classes.png" id="image_ag3_d4d_2rb">
@@ -208,7 +216,9 @@
         <cmd>For each holdings (carrier-level) record attached to a bibliographic record:</cmd>
         <choices>
           <choice>If the base class derived from the supertype is <codeph>LinguisticObject</codeph> or <codeph>VisualItem</codeph>: <ul>
-              <li>If the MFHD <codeph>852b</codeph> is <codeph>yulint</codeph> or <codeph>yulintx</codeph>, generate a JSON-LD document with a base class of <codeph>DigitalObject</codeph>.</li>
+              <li>If the MFHD <codeph>852b</codeph> has a value that <b>starts with</b>
+                <codeph>yulint</codeph>, generate a JSON-LD document with a base class of
+                  <codeph>DigitalObject</codeph>.</li>
               <li>Else, generate a JSON-LD document with a base class of <codeph>HumanMadeObject</codeph>.</li>
             </ul></choice>
           <choice>If the base class derived from the supertype is <codeph>Set</codeph>, generate an embedded <codeph>Set → members_exemplified_by → HumanMadeObject</codeph> resource to record carrier-level information.</choice>
