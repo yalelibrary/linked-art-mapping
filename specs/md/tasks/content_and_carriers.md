@@ -29,7 +29,7 @@ In MARC-based systems, this content/carrier model corresponds roughly to the dis
 
 For each record-level resource with a base class of `LinguisticObject` or `VisualItem` \(the *content* level\), one or more resources with a base class of `HumanMadeObject` or `DigitalObject` \(the *carrier* level\) must be generated. For each record-level resource with a base class of `Set` \(the *content* level\), a nested `members_exemplified_by → HumanMadeObject` resource must be generated.
 
-**Note:** `DigitalObject` carriers should be generated when the MFHD `852b` has a value of `yulint` or `yulintx`.
+**Note:** `DigitalObject` carriers should be generated when the MFHD `852b` has a value that **starts with** `yulint`.
 
 These `HumanMadeObject` or `DigitalObject` resources must be related to the `Set`, `LinguisticObject`, or `VisualItem` resource that they exemplify or instantiate and where any subjects, etc., are assigned.
 
@@ -157,7 +157,7 @@ The following diagram provides a high-level overview of the Linked Art model.
 5.  For each holdings \(carrier-level\) record attached to a bibliographic record:
 
     -   If the base class derived from the supertype is `LinguisticObject` or `VisualItem`:
-        -   If the MFHD `852b` is `yulint` or `yulintx`, generate a JSON-LD document with a base class of `DigitalObject`.
+        -   If the MFHD `852b` has a value that **starts with** `yulint`, generate a JSON-LD document with a base class of `DigitalObject`.
         -   Else, generate a JSON-LD document with a base class of `HumanMadeObject`.
     -   If the base class derived from the supertype is `Set`, generate an embedded `Set → members_exemplified_by → HumanMadeObject` resource to record carrier-level information.
 6.  If the supertype of the resource corresponding to the bibliographic record has a base class of `LinguisticObject` or `VisualItem`, then `HumanMadeObject` carriers must point to the content-level resource using the `carries` property for `LinguisticObject` resources or the `shows` property for `VisualItem` resources. For `DigitalObject` carriers, the corresponding properties are `digitally_carries` and `digitally_shows`.
