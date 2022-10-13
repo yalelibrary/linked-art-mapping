@@ -50,9 +50,9 @@ The supertype of a resource is used to determine its base class or document type
 |VisualItem|Visual Works|[Prints](prints.md)| |
 |VisualItem|Visual Works|[Slides](slides.md)| |
 
-## Content-type mapping
+## Content-type mappings
 
-Map the content type classifications to the Getty URIs listed below.
+Map the content-type classifications to the Getty URIs listed below.
 
 |Content type|Getty URI|
 |------------|---------|
