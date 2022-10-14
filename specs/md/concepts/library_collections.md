@@ -595,7 +595,7 @@ scriptInclusion: NONE
           "@context": "https://linked.art/ns/v1/linked-art.json",
           "id": "https://lux.collections.yale.edu/data/set/collection-yulint",
           "type": "Set",
-          "_label": "Yale University Library",
+          "_label": "Yale Library Internet Resource",
           "classified_as": [
             {
               "id": "http://vocab.getty.edu/aat/300025976",
