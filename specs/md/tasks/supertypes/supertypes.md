@@ -6,7 +6,7 @@ author: timothy.thompson@yale.edu
 
 Taxonomy of content types and related formats for classifying record-level resources in LUX.
 
-Format mappings \(level one and level two\) are applied to carrier-level records \(`HumanMadeObject` or `DigitalObject`\). Content type mappings are inferred from format mappings and are applied to content-level records \(`LinguisticObject`, `VisualItem`, or `Set`\).
+Format mappings \(level one and level two\) are applied to carrier-level records \(`HumanMadeObject` or `DigitalObject`\). Content-type mappings are inferred from format mappings and are applied to content-level records \(`LinguisticObject`, `VisualItem`, or `Set`\).
 
 The supertype of a resource is used to determine its base class or document type in the Linked Art model.
 
@@ -67,7 +67,7 @@ Map the content-type classifications to the Getty URIs listed below.
 |Textual Works|[http://vocab.getty.edu/aat/300263751](http://vocab.getty.edu/aat/300263751)|
 |Visual Works|[http://vocab.getty.edu/aat/300191086](http://vocab.getty.edu/aat/300191086)|
 
-The content-type classification\(s\) for each content-level record \(for example, `LinguisticObject`\) should be included as the first object\(s\) in its `classified_by` array.
+The content-type classification\(s\) for each content-level record \(for example, `LinguisticObject`\) should be included as the first object\(s\) in its `classified_as` array.
 
 **Content-level record \(`LinguisticObject`\):**
 
