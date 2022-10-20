@@ -91,6 +91,7 @@ scriptInclusion: BOTH
         |Linked Art class|MARC tag|Subfields|
         |----------------|--------|---------|
         |Person|X00|abcdgjqu|
+        |Group|X00\|3\*\||abcdgjqu|
         |Group|X10|abcdg|
         |Group|X11|acdegnqu|
         |LinguisticObject|X30|adfhklmnoprst|
@@ -261,7 +262,42 @@ scriptInclusion: BOTH
         }
         ```
 
-    9.  Process top-level person resources.
+    9.  Process top-level group \(`Family`\) resources.
+
+        **Note:** Top-level resources representing group entities derived from `X00|3*|` fields should include an additional `classified_as` for `Family` to distinguish them from organization or meeting entities.
+
+        `615723`
+
+        ```
+        {
+          "@context": "https://linked.art/ns/v1/linked-art.json",
+          "id": "https://linked-art.library.yale.edu/node/69a28455-ad2f-49be-ac33-dc5b047f5dfd",
+          "type": "Group",
+          "_label": "Trumbull family",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300025948",
+              "type": "Type",
+              "_label": "Family"
+            }
+          ],
+          "identified_by": [
+            {
+              "type": "Name",
+              "content": "Trumbull family",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404670",
+                  "type": "Type",
+                  "_label": "Primary Name"
+                }
+              ]
+            }
+          ]
+        }
+        ```
+
+    10. Process top-level person resources.
 
         `907221`
 
@@ -294,7 +330,7 @@ scriptInclusion: BOTH
         
         ```
 
-    10. Process top-level place resources.
+    11. Process top-level place resources.
 
         `6017172`
 
@@ -326,7 +362,7 @@ scriptInclusion: BOTH
         }
         ```
 
-    11. Process top-level standalone work resources.
+    12. Process top-level standalone work resources.
 
         `227`
 
@@ -374,4 +410,3 @@ scriptInclusion: BOTH
 
 
 **Parent topic:**[Related entities](../../tasks/related_entities.md)
-
