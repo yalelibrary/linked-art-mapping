@@ -60,6 +60,7 @@ scriptInclusion: BOTH
         |Linked Art class|MARC tag|Subfields|
         |----------------|--------|---------|
         |Person|600|abcdgjqvxyz|
+        |Group|600\|3\*\||abcdgjqvxyz|
         |Group|610|abcdgvxyz|
         |Group|611|acdegnquvxyz|
         |LinguisticObject|630|adfhklmnoprst|
@@ -117,8 +118,9 @@ scriptInclusion: BOTH
         |6XXy|Period|
         |6XXz|Place|
         |600abcdgjq|Person|
-        |610abcdg|Group|
-        |611acdegnqu|Group|
+        |600\|3\*\|abcdgjq|Group \[Family\]|
+        |610abcdg|Group \[Organization\]|
+        |611acdegnqu|Group \[Meeting\]|
         |630adfhklmnoprst|LinguisticObject|
         |650abcdg|Type|
         |651\| 0\|ag|Place|
