@@ -10,7 +10,7 @@ Format mappings \(level one and level two\) are applied to carrier-level records
 
 The supertype of a resource is used to determine its base class or document type in the Linked Art model.
 
-**Note:** For supertypes that map to more than one base class, the primary class is indicated as **primary** in the base class column. Content types should be assigned to base-class documents using the [mapping that has been specified for content types](https://git.yale.edu/Library-IT/linked-art-transform/blob/AddContentTypeMap/src/main/resources/maps/supertype-contenttype-map.json).
+**Note:** For supertypes that map to more than one base class, the primary class is indicated as **primary** in the base class column. Content types should be assigned to base-class documents using the [mapping that has been specified for content types](https://git.yale.edu/Library-IT/linked-art-transform/blob/cea5233d2a6699ce16b9645853bdf87ed07470ab/src/main/resources/maps/supertype-contenttype-map.json).
 
 |Base class|Content type|Format level one|Format level two|
 |----------|------------|----------------|----------------|
