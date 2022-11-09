@@ -178,7 +178,7 @@ scriptInclusion: BOTH
     }
     ```
 
-6.  In each referring record-level resource \(`LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the most specific `752` entity.
+6.  In each referring record-level resource, add an embedded reference to the most specific `752` entity.
 
     1.  See [Associated places](../../concepts/associated_places.md) for instructions related to `752`.
 
