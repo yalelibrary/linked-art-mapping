@@ -178,7 +178,7 @@ scriptInclusion: BOTH
     }
     ```
 
-6.  In each referring record-level resource, add an embedded reference to the most specific `752` entity.
+6.  In each referring record-level resource \(`LinguisticObject`, `Set`, `VisualItem`\), add an embedded reference to the most specific `752` entity.
 
     1.  See [Associated places](../../concepts/associated_places.md) for instructions related to `752`.
 
@@ -282,6 +282,58 @@ scriptInclusion: BOTH
           ]
         }
       ]
+    }
+    ```
+
+8.  Apply the same pattern to construct the chain of place entities for `651a` followed by subfield `z`.
+
+    `6795783`
+
+    ```
+    651 0 $a Germany $z Leipzig $x Foreign economic relations $z Europe, Eastern.
+    ```
+
+    `6795783`
+
+    ```
+    {
+      "@context": "https://linked.art/ns/v1/linked-art.json",
+      "id": "https://linked-art.library.yale.edu/node/1f64e532-4bd9-46f6-a3d4-4d3916539812",
+      "type": "Type",
+      "_label": "Germany -- Leipzig -- Foreign economic relations -- Europe, Eastern",
+      "identified_by": [
+        {
+          "type": "Name",
+          "content": "Germany -- Leipzig -- Foreign economic relations -- Europe, Eastern",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            }
+          ]
+        }
+      ],
+      "created_by": {
+        "type": "Creation",
+        "influenced_by": [
+          {
+            "id": "https://linked-art.library.yale.edu/node/09cdc7f2-f5ae-474f-b737-7361efbd4d15",
+            "type": "Place",
+            "_label": "Leipzig"
+          },
+          {
+            "id": "https://linked-art.library.yale.edu/node/582240f6-eda4-4905-acdf-da3aa3043f3a",
+            "type": "Type",
+            "_label": "Foreign economic relations"
+          },
+          {
+            "id": "https://linked-art.library.yale.edu/node/e9774358-5302-4fe4-9a34-470b4aea7452",
+            "type": "Place",
+            "_label": "Europe, Eastern"
+          }
+        ]
+      }
     }
     ```
 
