@@ -45,10 +45,7 @@ conditions:
       - NOT:
         # Updating looseleaf
         - - 008[21]
-          - l
-        # Monographic series
-        - - 008[21]
-          - m
+          - l        
         # Newspaper
         - - 008[21]
           - n
