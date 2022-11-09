@@ -96,7 +96,7 @@ scriptInclusion: BOTH
         |Group|X11|acdegnqu|
         |LinguisticObject|X30|adfhklmnoprst|
         |Concept|650\|\*0\||abcdg|
-        |Place|651\|\*0\||a|
+        |Place|651\|\*0\||az|
         |Type|655|a|
         |Concept|690|abcdg|
         |Place|691|a|
