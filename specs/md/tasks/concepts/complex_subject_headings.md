@@ -65,7 +65,8 @@ scriptInclusion: BOTH
         |Group|611|acdegnquvxyz|
         |LinguisticObject|630|adfhklmnoprst|
         |Concept|650|abcdgvxyz|
-        |Place|651\| 0\||agvxyz|
+        |Place|651\| 0\||avxyz|
+        |Place|651\| 0\||g|
         |Type|655|avxyz|
         |Concept|690|abcdgvxyz|
         |Place|691|agvxyz|
