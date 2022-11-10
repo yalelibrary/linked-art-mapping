@@ -123,10 +123,12 @@ scriptInclusion: BOTH
         |611acdegnqu|Group \[Meeting\]|
         |630adfhklmnoprst|LinguisticObject|
         |650abcdg|Type|
-        |651\| 0\|ag|Place|
+        |651\| 0\|a|Place|
+        |651\| 0\|g|Place|
         |655a|Type|
         |690abcdg|Type|
         |691ag|Place|
+        |691g|Place|
         |692abcdgjq|Person|
         |693abcdg|Group|
         |694acdegnqu|Group|
