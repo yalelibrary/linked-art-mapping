@@ -127,7 +127,7 @@ scriptInclusion: BOTH
         |651\| 0\|g|Place|
         |655a|Type|
         |690abcdg|Type|
-        |691ag|Place|
+        |691a|Place|
         |691g|Place|
         |692abcdgjq|Person|
         |693abcdg|Group|
