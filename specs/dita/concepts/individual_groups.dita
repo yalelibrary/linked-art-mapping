@@ -8,6 +8,8 @@
       <created date="2022-02-03"/>
       <!--timothy.thompson@yale.edu-->
       <revised modified="2022-02-15"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-23"/>
     </critdates>
     <metadata>
       <keywords>
@@ -177,7 +179,7 @@
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "https://lux.collections.yale.edu/data/group/ycba-reference-library",
   "type": "Group",
-  "_label": "Reference Library",
+  "_label": "Yale Center for British Art Reference Library",
   "classified_as": [
     {
       "id": "Department",
@@ -194,7 +196,7 @@
   "identified_by": [
     {
       "type": "Name",
-      "content": "Reference Library",
+      "content": "Yale Center for British Art Reference Library",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",
@@ -260,7 +262,7 @@
   "@context": "https://linked.art/ns/v1/linked-art.json",
   "id": "https://lux.collections.yale.edu/data/group/yuag-numismatics",
   "type": "Group",
-  "_label": "Numismatics (YUAG)",
+  "_label": "Yale University Art Gallery Numismatics",
   "classified_as": [
     {
       "id": "Department",
@@ -277,7 +279,7 @@
   "identified_by": [
     {
       "type": "Name",
-      "content": "Numismatics (YUAG)",
+      "content": "Yale University Art Gallery Numismatics",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",

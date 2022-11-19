@@ -31,17 +31,16 @@
   </prolog>
   <conbody>
     <p>Format mappings (level one and level two) are applied to carrier-level records
-        (<codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph>). Content type mappings
+        (<codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph>). Content-type mappings
       are inferred from format mappings and are applied to content-level records
         (<codeph>LinguisticObject</codeph>, <codeph>VisualItem</codeph>, or <codeph>Set</codeph>). </p>
     <p>The supertype of a resource is used to determine its base class or document type in the
       Linked Art model. </p>
     <note>For supertypes that map to more than one base class, the primary class is indicated as
-        <b>primary</b> in the base class column. However, a single base class document may have more
-      than one content type assigned. For example, a <codeph>LinguisticObject</codeph> that is
-      carried by a <codeph>HumanMadeObject</codeph> classified as <codeph>Maps</codeph> would be
-      classified as both <codeph>Cartographic Works</codeph> and <codeph>Visual
-      Works</codeph>.</note>
+        <b>primary</b> in the base class column. Content types should be assigned to base-class
+      documents using the <xref format="html" scope="external"
+        href="https://git.yale.edu/Library-IT/linked-art-transform/blob/cea5233d2a6699ce16b9645853bdf87ed07470ab/src/main/resources/maps/supertype-contenttype-map.json"
+        >mapping that has been specified for content types</xref>.</note>
     <table id="table_wmw_tjc_5rb">
       <title>Linked Art base class to supertype mapping</title>
       <tgroup cols="4">
@@ -342,7 +341,7 @@
       </table>
       <p>The content-type classification(s) for each content-level record (for example,
           <codeph>LinguisticObject</codeph>) should be included as the first object(s) in its
-          <codeph>classified_by</codeph> array.</p>
+          <codeph>classified_as</codeph> array.</p>
       <p>
         <b>Content-level record (<codeph>LinguisticObject</codeph>):</b>
         <codeblock><![CDATA[{
@@ -369,7 +368,7 @@
       "_label": "Information Artifact"
     }
   ]
-}]]></codeblock>       
+}]]></codeblock>
         <b>Carrier-level record (<codeph>HumanMadeObject</codeph>):</b>
         <codeblock><![CDATA[{
   "@context": "https://linked.art/ns/v1/linked-art.json",
@@ -399,7 +398,8 @@
         <fig>
           <title>LUX Supertype Taxonomy</title>
           <image href="supertypes.svg" scope="external" format="svg">
-            <alt>Mental map illustrating the hierarchical structure of the LUX Supertype Taxonomy.</alt>
+            <alt>Mental map illustrating the hierarchical structure of the LUX Supertype
+              Taxonomy.</alt>
           </image>
         </fig>
         <!--
@@ -462,8 +462,7 @@
 @endmindmap]]></foreign>
     -->
       </p>
-      
     </section>
   </conbody>
-  
+
 </concept>

@@ -167,6 +167,11 @@ scriptInclusion: BOTH</codeblock>
                     </row>
                     <row>
                       <entry>Group</entry>
+                      <entry>X00|3*|</entry>
+                      <entry>abcdgjqu</entry>
+                    </row>
+                    <row>
+                      <entry>Group</entry>
                       <entry>X10</entry>
                       <entry>abcdg</entry>
                     </row>
@@ -381,6 +386,41 @@ scriptInclusion: BOTH</codeblock>
     {
       "type": "Name",
       "content": "Congreso de Cúcuta (1821)",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        }
+      ]
+    }
+  ]
+}]]></codeblock>
+            </stepresult>
+          </substep>
+          <substep>
+            <cmd>Process top-level group (<codeph>Family</codeph>) resources.</cmd>
+            <info>
+              <note>Top-level resources representing group entities derived from <codeph>X00|3*|</codeph> fields should include an additional <codeph>classified_as</codeph> for <codeph>Family</codeph> to distinguish them from organization or meeting entities.</note>
+            </info>
+            <stepresult>
+              <yulbibid>615723</yulbibid>
+              <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked-art.library.yale.edu/node/69a28455-ad2f-49be-ac33-dc5b047f5dfd",
+  "type": "Group",
+  "_label": "Trumbull family",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300025948",
+      "type": "Type",
+      "_label": "Family"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "Trumbull family",
       "classified_as": [
         {
           "id": "http://vocab.getty.edu/aat/300404670",

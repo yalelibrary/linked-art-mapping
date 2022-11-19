@@ -37,7 +37,13 @@
                 <codeph>LinguisticObject</codeph>
               </entry>
               <entry>Do not repeat on related <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph>.</entry>
-            </row>          
+            </row>
+            <row>
+              <entry>
+                <codeph>VisualItem</codeph>
+              </entry>
+              <entry>Include language information on related <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph>.</entry>
+            </row>
             <row>
               <entry>
                 <codeph>members_exemplified_by → HumanMadeObject</codeph>
@@ -65,13 +71,13 @@ scriptInclusion: NONE</codeblock>
     <steps id="steps_rzf_r13_krb">
       <step>
         <cmd>Process the language statement values (MARC <codeph>546ab</codeph>).</cmd>
-      </step>
-      <step>
-        <cmd>For top-level resources with a base class of <codeph>LinguisticObject</codeph>:</cmd>
         <choices id="choices_szf_r13_krb">
           <choice>If both subfields (<codeph>546ab</codeph>) are present, join them with a whitespace character.</choice>
           <choice>Else, output the string value of <codeph>546a</codeph>.</choice>
         </choices>
+      </step>
+      <step>
+        <cmd>For top-level resources with a base class of <codeph>LinguisticObject</codeph>:</cmd>        
         <stepresult>
           <note id="note_tzf_r13_krb">This example is meant to illustrate a language statement and does not represent a complete JSON-LD document.</note>
           <yulbibid>1001852</yulbibid>
@@ -113,11 +119,70 @@ scriptInclusion: NONE</codeblock>
         </stepresult>
       </step>
       <step>
-        <cmd>For top-level resources with a base class of <codeph>Set</codeph> (archival records or kits), language information should be attached to the embedded <codeph>HumanMadeObject</codeph> resource using the <codeph>carries</codeph> property.</cmd>
-        <choices id="choices_szf_r13_krb2">
-          <choice>If both subfields (<codeph>546ab</codeph>) are present, join them with a whitespace character.</choice>
-          <choice>Else, output the string value of <codeph>546a</codeph>.</choice>
-        </choices>          
+        <cmd>For record-level resources with a base class of <codeph>VisualItem</codeph> (e.g., <xref href="../../tasks/supertypes/posters.dita"/> or <xref href="../../tasks/supertypes/prints.dita"/>) that have associated language information, that information should be attached to the related <codeph>HumanMadeObject</codeph> or <codeph>DigitalObject</codeph> using the <codeph>carries</codeph> (<codeph>HumanMadeObject</codeph>) or <codeph>digitally_carries</codeph> (<codeph>DigitalObject</codeph>) property.</cmd>
+        <stepresult>
+          <codeblock><![CDATA[{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked-art.library.yale.edu/node/abc123",
+  "type": "HumanMadeObject",
+  "_label": "[Example]",
+  "member_of": [
+    {
+      "id": "https://linked-art.library.yale.edu/node/9d83b3ef-e184-4a46-a2b3-db895d9948bc",
+      "type": "Set",
+      "_label": "Yale University Library"
+    }
+  ],
+  "shows": [
+    {
+      "id": "https://linked-art.library.yale.edu/node/xyz456",
+      "type": "VisualItem",
+      "_label": "[Example]"
+    }
+  ],
+  "carries": [
+    {
+      "type": "LinguisticObject",
+      "referred_to_by": [
+        {
+          "type": "LinguisticObject",
+          "content": "In English and Portuguese",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435433",
+              "type": "Type",
+              "_label": "Language Statement",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300418049",
+                  "type": "Type",
+                  "_label": "Brief Text"
+                }
+              ]
+            }
+          ],
+          "identified_by": [
+            {
+              "type": "Name",
+              "content": "Language Note",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300404669",
+                  "type": "Type",
+                  "_label": "Display Title"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}]]></codeblock>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>For top-level resources with a base class of <codeph>Set</codeph> (archival records or kits), language information should be attached to the embedded <codeph>HumanMadeObject</codeph> resource using the <codeph>carries</codeph> property.</cmd>     
         <stepresult>
           <yulbibid>11167038</yulbibid>
           <codeblock><![CDATA[{

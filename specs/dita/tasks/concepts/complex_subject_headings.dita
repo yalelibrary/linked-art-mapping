@@ -63,6 +63,7 @@ sampleBibs:
   - 9564880
   - 3145537 # 630
   - 13146411
+  - 15552027 # 651ag
 # Source data fields
 fieldSpec:
   - 60004abcdegjquvxyz
@@ -136,6 +137,11 @@ scriptInclusion: BOTH</codeblock>
                     <row>
                       <entry>Person</entry>
                       <entry>600</entry>
+                      <entry>abcdgjqvxyz</entry>
+                    </row>
+                    <row>
+                      <entry>Group</entry>
+                      <entry>600|3*|</entry>
                       <entry>abcdgjqvxyz</entry>
                     </row>
                     <row>
@@ -273,11 +279,11 @@ scriptInclusion: BOTH</codeblock>
                       <entry>abcdg</entry>
                     </row>
                     <row>
-                      <entry>651| 0|</entry>
+                      <entry>651|*0|</entry>
                       <entry>a</entry>
                     </row>
                     <row>
-                      <entry>651| 0|</entry>
+                      <entry>651|*0|</entry>
                       <entry>g</entry>
                     </row>
                     <row>
@@ -347,12 +353,16 @@ scriptInclusion: BOTH</codeblock>
                       <entry>Person</entry>
                     </row>
                     <row>
+                      <entry>600|3*|abcdgjq</entry>
+                      <entry>Group [Family]</entry>
+                    </row>
+                    <row>
                       <entry>610abcdg</entry>
-                      <entry>Group</entry>
+                      <entry>Group [Organization]</entry>
                     </row>
                     <row>
                       <entry>611acdegnqu</entry>
-                      <entry>Group</entry>
+                      <entry>Group [Meeting]</entry>
                     </row>
                     <row>
                       <entry>630adfhklmnoprst</entry>
@@ -363,7 +373,11 @@ scriptInclusion: BOTH</codeblock>
                       <entry>Type</entry>
                     </row>
                     <row>
-                      <entry>651| 0|ag</entry>
+                      <entry>651|*0|a</entry>
+                      <entry>Place</entry>
+                    </row>
+                    <row>
+                      <entry>651|*0|g</entry>
                       <entry>Place</entry>
                     </row>
                     <row>
@@ -375,7 +389,11 @@ scriptInclusion: BOTH</codeblock>
                       <entry>Type</entry>
                     </row>
                     <row>
-                      <entry>691ag</entry>
+                      <entry>691a</entry>
+                      <entry>Place</entry>
+                    </row>
+                    <row>
+                      <entry>691g</entry>
                       <entry>Place</entry>
                     </row>
                     <row>

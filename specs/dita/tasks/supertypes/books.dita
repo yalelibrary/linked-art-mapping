@@ -95,7 +95,7 @@ conditions:
     - 035a contains 'yuldbase'</codeblock>
     </section>
     <result>
-      <codeblock>{
+      <codeblock><![CDATA[{
   "classified_as": [
     {
       "id": "http://vocab.getty.edu/aat/300028051",
@@ -110,7 +110,7 @@ conditions:
       ]
     }
   ]    		
-}</codeblock>
+}]]></codeblock>
     </result>
   </taskbody>
 </task>

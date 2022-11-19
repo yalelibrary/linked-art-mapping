@@ -1,5 +1,5 @@
 <task xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="copy_and_version_note" xsi:noNamespaceSchemaLocation="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd">
-  <title>Copy and version identification note</title>
+  <title>Copy and version identification note [draft: steps copied from Acquisition statement spec.]</title>
   <shortdesc/>
   <prolog>
     <author type="creator">timothy.thompson@yale.edu</author>
@@ -59,13 +59,11 @@
     <section>
       <title>Source data</title>
       <codeblock>---
-name: AcquisitionStatement
+name: 
 sampleBibs:
-  - 431
-  - 58130
+  - 
 fieldSpec:
-  - 541|1 |3abcdefn
-  - 541|  |3abcdefn
+  - 
 trimPunctuation: false
 scriptInclusion: NONE</codeblock>
     </section>
