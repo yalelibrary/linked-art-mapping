@@ -1,5 +1,6 @@
 ---
 author: timothy.thompson@yale.edu
+keyword: [Assigned, Completed]
 ---
 
 # Medium of performance
@@ -8,9 +9,8 @@ Corresponds to the `382` field in MARC.
 
 |Domains|Usage|
 |-------|-----|
-|`LinguisticObject`|Do not repeat on related `HumanMadeObject`.|
-|`VisualItem`|Do not repeat on related `HumanMadeObject`.|
-|`DigitalObject`| |
+|`LinguisticObject`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
+|`VisualItem`|Do not repeat on related `HumanMadeObject` or `DigitalObject`.|
 
 ## Source data
 
@@ -32,8 +32,18 @@ scriptInclusion: NONE
     |Subfields|Instructions|
     |---------|------------|
     |**382a**|Output the string value.|
-    |**382an**|For each `382an` pair, join the following values with a whitespace character: <br/> 1.  “Number of” <br/> 2.  `382a` <br/> 3.  “performers:” <br/> 4.  `382n` + “.”|
-    |**382ans**|For `382s` following one or more `382an` pairs, join the following values to the `382an` value(s) with a whitespace character: <br/> 1.  “Total number of performers:” <br/> 2.  `382s` + “.”|
+    |**382an**|For each `382an` pair, join the following values with a whitespace character:
+
+    1.  “Number of”
+    2.  `382a`
+    3.  “performers:”
+    4.  `382n` + “.”
+|
+    |**382ans**|For `382s` following one or more `382an` pairs, join the following values to the 382an value\(s\) with a whitespace character:
+
+    1.  “Total number of performers:”
+    2.  `382s` + “.”
+|
 
     **Note:** This example is meant to illustrate a medium of performance statement and does not represent a complete JSON-LD document.
 

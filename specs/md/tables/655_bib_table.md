@@ -30,6 +30,10 @@ Terms indicating the genre, form, and/or physical characteristics of the materia
 **Related information**  
 
 
+[LUX top-level entities](../concepts/lux_top-level_entities.md)
+
+[Descriptive content](../concepts/descriptive_content.md)
+
 [MARC to Linked Art glossary](../glossary/marc_to_linked_art_glossary.md)
 
 [001 \(Control Number\)](../tables/001_bib_table.md)

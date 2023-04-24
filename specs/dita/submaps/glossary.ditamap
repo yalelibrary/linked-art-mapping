@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:map.xsd">
+	<title>Glossary</title>
+  <topicmeta>
+    <critdates>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2021-11-23"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-03"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-04"/>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-13"/>
+    </critdates>
+  </topicmeta>
+	<topicref collection-type="sequence" href="../glossary/marc_to_linked_art_glossary.dita">
+		<topicref href="../glossary/entification.dita" keys="gloss-ent"/>
+    <topicref href="../glossary/normalization.dita" keys="gloss-norm"/>
+		<topicref href="../glossary/frbr.dita" keys="gloss-frbr"/>
+    <topicref href="../glossary/carrier_level_record.dita" keys="gloss-carrier"/>
+    <topicref href="../glossary/content_level_record.dita" keys="gloss-content"/>
+    <topicref href="../glossary/bound-with_resource.dita" keys="gloss-bound-with"/>
+	</topicref>	
+</map>

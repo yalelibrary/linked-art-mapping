@@ -58,7 +58,7 @@ Statement indicating whether a resource is available online or in the library.
 
 -   **[Acquisition statement](../tasks/notes-and-statements/acquisition_statement.md)**  
 
--   **[Copy and version identification note](../tasks/notes-and-statements/copy_and_version_note.md)**  
+-   **[Copy and version identification note \[draft: steps copied from Acquisition statement spec.\]](../tasks/notes-and-statements/copy_and_version_note.md)**  
 
 -   **[Reproduction statement](../tasks/notes-and-statements/reproduction_statement.md)**  
 

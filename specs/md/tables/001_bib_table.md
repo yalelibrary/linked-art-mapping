@@ -15,6 +15,10 @@ keyword: [MARC 21, Bibliographic]
 **Related information**  
 
 
+[LUX top-level entities](../concepts/lux_top-level_entities.md)
+
+[Descriptive content](../concepts/descriptive_content.md)
+
 [MARC to Linked Art glossary](../glossary/marc_to_linked_art_glossary.md)
 
 [010 \(Library of Congress Control Number\)](../tables/010_bib_table.md)

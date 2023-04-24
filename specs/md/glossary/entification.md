@@ -13,7 +13,5 @@ The process of converting "strings" into "things": for example, extracting and n
 
 **Parent topic:**[MARC to Linked Art glossary](../glossary/marc_to_linked_art_glossary.md)
 
-**Previous topic:**[MARC to Linked Art glossary](../glossary/marc_to_linked_art_glossary.md)
-
 **Next topic:**[Normalization](../glossary/normalization.md)
 

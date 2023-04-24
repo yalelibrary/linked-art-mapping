@@ -20,6 +20,10 @@ author: timothy.thompson@yale.edu
 **Related information**  
 
 
+[LUX top-level entities](../concepts/lux_top-level_entities.md)
+
+[Descriptive content](../concepts/descriptive_content.md)
+
 [001 \(Control Number\)](../tables/001_bib_table.md)
 
 [010 \(Library of Congress Control Number\)](../tables/010_bib_table.md)

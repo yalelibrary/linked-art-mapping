@@ -19,5 +19,3 @@ A “master” bib record is linked to the MFHD, and then the bib ID for every o
 
 **Previous topic:**[Content-level record](../glossary/content_level_record.md)
 
-**Next topic:**[001 \(Control Number\)](../tables/001_bib_table.md)
-

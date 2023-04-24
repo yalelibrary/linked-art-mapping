@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subjectScheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd">
+	<title><i><ph keyref="lux"/></i> supertypes taxonomy</title>
+	<topicmeta>
+		<source format="html" href="https://docs.google.com/spreadsheets/d/1a7HExLexADWT2Xx8eGeKhKn1Mdl9dlnURlbp22vb47U/edit?usp=sharing" scope="external">LUX Supertypes Google Sheet (Types v2 and Formats v2)</source>
+	</topicmeta>
+	<subjectHead>
+		<subjectHeadMeta>
+			<navtitle><i><ph keyref="lux"/> supertypes</i></navtitle>
+		</subjectHeadMeta>
+	</subjectHead>
+
+	<hasNarrower>
+		<subjectdef keys="CoreClasses">
+			<!--<topicmeta>
+				<navtitle>Core Linked Art Classes</navtitle>
+				<shortdesc>Core Classes defined in the Linked Art profile of CIDOC-CRM.</shortdesc>
+			</topicmeta>-->
+			<subjectdef keys="Types">
+				<!--<topicmeta>
+					<navtitle>Types</navtitle>
+					<shortdesc>Type desc.</shortdesc>
+				</topicmeta>-->
+				<hasInstance>
+					<subjectdef keys="Formats">
+						<!--<topicmeta>
+							<navtitle>Formats</navtitle>
+							<shortdesc>Format desc.</shortdesc>
+						</topicmeta>-->
+					</subjectdef>
+				</hasInstance>
+			</subjectdef>
+		</subjectdef>
+	</hasNarrower>
+	<hasKind>
+		<subjectdef href="../concepts/supertypes/core_classes.dita" keyref="CoreClasses" processing-role="normal" toc="yes">
+			<subjectdef keys="DigitalObject"/>
+			<subjectdef keys="HumanMadeObject"/>
+			<subjectdef keys="LinguisticObject"/>
+			<subjectdef keys="Set"/>
+			<subjectdef keys="VisualItem"/>
+		</subjectdef>
+	</hasKind>
+	<hasKind>
+		<subjectdef href="../concepts/supertypes/types.dita" keys="Types" processing-role="normal" toc="yes">
+			<subjectdef keys="Audio"/>
+			<subjectdef keys="Cartography"/>
+			<subjectdef keys="Collections"/>
+			<subjectdef keys="Datasets"/>
+			<subjectdef keys="MovingImages"/>
+			<subjectdef keys="Objects"/>
+			<subjectdef keys="ScoresAndNotation"/>
+			<subjectdef keys="SoftwareAndElectronicMedia"/>
+			<subjectdef keys="TextualWorks"/>
+			<subjectdef keys="VisualWorks"/>
+		</subjectdef>
+	</hasKind>
+	<hasKind>
+		<subjectdef href="../concepts/supertypes/formats.dita" keyref="Formats" processing-role="normal" toc="yes">
+			<subjectdef keys="ArchivalFormats"/>
+			<subjectdef keys="AudioFormats"/>
+			<subjectdef keys="DataFormats"/>
+			<subjectdef keys="SoftwareFormats"/>
+			<subjectdef keys="CartographicFormats"/>
+			<subjectdef keys="ImageFormats"/>
+			<subjectdef keys="MovingImageFormats"/>
+			<subjectdef keys="NotationFormats"/>
+			<subjectdef keys="ObjectFormats"/>
+			<subjectdef keys="TextualFormats"/>
+		</subjectdef>
+	</hasKind>
+	<hasKind>
+		<subjectdef keyref="ArchivalFormats">
+			<subjectdef keys="ArchivalAndManuscriptMaterials"/>
+		</subjectdef>
+		<subjectdef keyref="AudioFormats">
+			<subjectdef keys="Music"/>
+			<subjectdef keys="Sound"/>
+		</subjectdef>
+		<subjectdef keyref="DataFormats">
+			<subjectdef keys="DataAndFiles"/>
+		</subjectdef>
+		<subjectdef keyref="SoftwareFormats">
+			<subjectdef keys="SoftwareApplications"/>
+		</subjectdef>
+		<subjectdef keyref="CartographicFormats">
+			<subjectdef keys="Atlases"/>
+			<subjectdef keys="GIS"/>
+			<subjectdef keys="Globes"/>
+			<subjectdef keys="Maps"/>
+		</subjectdef>
+		<subjectdef keyref="ImageFormats">
+			<subjectdef keys="Calligraphy"/>
+			<subjectdef keys="Collages"/>
+			<subjectdef keys="Drawings"/>
+			<subjectdef keys="Installations"/>
+			<subjectdef keys="Paintings"/>
+			<subjectdef keys="Photographs"/>
+			<subjectdef keys="Posters"/>
+			<subjectdef keys="Prints"/>
+			<subjectdef keys="Slides"/>
+		</subjectdef>
+		<subjectdef keyref="MovingImageFormats">
+			<subjectdef keys="Film"/>
+			<subjectdef keys="Video"/>
+		</subjectdef>
+		<subjectdef keyref="NotationFormats">
+			<subjectdef keys="NotatedMovement"/>
+			<subjectdef keys="NotatedMusic"/>
+		</subjectdef>
+		<subjectdef keyref="ObjectFormats">
+			<!--<topicmeta>
+				<navtitle>Object Formats</navtitle>
+				<shortdesc>Object format desc.</shortdesc>
+			</topicmeta>-->
+			<subjectdef keys="Animals"/>
+			<subjectdef keys="ArchitecturalElements"/>
+			<subjectdef keys="ArmsAndArmor"/>
+			<subjectdef keys="Ceramics"/>
+			<subjectdef keys="Containers"/>
+			<subjectdef keys="Costume">
+				<subjectdef keyref="Jewelry"/>
+				<subjectdef keyref="Masks"/>
+			</subjectdef>
+			<subjectdef keys="Equipment"/>
+			<subjectdef keys="Flatware"/>
+			<subjectdef keys="Fossils"/>
+			<subjectdef keys="Frames"/>
+			<subjectdef keys="Furnishings">
+				<subjectdef keyref="Flatware"/>
+				<subjectdef keyref="Frames"/>
+				<subjectdef keyref="Furniture"/>
+				<subjectdef keyref="LightingDevices"/>
+			</subjectdef>
+			<subjectdef keys="Furniture"/>
+			<subjectdef keys="Jewelry"/>
+			<subjectdef keys="Kits"/>
+			<subjectdef keys="LightingDevices"/>
+			<subjectdef keys="Masks"/>
+			<subjectdef keys="Meteorites"/>
+			<subjectdef keys="Minerals"/>
+			<subjectdef keys="Models"/>
+			<subjectdef keys="Numismatics"/>
+			<subjectdef keys="Plants"/>
+			<subjectdef keys="Realia"/>
+			<subjectdef keys="Sculptures">
+				<subjectdef keyref="Ceramics"/>
+			</subjectdef>
+			<subjectdef keys="SoundDevices"/>
+			<subjectdef href="../concepts/supertypes/specimens.dita" keys="Specimens" processing-role="normal" toc="yes">
+				<!--<topicmeta>
+					<navtitle>Specimens</navtitle>
+					<shortdesc>Specimen desc.</shortdesc>
+				</topicmeta>-->
+				<subjectdef keyref="Animals"/>
+				<subjectdef keyref="Fossils"/>
+				<subjectdef keyref="Meteorites"/>
+				<subjectdef keyref="Minerals"/>
+				<subjectdef keyref="Plants"/>
+			</subjectdef>
+			<subjectdef keys="Textiles"/>
+			<subjectdef keys="Timepieces"/>
+			<subjectdef keys="ToolsAndEquipment">
+				<subjectdef keyref="ArmsAndArmor"/>
+				<subjectdef keyref="Equipment"/>
+				<subjectdef keyref="SoundDevices"/>
+			</subjectdef>
+		</subjectdef>
+		<subjectdef keyref="TextualFormats">
+			<subjectdef keys="Books"/>
+			<subjectdef keys="Broadsides"/>
+			<subjectdef keys="DissertationsAndTheses"/>
+			<subjectdef keys="JournalsAndPeriodicals"/>
+		</subjectdef>
+	</hasKind>
+	<hasKind>
+		<subjectdef keyref="SoftwareApplications">
+			<subjectdef keys="Databases"/>
+		</subjectdef>
+		<subjectdef keyref="Installations">
+			<subjectdef keys="WallDrawings"/>
+		</subjectdef>
+		<subjectdef keyref="JournalsAndPeriodicals">
+			<subjectdef keys="Newspapers"/>
+		</subjectdef>
+	</hasKind>
+	<hasNarrower>
+		<subjectdef keyref="DigitalObject">
+			<subjectdef keyref="Datasets"/>
+			<subjectdef keyref="SoftwareAndElectronicMedia"/>
+		</subjectdef>
+		<subjectdef keyref="HumanMadeObject">
+			<subjectdef keyref="Objects"/>
+		</subjectdef>
+		<subjectdef keyref="LinguisticObject">
+			<subjectdef keyref="Audio"/>
+			<subjectdef keyref="MovingImages"/>
+			<subjectdef keyref="ScoresAndNotation"/>
+			<subjectdef keyref="TextualWorks"/>
+		</subjectdef>
+		<subjectdef keyref="Set">
+			<subjectdef keyref="Collections"/>
+		</subjectdef>
+		<subjectdef keyref="VisualItem">
+			<subjectdef keyref="Cartography"/>
+			<subjectdef keyref="VisualWorks"/>
+		</subjectdef>
+	</hasNarrower>
+	<hasInstance>
+		<subjectdef keyref="Collections">
+			<subjectdef keyref="ArchivalFormats"/>
+		</subjectdef>
+		<subjectdef keyref="Audio">
+			<subjectdef keyref="AudioFormats"/>
+		</subjectdef>
+		<subjectdef keyref="Datasets">
+			<subjectdef keyref="DataFormats"/>
+		</subjectdef>
+		<subjectdef keyref="SoftwareAndElectronicMedia">
+			<subjectdef keyref="SoftwareFormats"/>
+		</subjectdef>
+		<subjectdef keyref="Cartography">
+			<subjectdef keyref="CartographicFormats"/>
+		</subjectdef>
+		<subjectdef keyref="VisualWorks">
+			<subjectdef keyref="ImageFormats"/>
+		</subjectdef>
+		<subjectdef keyref="MovingImages">
+			<subjectdef keyref="MovingImageFormats"/>
+		</subjectdef>
+		<subjectdef keyref="Objects">
+			<subjectdef keyref="ObjectFormats"/>
+		</subjectdef>
+		<subjectdef keyref="ScoresAndNotation">
+			<subjectdef keyref="NotationFormats"/>
+		</subjectdef>
+		<subjectdef keyref="TextualWorks">
+			<subjectdef keyref="TextualFormats"/>
+		</subjectdef>
+	</hasInstance>
+	
+	
+	<!-- Bind an attribute to a tree of related values -->
+	<!--
+	<enumerationdef>
+		
+		<attributedef name="name"/>
+		<subjectdef/>
+	</enumerationdef>
+	-->
+
+</subjectScheme>

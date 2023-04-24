@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:map.xsd">
+  <title>Common</title>
+  <topicmeta>
+    <critdates>
+      <!--timothy.thompson@yale.edu-->
+      <revised modified="2022-05-12"/>
+    </critdates>
+  </topicmeta>
+  <topicref href="../common/common_components_for_reuse.dita" processing-role="resource-only">
+    <keydef href="../common/specs.dita" keys="specs"/>
+    <keydef href="../common/object_level_steps.dita" keys="object_level_pn" keyscope="primary_name_scope">
+      <ditavalref href="../ditaval/primary_name.ditaval">
+        <ditavalmeta>
+          <dvrResourceSuffix>-pn</dvrResourceSuffix>
+        </ditavalmeta>
+      </ditavalref>
+    </keydef>
+    <keydef href="../common/object_level_steps.dita" keys="object_level_cn" keyscope="call_number_scope">
+      <ditavalref href="../ditaval/call_number.ditaval">
+        <ditavalmeta>
+          <dvrResourceSuffix>-cn</dvrResourceSuffix>
+        </ditavalmeta>
+      </ditavalref>
+    </keydef>
+    <keydef href="../common/linked_art_examples.dita" keys="linked_art_ex"/>
+    <keydef href="../common/common_metadata.dita" keys="metadata_common"/>
+    <keydef href="../common/glossary_metadata.dita" keys="metadata_glossary"/>
+    <keydef href="../common/metadata_linked_art.dita" keys="metadata_linked_art"/>
+    <keydef href="../common/topic_metadata.dita" keys="metadata_topic"/>
+    <keydef href="../common/reference_metadata.dita" keys="metadata_reference"/>    
+  </topicref>
+  <keydef keys="la-concept">
+    <topicmeta>
+      <linktext>Concept</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="la-digital">
+    <topicmeta>
+      <linktext>Digital Object</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="la-event">
+    <topicmeta>
+      <linktext>Event</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="la-group">
+    <topicmeta>
+      <linktext>Group</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="la-person">
+    <topicmeta>
+      <linktext>Person</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="la-physical">
+    <topicmeta>
+      <linktext>Physical Object</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="la-place">
+    <topicmeta>
+      <linktext>Place</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="la-provenance">
+    <topicmeta>
+      <linktext>Provenance Activity</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="la-set">
+    <topicmeta>
+      <linktext>Set</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="la-textual">
+    <topicmeta>
+      <linktext>Textual Work</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="la-visual">
+    <topicmeta>
+      <linktext>Visual Work</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="orbis">
+    <topicmeta>
+      <linktext>Voyager BIB ID</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="lccn">
+    <topicmeta>
+      <linktext>Library of Congress Control Number (LCCN)</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="isbn">
+    <topicmeta>
+      <linktext>International Standard Book Number (ISBN)</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="issn">
+    <topicmeta>
+      <linktext>International Standard Serial Number (ISSN)</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="pub-num">
+    <topicmeta>
+      <linktext>Publisher or Distributor Number</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="oclc-num">
+    <topicmeta>
+      <linktext>System Control Number (OCLC Number)</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="oclc-num-local">
+    <topicmeta>
+      <linktext>Local System Control Number (OCLC Number)</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="output-vals">
+    <topicmeta>
+      <linktext>Output JSON-LD with the</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef format="html" href="http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html" keys="cidoc" scope="external"/>
+  <keydef format="html" href="https://json-ld.org/" keys="json-ld" scope="external">
+    <topicmeta>
+      <linktext>JSON-LD</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef format="html" href="https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier" keys="iri" scope="external">
+    <topicmeta>
+      <linktext>IRI</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef format="html" href="https://www.loc.gov/marc/bibliographic/bd1xx.html" keys="1xx" scope="external">
+    <topicmeta>
+      <linktext>1XX</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef format="html" href="https://www.loc.gov/marc/bibliographic/bd6xx.html" keys="6xx" scope="external">
+    <topicmeta>
+      <linktext>6XX</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef format="html" href="https://www.loc.gov/marc/bibliographic/bd70x75x.html" keys="7xx" scope="external">
+    <topicmeta>
+      <linktext>7XX</linktext>
+    </topicmeta>
+  </keydef>
+  <keydef keys="lux">
+    <topicmeta>
+      <linktext><i>LUX</i></linktext>
+    </topicmeta>
+  </keydef>
+  <keydef format="dita" href="../concepts/subject_headings.dita#subject_headings" keys="facet-types" scope="local"/>
+
+</map>

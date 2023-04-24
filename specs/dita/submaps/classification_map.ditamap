@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:spec:classification:xsd:classifyMap.xsd">
+	<title>Classification map</title>
+	<topicref>
+		<topicsubject keyref="Specimens"/>
+	</topicref>
+	<topicref>
+		<topicsubject keyref="CoreClasses"/>
+	</topicref>
+	<topicref>
+		<topicsubject keyref="Types"/>
+	</topicref>
+	<topicref>
+		<topicsubject keyref="Formats"/>
+	</topicref>
+
+</map>

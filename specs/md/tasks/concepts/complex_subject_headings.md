@@ -22,6 +22,7 @@ sampleBibs:
   - 9564880
   - 3145537 # 630
   - 13146411
+  - 15552027 # 651ag
 # Source data fields
 fieldSpec:
   - 60004abcdegjquvxyz
@@ -99,8 +100,8 @@ scriptInclusion: BOTH
         |611|acdegnqu|
         |630|adfhklmnoprst|
         |650|abcdg|
-        |651\| 0\||a|
-        |651\| 0\||g|
+        |651\|\*0\||a|
+        |651\|\*0\||g|
         |655|a|
         |690|abcdg|
         |691|a|
@@ -123,8 +124,8 @@ scriptInclusion: BOTH
         |611acdegnqu|Group \[Meeting\]|
         |630adfhklmnoprst|LinguisticObject|
         |650abcdg|Type|
-        |651\| 0\|a|Place|
-        |651\| 0\|g|Place|
+        |651\|\*0\|a|Place|
+        |651\|\*0\|g|Place|
         |655a|Type|
         |690abcdg|Type|
         |691a|Place|
