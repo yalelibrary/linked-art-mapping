@@ -8,7 +8,7 @@ The MARC-to-Linked Art crosswalk specifications have been written using the [Dar
 ## Transformation
 DITA XML can be transformed into a variety of output formats, including GitHub-flavored Markdown.
 
-The DITA user community maintains [DITA-OT](https://www.dita-ot.org/), an open-source publishing engine for DITA documentation. **Note**: The current version of the specifications is incompatible with DITA-OT versions later than 3.7.4.
+The DITA user community maintains the [DITA Open Toolkit](https://www.dita-ot.org/) (DITA-OT), an open-source publishing engine for DITA documentation. **Note**: The current version of the specifications is incompatible with DITA-OT versions later than 3.7.4.
 
 1. Download [DITA-OT 3.7.4](https://github.com/dita-ot/dita-ot/releases/tag/3.7.4).
 1. Extract the contents of the package to the directory where you want to install DITA-OT.
