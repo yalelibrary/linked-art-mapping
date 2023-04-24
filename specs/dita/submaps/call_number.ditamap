@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:map.xsd">
+  <title>Call number</title>
+  <topicmeta>
+    <author type="creator">timothy.thompson@yale.edu</author>
+    <critdates>
+      <created date="2022-05-10"/>
+    </critdates>
+  </topicmeta>
+  
+  <topicref href="../tasks/identifiers/call_number.dita" keys="CallNumber" type="task"/>
+  
+  
+    
+  
+  
+  
+  
+</map>
