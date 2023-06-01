@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+	
+	<uri name="urn:pubid:edu:library:yale:doctypes:dita:modules:yulDomain"
+		uri="yulDomain.xsd"
+	/>
+	<system systemId="urn:pubid:edu:library:yale:doctypes:dita:modules:yulDomain" uri="yulDomain.xsd"/>
+	
+</catalog>

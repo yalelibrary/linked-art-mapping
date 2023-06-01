@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+	<uri name="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd"
+		uri="generalTask.xsd"
+	/>
+	<system systemId="urn:oasis:names:edu:library:yale:xsd:generalTask.xsd" uri="generalTask.xsd"/>
+</catalog>

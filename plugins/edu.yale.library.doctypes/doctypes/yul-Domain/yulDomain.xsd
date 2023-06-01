@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+	
+	<xs:group name="yul-d-codeph">
+		<xs:choice>
+			<xs:element ref="yulbibid"/>
+			<xs:element ref="yulmfhdid"/>
+			<xs:element ref="yulitemid"/>			
+		</xs:choice>
+	</xs:group>
+
+	<!-- BIB ID -->
+	<xs:element name="yulbibid">
+		<xs:annotation>
+			<xs:documentation>
+				The XML element (&lt;<keyword>yulbibid</keyword>&gt;) represents a 
+				mention of a YUL Bibliographic Record ID.
+			</xs:documentation>
+		</xs:annotation>
+		
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="yulbibid.class">
+					<xs:attribute ref="class" default="+ topic/ph pr-d/codeph yul-d/yulbibid "/>
+				</xs:extension>				
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element> 
+	<xs:group name="yulbibid.content">
+		<xs:sequence/>
+	</xs:group>
+	<xs:attributeGroup name="yulbibid.attributes">
+		<xs:attribute name="outputclass" type="xs:string"/>
+		<xs:attribute name="keyref" type="xs:string"/>
+		<xs:attributeGroup ref="global-atts"/>
+		<xs:attributeGroup ref="univ-atts"/>
+	</xs:attributeGroup>
+	<xs:group name="yulbibid">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element ref="yulbibid"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>  
+	<xs:complexType name="yulbibid.class" mixed="true">
+		<xs:sequence>
+			<xs:group ref="yulbibid.content"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="yulbibid.attributes"/>
+	</xs:complexType>
+	
+	<!-- MFHD ID -->
+	<xs:element name="yulmfhdid">
+		<xs:annotation>
+			<xs:documentation>
+				The XML element (&lt;<keyword>yulmfhdid</keyword>&gt;) represents a 
+				mention of a YUL Holdings Record ID.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="yulmfhdid.class">
+					<xs:attribute ref="class" default="+ topic/ph pr-d/codeph yul-d/yulmfhdid "/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element> 
+	<xs:group name="yulmfhdid.content">
+		<xs:sequence/>
+	</xs:group>
+	<xs:attributeGroup name="yulmfhdid.attributes">
+		<xs:attribute name="outputclass" type="xs:string"/>
+		<xs:attribute name="keyref" type="xs:string"/>
+		<xs:attributeGroup ref="global-atts"/>
+		<xs:attributeGroup ref="univ-atts"/>
+	</xs:attributeGroup>
+	<xs:group name="yulmfhdid">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element ref="yulmfhdid"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>  
+	<xs:complexType name="yulmfhdid.class" mixed="true">
+		<xs:sequence>
+			<xs:group ref="yulmfhdid.content"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="yulmfhdid.attributes"/>
+	</xs:complexType>
+	
+	<!-- Item ID -->
+	<xs:element name="yulitemid">
+		<xs:annotation>
+			<xs:documentation>
+				The XML element (&lt;<keyword>yulitemid</keyword>&gt;) represents a 
+				mention of a YUL Holdings Record ID.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="yulitemid.class">
+					<xs:attribute ref="class" default="+ topic/ph pr-d/codeph yul-d/yulitemid "/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element> 
+	<xs:group name="yulitemid.content">
+		<xs:sequence/>
+	</xs:group>
+	<xs:attributeGroup name="yulitemid.attributes">
+		<xs:attribute name="outputclass" type="xs:string"/>
+		<xs:attribute name="keyref" type="xs:string"/>
+		<xs:attributeGroup ref="global-atts"/>
+		<xs:attributeGroup ref="univ-atts"/>
+	</xs:attributeGroup>
+	<xs:group name="yulitemid">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element ref="yulitemid"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>  
+	<xs:complexType name="yulitemid.class" mixed="true">
+		<xs:sequence>
+			<xs:group ref="yulitemid.content"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="yulitemid.attributes"/>
+	</xs:complexType>
+	
+</xs:schema>
