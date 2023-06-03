@@ -6,6 +6,7 @@
     <dcterms:modified>2023-06-01-04:00</dcterms:modified>
     <owl:versionInfo>1.2.0</owl:versionInfo>
     <rdfs:comment>Changes in v1.2.0: (1) changed Getty close match for Collections; (2) removed trailing "/" from concept scheme URI; (3) made uses of "supertype" plural.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://docs.google.com/spreadsheets/d/1a7HExLexADWT2Xx8eGeKhKn1Mdl9dlnURlbp22vb47U/edit#gid=1517902952"/>
     <skos:prefLabel xml:lang="en">LUX: Yale Collections Discovery Supertype Vocabulary</skos:prefLabel>
     <skos:definition xml:lang="en">The LUX Supertype Vocabulary is a controlled vocabulary used to classify record-level resources in the LUX discovery environment.</skos:definition>
     <vann:preferredNamespacePrefix>supertypes</vann:preferredNamespacePrefix>
