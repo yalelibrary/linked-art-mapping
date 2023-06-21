@@ -48,7 +48,7 @@ scriptInclusion: BOTH
 
     ```
     {
-      "id": "https://lux.collections.yale.edu/data/text/c0fd4d84-4b50-496d-a56e-ebf952f8dcf2",
+      "id": "https://lux.collections.yale.edu/data/text/679ac495-2b78-403c-8cd9-c2b31a6ce052",
       "type": "LinguisticObject",
       "_label": "韓國 의 선비 文化",
       "identified_by": [
@@ -60,6 +60,13 @@ scriptInclusion: BOTH
               "id": "http://vocab.getty.edu/aat/300404670",
               "type": "Type",
               "_label": "Primary Name"
+            }
+          ],
+          "language": [
+            {
+              "id": "https://lux.collections.yale.edu/data/concept/dfa53b96-4eda-4c9a-b091-10008a726c38",
+              "type": "Language",
+              "_label": "eng"
             }
           ]
         },
@@ -75,7 +82,7 @@ scriptInclusion: BOTH
           ],
           "language": [
             {
-              "id": "https://lux.collections.yale.edu/data/concept/70cb6397-2b2f-400c-b887-70fd80969c8b",
+              "id": "https://lux.collections.yale.edu/data/concept/ebed2daf-ff6f-42bd-bce3-caa9d25c4884",
               "type": "Language",
               "_label": "und"
             }
