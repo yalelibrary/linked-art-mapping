@@ -61,13 +61,6 @@ scriptInclusion: BOTH
               "type": "Type",
               "_label": "Primary Name"
             }
-          ],
-          "language": [
-            {
-              "id": "https://lux.collections.yale.edu/data/concept/dfa53b96-4eda-4c9a-b091-10008a726c38",
-              "type": "Language",
-              "_label": "eng"
-            }
           ]
         },
         {
