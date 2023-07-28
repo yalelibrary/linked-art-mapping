@@ -64,7 +64,7 @@ scriptInclusion: NONE
       "content": "M301356 (MGM/UA Home Video)",
       "classified_as": [
         {
-          "id": "TBD",
+          "id": "http://id.loc.gov/vocabulary/identifiers/stock-number",
           "type": "Type",
           "_label": "Publisher/Distributor Number"
         }
