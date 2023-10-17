@@ -55,7 +55,10 @@ fieldSpec:
   - 630014adfghklmnoprst
   - 65004abcdeg
   - 651| 0|014ae
-  - 655014abc
+  - 655| 0|014abc
+  - 655| 7|014abc[2 == "aat"]
+  - 655| 7|014abc[2 == "gmgpc"]
+  - 655| 7|014abc[2 == "lcgft"]
   - 690014abcdeg
   - 691014ae       
   - 692014abcdegjqu
@@ -95,10 +98,13 @@ scriptInclusion: BOTH
         |Group|X10|abcdg|
         |Group|X11|acdegnqu|
         |LinguisticObject|X30|adfhklmnoprst|
-        |Concept|650\|\*0\||abcdg|
+        |Type|650\|\*0\||abcdg|
         |Place|651\|\*0\||a|
-        |Type|655|a|
-        |Concept|690|abcdg|
+        |Type|655\|\*0\||a|
+        |Type|655\|\*7\||a and 2 == "aat"|
+        |Type|655\|\*7\||a and 2 == "gmgpc"|
+        |Type|655\|\*7\||a and 2 == "lcgft"|
+        |Type|690|abcdg|
         |Place|691|a|
         |Person|692|abcdgjq|
         |Group|693|abcdg|
@@ -106,13 +112,13 @@ scriptInclusion: BOTH
         |LinguisticObject|695|adfhklmnoprst|
         |Place|751|a|
 
-    3.  [Normalize](../../glossary/normalization.md) and match string values.
+    4.  [Normalize](../../glossary/normalization.md) and match string values.
 
-    4.  If a field includes a `$0` with an IRI, output an `equivalent` reference.
+    5.  If a field includes a `$0` with an IRI, output an `equivalent` reference.
 
-        **Note:** The `Type` of the `equivalent` reference should match the `Type` of the top-level resource.
+        **Note:** The `type` of the `equivalent` reference should match the `type` of the top-level resource.
 
-    5.  Process top-level concept resources.
+    6.  Process top-level concept resources.
 
         `3`
 
@@ -151,7 +157,7 @@ scriptInclusion: BOTH
         }
         ```
 
-    6.  Process top-level genre/form resources.
+    7.  Process top-level genre/form resources.
 
         **Note:** Top-level resources representing genre/form headings should include an additional `classified_as` for `Genre` to distinguish them from topical subject headings.
 
@@ -192,7 +198,7 @@ scriptInclusion: BOTH
         }
         ```
 
-    7.  Process top-level group \(`Organization`\) resources.
+    8.  Process top-level group \(`Organization`\) resources.
 
         **Note:** Top-level resources representing group entities derived from `X10` fields should include an additional `classified_as` for `Organization` to distinguish them from meeting entities derived from `X11`.
 
@@ -234,7 +240,7 @@ scriptInclusion: BOTH
         
         ```
 
-    8.  Process top-level group \(`Meeting`\) resources.
+    9.  Process top-level group \(`Meeting`\) resources.
 
         **Note:** Top-level resources representing group entities derived from `X11` fields should include an additional `classified_as` for `Meeting` to distinguish them from organization entities derived from `X10`.
 
@@ -269,7 +275,7 @@ scriptInclusion: BOTH
         }
         ```
 
-    9.  Process top-level group \(`Family`\) resources.
+    10.  Process top-level group \(`Family`\) resources.
 
         **Note:** Top-level resources representing group entities derived from `X00|3*|` fields should include an additional `classified_as` for `Family` to distinguish them from organization or meeting entities.
 
@@ -304,7 +310,7 @@ scriptInclusion: BOTH
         }
         ```
 
-    10. Process top-level person resources.
+    11. Process top-level person resources.
 
         `907221`
 
@@ -337,7 +343,7 @@ scriptInclusion: BOTH
         
         ```
 
-    11. Process top-level place resources.
+    12. Process top-level place resources.
 
         `6017172`
 
@@ -369,7 +375,7 @@ scriptInclusion: BOTH
         }
         ```
 
-    12. Process top-level standalone work resources.
+    13. Process top-level standalone work resources.
 
         `227`
 
