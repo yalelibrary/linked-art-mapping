@@ -52,6 +52,8 @@ conditions:
         # Other type of material
         - - 006[16]
           - z
+        - - 006[16]
+          - a
 ```
 
 ```
