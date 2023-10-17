@@ -52,6 +52,7 @@ conditions:
         # Other type of material
         - - 006[16]
           - z
+        # Art original
         - - 006[16]
           - a
 ```
