@@ -49,9 +49,9 @@ fieldSpec:
   - 600014abcdefghjklmnopqrstu
   - 610014abcdefghklmnopqrstu
   - 611014acdefghjklmnopqrstu    
-  - 692014abcdegjqu
-  - 693014abcdegu
-  - 694014acdegjnqu  
+  - 692014abcdegjqtu
+  - 693014abcdegtu
+  - 694014acdegjnqtu  
   - 700014abcdefghjklmnopqrstu
   - 710014abcdefghklmnopqrstu
   - 711014acdefghjklmnopqrstu 
