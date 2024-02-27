@@ -243,7 +243,7 @@ scriptInclusion: NONE
     |Yale University Library|Lewis Walpole Library|lwlint|
     |Yale University Library|Lewis Walpole Library|lwlprsat|
     |Yale University Library|Lewis Walpole Library|lwlref|
-    |Yale University Library| |lsf|
+    |Yale University Library|Offsite Storage|lsf|
     |Yale University Library|Manuscripts and Archives|lsffesr|
     |Yale University Library|Manuscripts and Archives|lsfhvt|
     |Yale University Library|Manuscripts and Archives|lsfmssr|
@@ -542,57 +542,6 @@ scriptInclusion: NONE
         ```
         {
           "@context": "https://linked.art/ns/v1/linked-art.json",
-          "id": "https://lux.collections.yale.edu/data/set/collection1",
-          "type": "Set",
-          "_label": "Yale University Library",
-          "classified_as": [
-            {
-              "id": "http://vocab.getty.edu/aat/300025976",
-              "type": "Type",
-              "_label": "Collection"
-            }
-          ],
-          "used_for": [
-            {
-              "type": "Activity",
-              "_label": "Curation",
-              "classified_as": [
-                {
-                  "id": "http://vocab.getty.edu/aat/300054277",
-                  "type": "Type",
-                  "_label": "Curating"
-                }
-              ],
-              "carried_out_by": [
-                {
-                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
-                  "type": "Group",
-                  "_label": "Yale University Library"
-                }
-              ]
-            }
-          ],  
-          "identified_by": [
-            {
-              "type": "Name",
-              "content": "Yale University Library",
-              "classified_as": [
-                {
-                  "id": "http://vocab.getty.edu/aat/300404670",
-                  "type": "Type",
-                  "_label": "Primary Name"
-                }
-              ]
-            }                
-          ]
-        }
-        ```
-
-    2.  For electronic resources \(where the value of `852b` **starts with** `yulint`\), include a reference to Yale University Library, as above.
-
-        ```
-        {
-          "@context": "https://linked.art/ns/v1/linked-art.json",
           "id": "https://lux.collections.yale.edu/data/set/collection-yulint",
           "type": "Set",
           "_label": "Yale Library Internet Resource",
@@ -616,9 +565,9 @@ scriptInclusion: NONE
               ],
               "carried_out_by": [
                 {
-                  "id": "https://lux.collections.yale.edu/data/group/yale-university-library",
+                  "id": "https://lux.collections.yale.edu/data/group/yale-library-internet-resource",
                   "type": "Group",
-                  "_label": "Yale University Library"
+                  "_label": "Yale Library Internet Resource"
                 }
               ]
             }
@@ -639,7 +588,7 @@ scriptInclusion: NONE
         }
         ```
 
-    3.  For collections that correspond to “locations”, include a `member_of` relationship to the campus division collection.
+    2.  For all sublocations, include a `member_of` relationship to the campus division collection.
 
         ```
         {
