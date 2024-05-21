@@ -31,6 +31,8 @@ scriptInclusion: NONE
 
 3.  Use the following table to match MFHD location codes against collection entities.
 
+    **Note:** Any location beginning with **lsf** that is not mapped in the table should default to the **Offsite Storage** set.
+
     |Campus division|Location|Location code|
     |---------------|--------|-------------|
     |Yale University Library|Bass Library|bassill|
@@ -244,6 +246,7 @@ scriptInclusion: NONE
     |Yale University Library|Lewis Walpole Library|lwlprsat|
     |Yale University Library|Lewis Walpole Library|lwlref|
     |Yale University Library|Offsite Storage|lsf|
+    |Yale University Library|Offsite Storage|mudd|
     |Yale University Library|Manuscripts and Archives|lsffesr|
     |Yale University Library|Manuscripts and Archives|lsfhvt|
     |Yale University Library|Manuscripts and Archives|lsfmssr|
@@ -588,7 +591,7 @@ scriptInclusion: NONE
         }
         ```
 
-    2.  For all sublocations, include a `member_of` relationship to the campus division collection.
+    3.  For all sublocations, include a `member_of` relationship to the campus division collection.
 
         ```
         {
@@ -646,7 +649,7 @@ scriptInclusion: NONE
         }
         ```
 
-4.  Add an embedded reference to the `Set` within the corresponding `HumanMadeObject` resource.
+5.  Add an embedded reference to the `Set` within the corresponding `HumanMadeObject` resource.
 
     ```
     {
@@ -654,7 +657,7 @@ scriptInclusion: NONE
         {
           "id": "https://lux.collections.yale.edu/data/set/collection1",
           "type": "Set",
-          "_label": "Yale University Library"
+          "_label": "Offsite Storage, Yale University Library"
         }
       ]
     }
