@@ -31,7 +31,7 @@ scriptInclusion: NONE
 
 3.  Use the following table to match MFHD location codes against collection entities.
 
-    **Note:** Any location beginning with **lsf** that is not mapped in the table should default to the **Offsite Storage** set.
+    **Note:** Any location code beginning with **lsf** that is not mapped in the table should default to the **Offsite Storage** set.
 
     |Campus division|Location|Location code|
     |---------------|--------|-------------|
