@@ -19,6 +19,7 @@ Apply these instructions when a `6XX` field includes any of the subdivision subf
 ---
 name: ComplexSubjectHeadings
 sampleBibs:
+  - 9920561
   - 9564880
   - 3145537 # 630
   - 13146411
