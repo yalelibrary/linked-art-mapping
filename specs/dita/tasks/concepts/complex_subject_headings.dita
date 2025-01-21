@@ -60,6 +60,7 @@
       <codeblock>---
 name: ComplexSubjectHeadings
 sampleBibs:
+  - 9920561
   - 9564880
   - 3145537 # 630
   - 13146411
@@ -70,7 +71,7 @@ fieldSpec:
   - 61004abcdeguvxyz
   - 61104acdegjnquvxyz
   - 630014adfghklmnoprstvxyz
-  - 65004abcdegvxyz
+  - 650|**|04abcdegvxyz
   - 651| 0|014aegvxyz
   - 65504abcvxyz
   - 69004abcdegvxyz
@@ -161,7 +162,7 @@ scriptInclusion: BOTH</codeblock>
                     </row>
                     <row>
                       <entry>Concept</entry>
-                      <entry>650</entry>
+                      <entry>650|**|</entry>
                       <entry>abcdgvxyz</entry>
                     </row>
                     <row>
