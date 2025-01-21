@@ -80,6 +80,7 @@ sampleBibs:
   - 907221 # 600
   - 1066178 # 751
   - 6017172 # 651
+  - 9920561 # 655
 # Source data fields
 fieldSpec:
   - 100014abcdegjqu
@@ -93,6 +94,7 @@ fieldSpec:
   - 65004abcdeg
   - 651| 0|014ae
   - 655014abc
+  - 655| 7|014abc[starts-with(2, "rb")]
   - 690014abcdeg
   - 691014ae       
   - 692014abcdegjqu
