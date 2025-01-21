@@ -43,6 +43,7 @@ sampleBibs:
   - 907221 # 600
   - 1066178 # 751
   - 6017172 # 651
+  - 9920561 # 655 
 # Source data fields
 fieldSpec:
   - 100014abcdegjqu
@@ -59,6 +60,7 @@ fieldSpec:
   - 655| 7|014abc[2 == "aat"]
   - 655| 7|014abc[2 == "gmgpc"]
   - 655| 7|014abc[2 == "lcgft"]
+  - 655| 7|014abc[starts-with(2, "rb")]
   - 690014abcdeg
   - 691014ae       
   - 692014abcdegjqu
@@ -104,6 +106,7 @@ scriptInclusion: BOTH
         |Type|655\|\*7\||a and 2 == "aat"|
         |Type|655\|\*7\||a and 2 == "gmgpc"|
         |Type|655\|\*7\||a and 2 == "lcgft"|
+        |Type|655\|\*7\||a and starts-with(2, "lcgft")|
         |Type|690|abcdg|
         |Place|691|a|
         |Person|692|abcdgjq|
