@@ -106,7 +106,7 @@ scriptInclusion: BOTH
         |Type|655\|\*7\||a and 2 == "aat"|
         |Type|655\|\*7\||a and 2 == "gmgpc"|
         |Type|655\|\*7\||a and 2 == "lcgft"|
-        |Type|655\|\*7\||a and starts-with(2, "lcgft")|
+        |Type|655\|\*7\||a and starts-with(2, "rb")|
         |Type|690|abcdg|
         |Place|691|a|
         |Person|692|abcdgjq|
