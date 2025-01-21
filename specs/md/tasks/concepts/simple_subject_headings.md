@@ -53,7 +53,7 @@ fieldSpec:
   - 610014abcdegu
   - 611014acdegjnqu
   - 630014adfghklmnoprst
-  - 65004abcdeg
+  - 650| *|04abcdeg
   - 651| 0|014ae
   - 655| 0|014abc
   - 655| 7|014abc[2 == "aat"]
@@ -98,7 +98,7 @@ scriptInclusion: BOTH
         |Group|X10|abcdg|
         |Group|X11|acdegnqu|
         |LinguisticObject|X30|adfhklmnoprst|
-        |Type|650\|\*0\||abcdg|
+        |Type|650\|\**\||abcdg|
         |Place|651\|\*0\||a|
         |Type|655\|\*0\||a|
         |Type|655\|\*7\||a and 2 == "aat"|
